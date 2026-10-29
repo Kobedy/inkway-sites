@@ -1,0 +1,59 @@
+/* Ink Way — socle commun des sites standards */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-b);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.ph{background:var(--ph,#2a2a2a);object-fit:cover}
+.is-hidden{display:none!important}
+.small{font-size:.86em;opacity:.8}
+
+/* Apparition */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* Navigation mobile générique */
+.burger{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;position:relative;z-index:60}
+.burger span,.burger::before,.burger::after{content:"";position:absolute;left:11px;right:11px;height:2px;background:currentColor;transition:.3s}
+.burger::before{top:15px}.burger span{top:21px}.burger::after{top:27px}
+.nav-open .burger::before{top:21px;transform:rotate(45deg)}.nav-open .burger span{opacity:0}.nav-open .burger::after{top:21px;transform:rotate(-45deg)}
+@media (max-width:900px){
+  .burger{display:block}
+  .nav{position:fixed;inset:0;z-index:55;display:flex!important;flex-direction:column;justify-content:center;align-items:center;gap:22px;background:var(--nav-bg,var(--bg));color:var(--nav-fg,var(--fg));font-size:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s}
+  .nav-open .nav{opacity:1;pointer-events:auto}
+  .nav-open{overflow:hidden}
+}
+
+/* Statut d’ouverture */
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c0392b;margin-right:8px;vertical-align:middle;box-shadow:0 0 0 3px rgba(192,57,43,.18)}
+.dot.on{background:#2fae66;box-shadow:0 0 0 3px rgba(47,174,102,.2);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(47,174,102,0)}}
+
+/* Formulaires */
+.field{display:flex;flex-direction:column;gap:6px;font-size:.85rem;font-weight:600;letter-spacing:.02em}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border-radius:var(--r-in,8px);border:1px solid var(--line);background:var(--in-bg,transparent);font-weight:400;font-size:1rem;outline:none;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 25%,transparent)}
+.field select option{color:#111}
+[data-booking-result]{margin-top:18px;padding:18px 20px;border-radius:var(--r-in,8px);border:1px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent)}
+[data-booking-result] p{margin:.3em 0}
+[data-booking-result] .btn{margin-top:10px}
+
+/* Visionneuse */
+.iw-lightbox{position:fixed;inset:0;z-index:200;background:rgba(8,8,8,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.iw-lightbox.open{opacity:1;pointer-events:auto}
+.iw-lightbox figure{margin:0;max-width:min(1100px,90vw)}
+.iw-lightbox img{max-height:80vh;width:auto;margin:auto;border-radius:6px}
+.iw-lightbox figcaption{color:#ddd;text-align:center;margin-top:12px;font-size:.9rem}
+.iw-lightbox button{position:absolute;background:none;border:0;color:#fff;font-size:44px;cursor:pointer;padding:10px 18px;line-height:1}
+.iw-lb-close{top:10px;right:14px}.iw-lb-prev{left:6px;top:50%;transform:translateY(-50%)}.iw-lb-next{right:6px;top:50%;transform:translateY(-50%)}
+
+/* Retour en haut + badge démo */
+[data-totop]{position:fixed;right:18px;bottom:62px;z-index:40;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent,#fff);font-size:20px;cursor:pointer;opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none}
+[data-totop].show{opacity:1;transform:none;pointer-events:auto}
+.iw-demo-badge{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:90;background:rgba(15,15,15,.86);color:#fff;font:500 12px/1.2 system-ui,sans-serif;padding:8px 14px;border-radius:99px;backdrop-filter:blur(8px);white-space:nowrap;pointer-events:none}
+.iw-demo-badge b{color:#ffd28a}

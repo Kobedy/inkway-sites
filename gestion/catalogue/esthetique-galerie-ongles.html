@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velours — Nail &amp; beauty bar</title>
+<meta name="description" content="Modèle standard Ink Way · Esthétique · Galerie beauté &amp; ongles">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#fff4cf;--fg:#1b1414;--accent:#d7263d;--on-accent:#fff;--muted:#6f5f55;--line:rgba(27,20,20,.16);--pink:#ffc9d3;--font-d:"Bagel Fat One",cursive;--font-b:"Outfit",system-ui,sans-serif;--r-in:16px;--in-bg:#fff}
+header{position:sticky;top:12px;z-index:50;margin:12px auto 0;width:min(1200px,100% - 24px);background:#fff;border:2px solid var(--fg);border-radius:99px;box-shadow:4px 4px 0 var(--fg)}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 24px}
+.logo{font-family:var(--font-d);font-size:1.6rem;text-decoration:none;color:var(--accent)}
+.nav{display:flex;gap:22px;font-weight:700}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--fg);box-shadow:3px 3px 0 var(--fg);cursor:pointer;transition:.15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--fg)}
+.btn.w{background:#fff;color:var(--fg)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 0}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3.4rem,8vw,7rem);line-height:.92;margin:0 0 20px}
+.hero h1 span{color:var(--accent);display:inline-block;transform:rotate(-3deg)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:460px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.tiles img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:2px solid var(--fg);box-shadow:5px 5px 0 var(--fg)}
+.tiles img:nth-child(2){transform:translateY(40px)}.tiles img:nth-child(3){transform:translateY(-10px)}
+.sticker{position:absolute;width:130px;height:130px;border-radius:50%;background:var(--pink);border:2px solid var(--fg);display:grid;place-items:center;text-align:center;font-family:var(--font-d);font-size:1.1rem;line-height:1.05;left:42%;top:40%;animation:wob 4s ease-in-out infinite;z-index:2}
+@keyframes wob{50%{transform:rotate(12deg) scale(1.05)}}
+.tick{background:var(--fg);color:var(--bg);overflow:hidden;transform:rotate(-1.5deg);margin:20px 0}
+.tick div{display:flex;gap:40px;white-space:nowrap;padding:16px 0;font-family:var(--font-d);font-size:1.6rem;width:max-content;animation:mq 22s linear infinite}
+.tick span:nth-child(even){color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:100px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:.95;margin:0 0 20px}
+h2 span{color:var(--accent)}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.fl button{padding:10px 18px;border-radius:99px;border:2px solid var(--fg);background:#fff;font-weight:700;cursor:pointer}
+.fl button.active{background:var(--fg);color:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal a{border-radius:24px;overflow:hidden;border:2px solid var(--fg);aspect-ratio:1;position:relative;background:var(--pink)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s}.gal a:hover img{transform:scale(1.08) rotate(2deg)}
+.gal a b{position:absolute;left:10px;bottom:10px;background:#fff;border:2px solid var(--fg);border-radius:99px;padding:3px 12px;font-size:.8rem}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mc{background:#fff;border:2px solid var(--fg);border-radius:28px;padding:28px;box-shadow:6px 6px 0 var(--fg)}
+.mc:nth-child(2){background:var(--pink)}.mc:nth-child(3){background:#c9ecff}
+.mc h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0 0 14px}
+.mc li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:2px dotted var(--line)}
+.mc ul{list-style:none;padding:0;margin:0}.mc b{color:var(--accent)}
+.loy{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.lc{background:var(--fg);color:var(--bg);border-radius:28px;padding:32px;box-shadow:8px 8px 0 var(--accent)}
+.lc h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0}
+.stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:24px 0 14px}
+.stamp{aspect-ratio:1;border-radius:50%;border:2px dashed rgba(255,244,207,.5);background:none;color:var(--bg);font-family:var(--font-d);font-size:1.1rem;cursor:pointer;transition:.2s}
+.stamp.on{background:var(--accent);border:2px solid var(--accent)}
+.stamp.gift{border-color:var(--pink);color:var(--pink)}
+.lc p{margin:0;color:var(--pink);font-weight:700}
+.rdv{background:#fff;border:2px solid var(--fg);border-radius:36px;padding:50px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;box-shadow:8px 8px 0 var(--fg)}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.field input,.field select,.field textarea{border:2px solid var(--fg)}
+.map{width:100%;height:320px;border:2px solid var(--fg);border-radius:28px;margin-top:40px}
+footer{padding:50px 0 90px;text-align:center}
+footer .logo{font-size:3rem}footer p{color:var(--muted)}
+footer .today{color:var(--accent);font-weight:700}
+@media(max-width:900px){.hero,.loy,.rdv{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.rdv{padding:28px 20px}.rdv form{grid-template-columns:1fr}.hd .btn{display:none}.sticker{width:100px;height:100px;font-size:.9rem}section{padding:70px 0}}
+</style>
+</head>
+<body data-demo="Galerie beauté">
+<header data-header><div class="hd">
+  <a class="logo" href="#">velours.</a>
+  <nav class="nav"><a href="#galerie">Nail art</a><a href="#tarifs">Tarifs</a><a href="#fidelite">Fidélité</a><a href="#rdv">Contact</a></nav>
+  <a class="btn" href="#rdv">Réserver ✦</a>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<div class="wrap hero">
+  <div>
+    <h1 data-reveal>Des ongles<br>qui ont du <span>caractère.</span></h1>
+    <p data-reveal>Nail bar &amp; beauté du regard. Semi-permanent, gel, nail art dessiné à la main et rehaussement de cils, dans une ambiance qui fait du bien.</p><br>
+    <div data-reveal style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#rdv">Prendre rendez-vous</a><a class="btn w" href="#galerie">Voir le nail art</a></div>
+  </div>
+  <div class="tiles" data-reveal>
+    <img class="ph" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&h=600&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=600&h=600&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&h=600&q=70" alt="">
+    <img class="ph" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=600&h=600&q=70" alt="">
+    <div class="sticker">Nail art<br>dès 5 €</div>
+  </div>
+</div>
+<div class="tick" aria-hidden="true"><div><span>Semi-permanent ✦</span><span>Gel ✦</span><span>French revisitée ✦</span><span>Nail art ✦</span><span>Cils ✦</span><span>Semi-permanent ✦</span><span>Gel ✦</span><span>French revisitée ✦</span><span>Nail art ✦</span><span>Cils ✦</span></div></div>
+
+<section id="galerie"><div class="wrap">
+  <h2 data-reveal>Le <span>book</span> nail art</h2>
+  <div class="fl" data-filter-group="#gal"><button class="active" data-filter="all">Tout</button><button data-filter="nude">Nude</button><button data-filter="rouge">Rouge</button><button data-filter="art">Art</button><button data-filter="pieds">Pieds</button></div>
+  <div class="gal" id="gal">
+    <a data-cat="art" data-lightbox href="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Graphique</b></a>
+    <a data-cat="nude" data-lightbox href="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Nude</b></a>
+    <a data-cat="rouge art" data-lightbox href="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Rouge cerise</b></a>
+    <a data-cat="nude" data-lightbox href="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Pastel</b></a>
+    <a data-cat="art" data-lightbox href="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>En cours</b></a>
+    <a data-cat="pieds" data-lightbox href="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Beauté des pieds</b></a>
+    <a data-cat="rouge" data-lightbox href="https://images.unsplash.com/photo-1601612628452-9e99ced43524?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1601612628452-9e99ced43524?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Brillance</b></a>
+    <a data-cat="nude" data-lightbox href="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=500&h=500&q=70" alt=""><b>Soin des mains</b></a>
+  </div>
+</div></section>
+
+<section id="tarifs" style="padding-top:0"><div class="wrap">
+  <h2 data-reveal>La <span>carte</span></h2>
+  <div class="menu">
+    <div class="mc" data-reveal><h3>Mains</h3><ul><li>Semi-permanent <b>32 €</b></li><li>Gel sur ongles naturels <b>45 €</b></li><li>Extensions gel <b>60 €</b></li><li>Dépose <b>10 €</b></li></ul></div>
+    <div class="mc" data-reveal><h3>Nail art</h3><ul><li>French revisitée <b>+8 €</b></li><li>Dessin par ongle <b>+5 €</b></li><li>Strass &amp; chrome <b>+10 €</b></li><li>Full art <b>+20 €</b></li></ul></div>
+    <div class="mc" data-reveal><h3>Pieds &amp; cils</h3><ul><li>Semi-permanent pieds <b>35 €</b></li><li>Beauté des pieds <b>45 €</b></li><li>Rehaussement de cils <b>55 €</b></li><li>Teinture sourcils <b>15 €</b></li></ul></div>
+  </div>
+</div></section>
+
+<section id="fidelite" style="padding-top:0"><div class="wrap loy">
+  <div><h2 data-reveal>La carte <span>fidélité</span></h2><p style="color:var(--muted);font-size:1.1rem">À chaque prestation, un tampon. Au dixième, votre semi-permanent est offert. Touchez les ronds pour essayer !</p></div>
+  <div class="lc" data-loyalty data-unit="prestation" data-reveal>
+    <h3>velours. club</h3>
+    <div class="stamps"><button class="stamp">1</button><button class="stamp">2</button><button class="stamp">3</button><button class="stamp">4</button><button class="stamp">5</button><button class="stamp">6</button><button class="stamp">7</button><button class="stamp">8</button><button class="stamp">9</button><button class="stamp gift">🎁</button></div>
+    <p data-loyalty-out>9 prestations, la 10e offerte</p>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="rdv">
+    <div><h2>On vous <span>attend</span></h2><p style="color:var(--muted)">Réservez votre moment, on vous confirme par SMS.</p><p data-open-status data-hours='{"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:30"],"5":["10:00","19:30"],"6":["10:00","18:00"]}'></p></div>
+    <div>
+      <form data-booking data-demo data-salon="Velours">
+        <label class="field full">Prestation<select name="service" required><option value="">Choisir</option><option>Semi-permanent mains</option><option>Gel</option><option>Extensions gel</option><option>Semi-permanent pieds</option><option>Rehaussement de cils</option></select></label>
+        <label class="field">Date<input type="date" name="date" required></label>
+        <label class="field">Heure<select name="time" required></select></label>
+        <label class="field">Prénom<input name="name" required></label>
+        <label class="field">Téléphone<input type="tel" name="phone" required pattern="[0-9 +().-]{8,}"></label>
+        <label class="field full">Idée de nail art ?<textarea name="note" rows="2"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Envoyer ✦</button></div>
+      </form>
+      <div data-booking-result hidden></div>
+    </div>
+  </div>
+  <iframe class="map" loading="lazy" title="Plan" src="https://maps.google.com/maps?q=Canal%20Saint-Martin%20Paris&z=15&output=embed"></iframe>
+</div></section>
+
+<footer><div class="wrap"><a class="logo" href="#">velours.</a><p>9 rue Exemple, 00000 Ville · 01 23 45 67 89 · @velours</p><p>© <span data-year></span> · Mentions légales</p></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>

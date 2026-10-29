@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lagon — Spa &amp; évasion</title>
+<meta name="description" content="Modèle standard Ink Way · Spa · Évasion visuelle">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#fbf7f2;--fg:#0f3b4a;--accent:#e9775a;--on-accent:#fff;--muted:#5d7780;--line:rgba(15,59,74,.15);--sea:#d8ebea;--font-d:"Young Serif",Georgia,serif;--font-b:"Plus Jakarta Sans",system-ui,sans-serif;--r-in:14px;--in-bg:#fff}
+header{position:fixed;inset:14px 14px auto;z-index:50;border-radius:20px;transition:.3s;color:#fff}
+header.scrolled{background:rgba(251,247,242,.85);backdrop-filter:blur(14px);color:var(--fg);box-shadow:0 10px 30px -15px rgba(15,59,74,.4)}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.logo{font-family:var(--font-d);font-size:1.6rem;text-decoration:none}
+.nav{display:flex;gap:26px;font-weight:500}.nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--fg)}.btn.g{background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4)}
+.hero{height:100vh;min-height:640px;position:relative;overflow:hidden;color:#fff}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,59,74,.75),rgba(15,59,74,.1))}
+.hero .in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:90px}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3.2rem,8vw,7rem);line-height:.95;margin:0 0 20px;max-width:900px}
+.hero p{max-width:480px;font-size:1.12rem;opacity:.9}
+.glass{position:absolute;right:4vw;bottom:90px;z-index:3;width:300px;background:rgba(255,255,255,.14);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.3);border-radius:22px;padding:22px}
+.glass b{font-family:var(--font-d);font-size:1.4rem;font-weight:400}
+.glass small{display:block;opacity:.85;margin:6px 0 14px}
+section{padding:110px 0}
+.ey{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.02;margin:12px 0 18px}
+.voy{position:relative;height:90vh;min-height:520px;overflow:hidden;display:flex;align-items:center;color:#fff}
+.voy img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 1.4s}
+.voy.in img{transform:scale(1)}
+.voy::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,59,74,.8),transparent 70%)}
+.voy.r::after{background:linear-gradient(270deg,rgba(15,59,74,.8),transparent 70%)}
+.voy .wrap{position:relative;z-index:2}
+.voy .box{max-width:460px}.voy.r .box{margin-left:auto}
+.voy h3{font-family:var(--font-d);font-weight:400;font-size:clamp(2.2rem,4vw,3.4rem);margin:10px 0}
+.voy ul{padding:0;list-style:none;margin:20px 0;display:grid;gap:6px;opacity:.9}.voy li::before{content:"— "}
+.voy .pr{font-family:var(--font-d);font-size:1.8rem;margin-bottom:20px}
+.gift{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.gf{display:grid;gap:14px}
+.amts{display:flex;gap:8px;flex-wrap:wrap}
+.amts button{padding:12px 18px;border-radius:99px;border:1.5px solid var(--line);background:#fff;cursor:pointer;font-weight:700}
+.amts button.on{background:var(--fg);color:#fff;border-color:var(--fg)}
+.gcard{aspect-ratio:1.6;border-radius:26px;position:relative;overflow:hidden;color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -30px rgba(15,59,74,.7)}
+.gcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.gcard::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,59,74,.85),rgba(233,119,90,.55));z-index:-1}
+.gcard .v{font-family:var(--font-d);font-size:3.2rem;line-height:1}
+.gcard .to{font-size:1.1rem}.gcard .msg{font-style:italic;opacity:.9;min-height:1.4em}
+.subs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.sb{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--line);transition:.3s}
+.sb:hover{border-color:var(--accent);transform:translateY(-4px)}
+.sb.hot{background:var(--fg);color:#fff}
+.sb h3{font-family:var(--font-d);font-weight:400;font-size:1.7rem;margin:0}.sb .p{font-family:var(--font-d);font-size:2.6rem;margin:10px 0}.sb .p small{font-size:1rem;font-family:var(--font-b)}
+.sb ul{padding-left:18px;margin:0 0 20px;color:var(--muted)}.sb.hot ul{color:#cfe0e3}
+.rdv{background:var(--sea);border-radius:36px;padding:60px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.ig{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:40px}.ig img{aspect-ratio:1;object-fit:cover;border-radius:16px;width:100%}
+footer{padding:50px 0 90px;border-top:1px solid var(--line);margin-top:60px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--muted)}
+footer .today{color:var(--accent);font-weight:700}
+@media(max-width:900px){.glass{display:none}.gift,.rdv{grid-template-columns:1fr}.subs{grid-template-columns:1fr}.rdv{padding:30px 20px}.rdv form{grid-template-columns:1fr}.ig{grid-template-columns:repeat(3,1fr)}.hd .btn{display:none}section{padding:80px 0}.voy::after,.voy.r::after{background:rgba(15,59,74,.6)}}
+</style>
+</head>
+<body data-demo="Évasion visuelle">
+<header data-header><div class="hd">
+  <a class="logo" href="#">Lagon</a>
+  <nav class="nav"><a href="#voyages">Voyages</a><a href="#cadeau">Bon cadeau</a><a href="#abonnements">Abonnements</a><a href="#rdv">Réserver</a></nav>
+  <a class="btn" href="#rdv">Réserver</a>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<div class="hero">
+  <img class="ph" src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=2000&q=75" alt="Bain de spa">
+  <div class="wrap in"><span class="ey" data-reveal style="color:#ffc2ad">Spa urbain · soins du monde</span><h1 data-reveal>Partir loin,<br>sans quitter la ville.</h1><p data-reveal>Quatre voyages sensoriels inspirés de Bali, du Maroc, du Japon et de la Polynésie. Fermez les yeux, on s’occupe du reste.</p><br><div data-reveal style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#voyages">Choisir mon voyage</a><a class="btn g" href="#cadeau">Offrir</a></div></div>
+  <div class="glass" data-hours='{"1":["11:00","20:00"],"2":["10:00","20:00"],"3":["10:00","20:00"],"4":["10:00","21:00"],"5":["10:00","21:00"],"6":["09:00","20:00"],"0":["10:00","19:00"]}'><b>Ouvert 7j/7</b><small data-open-status></small><a class="btn" href="#rdv" style="width:100%;justify-content:center">Voir les disponibilités</a></div>
+</div>
+
+<div id="voyages">
+  <div class="voy" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2000&q=75" alt=""><div class="wrap"><div class="box"><span class="ey" style="color:#ffc2ad">Voyage 01 · Bali</span><h3>Rituel balinais</h3><p>Massage profond aux pressions glissées et étirements doux, huile de coco tiède.</p><ul><li>Bain de pieds aux fleurs</li><li>Massage 60 min</li><li>Infusion gingembre</li></ul><div class="pr">85 € · 1 h 15</div><a class="btn" href="#rdv" data-book="Rituel balinais">Réserver ce voyage</a></div></div></div>
+  <div class="voy r" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=2000&q=75" alt=""><div class="wrap"><div class="box"><span class="ey" style="color:#ffc2ad">Voyage 02 · Polynésie</span><h3>Lomi-lomi &amp; pierres</h3><p>Le mouvement des vagues dans un massage aux avant-bras, puis la chaleur des basaltes.</p><ul><li>Massage lomi-lomi 60 min</li><li>Pierres chaudes 20 min</li></ul><div class="pr">110 € · 1 h 30</div><a class="btn" href="#rdv" data-book="Lomi-lomi">Réserver ce voyage</a></div></div></div>
+  <div class="voy" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?auto=format&fit=crop&w=2000&q=75" alt=""><div class="wrap"><div class="box"><span class="ey" style="color:#ffc2ad">Voyage 03 · Japon</span><h3>Kobido visage</h3><p>Le lifting manuel japonais : 50 mouvements pour un teint reposé.</p><ul><li>Double nettoyage</li><li>Kobido 45 min</li><li>Masque et thé matcha</li></ul><div class="pr">79 € · 1 h</div><a class="btn" href="#rdv" data-book="Kobido visage">Réserver ce voyage</a></div></div></div>
+</div>
+
+<section id="cadeau"><div class="wrap gift">
+  <div><span class="ey">Bon cadeau</span><h2 data-reveal>Offrez un voyage.</h2><p style="color:var(--muted)">Créez votre bon cadeau, envoyez-le par e-mail ou retirez-le à l’accueil. Valable 12 mois sur tous les soins.</p>
+    <div class="gf">
+      <div class="amts" id="amts"><button data-v="50">50 €</button><button class="on" data-v="85">85 €</button><button data-v="110">110 €</button><button data-v="150">150 €</button></div>
+      <label class="field">Pour<input id="g-to" placeholder="Prénom du destinataire" maxlength="30"></label>
+      <label class="field">Message<input id="g-msg" placeholder="Joyeux anniversaire !" maxlength="60"></label>
+      <a class="btn" href="#rdv" id="g-go" style="justify-self:start">Commander ce bon cadeau</a>
+    </div></div>
+  <div class="gcard" data-reveal><img class="ph" src="https://images.unsplash.com/photo-1620733723572-11c53f73a416?auto=format&fit=crop&w=900&q=70" alt=""><span>LAGON · bon cadeau</span><div><div class="v" id="g-v">85 €</div><div class="to">Pour <b id="g-tov">vous</b></div><div class="msg" id="g-msgv"></div></div></div>
+</div></section>
+
+<section id="abonnements" style="padding-top:0"><div class="wrap">
+  <span class="ey">Abonnements</span><h2 data-reveal>Le bien-être, chaque mois.</h2>
+  <div class="subs">
+    <div class="sb" data-reveal><h3>Escale</h3><div class="p">59 € <small>/ mois</small></div><ul><li>1 soin de 45 min par mois</li><li>−10 % sur les soins additionnels</li></ul><a class="btn" href="#rdv" data-book="Abonnement Escale">Choisir</a></div>
+    <div class="sb hot" data-reveal><h3>Traversée</h3><div class="p">99 € <small>/ mois</small></div><ul><li>1 voyage de 75 min par mois</li><li>Accès espace détente illimité</li><li>−15 % sur les produits</li></ul><a class="btn" href="#rdv" data-book="Abonnement Traversée">Choisir</a></div>
+    <div class="sb" data-reveal><h3>Duo</h3><div class="p">179 € <small>/ mois</small></div><ul><li>1 soin en duo de 60 min par mois</li><li>Champagne ou thé offert</li></ul><a class="btn" href="#rdv" data-book="Abonnement Duo">Choisir</a></div>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="rdv">
+    <div><span class="ey">Réservation</span><h2>Embarquement immédiat</h2><p style="color:var(--muted)">Envoyez votre demande, l’accueil vous confirme le créneau et la cabine.</p></div>
+    <div>
+      <form data-booking data-demo data-salon="Lagon">
+        <label class="field full">Voyage ou formule<select name="service" required><option value="">Choisir</option><option>Rituel balinais</option><option>Lomi-lomi</option><option>Kobido visage</option><option>Bon cadeau</option><option>Abonnement Escale</option><option>Abonnement Traversée</option><option>Abonnement Duo</option></select></label>
+        <label class="field">Date<input type="date" name="date" required></label>
+        <label class="field">Heure<select name="time" required></select></label>
+        <label class="field">Nom<input name="name" required></label>
+        <label class="field">Téléphone<input type="tel" name="phone" required pattern="[0-9 +().-]{8,}"></label>
+        <label class="field full">Remarque<textarea name="note" rows="2"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Envoyer</button></div>
+      </form>
+      <div data-booking-result hidden></div>
+    </div>
+  </div>
+  <div class="ig"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=400&h=400&q=60" alt=""><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=400&h=400&q=60" alt=""><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&h=400&q=60" alt=""><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=400&h=400&q=60" alt=""><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=400&h=400&q=60" alt=""></div>
+</div></section>
+
+<footer><div class="wrap"><span>Lagon Spa · 40 quai Exemple, 00000 Ville · 01 23 45 67 89</span><span>© <span data-year></span> · Mentions légales · CGV bons cadeaux</span></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+<script>
+(function(){var v=85,f=document.querySelector("form[data-booking]");
+document.querySelectorAll("#amts button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#amts button").forEach(function(x){x.classList.toggle("on",x===b)});v=b.dataset.v;document.getElementById("g-v").textContent=v+" €";})});
+document.getElementById("g-to").addEventListener("input",function(e){document.getElementById("g-tov").textContent=e.target.value||"vous"});
+document.getElementById("g-msg").addEventListener("input",function(e){document.getElementById("g-msgv").textContent=e.target.value?"« "+e.target.value+" »":""});
+document.getElementById("g-go").addEventListener("click",function(){f.elements.service.value="Bon cadeau";f.elements.note.value="Bon cadeau de "+v+" € pour "+(document.getElementById("g-to").value||"—")+". Message : "+(document.getElementById("g-msg").value||"—");});
+})();
+</script>
+</body>
+</html>
