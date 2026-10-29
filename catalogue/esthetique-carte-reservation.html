@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Belle Peau — Institut &amp; carte de soins</title>
+<meta name="description" content="Modèle standard Ink Way · Esthétique · Carte de soins &amp; réservation">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#fbf8f6;--fg:#2c2a2e;--accent:#b4806a;--on-accent:#fff;--muted:#837b7b;--line:#ece4df;--rose:#f3e6df;--font-d:"Italiana",serif;--font-b:"Nunito Sans",system-ui,sans-serif;--r-in:10px;--in-bg:#fff}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:30px;padding:16px 0}
+.logo{font-family:var(--font-d);font-size:1.9rem;text-decoration:none;letter-spacing:.06em}
+.nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:.92rem}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--fg);color:#fff;font-weight:800;text-decoration:none;border:0;cursor:pointer;transition:.2s;font-size:.92rem}
+.btn:hover{background:var(--accent)}.btn.acc{background:var(--accent)}.btn.acc:hover{background:var(--fg)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;padding:60px 0 80px}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3rem,6.6vw,5.8rem);line-height:1;margin:16px 0}
+.hero p{color:var(--muted);font-size:1.12rem;max-width:520px}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pills span{background:var(--rose);padding:8px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
+.hv{position:relative}
+.hv img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
+.promo{position:absolute;left:-40px;bottom:40px;background:#fff;padding:22px 24px;border-radius:14px;box-shadow:0 24px 50px -20px rgba(44,42,46,.35);max-width:250px}
+.promo b{font-family:var(--font-d);font-size:2.6rem;color:var(--accent);display:block;line-height:1}
+.ey{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:800}
+section{padding:90px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.6rem);margin:10px 0 14px;line-height:1.05}
+.menu{display:grid;grid-template-columns:220px 1fr 320px;gap:36px;align-items:start;margin-top:40px}
+.side{position:sticky;top:90px;display:grid;gap:4px}
+.side a{padding:12px 14px;border-radius:10px;text-decoration:none;font-weight:600;color:var(--muted)}.side a:hover,.side a.active{background:var(--rose);color:var(--fg)}
+.grp{margin-bottom:40px;scroll-margin-top:90px}
+.grp h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.soin{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:16px 4px;border-bottom:1px solid var(--line)}
+.soin b{display:block}.soin small{color:var(--muted)}
+.soin .p{font-weight:800}
+.add{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--accent);background:none;color:var(--accent);font-size:1.2rem;cursor:pointer;transition:.2s}
+.soin.sel{background:var(--rose);border-radius:10px;padding-inline:12px}.soin.sel .add{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.cart{position:sticky;top:90px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.cart h4{margin:0 0 12px;font-family:var(--font-d);font-size:1.6rem;font-weight:400}
+.cart ul{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px;font-size:.92rem;max-height:220px;overflow:auto}
+.cart li{display:flex;justify-content:space-between;gap:10px}
+.cart .tot{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font-weight:800}
+.cart .empty{color:var(--muted);font-size:.92rem}
+.cart .btn{width:100%;margin-top:14px}
+.forf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.fc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.fc img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.fc div{padding:22px}.fc h3{margin:0;font-family:var(--font-d);font-weight:400;font-size:1.7rem}
+.fc p{color:var(--muted);margin:8px 0 14px}.fc .p{font-weight:800;font-size:1.2rem}.fc .p s{color:var(--muted);font-weight:400;margin-left:6px}
+.rdv{background:var(--fg);color:#fff;border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;--line:rgba(255,255,255,.18);--in-bg:rgba(255,255,255,.06)}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.rdv .ey{color:#e6b9a3}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.info div{background:var(--rose);border-radius:16px;padding:26px}.info b{display:block;font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin-bottom:8px}
+.info .today{color:var(--accent);font-weight:800}
+footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:60px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.mcart{display:none}
+@media(max-width:1000px){.menu{grid-template-columns:1fr}.side{position:static;display:flex;overflow-x:auto}.side a{white-space:nowrap}.cart{position:fixed;left:12px;right:12px;bottom:12px;top:auto;z-index:45;display:none}.cart.show{display:block}
+ .mcart{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:44}.mcart .btn{width:100%}.iw-demo-badge{bottom:74px}}
+@media(max-width:900px){.hero,.rdv{grid-template-columns:1fr}.forf,.info{grid-template-columns:1fr}.rdv{padding:30px 20px}.rdv form{grid-template-columns:1fr}.promo{left:12px}.hd .btn{display:none}section{padding:70px 0}}
+</style>
+</head>
+<body data-demo="Carte de soins &amp; réservation">
+<header data-header><div class="wrap hd">
+  <a class="logo" href="#">BELLE PEAU</a>
+  <nav class="nav"><a href="#carte">Carte des soins</a><a href="#forfaits">Forfaits</a><a href="#rdv">Rendez-vous</a><a href="#infos">Infos</a></nav>
+  <a class="btn acc" href="#carte">Composer mon soin</a>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<div class="wrap hero">
+  <div>
+    <span class="ey" data-reveal>Institut de beauté · Onglerie · Regard</span>
+    <h1 data-reveal>Votre carte de soins, à composer.</h1>
+    <p data-reveal>Sélectionnez un ou plusieurs soins, découvrez la durée et le prix total, puis envoyez votre demande de rendez-vous en un clic.</p>
+    <div class="pills" data-reveal><span>✓ Prix affichés</span><span>✓ Durées exactes</span><span>✓ Confirmation rapide</span></div>
+    <a class="btn acc" href="#carte" data-reveal>Voir la carte</a>
+  </div>
+  <div class="hv" data-reveal><img class="ph" src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1000&q=75" alt="Esthéticienne réalisant un soin du visage"><div class="promo"><span class="ey">Première visite</span><b>−15 %</b><small>sur votre premier soin visage (offre exemple)</small></div></div>
+</div>
+
+<section id="carte" style="background:#fff"><div class="wrap">
+  <span class="ey">Carte des soins</span><h2 data-reveal>Composez votre moment</h2>
+  <div class="menu">
+    <nav class="side"><a href="#g-visage" class="active">Visage</a><a href="#g-regard">Regard</a><a href="#g-ongles">Ongles</a><a href="#g-epil">Épilation</a><a href="#g-corps">Corps</a></nav>
+    <div id="soins">
+      <div class="grp" id="g-visage"><h3>Visage</h3>
+        <div class="soin" data-soin="Soin hydratant" data-price="49" data-min="45"><div><b>Soin hydratant</b><small>45 min · peaux sèches</small></div><span class="p">49 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Soin purifiant" data-price="55" data-min="50"><div><b>Soin purifiant</b><small>50 min · extraction douce</small></div><span class="p">55 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Soin anti-âge lift" data-price="85" data-min="75"><div><b>Soin anti-âge lift</b><small>1 h 15 · modelage liftant</small></div><span class="p">85 €</span><button class="add" aria-label="Ajouter">+</button></div>
+      </div>
+      <div class="grp" id="g-regard"><h3>Regard</h3>
+        <div class="soin" data-soin="Rehaussement de cils" data-price="59" data-min="60"><div><b>Rehaussement de cils</b><small>1 h · teinture incluse</small></div><span class="p">59 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Restructuration sourcils" data-price="18" data-min="20"><div><b>Restructuration sourcils</b><small>20 min</small></div><span class="p">18 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Teinture sourcils" data-price="15" data-min="15"><div><b>Teinture sourcils</b><small>15 min</small></div><span class="p">15 €</span><button class="add" aria-label="Ajouter">+</button></div>
+      </div>
+      <div class="grp" id="g-ongles"><h3>Ongles</h3>
+        <div class="soin" data-soin="Manucure semi-permanent" data-price="35" data-min="45"><div><b>Manucure semi-permanent</b><small>45 min</small></div><span class="p">35 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Pose gel complète" data-price="55" data-min="90"><div><b>Pose gel complète</b><small>1 h 30</small></div><span class="p">55 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Pédicure spa" data-price="45" data-min="60"><div><b>Pédicure spa</b><small>1 h</small></div><span class="p">45 €</span><button class="add" aria-label="Ajouter">+</button></div>
+      </div>
+      <div class="grp" id="g-epil"><h3>Épilation</h3>
+        <div class="soin" data-soin="Jambes complètes" data-price="32" data-min="40"><div><b>Jambes complètes</b><small>40 min</small></div><span class="p">32 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Maillot classique" data-price="18" data-min="15"><div><b>Maillot classique</b><small>15 min</small></div><span class="p">18 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Aisselles" data-price="12" data-min="10"><div><b>Aisselles</b><small>10 min</small></div><span class="p">12 €</span><button class="add" aria-label="Ajouter">+</button></div>
+      </div>
+      <div class="grp" id="g-corps"><h3>Corps</h3>
+        <div class="soin" data-soin="Modelage relaxant" data-price="70" data-min="60"><div><b>Modelage relaxant</b><small>1 h</small></div><span class="p">70 €</span><button class="add" aria-label="Ajouter">+</button></div>
+        <div class="soin" data-soin="Gommage corps" data-price="40" data-min="30"><div><b>Gommage corps</b><small>30 min</small></div><span class="p">40 €</span><button class="add" aria-label="Ajouter">+</button></div>
+      </div>
+    </div>
+    <aside class="cart" id="cart"><h4>Ma sélection</h4><ul id="cart-list"></ul><p class="empty" id="cart-empty">Ajoutez un soin avec le bouton +</p><div class="tot"><span id="cart-min">0 min</span><span id="cart-tot">0 €</span></div><a class="btn acc" href="#rdv" id="cart-go">Réserver ma sélection</a></aside>
+  </div>
+</div></section>
+<div class="mcart"><button class="btn acc" id="mcart">Ma sélection · <span id="mcount">0</span> soin(s)</button></div>
+
+<section id="forfaits"><div class="wrap">
+  <span class="ey">Forfaits</span><h2 data-reveal>Nos formules duo &amp; cures</h2>
+  <div class="forf">
+    <div class="fc" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=70" alt=""><div><h3>Mains parfaites</h3><p>Manucure semi-permanent + soin paraffine.</p><span class="p">45 € <s>55 €</s></span></div></div>
+    <div class="fc" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=700&q=70" alt=""><div><h3>Cure éclat ×3</h3><p>Trois soins hydratants à utiliser en 3 mois.</p><span class="p">129 € <s>147 €</s></span></div></div>
+    <div class="fc" data-reveal><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?auto=format&fit=crop&w=700&q=70" alt=""><div><h3>Regard intense</h3><p>Rehaussement de cils + restructuration sourcils.</p><span class="p">69 € <s>77 €</s></span></div></div>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap rdv">
+  <div><span class="ey">Rendez-vous</span><h2>Envoyez votre demande</h2><p style="opacity:.75">Votre sélection est reprise automatiquement. L’institut vous confirme l’horaire par SMS.</p></div>
+  <div>
+    <form data-booking data-demo data-salon="Belle Peau">
+      <label class="field full">Soins choisis<input name="service" required readonly placeholder="Composez votre sélection dans la carte"></label>
+      <label class="field">Date<input type="date" name="date" required></label>
+      <label class="field">Heure<select name="time" required></select></label>
+      <label class="field">Nom<input name="name" required></label>
+      <label class="field">Téléphone<input type="tel" name="phone" required pattern="[0-9 +().-]{8,}"></label>
+      <div class="full"><button class="btn acc" type="submit">Demander ce rendez-vous</button></div>
+    </form>
+    <div data-booking-result hidden></div>
+  </div>
+</div></section>
+
+<section id="infos" style="padding-top:0"><div class="wrap info">
+  <div data-reveal><b>Adresse</b>21 rue des Roses<br>00000 Ville<br><a href="#">Itinéraire →</a></div>
+  <div data-reveal data-hours='{"1":["13:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","20:00"],"5":["10:00","20:00"],"6":["09:30","18:00"]}'><b>Horaires</b><span data-open-status></span><br><span data-day="1">Lun 13h – 19h</span><br><span data-day="2">Mar – Mer 10h – 19h</span><br><span data-day="4">Jeu – Ven 10h – 20h</span><br><span data-day="6">Sam 9h30 – 18h</span></div>
+  <div data-reveal><b>Contact</b>01 23 45 67 89<br>bonjour@exemple.fr<br>Instagram · Facebook</div>
+</div></section>
+
+<footer><div class="wrap"><span>© <span data-year></span> Belle Peau Institut</span><span>Mentions légales · Politique de confidentialité</span></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var sel=[],list=document.getElementById("cart-list"),form=document.querySelector("form[data-booking]");
+  function render(){
+    var t=0,m=0;list.innerHTML=sel.map(function(s){t+=s.p;m+=s.m;return "<li><span>"+s.n+"</span><b>"+s.p+" €</b></li>"}).join("");
+    document.getElementById("cart-empty").hidden=sel.length>0;
+    document.getElementById("cart-tot").textContent=t+" €";
+    document.getElementById("cart-min").textContent=(m>=60?Math.floor(m/60)+" h "+(m%60?m%60+" min":""):m+" min");
+    document.getElementById("mcount").textContent=sel.length;
+    form.elements.service.value=sel.map(function(s){return s.n}).join(" + ")+(sel.length?" ("+t+" €, "+m+" min)":"");
+  }
+  document.querySelectorAll(".soin").forEach(function(el){
+    el.querySelector(".add").addEventListener("click",function(){
+      var n=el.dataset.soin,i=sel.findIndex(function(s){return s.n===n});
+      if(i>-1)sel.splice(i,1);else sel.push({n:n,p:+el.dataset.price,m:+el.dataset.min});
+      el.classList.toggle("sel",i===-1);render();
+    });
+  });
+  document.getElementById("mcart").addEventListener("click",function(){document.getElementById("cart").classList.toggle("show")});
+  document.getElementById("cart-go").addEventListener("click",function(){document.getElementById("cart").classList.remove("show")});
+  var links=document.querySelectorAll(".side a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll(".grp").forEach(function(g){io.observe(g)});}
+  form.addEventListener("submit",function(e){if(!sel.length){e.preventDefault();e.stopImmediatePropagation();var r=document.querySelector("[data-booking-result]");r.hidden=false;r.innerHTML="<b>Ajoutez au moins un soin</b><p>Composez votre sélection dans la carte des soins ci-dessus.</p>";document.getElementById("carte").scrollIntoView({behavior:"smooth"});}},true);
+  render();
+})();
+</script>
+</body>
+</html>

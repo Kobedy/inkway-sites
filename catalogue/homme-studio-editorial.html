@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>NORD — Studio de coupe homme</title>
+<meta name="description" content="Modèle standard Ink Way · Coiffure homme · Studio éditorial">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#f1eee8;--fg:#141414;--accent:#ff4a1c;--on-accent:#fff;--muted:#6f6a62;--line:rgba(20,20,20,.14);--font-d:"Unbounded",sans-serif;--font-b:"Manrope",system-ui,sans-serif;--r-in:0;--in-bg:#fff}
+body{background-image:radial-gradient(rgba(20,20,20,.05) 1px,transparent 1px);background-size:4px 4px}
+header{position:fixed;top:0;left:0;right:0;z-index:50;mix-blend-mode:normal;transition:.3s}
+header.scrolled{background:rgba(241,238,232,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:var(--font-d);font-weight:900;font-size:1.4rem;text-decoration:none;letter-spacing:-.02em}
+.logo sup{font-size:.5em;color:var(--accent)}
+.nav{display:flex;gap:6px}
+.nav a{text-decoration:none;font-weight:500;padding:9px 16px;border-radius:99px;font-size:.92rem}
+.nav a:hover{background:var(--fg);color:var(--bg)}
+.nav a.cta{background:var(--accent);color:#fff}
+.hero{padding:140px 0 40px;position:relative}
+.giant{font-family:var(--font-d);font-weight:900;font-size:clamp(5rem,23vw,22rem);line-height:.78;letter-spacing:-.06em;margin:0;position:relative;z-index:1}
+.giant span{color:var(--accent)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:30px;align-items:end;margin-top:-6vw;position:relative;z-index:2}
+.hero-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:0 0 200px 200px}
+.hero p.big{font-size:1.25rem;line-height:1.45;margin:0;font-weight:500}
+.meta{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:grid;gap:8px}
+.meta b{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:99px;background:var(--fg);color:var(--bg);text-decoration:none;font-weight:700;border:0;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--accent);transform:translateY(-2px)}
+.btn .ar{width:26px;height:26px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:.25s}.btn:hover .ar{background:var(--fg)}
+.marq{overflow:hidden;border-block:1px solid var(--fg);background:var(--fg);color:var(--bg);margin-top:60px}
+.marq div{display:flex;gap:46px;white-space:nowrap;padding:18px 0;animation:mq 26s linear infinite;font-family:var(--font-d);font-size:1.5rem;font-weight:700;width:max-content}
+.marq i{color:var(--accent);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:110px 0}
+.lbl{font-family:var(--font-d);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.lbl::before{content:"";width:10px;height:10px;background:var(--accent);border-radius:50%}
+h2{font-family:var(--font-d);font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:.98;letter-spacing:-.04em;margin:18px 0 40px;font-weight:700}
+.svc{border-top:1px solid var(--fg)}
+.row{display:grid;grid-template-columns:70px 1fr 1.2fr 110px 130px;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);position:relative;transition:.3s}
+.row:hover{background:#fff;padding-inline:16px}
+.row .n{font-family:var(--font-d);color:var(--muted)}
+.row h3{font-family:var(--font-d);font-size:1.5rem;margin:0;letter-spacing:-.02em}
+.row p{margin:0;color:var(--muted)}
+.row .pr{font-family:var(--font-d);font-size:1.4rem;font-weight:700}
+.row button{border:1px solid var(--fg);background:none;border-radius:99px;padding:10px 16px;cursor:pointer;font-weight:700}
+.row button:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.row .thumb{position:absolute;right:270px;top:50%;width:180px;aspect-ratio:1;object-fit:cover;transform:translateY(-50%) rotate(-6deg) scale(.6);opacity:0;pointer-events:none;transition:.35s;z-index:3;border-radius:12px}
+.row:hover .thumb{opacity:1;transform:translateY(-50%) rotate(-6deg) scale(1)}
+.appr{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cd{background:#fff;padding:28px;border-radius:24px}
+.cd b{font-family:var(--font-d);font-size:2.6rem;color:var(--accent);display:block;line-height:1}
+.cd:nth-child(2){background:var(--fg);color:var(--bg)}.cd:nth-child(3){background:var(--accent);color:#fff}.cd:nth-child(3) b{color:#fff}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
+.strip a{flex:0 0 min(340px,78vw);scroll-snap-align:start;aspect-ratio:3/4;overflow:hidden;border-radius:18px}
+.strip img{width:100%;height:100%;object-fit:cover;transition:.6s}.strip a:hover img{transform:scale(1.06)}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}
+.faq summary{font-family:var(--font-d);font-size:1.15rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.6rem;line-height:1;transition:.3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);max-width:700px}
+.book{background:var(--fg);color:var(--bg);border-radius:36px;padding:70px;display:grid;grid-template-columns:1fr 1.2fr;gap:60px;--line:rgba(241,238,232,.2);--in-bg:rgba(255,255,255,.06)}
+.book h2{margin-bottom:20px}
+.book form{display:grid;grid-template-columns:1fr 1fr;gap:16px}.book .full{grid-column:1/-1}
+.book .btn{background:var(--accent);color:#fff}
+.hrs{display:grid;gap:6px;margin-top:20px;font-size:.95rem}.hrs div{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0}.hrs .today{color:var(--accent);font-weight:700}
+footer{padding:80px 0 70px;overflow:hidden}
+footer .giant{font-size:clamp(4rem,19vw,17rem);color:transparent;-webkit-text-stroke:2px var(--fg)}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;border-top:1px solid var(--fg);padding-top:24px;margin-top:20px;font-size:.92rem}
+.fl a{text-decoration:none;margin-right:18px}
+@media(max-width:900px){
+ .hero-grid,.appr,.book{grid-template-columns:1fr}.hero-grid{margin-top:20px}
+ .row{grid-template-columns:40px 1fr auto;row-gap:6px}.row p{grid-column:2/-1}.row button{grid-column:2/-1;justify-self:start}.row .thumb{display:none}.row .pr{grid-column:3;grid-row:1}
+ .book{padding:36px 22px;border-radius:24px}.book form{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}section{padding:80px 0}
+}
+</style>
+</head>
+<body data-demo="Studio éditorial">
+<header data-header><div class="wrap hd">
+  <a class="logo" href="#">NORD<sup>®</sup></a>
+  <nav class="nav"><a href="#coupes">Coupes</a><a href="#approche">Approche</a><a href="#looks">Looks</a><a href="#faq">FAQ</a><a class="cta" href="#rdv">Réserver</a></nav>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1 class="giant" data-reveal>NORD<span>.</span></h1>
+  <div class="hero-grid">
+    <div data-reveal><p class="big">Studio de coupe homme. Des lignes nettes, des coupes pensées pour durer entre deux visites.</p><br><a class="btn" href="#rdv">Réserver un créneau <span class="ar">→</span></a></div>
+    <img class="ph" data-reveal src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=75" alt="Coupe texturée">
+    <div class="meta" data-reveal><span data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","21:00"],"5":["10:00","21:00"],"6":["09:00","18:00"]}'></span><span><b>Studio</b> — 9 quai du Nord, 00000 Ville</span><span><b>Tél.</b> — 01 23 45 67 89</span></div>
+  </div>
+</div>
+<div class="marq" aria-hidden="true"><div><span>Coupe ciseaux</span><i>✦</i><span>Skin fade</span><i>✦</i><span>Barbe sculptée</span><i>✦</i><span>Coupe texturée</span><i>✦</i><span>Couleur homme</span><i>✦</i><span>Coupe ciseaux</span><i>✦</i><span>Skin fade</span><i>✦</i><span>Barbe sculptée</span><i>✦</i><span>Coupe texturée</span><i>✦</i><span>Couleur homme</span><i>✦</i></div></div>
+</section>
+
+<section id="coupes" style="padding-top:40px"><div class="wrap">
+  <span class="lbl">La carte · 2026</span><h2 data-reveal>Ce qu’on fait.<br>Et combien ça coûte.</h2>
+  <div class="svc">
+    <div class="row" data-reveal><span class="n">01</span><h3>Coupe signature</h3><p>Diagnostic, coupe, shampooing et coiffage. 45 min.</p><span class="pr">29 €</span><button data-book="Coupe signature">Choisir</button><img class="thumb ph" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=70" alt=""></div>
+    <div class="row" data-reveal><span class="n">02</span><h3>Skin fade</h3><p>Dégradé à blanc, transitions invisibles. 45 min.</p><span class="pr">32 €</span><button data-book="Skin fade">Choisir</button><img class="thumb ph" src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?auto=format&fit=crop&w=400&q=70" alt=""></div>
+    <div class="row" data-reveal><span class="n">03</span><h3>Barbe sculptée</h3><p>Tracé au rasoir, serviette chaude et huile. 25 min.</p><span class="pr">18 €</span><button data-book="Barbe sculptée">Choisir</button><img class="thumb ph" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=400&q=70" alt=""></div>
+    <div class="row" data-reveal><span class="n">04</span><h3>Le duo</h3><p>Coupe signature + barbe sculptée. 1 h.</p><span class="pr">42 €</span><button data-book="Le duo">Choisir</button><img class="thumb ph" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=400&q=70" alt=""></div>
+    <div class="row" data-reveal><span class="n">05</span><h3>Junior</h3><p>Moins de 14 ans. 30 min.</p><span class="pr">18 €</span><button data-book="Junior">Choisir</button><img class="thumb ph" src="https://images.unsplash.com/photo-1593702288056-7927b442d0fa?auto=format&fit=crop&w=400&q=70" alt=""></div>
+  </div>
+</div></section>
+
+<section id="approche" style="background:#fff"><div class="wrap appr">
+  <div data-reveal><span class="lbl">Approche</span><h2>Moins de produit. Plus de coupe.</h2><p style="color:var(--muted);font-size:1.1rem">Une coupe NORD se coiffe en deux minutes le matin. On travaille la forme de votre crâne, la densité et la direction naturelle de vos cheveux, pas une photo trouvée sur Internet.</p></div>
+  <div class="cards">
+    <div class="cd" data-reveal><b data-count="4">0</b>coiffeurs formés aux techniques ciseaux</div>
+    <div class="cd" data-reveal><b>45′</b>par coupe, jamais moins</div>
+    <div class="cd" data-reveal><b data-count="98">0</b>% de clients qui reviennent (exemple)</div>
+    <div class="cd" data-reveal><b>0 €</b>de supplément le soir et le samedi</div>
+  </div>
+</div></section>
+
+<section id="looks"><div class="wrap">
+  <span class="lbl">Lookbook</span><h2 data-reveal>Derniers passages au studio.</h2>
+  <div class="strip">
+    <a data-lightbox href="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=700&q=70" alt=""></a>
+    <a data-lightbox href="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=70" alt=""></a>
+    <a data-lightbox href="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=700&q=70" alt=""></a>
+    <a data-lightbox href="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=700&q=70" alt=""></a>
+    <a data-lightbox href="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?auto=format&fit=crop&w=700&q=70" alt=""></a>
+    <a data-lightbox href="https://images.unsplash.com/photo-1541533848490-bc8115cd6522?auto=format&fit=crop&w=1400&q=80"><img class="ph" loading="lazy" src="https://images.unsplash.com/photo-1541533848490-bc8115cd6522?auto=format&fit=crop&w=700&q=70" alt=""></a>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap faq">
+  <span class="lbl">Questions</span><h2 data-reveal>On vous répond.</h2>
+  <details><summary>Faut-il réserver ?</summary><p>C’est conseillé le soir et le samedi. En journée, nous prenons aussi les clients sans rendez-vous selon les disponibilités.</p></details>
+  <details><summary>Combien de temps dure une coupe ?</summary><p>Comptez 45 minutes pour une coupe signature, shampooing et coiffage compris.</p></details>
+  <details><summary>Quels moyens de paiement ?</summary><p>Carte bancaire, espèces et paiement sans contact.</p></details>
+  <details><summary>Puis-je annuler mon rendez-vous ?</summary><p>Oui, prévenez-nous au moins 2 heures avant par téléphone ou message.</p></details>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="book">
+    <div><span class="lbl">Réservation</span><h2>Votre prochaine coupe.</h2><p style="opacity:.75">Choisissez la prestation et le créneau. Le studio confirme votre rendez-vous par message.</p>
+      <div class="hrs"><div data-day="1"><span>Lun – Mer</span><span>10h – 19h</span></div><div data-day="4"><span>Jeu – Ven</span><span>10h – 21h</span></div><div data-day="6"><span>Samedi</span><span>9h – 18h</span></div><div data-day="0"><span>Dimanche</span><span>Fermé</span></div></div>
+    </div>
+    <div>
+      <form data-booking data-demo data-salon="NORD" data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","21:00"],"5":["10:00","21:00"],"6":["09:00","18:00"]}'>
+        <label class="field full">Prestation<select name="service" required><option value="">Choisir</option><option>Coupe signature</option><option>Skin fade</option><option>Barbe sculptée</option><option>Le duo</option><option>Junior</option></select></label>
+        <label class="field">Date<input type="date" name="date" required></label>
+        <label class="field">Heure<select name="time" required></select></label>
+        <label class="field">Nom<input name="name" required></label>
+        <label class="field">Téléphone<input name="phone" type="tel" required pattern="[0-9 +().-]{8,}"></label>
+        <label class="field full">Une précision ?<textarea name="note" rows="2" placeholder="Ex. je laisse pousser le dessus"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Envoyer la demande <span class="ar">→</span></button></div>
+      </form>
+      <div data-booking-result hidden></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="giant">NORD</div>
+  <div class="fl"><div><a href="#coupes">Coupes</a><a href="#looks">Looks</a><a href="#rdv">Réserver</a><a href="#">Instagram</a></div><span>© <span data-year></span> NORD Studio · Mentions légales</span></div>
+</div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>
