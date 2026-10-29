@@ -1,4 +1,4 @@
-/* Ink Way — comportements communs des sites standards (sans dépendance) */
+/* Inkway — comportements communs des sites standards (sans dépendance) */
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };

@@ -1,4 +1,4 @@
-# Ink Way — sites publiés
+# Inkway — sites publiés
 
 Publication GitHub Pages :
 
