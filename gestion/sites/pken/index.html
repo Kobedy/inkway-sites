@@ -32,7 +32,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.96);color:#fff
 header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{height:46px;width:auto}
+.brand img{height:62px;width:auto}
 .brand b{font-weight:900;font-size:1.45rem;letter-spacing:-.01em;line-height:1}
 .brand small{display:block;font-family:var(--script);font-style:italic;color:var(--accent-l);font-size:.85rem;font-weight:500;margin-top:3px}
 .nav{display:flex;gap:26px;align-items:center;font-weight:600;font-size:.95rem}
@@ -44,6 +44,9 @@ header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .btn svg{width:18px;height:18px;fill:currentColor}
 /* hero */
 .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/real/hero-salon.webp) center 40%/cover no-repeat;filter:grayscale(.35) blur(1.5px);transform:scale(1.04)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,11,.94) 0%,rgba(11,11,11,.82) 45%,rgba(11,11,11,.7) 100%),linear-gradient(0deg,rgba(11,11,11,.9),transparent 35%)}
+.hero>.wrap{position:relative;z-index:1}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:calc(100vh - 110px);padding:50px 0 70px}
 .hero h1{font-weight:900;font-size:clamp(2.9rem,6.4vw,5.6rem);line-height:.95;letter-spacing:-.03em;margin:18px 0 22px}
 .hero h1 .script{font-weight:700;letter-spacing:0}
@@ -56,7 +59,7 @@ header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .hv .ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(185,134,84,.45)}
 .hv .ring.r2{inset:7%;border-color:rgba(185,134,84,.25)}
 .hv .photo{position:absolute;inset:12%;border-radius:50%;overflow:hidden;background:#1a1a1a}
-.hv .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);opacity:.55}
+.hv .photo img{width:100%;height:100%;object-fit:cover;object-position:35% 30%;filter:grayscale(1) contrast(1.1);opacity:.6}
 .hv .logo{position:absolute;inset:22%;display:grid;place-items:center}
 .hv .logo img{width:100%;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
 .hv .tag{position:absolute;background:var(--accent);color:#fff;border-radius:12px;padding:12px 16px;font-weight:800;line-height:1.15;box-shadow:0 20px 40px rgba(0,0,0,.4)}
@@ -97,7 +100,7 @@ h2{font-weight:900;font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1;letter-spa
 .lcard{background:#111;border:1px solid #2a2a2a;border-radius:22px;padding:28px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);position:relative;overflow:hidden}
 .lcard::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 0%,rgba(185,134,84,.25),transparent 50%)}
 .lhead{display:flex;align-items:center;justify-content:space-between;position:relative}
-.lhead .brand img{height:54px}
+.lhead .brand img{height:70px}
 .lhead>span:last-child{font-family:var(--script);font-style:italic;color:var(--accent-l)}
 .stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0 16px;position:relative}
 .stamp{aspect-ratio:1;border-radius:50%;border:2px dashed #4a4a4a;background:none;color:#8d867f;font-weight:800;font-size:1.05rem;cursor:pointer;transition:.2s;display:grid;place-items:center}
@@ -108,7 +111,7 @@ h2{font-weight:900;font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1;letter-spa
 /* salon */
 .salon .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .salon figure{margin:0;position:relative}
-.salon figure img{width:100%;border-radius:18px;aspect-ratio:4/3;object-fit:cover}
+.salon figure img{width:100%;height:auto;border-radius:18px;aspect-ratio:4/3;object-fit:cover}
 .salon figcaption{position:absolute;left:18px;bottom:18px;background:#fff;border-radius:10px;padding:10px 14px;font-size:.88rem;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .welcome{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
 .welcome div{background:var(--cream);border-radius:14px;padding:18px;text-align:center}
@@ -140,6 +143,17 @@ h2{font-weight:900;font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1;letter-spa
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{color:var(--muted);margin:12px 0 0}
 /* pied */
+.reals{background:#fff}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.rgrid a{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#111}
+.rgrid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.rgrid a:hover img{transform:scale(1.05)}
+.rgrid a span{position:absolute;left:10px;bottom:10px;background:rgba(11,11,11,.82);color:#fff;font-size:.78rem;font-weight:700;padding:6px 10px;border-radius:99px}
+.rgrid a.wide{grid-column:span 2;aspect-ratio:auto}
+.rmore{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.inside{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.inside img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px}
+@media(max-width:900px){.rgrid{grid-template-columns:repeat(2,1fr)}}
 footer{background:#000;color:#cfc8c0;padding:70px 0 100px}
 .fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
 footer .brand{color:#fff;margin-bottom:16px}
@@ -157,7 +171,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
  .mbar .btn{padding:13px 8px;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
  [data-totop]{bottom:78px}
 }
-@media(max-width:520px){.perks .wrap{grid-template-columns:1fr}.welcome{grid-template-columns:1fr}.pi{grid-template-columns:1fr auto}.pi button{grid-column:1/-1;justify-self:start}.brand b{font-size:1.2rem}.brand img{height:40px}}
+@media(max-width:520px){.perks .wrap{grid-template-columns:1fr}.welcome{grid-template-columns:1fr}.pi{grid-template-columns:1fr auto}.pi button{grid-column:1/-1;justify-self:start}.brand b{font-size:1.2rem}.brand img{height:52px}}
 </style>
 </head>
 <body>
@@ -167,8 +181,8 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
 </div></div>
 
 <header data-header><div class="wrap hd">
-  <a class="brand" href="#" aria-label="PKEN Coiffure, accueil"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b><small>Hommes</small></span></a>
-  <nav class="nav"><a href="#tarifs">Prestations</a><a href="#fidelite">Fidélité</a><a href="#salon">Le salon</a><a href="#acces">Horaires &amp; accès</a><a href="#rdv">Rendez-vous</a></nav>
+  <a class="brand" href="#" aria-label="PKEN Coiffure, accueil"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b></span></a>
+  <nav class="nav"><a href="#tarifs">Prestations</a><a href="#realisations">Réalisations</a><a href="#fidelite">Fidélité</a><a href="#salon">Le salon</a><a href="#acces">Horaires &amp; accès</a><a href="#rdv">Rendez-vous</a></nav>
   <a class="btn" href="#rdv">Prendre rendez-vous</a>
   <button class="burger" data-nav-toggle aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
 </div></header>
@@ -187,7 +201,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
   </div>
   <div class="hv" data-reveal>
     <span class="ring"></span><span class="ring r2"></span>
-    <div class="photo"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=70" alt=""></div>
+    <div class="photo"><img src="img/real/hero-coiffeur.webp" alt="" width="1080" height="720"></div>
     <div class="logo"><img src="img/pken-logo-blanc.png" alt="Logo PKEN Coiffure"></div>
     <span class="tag t1">Ouvert 7j/7<small>dimanche inclus</small></span>
     <span class="tag t2">Coupe enfant<small>10 €</small></span>
@@ -221,18 +235,26 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
   </div>
 </div></section>
 
+<section class="reals" id="realisations"><div class="wrap">
+  <span class="kick">Réalisations</span>
+  <h2 data-reveal>Le travail du salon, <span class="script" style="color:var(--accent)">en photos.</span></h2>
+  <p class="sub">Dégradés, contours, dessins, barbes : quelques coupes réalisées chez PKEN Coiffure. Touchez une photo pour l’agrandir.</p>
+  <div class="rgrid"><a href="img/real/r-coupe-design-arriere.webp" data-lightbox data-caption="Dégradé & motif · PKEN Coiffure" data-reveal><img src="img/real/r-coupe-design-arriere.webp" alt="Dégradé & motif réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Dégradé & motif</span></a><a href="img/real/r-degrade-profil.webp" data-lightbox data-caption="Dégradé & traits · PKEN Coiffure" data-reveal><img src="img/real/r-degrade-profil.webp" alt="Dégradé & traits réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Dégradé & traits</span></a><a href="img/real/r-portrait-barbe.webp" data-lightbox data-caption="Barbe sculptée · PKEN Coiffure" data-reveal><img src="img/real/r-portrait-barbe.webp" alt="Barbe sculptée réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Barbe sculptée</span></a><a href="img/real/r-design-degrade-lateral.webp" data-lightbox data-caption="Dessin latéral · PKEN Coiffure" data-reveal><img src="img/real/r-design-degrade-lateral.webp" alt="Dessin latéral réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Dessin latéral</span></a><a href="img/real/r-degrade-vue-arriere.webp" data-lightbox data-caption="Dégradé à blanc · PKEN Coiffure" data-reveal><img src="img/real/r-degrade-vue-arriere.webp" alt="Dégradé à blanc réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Dégradé à blanc</span></a><a href="img/real/r-motif-rasage-lateral.webp" data-lightbox data-caption="Motif rasé · PKEN Coiffure" data-reveal><img src="img/real/r-motif-rasage-lateral.webp" alt="Motif rasé réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Motif rasé</span></a><a href="img/real/r-coupe-en-cours-degrade.webp" data-lightbox data-caption="Coupe en cours · PKEN Coiffure" data-reveal><img src="img/real/r-coupe-en-cours-degrade.webp" alt="Coupe en cours réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Coupe en cours</span></a><a href="img/real/r-portrait-apres-coupe.webp" data-lightbox data-caption="Client satisfait · PKEN Coiffure" data-reveal><img src="img/real/r-portrait-apres-coupe.webp" alt="Client satisfait réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Client satisfait</span></a><a href="img/real/r-degrade-afro-arriere.webp" data-lightbox data-caption="Afro dégradé · PKEN Coiffure" data-reveal><img src="img/real/r-degrade-afro-arriere.webp" alt="Afro dégradé réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Afro dégradé</span></a><a href="img/real/r-degrade-aux-ciseaux.webp" data-lightbox data-caption="Coupe aux ciseaux · PKEN Coiffure" data-reveal><img src="img/real/r-degrade-aux-ciseaux.webp" alt="Coupe aux ciseaux réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Coupe aux ciseaux</span></a><a href="img/real/r-coupe-arriere-nuque.webp" data-lightbox data-caption="Nuque nette · PKEN Coiffure" data-reveal><img src="img/real/r-coupe-arriere-nuque.webp" alt="Nuque nette réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Nuque nette</span></a><a href="img/real/r-coupe-afro-vue-arriere.webp" data-lightbox data-caption="Afro & contours · PKEN Coiffure" data-reveal><img src="img/real/r-coupe-afro-vue-arriere.webp" alt="Afro & contours réalisé chez PKEN Coiffure à Alfortville" loading="lazy" width="382" height="510"><span>Afro & contours</span></a></div>
+  <div class="rmore"><a class="btn" href="#rdv">Je veux cette coupe</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&query=PKEN+Coiffure+Alfortville" target="_blank" rel="noopener">Plus de photos sur Google</a></div>
+</div></section>
+
 <section class="fid" id="fidelite"><div class="wrap">
   <div><span class="kick" style="color:var(--accent-l)">Carte de fidélité</span><h2 data-reveal>9 coupes,<br>la 10<sup>e</sup> est <span class="script">offerte.</span></h2>
     <p class="sub">Demandez votre carte au salon. À chaque coupe, un tampon. Après neuf coupes, la dixième est pour nous. Touchez les cases pour voir le principe.</p></div>
   <div class="lcard" data-loyalty data-reveal>
-    <div class="lhead"><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b><small>Hommes</small></span></span><span>Carte de fidélité</span></div>
+    <div class="lhead"><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b></span></span><span>Carte de fidélité</span></div>
     <div class="stamps"><button class="stamp">1</button><button class="stamp">2</button><button class="stamp">3</button><button class="stamp">4</button><button class="stamp">5</button><button class="stamp">6</button><button class="stamp">7</button><button class="stamp">8</button><button class="stamp">9</button><button class="stamp gift">10<br>offerte</button></div>
     <p data-loyalty-out>9 coupes, la 10e offerte</p>
   </div>
 </div></section>
 
 <section class="salon" id="salon"><div class="wrap">
-  <figure data-reveal><img src="img/facade.jpg" alt="Façade du salon PKEN Coiffure, 2 bis boulevard Carnot à Alfortville"><figcaption>2 bis boulevard Carnot · Alfortville</figcaption></figure>
+  <div><figure data-reveal><img src="img/real/facade.webp" alt="Façade du salon PKEN Coiffure, 2 bis boulevard Carnot à Alfortville" width="1080" height="720"><figcaption>2 bis boulevard Carnot · Alfortville</figcaption></figure><div class="inside"><a href="img/real/interieur-postes.webp" data-lightbox data-caption="Les postes de coupe"><img src="img/real/interieur-postes.webp" alt="Postes de coupe du salon PKEN Coiffure" loading="lazy"></a><a href="img/real/zone-bacs.webp" data-lightbox data-caption="Le bac à shampoing"><img src="img/real/zone-bacs.webp" alt="Bac à shampoing du salon PKEN Coiffure" loading="lazy"></a></div></div>
   <div><span class="kick">Le salon</span><h2 data-reveal>Un salon de quartier, <span class="script" style="color:var(--accent)">accueillant.</span></h2>
     <p class="sub">PKEN Coiffure vous reçoit au 2 bis boulevard Carnot à Alfortville, 7 jours sur 7. On prend le temps de vous écouter, on soigne la coupe, et on vous sert à boire en attendant.</p>
     <div class="welcome">
@@ -292,7 +314,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
 
 <footer><div class="wrap">
   <div class="fg">
-    <div><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b><small>Hommes</small></span></span><p>Salon de coiffure à Alfortville. Coupe homme, barbe, coupe enfant. Eau, café et thé offerts.</p></div>
+    <div><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b></span></span><p>Salon de coiffure à Alfortville. Coupe homme, barbe, coupe enfant. Eau, café et thé offerts.</p></div>
     <div><h4>Contact</h4><a href="tel:+33695949808">06 95 94 98 08</a><a href="mailto:pkencoiffure@gmail.com">pkencoiffure@gmail.com</a><a href="https://www.google.com/maps/search/?api=1&query=PKEN+Coiffure+Alfortville" target="_blank" rel="noopener">2 bis bd Carnot, 94140 Alfortville</a></div>
     <div><h4>Le salon</h4><a href="#tarifs">Prestations &amp; tarifs</a><a href="#fidelite">Carte de fidélité</a><a href="#rdv">Rendez-vous</a><a href="https://www.google.com/maps/search/?api=1&query=PKEN+Coiffure+Alfortville" target="_blank" rel="noopener">Laisser un avis Google</a></div>
   </div>
