@@ -44,6 +44,9 @@ header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .btn svg{width:18px;height:18px;fill:currentColor}
 /* hero */
 .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/real/hero-salon.webp) center 40%/cover no-repeat;filter:grayscale(.35) blur(1.5px);transform:scale(1.04)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,11,.94) 0%,rgba(11,11,11,.82) 45%,rgba(11,11,11,.7) 100%),linear-gradient(0deg,rgba(11,11,11,.9),transparent 35%)}
+.hero>.wrap{position:relative;z-index:1}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:calc(100vh - 110px);padding:50px 0 70px}
 .hero h1{font-weight:900;font-size:clamp(2.9rem,6.4vw,5.6rem);line-height:.95;letter-spacing:-.03em;margin:18px 0 22px}
 .hero h1 .script{font-weight:700;letter-spacing:0}
@@ -178,7 +181,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
 </div></div>
 
 <header data-header><div class="wrap hd">
-  <a class="brand" href="#" aria-label="PKEN Coiffure, accueil"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b><small>Hommes</small></span></a>
+  <a class="brand" href="#" aria-label="PKEN Coiffure, accueil"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b></span></a>
   <nav class="nav"><a href="#tarifs">Prestations</a><a href="#realisations">Réalisations</a><a href="#fidelite">Fidélité</a><a href="#salon">Le salon</a><a href="#acces">Horaires &amp; accès</a><a href="#rdv">Rendez-vous</a></nav>
   <a class="btn" href="#rdv">Prendre rendez-vous</a>
   <button class="burger" data-nav-toggle aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
@@ -311,7 +314,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
 
 <footer><div class="wrap">
   <div class="fg">
-    <div><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b><small>Hommes</small></span></span><p>Salon de coiffure à Alfortville. Coupe homme, barbe, coupe enfant. Eau, café et thé offerts.</p></div>
+    <div><span class="brand"><img src="img/pken-logo-blanc.png" alt=""><span><b>PKEN Coiffure</b></span></span><p>Salon de coiffure à Alfortville. Coupe homme, barbe, coupe enfant. Eau, café et thé offerts.</p></div>
     <div><h4>Contact</h4><a href="tel:+33695949808">06 95 94 98 08</a><a href="mailto:pkencoiffure@gmail.com">pkencoiffure@gmail.com</a><a href="https://www.google.com/maps/search/?api=1&query=PKEN+Coiffure+Alfortville" target="_blank" rel="noopener">2 bis bd Carnot, 94140 Alfortville</a></div>
     <div><h4>Le salon</h4><a href="#tarifs">Prestations &amp; tarifs</a><a href="#fidelite">Carte de fidélité</a><a href="#rdv">Rendez-vous</a><a href="https://www.google.com/maps/search/?api=1&query=PKEN+Coiffure+Alfortville" target="_blank" rel="noopener">Laisser un avis Google</a></div>
   </div>
