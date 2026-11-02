@@ -202,16 +202,27 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
 .social a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 .social svg{width:20px;height:20px;fill:currentColor}
 .legal{border-top:1px solid #222;margin-top:40px;padding-top:20px;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.mbar{display:none}
+/* bouton WhatsApp flottant (mobile) */
+.wa-fab{display:none;position:fixed;right:16px;bottom:18px;z-index:46;align-items:center;gap:10px;text-decoration:none}
+.wa-ico{position:relative;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#7ef59a 0%,#3ad366 32%,#22b24c 68%,#128c3e 100%);
+  box-shadow:inset 0 3px 6px rgba(255,255,255,.55),inset 0 -6px 10px rgba(0,0,0,.25),0 6px 0 #0d7a33,0 14px 24px rgba(0,0,0,.4);
+  transition:transform .15s,box-shadow .15s}
+.wa-ico::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(37,211,102,.55);animation:wa-pulse 2.2s ease-out infinite}
+.wa-ico svg{width:34px;height:34px;fill:#fff;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+.wa-fab:active .wa-ico{transform:translateY(4px);box-shadow:inset 0 3px 6px rgba(255,255,255,.55),inset 0 -6px 10px rgba(0,0,0,.25),0 2px 0 #0d7a33,0 6px 12px rgba(0,0,0,.35)}
+.wa-bubble{background:#fff;color:#0b0b0b;font-weight:800;font-size:.86rem;padding:9px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3);white-space:nowrap}
+@keyframes wa-pulse{0%{transform:scale(.92);opacity:1}100%{transform:scale(1.35);opacity:0}}
+@media (prefers-reduced-motion:reduce){.wa-ico::before{animation:none;opacity:0}}
 @media(max-width:960px){
  .hero .wrap,.tarifs,.fid .wrap,.salon .wrap,.rdv .wrap,.acces .wrap{grid-template-columns:1fr}
  .hero .wrap{min-height:auto;padding:30px 0 60px}.hv{justify-self:center;max-width:420px}
  .perks .wrap{grid-template-columns:1fr 1fr}.perk{border-right:0;border-bottom:1px solid var(--line)}
  .fg{grid-template-columns:1fr}.hd .btn{display:none}section{padding:70px 0}
  .rdv .panel{padding:22px}.rdv form{grid-template-columns:1fr}
- .mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;z-index:45}
- .mbar .btn{padding:13px 8px;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
- [data-totop]{bottom:78px}
+ .wa-fab{display:flex}
+ .hd .hd-tel{display:inline-flex;width:44px;height:44px;padding:0;font-size:0;gap:0;border-radius:50%;margin-left:auto}.hd .hd-tel svg{width:20px;height:20px}
+ [data-totop]{bottom:100px;right:22px}
 }
 @media(max-width:520px){.perks .wrap{grid-template-columns:1fr}.welcome{grid-template-columns:1fr}.pi{grid-template-columns:1fr auto}.pi button{grid-column:1/-1;justify-self:start}.brand b{font-size:1.2rem}.brand img{height:52px}}
 </style>
@@ -387,7 +398,7 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
   <div class="legal"><span>© <span data-year></span> PKEN Coiffure · Tous droits réservés</span><span><a href="mentions-legales.html" style="display:inline">Mentions légales</a> · <a href="confidentialite.html" style="display:inline">Confidentialité</a></span></div>
 </div></footer>
 
-<div class="mbar"><a class="btn w" href="tel:+33695949808" style="border-color:var(--ink);color:var(--ink)">Appeler</a><a class="btn o" style="background:#0b0b0b;color:#fff;border-color:#0b0b0b" href="https://wa.me/33695949808" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="#rdv">Rendez-vous</a></div>
+<a class="wa-fab" href="https://wa.me/33695949808?text=Bonjour%20PKEN%20Coiffure%2C%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20coupe.%20Quelles%20sont%20vos%20prochaines%20disponibilit%C3%A9s%20%3F%20Merci%20%21" target="_blank" rel="noopener" aria-label="Réserver une coupe sur WhatsApp"><span class="wa-bubble">Réserver sur WhatsApp</span><span class="wa-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span></a>
 <button data-totop aria-label="Haut de page">↑</button>
 <script src="assets/site.js"></script>
 </body>
