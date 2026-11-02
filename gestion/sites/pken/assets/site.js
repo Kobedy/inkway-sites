@@ -12,8 +12,17 @@
       b.setAttribute("aria-expanded", open ? "true" : "false");
     });
   });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+      document.body.classList.remove("nav-open");
+      $$("[data-nav-toggle]").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+    }
+  });
   $$(".nav a[href^='#'], [data-close-nav]").forEach(function (a) {
-    a.addEventListener("click", function () { document.body.classList.remove("nav-open"); });
+    a.addEventListener("click", function () {
+      document.body.classList.remove("nav-open");
+      $$("[data-nav-toggle]").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+    });
   });
   var header = $("[data-header]");
   var onScroll = function () {
