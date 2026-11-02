@@ -89,7 +89,20 @@ header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.35)}
 .hv .logo img{width:100%;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
 .hv .tag{position:absolute;background:var(--accent);color:#fff;border-radius:12px;padding:12px 16px;font-weight:800;line-height:1.15;box-shadow:0 20px 40px rgba(0,0,0,.4)}
 .hv .tag small{display:block;font-weight:500;opacity:.85;font-size:.78rem}
-.hv .t1{left:0;top:16%}.hv .t2{right:2%;bottom:12%;background:#fff;color:var(--ink)}
+.hv .t2{background:#fff;color:var(--ink)}
+/* animation : cercles qui tournent, étiquettes en orbite autour de la photo */
+.hv .ring{animation:hv-spin 28s linear infinite}
+.hv .ring.r2{animation-duration:20s;animation-direction:reverse}
+.hv .ring::after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--accent-l);box-shadow:0 0 14px var(--accent-l)}
+.hv .ring.r2::after{top:auto;bottom:-4px;width:8px;height:8px;margin-left:-4px;background:#fff;box-shadow:0 0 10px rgba(255,255,255,.8)}
+.hv .orbit{position:absolute;inset:9%;border-radius:50%;animation:hv-spin 36s linear infinite;pointer-events:none}
+.hv .o1{animation-delay:-4.5s}.hv .o2{animation-delay:-22.5s}
+.hv .opos{position:absolute;top:0;left:50%;transform:translate(-50%,-50%)}
+.hv .orbit .tag{position:static;display:block;white-space:nowrap;animation:hv-spin 36s linear infinite reverse}
+.hv .o1 .tag{animation-delay:-4.5s}.hv .o2 .tag{animation-delay:-22.5s}
+@keyframes hv-spin{to{transform:rotate(360deg)}}
+@media (max-width:760px){.hv .orbit{inset:16%}.hv .orbit .tag{padding:8px 11px;font-size:.84rem;border-radius:10px}.hv .orbit .tag small{font-size:.7rem}}
+@media (prefers-reduced-motion:reduce){.hv .ring,.hv .orbit,.hv .orbit .tag{animation:none}.hv .o1{transform:rotate(-45deg)}.hv .o1 .tag{transform:rotate(45deg)}.hv .o2{transform:rotate(135deg)}.hv .o2 .tag{transform:rotate(-135deg)}}
 /* bandeau atouts */
 .perks{background:var(--cream)}
 .perks .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
@@ -231,8 +244,8 @@ footer a{text-decoration:none;display:block;margin:6px 0}footer a:hover{color:va
     <span class="ring"></span><span class="ring r2"></span>
     <div class="photo"><img src="img/real/hero-coiffeur.webp" alt="" width="1080" height="720"></div>
     <div class="logo"><img src="img/pken-logo-blanc.png" alt="Logo PKEN Coiffure"></div>
-    <span class="tag t1">Ouvert 7j/7<small>dimanche inclus</small></span>
-    <span class="tag t2">Coupe enfant<small>10 €</small></span>
+    <div class="orbit o1" aria-hidden="true"><div class="opos"><span class="tag t1">Ouvert 7j/7<small>dimanche inclus</small></span></div></div>
+    <div class="orbit o2" aria-hidden="true"><div class="opos"><span class="tag t2">Coupe enfant<small>10 €</small></span></div></div>
   </div>
 </div></section>
 
