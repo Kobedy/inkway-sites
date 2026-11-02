@@ -1,5 +1,6 @@
 /* PKEN Coiffure — pages Mentions légales et Confidentialité */
 :root{--bg:#ffffff;--fg:#0b0b0b;--accent:#8a5a32;--accent-l:#b98654;--cream:#f5efe8;--muted:#6b6560;--line:rgba(11,11,11,.12);--font-d:"Archivo",system-ui,sans-serif;--font-b:"Archivo",system-ui,sans-serif}
+html,body{overflow-x:clip}
 body{font-size:16.5px}
 .lg-head{background:#0b0b0b;color:#fff;position:sticky;top:0;z-index:20}
 .lg-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}

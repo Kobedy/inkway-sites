@@ -21,6 +21,8 @@
 </script>
 <style>
 :root{--bg:#ffffff;--fg:#0b0b0b;--ink:#0b0b0b;--paper:#ffffff;--accent:#8a5a32;--accent-l:#b98654;--cream:#f5efe8;--on-accent:#fff;--muted:#6b6560;--line:rgba(11,11,11,.12);--font-d:"Archivo",system-ui,sans-serif;--font-b:"Archivo",system-ui,sans-serif;--script:"Playfair Display",Georgia,serif;--nav-bg:#0b0b0b;--nav-fg:#fff;--r-in:10px;--in-bg:#fff}
+/* overflow-x:hidden (socle) empêche l’en-tête collant : clip coupe le débordement sans créer de zone de défilement */
+html,body{overflow-x:clip}
 body{font-size:16.5px}
 .script{font-family:var(--script);font-style:italic;font-weight:500;color:var(--accent-l)}
 /* barre haute */
