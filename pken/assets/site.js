@@ -218,28 +218,33 @@
     var summary = function () {
       var v = function (n) { var f = form.elements[n]; return f ? (f.value || "").trim() : ""; };
       var d = v("date") ? new Date(v("date") + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "";
+      var sel = form.elements.service, opt = sel && sel.tagName === "SELECT" ? sel.options[sel.selectedIndex] : null;
+      var price = opt && opt.dataset.price ? opt.dataset.price : "";
       $$("[data-sum]", form.parentElement).forEach(function (el) {
-        var k = el.dataset.sum; el.textContent = k === "date" ? d : v(k) || "—";
+        var k = el.dataset.sum; el.textContent = k === "date" ? d || "—" : k === "price" ? price || "—" : v(k) || "—";
       });
-      return { service: v("service"), date: d, time: v("time"), name: v("name"), phone: v("phone"), note: v("note") };
+      $$("[data-sum-row]", form.parentElement).forEach(function (el) { el.hidden = !v(el.dataset.sumRow); });
+      return { service: v("service"), price: price, date: d, time: v("time"), name: v("name"), phone: v("phone"), note: v("note") };
     };
     form.addEventListener("change", summary);
+    form.addEventListener("input", summary);
+    summary();
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var s = summary();
-      var msg = "Bonjour " + (form.dataset.salon || "") + ", je souhaite un rendez-vous :\n• Prestation : " + s.service +
-        "\n• Date : " + s.date + " à " + s.time + "\n• Nom : " + s.name + "\n• Téléphone : " + s.phone + (s.note ? "\n• Précision : " + s.note : "") +
+      var msg = "Bonjour " + (form.dataset.salon || "") + ", je souhaite un rendez-vous :\n• Prestation : " + s.service + (s.price ? " (" + s.price + ")" : "") +
+        "\n• Date : " + s.date + "\n• Créneau : " + s.time + "\n• Nom : " + s.name + "\n• Téléphone : " + s.phone + (s.note ? "\n• Précision : " + s.note : "") +
         "\nMerci de me confirmer le créneau.";
       var out = $("[data-booking-result]", form.parentElement) || $("[data-booking-result]");
       var wa = form.dataset.whatsapp ? "https://wa.me/" + form.dataset.whatsapp + "?text=" + encodeURIComponent(msg) : "";
       if (out) {
         out.hidden = false;
-        out.innerHTML = '<b>Demande prête ✓</b><p>' + s.service + " · " + s.date + " à " + s.time + "</p>" +
+        out.innerHTML = '<b>Demande prête ✓</b><p>' + s.service + (s.price ? " · " + s.price : "") + " · " + s.date + " à " + s.time + "</p>" +
           (form.dataset.demo !== undefined
             ? "<p class='small'>Modèle de démonstration : aucune demande n’est envoyée. Sur le site du client, la demande part vers son WhatsApp ou son e-mail.</p>"
             : "<p class='small'>Votre demande s’ouvre dans WhatsApp. Le salon vous confirme le créneau en retour.</p>") +
-          (wa && form.dataset.demo === undefined ? '<a class="btn" target="_blank" rel="noopener" href="' + wa + '">Envoyer sur WhatsApp</a>' : "");
+          (wa && form.dataset.demo === undefined ? '<a class="btn" target="_blank" rel="noopener" href="' + wa + '">Envoyer ma demande</a>' : "");
         out.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
       if (wa && form.dataset.demo === undefined) window.open(wa, "_blank", "noopener");
