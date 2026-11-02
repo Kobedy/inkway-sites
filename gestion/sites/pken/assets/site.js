@@ -234,20 +234,14 @@
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var s = summary();
       var msg = "Bonjour " + (form.dataset.salon || "") + ", je souhaite un rendez-vous :\n• Prestation : " + s.service + (s.price ? " (" + s.price + ")" : "") +
-        "\n• Date : " + s.date + "\n• Créneau : " + s.time + "\n• Nom : " + s.name + "\n• Téléphone : " + s.phone + (s.note ? "\n• Précision : " + s.note : "") +
+        "\n• Date : " + s.date + "\n• Créneau : " + s.time + "\n• Nom : " + s.name + "\n• Téléphone : ce numéro WhatsApp" + (s.note ? "\n• Précision : " + s.note : "") +
         "\nMerci de me confirmer le créneau.";
-      var out = $("[data-booking-result]", form.parentElement) || $("[data-booking-result]");
-      var wa = form.dataset.whatsapp ? "https://wa.me/" + form.dataset.whatsapp + "?text=" + encodeURIComponent(msg) : "";
-      if (out) {
-        out.hidden = false;
-        out.innerHTML = '<b>Demande prête ✓</b><p>' + s.service + (s.price ? " · " + s.price : "") + " · " + s.date + " à " + s.time + "</p>" +
-          (form.dataset.demo !== undefined
-            ? "<p class='small'>Modèle de démonstration : aucune demande n’est envoyée. Sur le site du client, la demande part vers son WhatsApp ou son e-mail.</p>"
-            : "<p class='small'>Votre demande s’ouvre dans WhatsApp. Le salon vous confirme le créneau en retour.</p>") +
-          (wa && form.dataset.demo === undefined ? '<a class="btn" target="_blank" rel="noopener" href="' + wa + '">Envoyer ma demande</a>' : "");
-        out.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-      if (wa && form.dataset.demo === undefined) window.open(wa, "_blank", "noopener");
+      if (form.dataset.demo !== undefined || !form.dataset.whatsapp) return;
+      var wa = "https://wa.me/" + form.dataset.whatsapp + "?text=" + encodeURIComponent(msg);
+      // Ouvre WhatsApp directement (nouvel onglet ; si le navigateur le bloque, dans la page).
+      var w = window.open(wa, "_blank");
+      if (w) w.opener = null;
+      else location.href = wa;
     });
   });
 
