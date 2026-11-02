@@ -194,6 +194,8 @@
         if (sel.tagName === "SELECT") sel.value = b.dataset.book;
         else $$("input[name=service]", form).forEach(function (r) { r.checked = r.value === b.dataset.book; });
         form.dispatchEvent(new Event("change"));
+        var f = b.dataset.focus && form.elements[b.dataset.focus];
+        if (f) setTimeout(function () { try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }, 650);
       });
     });
 
