@@ -1,0 +1,85 @@
+INKWAY PKEN COIFFURE — THÈME WORDPRESS
+======================================
+
+Thème du site de PKEN Coiffure (Alfortville), reprise fidèle du site validé :
+prestations et tarifs, réalisations, avis Google, carte de fidélité, rendez-vous
+par WhatsApp, horaires dynamiques (ouvert / fermé), plan d’accès, FAQ et pages légales.
+Fonctionne sans aucune extension ; Gutenberg et Elementor (gratuit ou Pro) sont pris en charge.
+
+Configuration requise : WordPress 6.0 ou plus (testé jusqu’à 6.7), PHP 7.4 ou plus.
+
+
+1. INSTALLATION
+---------------
+1. Tableau de bord › Apparence › Thèmes › Ajouter › Téléverser un thème.
+2. Choisissez le fichier inkway-pken.zip, cliquez sur « Installer maintenant », puis « Activer ».
+3. À l’activation, le thème crée automatiquement (sans rien écraser d’existant) :
+   - les pages « Accueil », « Mentions légales » et « Politique de confidentialité » (avec leur contenu) ;
+   - la page d’accueil statique (Réglages › Lecture) ;
+   - les menus « Principal » (en-tête) et « Pied de page ».
+4. Réglages › Permaliens : choisissez « Titre de la publication », puis enregistrez.
+
+
+2. RÉGLAGES DU SALON (Apparence › Personnaliser › Salon PKEN Coiffure)
+---------------------------------------------------------------------
+Tout le site lit ces réglages : changez-les ici, jamais dans le code.
+- Coordonnées : nom, téléphone, WhatsApp (format international sans +, ex. 33695949808),
+  e-mail, adresse, code postal, ville. Le numéro WhatsApp reçoit les demandes du formulaire.
+- Horaires : au format JSON, jour → [ouverture, fermeture] ; 0 = dimanche, 1 = lundi … 6 = samedi.
+  Exemple : {"1":["10:00","20:00"],"2":["10:00","20:00"],"0":["11:30","18:30"]}
+  Retirez un jour pour l’afficher « Fermé ». Le statut « Ouvert maintenant » se calcule tout seul.
+- Prestations et tarifs : une prestation par ligne, « Nom | Prix | Description ».
+  Ajoutez « | rdv » à la fin pour une prestation proposée seulement dans le formulaire
+  (ex. « Coupe homme + barbe | 19 € | Formule complète | rdv »).
+  Les prix se mettent à jour partout : accueil, carte des prestations, formulaire et récapitulatif.
+- Réseaux sociaux et avis Google : Facebook, Instagram (laisser vide pour masquer l’icône),
+  note Google, nombre d’avis, lien « Laisser un avis », lien « Voir tous les avis ».
+- Photos des réalisations : identifiants des images de la Médiathèque séparés par des virgules
+  (Médias › cliquer sur une image : l’identifiant apparaît dans l’adresse « item=… »).
+  La légende de chaque image s’affiche sur la photo. Laisser vide = photos livrées avec le thème.
+- Société et référencement : raison sociale, SIRET, description pour Google.
+- Identité du site : logo (sinon le logo blanc du salon) et icône du site.
+
+
+3. MODIFIER LES TEXTES ET LES PHOTOS DE L’ACCUEIL
+------------------------------------------------
+Tant que la page « Accueil » est vide, le site affiche la mise en page validée.
+Pour la modifier vous-même, au choix :
+
+A. Avec Gutenberg (éditeur de blocs)
+   Pages › Accueil › « + » › Compositions › catégorie « PKEN Coiffure ».
+   Insérez « Accueil complet (toutes les sections) » ou les sections une par une.
+   Les textes (titres, paragraphes, FAQ) se modifient directement ; la carte des tarifs,
+   la galerie, le formulaire et les horaires restent reliés au Customizer.
+
+B. Avec Elementor
+   1. Installez et activez Elementor.
+   2. Modèles › Modèles enregistrés › Importer des modèles › fichier elementor/inkway-pken-accueil.json
+      (dans le dossier du thème ; il est aussi fourni à côté du fichier zip).
+   3. Pages › Accueil › Modifier avec Elementor › icône dossier › Mes modèles › « PKEN Coiffure — Accueil » › Insérer.
+   4. Attributs de la page : gabarit « Pleine largeur Elementor ».
+   Le modèle utilise les widgets natifs (Titre, Texte, Image, Bouton, Galerie, Liste d’icônes,
+   Accordéon, Google Maps) ; le formulaire de rendez-vous est le widget « Code court » [pken_rendez_vous].
+   Elementor Pro : les emplacements Theme Builder (en-tête, pied de page, contenu, archives) sont pris en charge.
+
+Codes courts disponibles : [pken_rendez_vous], [pken_tarifs], [pken_galerie], [pken_horaires],
+[pken_section nom="hero|atouts|tarifs|realisations|avis|fidelite|salon|rendez-vous|horaires-acces|faq"].
+
+
+4. GABARITS DE PAGE
+-------------------
+- Par défaut : mise en page des pages légales (titre, date de mise à jour, texte).
+- « Pleine largeur Elementor » : en-tête et pied de page du site, contenu sur toute la largeur.
+- « Canevas » : sans en-tête ni pied de page.
+
+
+5. À COMPLÉTER AVANT LA MISE EN LIGNE
+-------------------------------------
+- Mentions légales : rubrique « Hébergeur » (raison sociale, adresse, téléphone).
+- Compte Instagram du salon (Customizer).
+- Lien direct « Laisser un avis » de la fiche Google, une fois la fiche validée (Customizer).
+- Vérifier la note et le nombre d’avis Google affichés.
+
+
+Thème réalisé par Inkway — licence GPL v2 ou ultérieure.
+Polices Archivo et Playfair Display (SIL Open Font License), hébergées dans le thème.

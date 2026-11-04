@@ -1,0 +1,1164 @@
+{
+ "version": "0.4",
+ "title": "PKEN Coiffure — Accueil",
+ "type": "page",
+ "content": [
+  {
+   "id": "1ac826a",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#0b0b0b"
+   },
+   "elements": [
+    {
+     "id": "6fce484",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "3087743",
+       "elType": "widget",
+       "settings": {
+        "title": "Ouvert 7 jours sur 7",
+        "header_size": "span",
+        "title_color": "#b98654",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "2d10267",
+       "elType": "widget",
+       "settings": {
+        "title": "Votre coiffeur à <i style=\"font-family:Playfair Display,serif;color:#b98654\">Alfortville.</i>",
+        "header_size": "h1",
+        "title_color": "#ffffff",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "06d7e80",
+       "elType": "widget",
+       "settings": {
+        "editor": "<p>Coupe homme, barbe et coupe enfant, à deux pas du boulevard Carnot. Un accueil convivial, des prix clairs et un café qui vous attend.</p>",
+        "text_color": "#cfc8c0"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "5da846a",
+       "elType": "widget",
+       "settings": {
+        "text": "Prendre rendez-vous",
+        "link": {
+         "url": "#rdv",
+         "is_external": false,
+         "nofollow": false
+        },
+        "background_color": "#8a5a32",
+        "button_text_color": "#ffffff",
+        "border_border": "",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "8",
+         "right": "8",
+         "bottom": "8",
+         "left": "8",
+         "isLinked": true
+        },
+        "typography_typography": "custom",
+        "typography_font_weight": "800",
+        "size": "md"
+       },
+       "elements": [],
+       "widgetType": "button"
+      },
+      {
+       "id": "b682575",
+       "elType": "widget",
+       "settings": {
+        "icon_list": [
+         {
+          "_id": "32c3bb8",
+          "text": "Coupe homme 12 €",
+          "selected_icon": {
+           "value": "fas fa-cut",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "1e3c29b",
+          "text": "Barbe 7 €",
+          "selected_icon": {
+           "value": "fas fa-check",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "6217927",
+          "text": "Eau, café & thé offerts",
+          "selected_icon": {
+           "value": "fas fa-mug-hot",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "3c8eb5b",
+          "text": "10e coupe offerte",
+          "selected_icon": {
+           "value": "fas fa-gift",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "icon_color": "#8a5a32",
+        "text_color": "#ffffff",
+        "space_between": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "widgetType": "icon-list"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "78dcb74",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "ec87a17",
+       "elType": "widget",
+       "settings": {
+        "image": {
+         "url": "https://kobedy.github.io/inkway-sites/pken/img/real/hero-coiffeur.webp",
+         "id": "",
+         "alt": "Coiffeur au travail chez PKEN Coiffure"
+        },
+        "image_size": "large",
+        "image_border_radius": {
+         "unit": "px",
+         "top": "16",
+         "right": "16",
+         "bottom": "16",
+         "left": "16",
+         "isLinked": true
+        }
+       },
+       "elements": [],
+       "widgetType": "image"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "1a278f6",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "tarifs"
+   },
+   "elements": [
+    {
+     "id": "4f7fd63",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "f21345d",
+       "elType": "widget",
+       "settings": {
+        "title": "Prestations & tarifs",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "2cce803",
+       "elType": "widget",
+       "settings": {
+        "title": "Des prix clairs, <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">affichés.</i>",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "8a39d5e",
+       "elType": "widget",
+       "settings": {
+        "editor": "<p>Choisissez votre prestation, demandez votre créneau : le salon vous confirme le rendez-vous.</p>",
+        "text_color": "#6b6560"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "e3772a0",
+       "elType": "widget",
+       "settings": {
+        "icon_list": [
+         {
+          "_id": "0853964",
+          "text": "Coupe homme — coupe et finitions · 12 €",
+          "selected_icon": {
+           "value": "fas fa-cut",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "b50af03",
+          "text": "Barbe — taille et contours · 7 €",
+          "selected_icon": {
+           "value": "fas fa-cut",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "b971722",
+          "text": "Coupe enfant — pour les plus jeunes · 10 €",
+          "selected_icon": {
+           "value": "fas fa-child",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "f244f58",
+          "text": "Teinture — tarif selon la prestation · dès 10 €",
+          "selected_icon": {
+           "value": "fas fa-tint",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "d669cbe",
+          "text": "Shampoing — en complément de la coupe · 5 €",
+          "selected_icon": {
+           "value": "fas fa-shower",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "icon_color": "#8a5a32",
+        "text_color": "#0b0b0b",
+        "space_between": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "widgetType": "icon-list"
+      },
+      {
+       "id": "7702172",
+       "elType": "widget",
+       "settings": {
+        "text": "Réserver une prestation",
+        "link": {
+         "url": "#rdv",
+         "is_external": false,
+         "nofollow": false
+        },
+        "background_color": "#8a5a32",
+        "button_text_color": "#ffffff",
+        "border_border": "",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "8",
+         "right": "8",
+         "bottom": "8",
+         "left": "8",
+         "isLinked": true
+        },
+        "typography_typography": "custom",
+        "typography_font_weight": "800",
+        "size": "md"
+       },
+       "elements": [],
+       "widgetType": "button"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "15c0c8e",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "realisations"
+   },
+   "elements": [
+    {
+     "id": "9df4696",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "3dbdde1",
+       "elType": "widget",
+       "settings": {
+        "title": "Réalisations",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "31ca376",
+       "elType": "widget",
+       "settings": {
+        "title": "Le travail du salon, <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">en photos.</i>",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "6e4d58e",
+       "elType": "widget",
+       "settings": {
+        "editor": "<p>Dégradés, contours, dessins, barbes : quelques coupes réalisées chez PKEN Coiffure.</p>",
+        "text_color": "#6b6560"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "72e3102",
+       "elType": "widget",
+       "settings": {
+        "wp_gallery": [
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-coupe-design-arriere.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-degrade-profil.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-portrait-barbe.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-design-degrade-lateral.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-degrade-vue-arriere.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-motif-rasage-lateral.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-coupe-en-cours-degrade.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-portrait-apres-coupe.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-degrade-afro-arriere.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-degrade-aux-ciseaux.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-coupe-arriere-nuque.webp"
+         },
+         {
+          "id": "",
+          "url": "https://kobedy.github.io/inkway-sites/pken/img/real/r-coupe-afro-vue-arriere.webp"
+         }
+        ],
+        "thumbnail_size": "medium_large",
+        "gallery_columns": "4",
+        "gallery_link": "file",
+        "open_lightbox": "yes",
+        "image_spacing": "custom",
+        "image_spacing_custom": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "widgetType": "image-gallery"
+      },
+      {
+       "id": "75dff6c",
+       "elType": "widget",
+       "settings": {
+        "text": "Je veux une coupe",
+        "link": {
+         "url": "#rdv",
+         "is_external": false,
+         "nofollow": false
+        },
+        "background_color": "#8a5a32",
+        "button_text_color": "#ffffff",
+        "border_border": "",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "8",
+         "right": "8",
+         "bottom": "8",
+         "left": "8",
+         "isLinked": true
+        },
+        "typography_typography": "custom",
+        "typography_font_weight": "800",
+        "size": "md"
+       },
+       "elements": [],
+       "widgetType": "button"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "6a78c49",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "avis",
+    "background_background": "classic",
+    "background_color": "#f5efe8"
+   },
+   "elements": [
+    {
+     "id": "ea20e32",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "11a11f5",
+       "elType": "widget",
+       "settings": {
+        "title": "Avis Google",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "125227c",
+       "elType": "widget",
+       "settings": {
+        "title": "Nos clients en parlent <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">mieux que nous.</i>",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "3712da8",
+       "elType": "widget",
+       "settings": {
+        "shortcode": "[pken_section nom=\"avis\"]"
+       },
+       "elements": [],
+       "widgetType": "shortcode"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "6a68f81",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "fidelite",
+    "background_background": "classic",
+    "background_color": "#0b0b0b"
+   },
+   "elements": [
+    {
+     "id": "2d810a4",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "684b27b",
+       "elType": "widget",
+       "settings": {
+        "title": "Carte de fidélité",
+        "header_size": "span",
+        "title_color": "#b98654",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "95e9093",
+       "elType": "widget",
+       "settings": {
+        "title": "9 coupes, la 10<sup>e</sup> est <i style=\"font-family:Playfair Display,serif;color:#b98654\">offerte.</i>",
+        "header_size": "h2",
+        "title_color": "#ffffff",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "4833489",
+       "elType": "widget",
+       "settings": {
+        "editor": "<p>Demandez votre carte au salon. À chaque coupe, un tampon. Après neuf coupes, la dixième est pour nous.</p>",
+        "text_color": "#cfc8c0"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "dbad3c6",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "salon"
+   },
+   "elements": [
+    {
+     "id": "81d06bd",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "85ed032",
+       "elType": "widget",
+       "settings": {
+        "image": {
+         "url": "https://kobedy.github.io/inkway-sites/pken/img/real/facade.webp",
+         "id": "",
+         "alt": "Façade du salon PKEN Coiffure, 2 bis boulevard Carnot à Alfortville"
+        },
+        "image_size": "large",
+        "image_border_radius": {
+         "unit": "px",
+         "top": "16",
+         "right": "16",
+         "bottom": "16",
+         "left": "16",
+         "isLinked": true
+        }
+       },
+       "elements": [],
+       "widgetType": "image"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "2aa399d",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "41b4d41",
+       "elType": "widget",
+       "settings": {
+        "title": "Le salon",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "9b1b673",
+       "elType": "widget",
+       "settings": {
+        "title": "Un salon de quartier, <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">accueillant.</i>",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "bd4755d",
+       "elType": "widget",
+       "settings": {
+        "editor": "<p>PKEN Coiffure vous reçoit au 2 bis boulevard Carnot à Alfortville, 7 jours sur 7. On prend le temps de vous écouter, on soigne la coupe, et on vous sert à boire en attendant.</p>",
+        "text_color": "#6b6560"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "a828bca",
+       "elType": "widget",
+       "settings": {
+        "icon_list": [
+         {
+          "_id": "05ad785",
+          "text": "Eau",
+          "selected_icon": {
+           "value": "fas fa-glass-whiskey",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "3c1f76e",
+          "text": "Café",
+          "selected_icon": {
+           "value": "fas fa-coffee",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "b97706c",
+          "text": "Thé",
+          "selected_icon": {
+           "value": "fas fa-mug-hot",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "icon_color": "#8a5a32",
+        "text_color": "#0b0b0b",
+        "space_between": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "widgetType": "icon-list"
+      },
+      {
+       "id": "0385813",
+       "elType": "widget",
+       "settings": {
+        "text": "Itinéraire jusqu’au salon",
+        "link": {
+         "url": "https://www.google.com/maps/dir/?api=1&destination=PKEN+Coiffure+2+bis+boulevard+Carnot+94140+Alfortville",
+         "is_external": true,
+         "nofollow": false
+        },
+        "background_color": "rgba(0,0,0,0)",
+        "button_text_color": "#0b0b0b",
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "2",
+         "right": "2",
+         "bottom": "2",
+         "left": "2",
+         "isLinked": true
+        },
+        "border_radius": {
+         "unit": "px",
+         "top": "8",
+         "right": "8",
+         "bottom": "8",
+         "left": "8",
+         "isLinked": true
+        },
+        "typography_typography": "custom",
+        "typography_font_weight": "800",
+        "size": "md"
+       },
+       "elements": [],
+       "widgetType": "button"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "59c0996",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "rdv"
+   },
+   "elements": [
+    {
+     "id": "daeee6f",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "ac946dc",
+       "elType": "widget",
+       "settings": {
+        "shortcode": "[pken_rendez_vous]"
+       },
+       "elements": [],
+       "widgetType": "shortcode"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "ddaed16",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "acces"
+   },
+   "elements": [
+    {
+     "id": "dc0cf0b",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "529a279",
+       "elType": "widget",
+       "settings": {
+        "title": "Horaires & accès",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "764017f",
+       "elType": "widget",
+       "settings": {
+        "title": "Ouvert 7 jours sur 7",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "2978aa2",
+       "elType": "widget",
+       "settings": {
+        "icon_list": [
+         {
+          "_id": "2ed6cfc",
+          "text": "Lundi – samedi : 10h00 – 20h00",
+          "selected_icon": {
+           "value": "far fa-clock",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "7403d75",
+          "text": "Dimanche & jours fériés : 11h30 – 18h30",
+          "selected_icon": {
+           "value": "far fa-clock",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "e173e4e",
+          "text": "2 bis boulevard Carnot, 94140 Alfortville",
+          "selected_icon": {
+           "value": "fas fa-map-marker-alt",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "aede5fe",
+          "text": "06 95 94 98 08",
+          "selected_icon": {
+           "value": "fas fa-phone",
+           "library": "fa-solid"
+          }
+         },
+         {
+          "_id": "878f78e",
+          "text": "pkencoiffure@gmail.com",
+          "selected_icon": {
+           "value": "far fa-envelope",
+           "library": "fa-solid"
+          }
+         }
+        ],
+        "icon_color": "#8a5a32",
+        "text_color": "#0b0b0b",
+        "space_between": {
+         "unit": "px",
+         "size": 12
+        }
+       },
+       "elements": [],
+       "widgetType": "icon-list"
+      }
+     ],
+     "isInner": false
+    },
+    {
+     "id": "9cd7f78",
+     "elType": "column",
+     "settings": {
+      "_column_size": 50
+     },
+     "elements": [
+      {
+       "id": "447c462",
+       "elType": "widget",
+       "settings": {
+        "address": "2 bis boulevard Carnot 94140 Alfortville",
+        "zoom": {
+         "unit": "px",
+         "size": 16
+        },
+        "height": {
+         "unit": "px",
+         "size": 420
+        }
+       },
+       "elements": [],
+       "widgetType": "google_maps"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  },
+  {
+   "id": "b535930",
+   "elType": "section",
+   "settings": {
+    "gap": "wider",
+    "padding": {
+     "unit": "px",
+     "top": "90",
+     "right": "0",
+     "bottom": "90",
+     "left": "0",
+     "isLinked": false
+    },
+    "_element_id": "faq"
+   },
+   "elements": [
+    {
+     "id": "9cc6273",
+     "elType": "column",
+     "settings": {
+      "_column_size": 100
+     },
+     "elements": [
+      {
+       "id": "df0cac5",
+       "elType": "widget",
+       "settings": {
+        "title": "Questions fréquentes",
+        "header_size": "span",
+        "title_color": "#8a5a32",
+        "typography_typography": "custom",
+        "typography_font_size": {
+         "unit": "rem",
+         "size": 0.78
+        },
+        "typography_font_weight": "800",
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.5
+        },
+        "typography_text_transform": "uppercase"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "e40c02d",
+       "elType": "widget",
+       "settings": {
+        "title": "Bon à savoir",
+        "header_size": "h2",
+        "title_color": "#0b0b0b",
+        "typography_typography": "custom",
+        "typography_font_family": "Archivo",
+        "typography_font_weight": "900"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "74f36e8",
+       "elType": "widget",
+       "settings": {
+        "tabs": [
+         {
+          "_id": "4e518ca",
+          "tab_title": "Comment prendre rendez-vous ?",
+          "tab_content": "<p>Remplissez le formulaire de rendez-vous : votre demande s’ouvre dans WhatsApp. Le salon vous confirme ensuite le créneau. Vous pouvez aussi appeler le 06 95 94 98 08.</p>"
+         },
+         {
+          "_id": "6eaac8d",
+          "tab_title": "Proposez-vous la coupe femme ?",
+          "tab_content": "<p>Pas encore : le salon recrute une coiffeuse. La coupe femme sera ouverte dès son arrivée. Laissez-nous un message pour être prévenue.</p>"
+         },
+         {
+          "_id": "82f01b7",
+          "tab_title": "Comment fonctionne la carte de fidélité ?",
+          "tab_content": "<p>Un tampon par coupe. Après neuf coupes, la dixième est offerte. Demandez votre carte au salon.</p>"
+         },
+         {
+          "_id": "2107604",
+          "tab_title": "Êtes-vous ouverts le dimanche ?",
+          "tab_content": "<p>Oui, le dimanche et les jours fériés de 11h30 à 18h30. Du lundi au samedi, de 10h à 20h.</p>"
+         }
+        ]
+       },
+       "elements": [],
+       "widgetType": "accordion"
+      }
+     ],
+     "isInner": false
+    }
+   ],
+   "isInner": false
+  }
+ ],
+ "page_settings": {
+  "template": "templates/page-pleine-largeur.php"
+ }
+}
