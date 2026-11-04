@@ -67,16 +67,75 @@ function pken_head() {
 		echo '<meta property="og:description" content="' . esc_attr( pken_opt( 'description' ) ) . '">' . "\n";
 		echo '<meta property="og:image" content="' . esc_url( pken_img( 'facade.jpg' ) ) . '">' . "\n";
 	}
-	if ( is_front_page() ) {
+	// Avec Yoast SEO, le salon rejoint le graphe Yoast (pken_yoast_schema) au lieu d’un second bloc JSON-LD.
+	if ( is_front_page() && ! defined( 'WPSEO_VERSION' ) ) {
 		pken_json_ld();
 	}
 }
 add_action( 'wp_head', 'pken_head', 5 );
 
 /**
+ * Yoast SEO : description du salon utilisée par défaut sur l’accueil tant qu’elle n’est pas renseignée dans Yoast.
+ *
+ * @param string $desc Description Yoast.
+ * @return string
+ */
+function pken_yoast_front_desc( $desc ) {
+	return ( '' === trim( (string) $desc ) && is_front_page() ) ? pken_opt( 'description' ) : $desc;
+}
+add_filter( 'wpseo_metadesc', 'pken_yoast_front_desc' );
+add_filter( 'wpseo_opengraph_desc', 'pken_yoast_front_desc' );
+add_filter( 'wpseo_twitter_description', 'pken_yoast_front_desc' );
+
+/**
+ * Yoast SEO : image de partage par défaut (façade du salon) si aucune n’est définie.
+ *
+ * @param object $images Images Open Graph de Yoast.
+ */
+function pken_yoast_og_image( $images ) {
+	if ( is_front_page() && method_exists( $images, 'has_images' ) && ! $images->has_images() ) {
+		$images->add_image_by_url( pken_img( 'facade.jpg' ) );
+	}
+}
+add_action( 'wpseo_add_opengraph_images', 'pken_yoast_og_image' );
+
+/**
+ * Yoast SEO : le salon (HairSalon) ajouté au graphe Schema de l’accueil, relié à la page.
+ *
+ * @param array $graph Graphe Yoast.
+ * @return array
+ */
+function pken_yoast_schema( $graph ) {
+	if ( ! is_front_page() || ! is_array( $graph ) ) {
+		return $graph;
+	}
+	$salon = pken_json_ld_data();
+	unset( $salon['@context'] );
+	$salon['@id'] = home_url( '/#salon' );
+	foreach ( $graph as &$piece ) {
+		if ( isset( $piece['@type'] ) && 'WebPage' === $piece['@type'] ) {
+			$piece['about'] = array( '@id' => $salon['@id'] );
+		}
+	}
+	unset( $piece );
+	$graph[] = $salon;
+	return $graph;
+}
+add_filter( 'wpseo_schema_graph', 'pken_yoast_schema' );
+
+/**
  * Données structurées HairSalon (adresse, horaires, prestations) générées depuis les réglages.
  */
 function pken_json_ld() {
+	echo '<script type="application/ld+json">' . wp_json_encode( pken_json_ld_data(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+}
+
+/**
+ * Données HairSalon du salon.
+ *
+ * @return array
+ */
+function pken_json_ld_data() {
 	$days  = array( 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' );
 	$slots = array();
 	foreach ( pken_hours() as $day => $h ) {
@@ -127,7 +186,7 @@ function pken_json_ld() {
 	if ( $same ) {
 		$data['sameAs'] = $same;
 	}
-	echo '<script type="application/ld+json">' . wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . '</script>' . "\n";
+	return $data;
 }
 
 /**

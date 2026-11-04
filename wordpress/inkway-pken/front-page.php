@@ -16,7 +16,13 @@ if ( $pken_template && locate_template( $pken_template ) ) {
 }
 
 get_header();
-$pken_has_content = is_page() && '' !== trim( (string) get_post_field( 'post_content', get_queried_object_id() ) );
+// Contenu de la page utilisé s’il existe, si la page est construite avec Elementor ou ouverte dans son éditeur
+// (sinon Elementor ne trouve pas la zone the_content() et refuse de s’ouvrir sur une page encore vide).
+$pken_has_content = is_page() && (
+	'' !== trim( (string) get_post_field( 'post_content', get_queried_object_id() ) )
+	|| pken_is_elementor_page()
+	|| ( class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->preview->is_preview_mode() )
+);
 ?>
 <main id="contenu">
 <?php

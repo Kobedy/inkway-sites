@@ -67,7 +67,7 @@
        "id": "06d7e80",
        "elType": "widget",
        "settings": {
-        "editor": "<p>Coupe homme, barbe et coupe enfant, à deux pas du boulevard Carnot. Un accueil convivial, des prix clairs et un café qui vous attend.</p>",
+        "editor": "<p>Coiffeur à Alfortville, PKEN Coiffure s’occupe de la coupe homme, de la barbe et de la coupe enfant, à deux pas du boulevard Carnot. En plus, un accueil convivial, des prix clairs et un café vous attendent.</p>",
         "text_color": "#cfc8c0"
        },
        "elements": [],
@@ -566,42 +566,6 @@
      },
      "elements": [
       {
-       "id": "11a11f5",
-       "elType": "widget",
-       "settings": {
-        "title": "Avis Google",
-        "header_size": "span",
-        "title_color": "#8a5a32",
-        "typography_typography": "custom",
-        "typography_font_size": {
-         "unit": "rem",
-         "size": 0.78
-        },
-        "typography_font_weight": "800",
-        "typography_letter_spacing": {
-         "unit": "px",
-         "size": 2.5
-        },
-        "typography_text_transform": "uppercase"
-       },
-       "elements": [],
-       "widgetType": "heading"
-      },
-      {
-       "id": "125227c",
-       "elType": "widget",
-       "settings": {
-        "title": "Nos clients en parlent <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">mieux que nous.</i>",
-        "header_size": "h2",
-        "title_color": "#0b0b0b",
-        "typography_typography": "custom",
-        "typography_font_family": "Archivo",
-        "typography_font_weight": "900"
-       },
-       "elements": [],
-       "widgetType": "heading"
-      },
-      {
        "id": "3712da8",
        "elType": "widget",
        "settings": {
@@ -774,7 +738,7 @@
        "id": "9b1b673",
        "elType": "widget",
        "settings": {
-        "title": "Un salon de quartier, <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">accueillant.</i>",
+        "title": "Un coiffeur de quartier à Alfortville, <i style=\"font-family:Playfair Display,serif;color:#8a5a32\">accueillant.</i>",
         "header_size": "h2",
         "title_color": "#0b0b0b",
         "typography_typography": "custom",
@@ -788,7 +752,7 @@
        "id": "bd4755d",
        "elType": "widget",
        "settings": {
-        "editor": "<p>PKEN Coiffure vous reçoit au 2 bis boulevard Carnot à Alfortville, 7 jours sur 7. On prend le temps de vous écouter, on soigne la coupe, et on vous sert à boire en attendant.</p>",
+        "editor": "<p>Votre coiffeur PKEN vous reçoit au 2 bis boulevard Carnot à Alfortville, 7 jours sur 7. D’abord, on prend le temps de vous écouter ; ensuite, on soigne la coupe, et on vous sert à boire en attendant.</p>",
         "text_color": "#6b6560"
        },
        "elements": [],
