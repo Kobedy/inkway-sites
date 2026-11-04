@@ -58,6 +58,9 @@ B. Avec Elementor
       (dans le dossier du thème ; il est aussi fourni à côté du fichier zip).
    3. Pages › Accueil › Modifier avec Elementor › icône dossier › Mes modèles › « PKEN Coiffure — Accueil » › Insérer.
    4. Attributs de la page : gabarit « Pleine largeur Elementor ».
+      Le modèle reprend le site validé à l’identique : une section Elementor par bloc.
+      Hero, atouts, fidélité, salon et FAQ sont des widgets HTML (textes modifiables) ;
+      tarifs, réalisations, avis, rendez-vous et horaires restent reliés au Customizer (codes courts).
    Le modèle utilise les widgets natifs (Titre, Texte, Image, Bouton, Galerie, Liste d’icônes,
    Accordéon, Google Maps) ; le formulaire de rendez-vous est le widget « Code court » [pken_rendez_vous].
    Elementor Pro : les emplacements Theme Builder (en-tête, pied de page, contenu, archives) sont pris en charge.

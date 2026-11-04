@@ -17,3 +17,5 @@
 .pken-pattern .wp-block-details{border-bottom:1px solid rgba(11,11,11,.12);padding:16px 0}
 .pken-pattern .wp-block-details summary{font-weight:800;cursor:pointer}
 .pken-pattern .wp-block-gallery img{border-radius:12px}
+/* Éditeur Elementor : les sections sont insérées après le script d’apparition, on les affiche directement. */
+.elementor-editor-active [data-reveal]{opacity:1;transform:none}
