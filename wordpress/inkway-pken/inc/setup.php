@@ -40,7 +40,13 @@ add_action( 'after_setup_theme', 'pken_setup' );
  */
 function pken_assets() {
 	$v = wp_get_theme( get_template() )->get( 'Version' );
-	wp_enqueue_style( 'pken-fonts', pken_asset( 'assets/css/fonts.css' ), array(), $v );
+	// Pages Elementor : la feuille d’Elementor passe avant celle du thème, sinon ses remises à zéro
+	// (.elementor img, .elementor a) l’emportent sur les styles du site validé.
+	$after = array();
+	if ( wp_style_is( 'elementor-frontend', 'registered' ) && ( pken_is_elementor_page() || ( class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->preview->is_preview_mode() ) ) ) {
+		$after[] = 'elementor-frontend';
+	}
+	wp_enqueue_style( 'pken-fonts', pken_asset( 'assets/css/fonts.css' ), $after, $v );
 	wp_enqueue_style( 'pken-base', pken_asset( 'assets/css/base.css' ), array( 'pken-fonts' ), $v );
 	wp_enqueue_style( 'pken-site', pken_asset( 'assets/css/pken.css' ), array( 'pken-base' ), $v );
 	wp_enqueue_style( 'pken-blocks', pken_asset( 'assets/css/blocks.css' ), array( 'pken-site' ), $v );
@@ -49,6 +55,14 @@ function pken_assets() {
 	}
 	wp_enqueue_style( 'inkway-pken', get_stylesheet_uri(), array( 'pken-site' ), $v );
 	wp_enqueue_script( 'pken-site', pken_asset( 'assets/js/site.js' ), array(), $v, true );
+	// Aperçu Elementor : les sections sont rendues après site.js ; on y recopie le statut déjà calculé
+	// dans la barre du haut et on repère le jour courant des horaires.
+	if ( class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+		wp_add_inline_script(
+			'pken-site',
+			'(function(){var fill=function($s){var src=document.querySelector("[data-open-status]:not(:empty)");$s[0].querySelectorAll("[data-open-status]").forEach(function(el){if(src&&!el.innerHTML)el.innerHTML=src.innerHTML;});$s[0].querySelectorAll("[data-day]").forEach(function(el){el.classList.toggle("today",+el.dataset.day===new Date().getDay());});};var hook=function(){elementorFrontend.hooks.addAction("frontend/element_ready/global",fill);};if(window.elementorFrontend&&elementorFrontend.hooks){hook();}else{jQuery(window).on("elementor/frontend/init",hook);}jQuery(window).on("load",function(){fill(jQuery(document.body));});})();'
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'pken_assets' );
 

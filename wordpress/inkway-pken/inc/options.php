@@ -25,7 +25,7 @@ function pken_defaults() {
 		'holidays'      => 'Dimanche & jours fériés',
 		'facebook'      => 'https://www.facebook.com/pkencoiffure.fr/',
 		'instagram'     => '',
-		'services'      => "Coupe homme | 12 € | Coupe et finitions\nBarbe | 7 € | Taille et contours\nCoupe enfant | 10 € | Pour les plus jeunes\nTeinture | dès 10 € | Tarif selon la prestation\nShampoing | 5 € | En complément de la coupe\nCoupe homme + barbe | 19 € | Formule complète | rdv",
+		'services'      => "Coupe homme | 12 € | Coupe et finitions\nCoupe homme + barbe | 19 € | Formule complète | rdv\nBarbe | 7 € | Taille et contours\nCoupe enfant | 10 € | Pour les plus jeunes\nTeinture | dès 10 € | Tarif selon la prestation\nShampoing | 5 € | En complément de la coupe",
 		'rating'        => '4,9',
 		'reviews_count' => 'Plus de 70 avis',
 		'review_url'    => 'https://www.google.com/search?q=PKEN+Coiffure+2+bis+boulevard+Carnot+Alfortville',
