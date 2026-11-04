@@ -19,3 +19,7 @@
 .pken-pattern .wp-block-gallery img{border-radius:12px}
 /* Éditeur Elementor : les sections sont insérées après le script d’apparition, on les affiche directement. */
 .elementor-editor-active [data-reveal]{opacity:1;transform:none}
+/* Elementor remet les images à border-radius:0 (.elementor img) : arrondis du site validé rétablis. */
+.elementor .salon figure img{border-radius:18px}
+.elementor .inside img{border-radius:14px}
+.elementor .iw-lightbox img{border-radius:6px}
