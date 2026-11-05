@@ -15,11 +15,11 @@
 {"@context":"https://schema.org","@type":"NailSalon","name":"36 Beauté","slogan":"Belle jusqu’au bout des ongles","logo":"https://kobedy.github.io/inkway-sites/36-beaute/img/logo-diamant.png","telephone":"+33144622495",
 "address":{"@type":"PostalAddress","streetAddress":"36 rue Belgrand","postalCode":"75020","addressLocality":"Paris","addressCountry":"FR"},
 "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"}],
-"image":"https://kobedy.github.io/inkway-sites/36-beaute/img/facade.webp","priceRange":"10 € – 60 €","sameAs":["https://www.instagram.com/36beaute/","https://www.planity.com/36-beaute-75020-paris-ihk"]}
+"image":"https://kobedy.github.io/inkway-sites/36-beaute/img/facade.webp","priceRange":"10 € – 60 €","sameAs":["https://www.instagram.com/36beaute/","https://www.planity.com/36-beaute-75020-paris-vhy"]}
 </script>
 <style>
 /* Charte 36 Beauté : bleu nuit et argent de la devanture */
-:root{--bg:#f5f6fa;--fg:#1d2752;--accent:#33478f;--on-accent:#fff;--clay:#66759f;--silver:#c9d0e6;--muted:#555b72;--line:rgba(29,39,82,.14);--leaf:#e5e8f2;--font-d:"Gilda Display",Georgia,serif;--font-b:"Karla",system-ui,sans-serif;--r-in:30px;--in-bg:#fff}
+:root{--bg:#f5f6fa;--fg:#1d2752;--accent:#33478f;--on-accent:#fff;--clay:#66759f;--silver:#c9d0e6;--rose:#c98ca0;--muted:#555b72;--line:rgba(29,39,82,.14);--leaf:#e5e8f2;--font-d:"Gilda Display",Georgia,serif;--font-b:"Karla",system-ui,sans-serif;--r-in:30px;--in-bg:#fff}
 header{position:sticky;top:0;z-index:50;background:rgba(245,246,250,.92);backdrop-filter:blur(10px)}
 .hd{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
 .logo{font-family:var(--font-d);font-size:1.7rem;text-decoration:none;display:flex;align-items:center;gap:10px}
@@ -36,8 +36,23 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,246,250,.92);backdro
 .hero .tel{margin:18px auto 0;font-size:1rem}.hero .tel a{font-weight:600;color:var(--fg)}
 .oval{width:min(560px,86vw);aspect-ratio:3/4;margin:60px auto 0;border-radius:50% 50% 0 0/40% 40% 0 0;overflow:hidden;position:relative}
 .oval img{width:100%;height:100%;object-fit:cover}
-.leaf{position:absolute;width:140px;fill:var(--accent);opacity:.18}
-.leaf.a{left:6%;top:40%;transform:rotate(-14deg)}.leaf.b{right:6%;top:58%;transform:rotate(12deg)}
+.hero .wrap{position:relative}.hero .wrap>*:not(.diamonds){position:relative;z-index:1}
+.oval video{width:100%;height:100%;object-fit:cover;display:block}
+/* Diamants flottants du héros, couleurs de la charte */
+.diamonds{position:absolute;inset:0;z-index:0;pointer-events:none}
+.dm{position:absolute;width:var(--s,40px);height:auto;color:var(--c,var(--fg));opacity:var(--o,.5);animation:flotte var(--t,9s) ease-in-out var(--dl,0s) infinite alternate;filter:drop-shadow(0 6px 10px rgba(29,39,82,.18))}
+.d1{--s:64px;--c:var(--fg);--o:.85;--t:9s;left:3%;top:30%}
+.d2{--s:30px;--c:var(--silver);--o:.95;--t:7s;--dl:-2s;left:14%;top:12%}
+.d3{--s:44px;--c:var(--accent);--o:.6;--t:11s;--dl:-5s;left:8%;top:62%}
+.d4{--s:22px;--c:var(--rose);--o:.9;--t:6s;--dl:-1s;left:22%;top:48%}
+.d5{--s:36px;--c:var(--clay);--o:.7;--t:10s;--dl:-3s;left:16%;top:84%}
+.d6{--s:58px;--c:var(--accent);--o:.7;--t:10s;--dl:-4s;right:4%;top:24%}
+.d7{--s:26px;--c:var(--rose);--o:.9;--t:7.5s;--dl:-6s;right:16%;top:10%}
+.d8{--s:40px;--c:var(--fg);--o:.8;--t:12s;--dl:-2.5s;right:9%;top:56%}
+.d9{--s:24px;--c:var(--silver);--o:1;--t:6.5s;--dl:-4.5s;right:22%;top:42%}
+.d10{--s:34px;--c:var(--clay);--o:.65;--t:9.5s;--dl:-7s;right:14%;top:80%}
+@keyframes flotte{0%{transform:translate(0,0) rotate(-10deg) scale(1)}50%{transform:translate(14px,-26px) rotate(6deg) scale(1.06)}100%{transform:translate(-12px,10px) rotate(14deg) scale(.96)}}
+@media(prefers-reduced-motion:reduce){.dm{animation:none}}
 .badge{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);background:var(--bg);padding:14px 22px;border-radius:99px;font-size:.92rem;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.12)}
 section{padding:110px 0;scroll-margin-top:70px}
 .over{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600}
@@ -76,9 +91,7 @@ h2 i{color:var(--clay)}
 .rv div{background:#fff;border-radius:24px;padding:30px;display:flex;flex-direction:column;align-items:flex-start}.rv p{font-family:var(--font-d);font-size:1.25rem;line-height:1.4;margin:0 0 14px}.rv small{color:var(--muted)}
 .rv .sc{font-family:var(--font-d);font-size:3rem;line-height:1;color:var(--clay);margin-bottom:6px}
 .rv a{margin-top:auto;padding-top:14px;font-weight:600;color:var(--accent)}
-.bk{background:var(--leaf);border-radius:40px;padding:70px;display:grid;grid-template-columns:1fr 1.2fr;gap:60px}
-.bk form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.bk .full{grid-column:1/-1}
-.bk .act{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.act{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .ht td{padding:6px 18px 6px 0}.ht tr.today{color:var(--accent);font-weight:600}
 .acc{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}
 .acc iframe{width:100%;height:380px;border:0;border-radius:24px;background:var(--leaf)}
@@ -87,15 +100,15 @@ h2 i{color:var(--clay)}
 .faq summary{font-family:var(--font-d);font-size:1.3rem;cursor:pointer}.faq p{color:var(--muted)}
 footer{padding:70px 0 90px;text-align:center;border-top:1px solid var(--line)}
 footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
-@media(max-width:900px){.cats{grid-template-columns:1fr 1fr}.sig,.val,.bk,.acc{grid-template-columns:1fr}.sig div,.bk{padding:36px 22px}.rv{grid-template-columns:1fr}.bk form{grid-template-columns:1fr}.photos{height:380px}.hd .btn{display:none}section{padding:80px 0}.leaf{display:none}.gal{grid-template-columns:1fr 1fr}.sig img{min-height:280px}}
+@media(max-width:900px){.cats{grid-template-columns:1fr 1fr}.sig,.val,.acc{grid-template-columns:1fr}.sig div{padding:36px 22px}.rv{grid-template-columns:1fr}.photos{height:380px}.hd .btn{display:none}section{padding:80px 0}.dm{width:min(var(--s),26px)}.d1,.d2,.d3,.d4,.d5{left:-4px}.d6,.d7,.d8,.d9,.d10{right:-4px}.d3,.d8{display:none}.gal{grid-template-columns:1fr 1fr}.sig img{min-height:280px}}
 @media(max-width:520px){.cats{grid-template-columns:1fr}.vals{grid-template-columns:1fr}.badge{font-size:.82rem;padding:12px 16px}}
 </style>
 </head>
 <body>
 <header data-header><div class="wrap hd">
   <a class="logo" href="#" aria-label="36 Beauté, accueil"><span class="mark"><img src="img/logo-diamant.png" width="30" height="30" alt=""></span>36 Beauté</a>
-  <nav class="nav" aria-label="Navigation principale"><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#rdv">Horaires</a><a href="#acces">Accès</a></nav>
-  <a class="btn" href="#rdv">Prendre rendez-vous</a>
+  <nav class="nav" aria-label="Navigation principale"><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#acces">Horaires &amp; accès</a></nav>
+  <a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Prendre rendez-vous</a>
   <button class="burger" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
 </div></header>
 
@@ -104,42 +117,51 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
   <span class="over" data-reveal>Onglerie · Institut de beauté · Paris 20e</span>
   <h1 data-reveal>Belle jusqu’au bout <i>des ongles.</i></h1>
   <p data-reveal>Manucure, vernis semi-permanent, gel, résine et beauté des pieds, au 36 rue Belgrand. Ouvert du lundi au samedi, de 10 h à 19 h.</p>
-  <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn l" href="#tarifs">Voir les tarifs</a></div>
+  <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn l" href="#tarifs">Voir les tarifs</a></div>
   <p class="tel" data-reveal>Ou appelez le salon : <a href="tel:+33144622495">01 44 62 24 95</a></p>
-  <svg class="leaf a" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 32 36 14h28l14 18-28 52z"/></svg><svg class="leaf b" viewBox="0 0 100 100" aria-hidden="true"><path d="M22 32 36 14h28l14 18-28 52z"/></svg>
-  <div class="oval" data-reveal><img class="ph" src="img/hero-babyboomer.webp" width="900" height="1200" alt="Pose babyboomer sur ongles carrés, réalisée au salon 36 Beauté"><span class="badge" data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Lundi – samedi · 10h – 19h</span></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="diamant" viewBox="0 0 64 56"><path d="M14 2h36l12 16-30 36L2 18z" fill="currentColor"/><path d="M2 18h60M14 2l8 16 10 36 10-36 8-16M22 18 32 2l10 16" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round"/></symbol></svg>
+  <div class="diamonds" aria-hidden="true"><svg class="dm d1" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d2" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d3" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d4" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d5" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d6" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d7" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d8" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d9" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d10" viewBox="0 0 64 56"><use href="#diamant"/></svg></div>
+  <div class="oval" data-reveal><video class="ph" data-hero-video autoplay muted loop playsinline preload="auto" poster="img/hero-video-poster.webp" width="540" height="720" aria-label="Vidéo du salon : nail art nœuds rouges sur ongles nude"><source src="img/hero-video.webm" type="video/webm"><source src="img/hero-video.mp4" type="video/mp4"></video><span class="badge" data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Lundi – samedi · 10h – 19h</span></div>
 </div></div>
 
 <section id="tarifs"><div class="wrap">
   <div style="text-align:center"><span class="over">La carte</span><h2 data-reveal>Nos <i>prestations</i></h2></div>
   <div class="cats">
-    <div class="ct" data-reveal><img class="ph" loading="lazy" src="img/carte-mains.webp" width="500" height="500" alt="Babyboomer sur ongles en amande, réalisé au salon"><h3>Mains</h3><ul>
-      <li>Vernis simple <small>30 min</small> <b>10 €</b></li>
-      <li>Manucure + vernis simple <small>30 min</small> <b>20 €</b></li>
-      <li>Vernis semi-permanent <small>40 min</small> <b>25 €</b></li>
-      <li>Manucure + semi-permanent <small>30 min</small> <b>35 €</b></li>
-      <li>Pose gel ou résine + vernis <small>1 h</small> <b>30 €</b></li></ul></div>
+    <div class="ct" data-reveal><img class="ph" loading="lazy" src="img/carte-mains.webp" width="500" height="500" alt="Ongles roses ornés de feuilles dorées, réalisés au salon"><h3>Mains</h3><ul>
+      <li>Vernis simple <b>10 €</b></li>
+      <li>Manucure + vernis simple <b>20 €</b></li>
+      <li>Vernis semi-permanent <b>25 €</b></li>
+      <li>Manucure + semi-permanent <b>35 €</b></li>
+      <li>Pose gel ou résine + vernis simple <b>30 €</b></li>
+      <li>Pose gel ou résine + semi-permanent <b>50 €</b></li>
+      <li>Remplissage + semi-permanent <b>40 €</b></li>
+      <li>Avec capsules <b>50 €</b></li>
+      <li>Avec chablons <b>60 €</b></li></ul></div>
     <div class="ct" data-reveal><img class="ph" loading="lazy" src="img/carte-pieds.webp" width="500" height="500" alt="Fauteuils de pédicure du salon 36 Beauté"><h3>Pieds</h3><ul>
-      <li>Vernis simple <small>20 min</small> <b>15 €</b></li>
-      <li>Beauté des pieds + vernis <small>1 h</small> <b>30 €</b></li>
-      <li>Vernis semi-permanent <small>30 min</small> <b>30 €</b></li>
-      <li>Beauté des pieds + semi-permanent <small>1 h</small> <b>50 €</b></li>
-      <li>Pose gel ou résine + vernis <small>1 h</small> <b>60 €</b></li></ul></div>
-    <div class="ct" data-reveal><img class="ph" loading="lazy" src="img/carte-nail-art.webp" width="500" height="500" alt="Nail art rouge et turquoise réalisé au salon"><h3>Suppléments</h3><ul>
-      <li>French <small>10 min</small> <b>5 €</b></li>
-      <li>Babyboomer (ombré) <small>15 min</small> <b>10 €</b></li>
-      <li>Nail art, à l’unité <small>3 min</small> <b>1 €</b></li>
-      <li>Réparation d’un ongle <small>15 min</small> <b>5 €</b></li>
-      <li>Dépose <small>20 min</small> <b>10 €</b></li></ul></div>
+      <li>Vernis simple <b>15 €</b></li>
+      <li>Beauté des pieds + vernis simple <b>30 €</b></li>
+      <li>Vernis semi-permanent <b>30 €</b></li>
+      <li>Beauté des pieds + semi-permanent <b>50 €</b></li>
+      <li>Pose gel ou résine + vernis simple <b>40 €</b></li>
+      <li>Pose gel ou résine + semi-permanent <b>60 €</b></li>
+      <li>Remplissage + semi-permanent <b>50 €</b></li>
+      <li>Avec capsules <b>60 €</b></li></ul></div>
+    <div class="ct" data-reveal><img class="ph" loading="lazy" src="img/carte-nail-art.webp" width="500" height="500" alt="Nail art rouge et fleuri, réalisé au salon"><h3>Suppléments</h3><ul>
+      <li>French <b>5 €</b></li>
+      <li>Babyboomer (ombré) <b>10 €</b></li>
+      <li>Nail art, à l’unité <b>1 €</b></li>
+      <li>Réparation d’un ongle <b>5 €</b></li>
+      <li>Dépose <b>10 €</b></li>
+      <li>Gommage <b>10 €</b></li></ul></div>
   </div>
-  <p class="note">Tarifs indicatifs, paiement au salon. La carte complète est disponible sur <a href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">notre page de réservation</a>.</p>
+  <p class="note">Tarifs de la carte du salon, paiement sur place. Choisissez votre prestation et votre créneau sur <a href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">notre page Planity</a>.</p>
 </div></section>
 
 <div class="sig" id="reserver">
   <img class="ph" loading="lazy" src="img/salon-postes.webp" width="1100" height="1000" alt="Postes de manucure et de pédicure du salon 36 Beauté">
   <div><span class="over">Réservation en ligne</span><h2>Votre créneau <i style="color:var(--silver)">en 1 minute</i></h2><p style="opacity:.85">Réservez quand vous voulez, même le soir ou le dimanche.</p>
     <ol><li>Choisissez votre prestation</li><li>Sélectionnez le jour et l’heure</li><li>Recevez la confirmation tout de suite</li><li>Réglez sur place, le jour du rendez-vous</li></ol>
-    <div class="pr">dès 10 €</div><br><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">Réserver en ligne</a><a class="btn l" href="tel:+33144622495">01 44 62 24 95</a></div></div>
+    <div class="pr">dès 10 €</div><br><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Réserver en ligne</a><a class="btn l" href="tel:+33144622495">01 44 62 24 95</a></div></div>
 </div>
 
 <section id="salon"><div class="wrap val">
@@ -151,10 +173,14 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
 <section id="galerie" style="padding-top:0"><div class="wrap">
   <div style="text-align:center"><span class="over">Galerie</span><h2 data-reveal>Nos <i>réalisations</i></h2><p style="color:var(--muted)">Plus de réalisations sur Instagram : <a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener">@36beaute</a>.</p></div>
   <div class="gal">
-    <a data-reveal data-lightbox href="img/r-babyboomer-carre-grand.webp" data-caption="Babyboomer carré"><img class="ph" loading="lazy" src="img/r-babyboomer-carre.webp" width="400" height="400" alt="Babyboomer sur ongles carrés, réalisation du salon"></a>
-    <a data-reveal data-lightbox href="img/r-nail-art-rouge-grand.webp" data-caption="Nail art rouge et nude"><img class="ph" loading="lazy" src="img/r-nail-art-rouge.webp" width="400" height="400" alt="Nail art rouge et nude sur ongles en amande, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/ig-noeuds-grand.webp" data-caption="Nœuds rouges"><img class="ph" loading="lazy" src="img/ig-noeuds.webp" width="400" height="400" alt="Nail art nœuds rouges sur ongles nude, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/ig-rouge-bonhomme-grand.webp" data-caption="Rouge et bonhomme de neige"><img class="ph" loading="lazy" src="img/ig-rouge-bonhomme.webp" width="400" height="400" alt="Vernis rouge et nail art bonhomme de neige, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/ig-marron-grand.webp" data-caption="Nail art marron"><img class="ph" loading="lazy" src="img/ig-marron.webp" width="400" height="400" alt="Nail art marron et transparent sur ongles en amande, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/ig-chrome-grand.webp" data-caption="Effet chromé"><img class="ph" loading="lazy" src="img/ig-chrome.webp" width="400" height="400" alt="Ongles nude à pointes chromées, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/ig-french-pois-grand.webp" data-caption="French à pois"><img class="ph" loading="lazy" src="img/ig-french-pois.webp" width="400" height="400" alt="French rose à petits pois sur ongles en amande, réalisation du salon"></a>
     <a data-reveal data-lightbox href="img/r-rouge-turquoise-grand.webp" data-caption="Rouge et turquoise"><img class="ph" loading="lazy" src="img/r-rouge-turquoise.webp" width="400" height="400" alt="Nail art rouge et turquoise, réalisation du salon"></a>
-    <a data-reveal data-lightbox href="img/r-babyboomer-amande-grand.webp" data-caption="Babyboomer amande"><img class="ph" loading="lazy" src="img/r-babyboomer-amande.webp" width="400" height="400" alt="Babyboomer sur ongles en amande, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/r-nail-art-rouge-grand.webp" data-caption="Nail art rouge et nude"><img class="ph" loading="lazy" src="img/r-nail-art-rouge.webp" width="400" height="400" alt="Nail art rouge et nude sur ongles en amande, réalisation du salon"></a>
+    <a data-reveal data-lightbox href="img/r-babyboomer-carre-grand.webp" data-caption="Babyboomer carré"><img class="ph" loading="lazy" src="img/r-babyboomer-carre.webp" width="400" height="400" alt="Babyboomer sur ongles carrés, réalisation du salon"></a>
   </div>
 </div></section>
 
@@ -162,33 +188,17 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
   <div style="text-align:center"><span class="over">Avis clients</span><h2 data-reveal>Ce qu’en disent <i>nos clientes</i></h2></div>
   <div class="rv">
     <div data-reveal><span class="sc">4,4/5</span><p>Sur Google</p><small>128 avis (octobre 2026)</small><a href="https://www.google.com/maps/search/?api=1&amp;query=36%20Beaut%C3%A9%2036%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Lire et laisser un avis Google →</a></div>
-    <div data-reveal><span class="sc">4,9/5</span><p>Sur Planity</p><small>31 avis (octobre 2026)</small><a href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">Voir les avis Planity →</a></div>
+    <div data-reveal><span class="sc">4,9/5</span><p>Sur Planity</p><small>31 avis (octobre 2026)</small><a href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Voir les avis Planity →</a></div>
     <div data-reveal><span class="sc">@36beaute</span><p>Sur Instagram</p><small>Les réalisations du salon en photos</small><a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener">Suivre le salon →</a></div>
   </div>
 </div></section>
 
-<section id="rdv" style="padding-top:0"><div class="wrap bk">
-  <div><span class="over">Rendez-vous</span><h2>Réservez votre <i>prestation</i></h2><p style="color:var(--muted)">Réservez en ligne 24 h/24 avec confirmation immédiate, ou appelez le salon pendant les heures d’ouverture.</p>
-    <table class="ht"><tr data-day="1"><td>Lundi – samedi</td><td>10h – 19h</td></tr><tr data-day="0"><td>Dimanche</td><td>Fermé</td></tr><tr><td>Jours fériés</td><td>Nous consulter</td></tr></table>
-    <div class="act"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">Réserver en ligne</a><a class="btn l" href="tel:+33144622495">01 44 62 24 95</a></div></div>
-  <div>
-    <form data-booking data-whatsapp="" data-salon="36 Beauté" data-tel="+33144622495" data-tel-label="01 44 62 24 95" data-planity="https://www.planity.com/36-beaute-75020-paris-ihk">
-      <label class="field full">Prestation<select name="service" required><option value="">Choisir</option><option>Vernis simple (mains)</option><option>Manucure + vernis simple</option><option>Vernis semi-permanent (mains)</option><option>Manucure + vernis semi-permanent</option><option>Pose gel ou résine + vernis (mains)</option><option>Vernis simple (pieds)</option><option>Beauté des pieds + vernis simple</option><option>Vernis semi-permanent (pieds)</option><option>Beauté des pieds + semi-permanent</option><option>Pose gel ou résine + vernis (pieds)</option><option>Dépose</option></select></label>
-      <label class="field">Date<input type="date" name="date" required></label>
-      <label class="field">Heure<select name="time" required></select></label>
-      <label class="field">Nom<input name="name" autocomplete="name" required></label>
-      <label class="field">Téléphone<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9 +().-]{8,}"></label>
-      <div class="full"><button class="btn" type="submit">Préparer ma demande</button></div>
-    </form>
-    <div data-booking-result hidden aria-live="polite"></div>
-  </div>
-</div></section>
-
 <section id="acces" style="padding-top:0"><div class="wrap acc">
-  <div><span class="over">Accès</span><h2 data-reveal>Nous <i>trouver</i></h2>
+  <div><span class="over">Horaires &amp; accès</span><h2 data-reveal>Nous <i>trouver</i></h2>
     <address>36 Beauté<br>36 rue Belgrand<br>75020 Paris</address>
     <p><a href="tel:+33144622495">01 44 62 24 95</a></p>
-    <p><a class="btn l" href="https://www.google.com/maps/dir/?api=1&amp;destination=36%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Itinéraire</a></p></div>
+    <table class="ht"><tr data-day="1"><td>Lundi – samedi</td><td>10h – 19h</td></tr><tr data-day="0"><td>Dimanche</td><td>Fermé</td></tr><tr><td>Jours fériés</td><td>Nous consulter</td></tr></table>
+    <div class="act"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Réserver en ligne</a><a class="btn l" href="https://www.google.com/maps/dir/?api=1&amp;destination=36%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Itinéraire</a></div></div>
   <iframe loading="lazy" title="Plan d’accès : 36 rue Belgrand, 75020 Paris" src="https://www.google.com/maps?q=36%20rue%20Belgrand%2C%2075020%20Paris&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div></section>
 
@@ -203,8 +213,9 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
 </div></section>
 </main>
 
-<footer><div class="wrap"><a class="logo" href="#" style="justify-content:center"><span class="mark"><img src="img/logo-diamant.png" width="30" height="30" alt="" loading="lazy"></span>36 Beauté</a><p style="font-family:var(--font-d);font-size:1.3rem;color:var(--fg);margin:12px 0 0"><i>Belle jusqu’au bout des ongles</i></p><p>36 rue Belgrand, 75020 Paris · <a href="tel:+33144622495" style="margin:0">01 44 62 24 95</a><br>Lundi – samedi, 10h – 19h · Dimanche fermé</p><p><a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener">Instagram</a><a href="https://www.planity.com/36-beaute-75020-paris-ihk" target="_blank" rel="noopener">Réserver en ligne</a><a href="https://www.google.com/maps/search/?api=1&amp;query=36%20Beaut%C3%A9%2036%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Avis Google</a></p><p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></p><p>© <span data-year></span> 36 Beauté</p></div></footer>
+<footer><div class="wrap"><a class="logo" href="#" style="justify-content:center"><span class="mark"><img src="img/logo-diamant.png" width="30" height="30" alt="" loading="lazy"></span>36 Beauté</a><p style="font-family:var(--font-d);font-size:1.3rem;color:var(--fg);margin:12px 0 0"><i>Belle jusqu’au bout des ongles</i></p><p>36 rue Belgrand, 75020 Paris · <a href="tel:+33144622495" style="margin:0">01 44 62 24 95</a><br>Lundi – samedi, 10h – 19h · Dimanche fermé</p><p><a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener">Instagram</a><a href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Réserver en ligne</a><a href="https://www.google.com/maps/search/?api=1&amp;query=36%20Beaut%C3%A9%2036%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Avis Google</a></p><p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></p><p>© <span data-year></span> 36 Beauté</p></div></footer>
 <button data-totop aria-label="Haut de page">↑</button>
 <script src="assets/site.js"></script>
+<script>(function(){var v=document.querySelector("[data-hero-video]");if(v&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause();}})();</script>
 </body>
 </html>
