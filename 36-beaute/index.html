@@ -37,7 +37,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,246,250,.92);backdro
 .oval{width:min(560px,86vw);aspect-ratio:3/4;margin:60px auto 0;border-radius:50% 50% 0 0/40% 40% 0 0;overflow:hidden;position:relative}
 .oval img{width:100%;height:100%;object-fit:cover}
 .hero .wrap{position:relative}.hero .wrap>*:not(.diamonds){position:relative;z-index:1}
-.oval video{width:100%;height:100%;object-fit:cover;display:block}
+.oval video{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
 /* Diamants flottants du héros, couleurs de la charte */
 .diamonds{position:absolute;inset:0;z-index:0;pointer-events:none}
 .dm{position:absolute;width:var(--s,40px);height:auto;color:var(--c,var(--fg));opacity:var(--o,.5);animation:flotte var(--t,9s) ease-in-out var(--dl,0s) infinite alternate;filter:drop-shadow(0 6px 10px rgba(29,39,82,.18))}
@@ -121,7 +121,7 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
   <p class="tel" data-reveal>Ou appelez le salon : <a href="tel:+33144622495">01 44 62 24 95</a></p>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="diamant" viewBox="0 0 64 56"><path d="M14 2h36l12 16-30 36L2 18z" fill="currentColor"/><path d="M2 18h60M14 2l8 16 10 36 10-36 8-16M22 18 32 2l10 16" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round"/></symbol></svg>
   <div class="diamonds" aria-hidden="true"><svg class="dm d1" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d2" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d3" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d4" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d5" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d6" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d7" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d8" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d9" viewBox="0 0 64 56"><use href="#diamant"/></svg><svg class="dm d10" viewBox="0 0 64 56"><use href="#diamant"/></svg></div>
-  <div class="oval" data-reveal><video class="ph" data-hero-video autoplay muted loop playsinline preload="auto" poster="img/hero-video-poster.webp" width="540" height="720" aria-label="Vidéo du salon : nail art nœuds rouges sur ongles nude"><source src="img/hero-video.webm" type="video/webm"><source src="img/hero-video.mp4" type="video/mp4"></video><span class="badge" data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Lundi – samedi · 10h – 19h</span></div>
+  <div class="oval" data-reveal><video class="ph" data-hero-video autoplay muted loop playsinline preload="auto" poster="img/hero-video-poster.webp" width="576" height="1024" aria-label="Vidéo du salon : une prothésiste ongulaire à son poste chez 36 Beauté"><source src="img/hero-video.webm" type="video/webm"><source src="img/hero-video.mp4" type="video/mp4"></video><span class="badge" data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Lundi – samedi · 10h – 19h</span></div>
 </div></div>
 
 <section id="tarifs"><div class="wrap">
