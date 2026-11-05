@@ -1,5 +1,44 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="UTF-8"/><meta name="robots" content="noindex" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#111315"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"/><title>Inkway — Pilotage des projets</title>  <script type="module" crossorigin src="/inkway-sites/gestion/assets/index-vGfDHlFa.js"></script>
-  <link rel="stylesheet" crossorigin href="/inkway-sites/gestion/assets/index-BMnG9f13.css">
-</head><body><div id="root"></div></body></html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Inkway — Espace de travail déplacé</title>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#0f1420;color:#1d2433}
+  .card{background:#fff;border-radius:14px;padding:28px;max-width:420px;margin:16px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+  h1{font-size:20px;margin:0 0 10px}
+  p{font-size:14px;line-height:1.5;color:#475467}
+  a,button{display:inline-block;margin:6px 6px 0 0;padding:10px 16px;border-radius:8px;font:600 14px inherit;cursor:pointer;text-decoration:none}
+  a{background:#2f6bff;color:#fff;border:0}
+  button{background:#fff;color:#1d2433;border:1px solid #d0d5dd}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>L’espace de travail a déménagé</h1>
+  <p>Inkway est maintenant sur <b>inkway-gestion.vercel.app</b>, avec la sauvegarde en ligne des données.</p>
+  <p id="local" hidden>Ce navigateur contient encore des données saisies sur l’ancienne adresse. Exportez-les, puis importez le fichier dans Réglages sur la nouvelle adresse.</p>
+  <button id="export" hidden>Exporter mes données</button>
+  <a href="https://inkway-gestion.vercel.app/">Ouvrir la nouvelle adresse</a>
+</div>
+<script>
+  // Redirection directe, sauf si l'ancienne adresse garde des données locales à récupérer.
+  var raw = null;
+  try { raw = localStorage.getItem("ink-way-state-v1"); } catch (e) {}
+  if (!raw) location.replace("https://inkway-gestion.vercel.app/" + location.search + location.hash);
+  else {
+    document.getElementById("local").hidden = false;
+    var b = document.getElementById("export");
+    b.hidden = false;
+    b.onclick = function () {
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([raw], { type: "application/json" }));
+      a.download = "ink-way-sauvegarde-ancienne-adresse-" + new Date().toISOString().slice(0, 10) + ".json";
+      a.click();
+    };
+  }
+</script>
+</body>
+</html>

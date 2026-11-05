@@ -1,0 +1,7 @@
+/* Éditeur de blocs : mêmes polices et accents que le site */
+:root{--accent:#8a5a32;--accent-l:#b98654;--cream:#f5efe8}
+body{font-family:"Archivo",system-ui,sans-serif;color:#0b0b0b}
+.pken-kick,.pken-pattern .kick{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#8a5a32}
+.pken-script,.pken-pattern .script{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;color:#b98654}
+.pken-pattern.is-dark{background:#0b0b0b;color:#fff}
+.pken-pattern.is-cream{background:#f5efe8}

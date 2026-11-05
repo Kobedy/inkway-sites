@@ -1,0 +1,23 @@
+/* Inkway PKEN — contenus Gutenberg / Elementor et pages */
+.pken-page-wrap{display:block!important}
+.pken-page-wrap .lg-text{max-width:820px;margin:0 auto}
+.pken-content>*:not(.alignfull):not(.alignwide){max-width:1200px;margin-left:auto;margin-right:auto}
+.pken-content .alignwide{max-width:1200px;margin-left:auto;margin-right:auto}
+.pken-full-width{width:100%}
+.pken-embed{width:100%}
+/* Compositions PKEN (blocs) */
+.pken-pattern{padding:90px 20px}
+.pken-pattern>.wp-block-group__inner-container,.pken-pattern.is-layout-constrained>*{max-width:1200px}
+.pken-pattern .kick,.pken-kick{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent,#8a5a32);margin:0 0 10px}
+.pken-pattern .script,.pken-script{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;color:var(--accent-l,#b98654)}
+.pken-pattern.is-dark{background:#0b0b0b;color:#fff}
+.pken-pattern.is-cream{background:var(--cream,#f5efe8)}
+.pken-pattern .wp-block-button__link{background:var(--accent,#8a5a32);color:#fff;border-radius:8px;font-weight:800}
+.pken-pattern .is-style-outline .wp-block-button__link{background:transparent;color:inherit;border:2px solid currentColor}
+.pken-pattern .wp-block-details{border-bottom:1px solid rgba(11,11,11,.12);padding:16px 0}
+.pken-pattern .wp-block-details summary{font-weight:800;cursor:pointer}
+.pken-pattern .wp-block-gallery img{border-radius:12px}
+/* Éditeur Elementor : les sections sont insérées après le script d’apparition, on les affiche directement. */
+.elementor-editor-active [data-reveal]{opacity:1;transform:none}
+/* Elementor : .elementor a{box-shadow:none} pèse plus que .btn-xl ; ombre du bouton principal rétablie. */
+.elementor a.btn-xl{box-shadow:0 18px 40px -18px rgba(138,90,50,.9)}

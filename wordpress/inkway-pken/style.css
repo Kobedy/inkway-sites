@@ -1,0 +1,17 @@
+/*
+Theme Name: Inkway PKEN Coiffure
+Theme URI: https://inkway-sites.vercel.app/pken/
+Author: Inkway
+Author URI: https://inkway-sites.vercel.app/
+Description: Thème du site de PKEN Coiffure (Alfortville), conversion fidèle du site validé : prestations et tarifs, réalisations, avis Google, carte de fidélité, rendez-vous par WhatsApp, horaires dynamiques et pages légales. Coordonnées, horaires et prestations réglables dans le Customizer. Compatible Gutenberg (compositions « PKEN Coiffure ») et Elementor (accueil créé en un clic, valeurs du salon en codes [pken], emplacements Theme Builder).
+Version: 1.1.0
+Requires at least: 6.0
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: inkway-pken
+Tags: one-column, custom-logo, custom-menu, editor-style, featured-images, full-width-template, block-patterns, wide-blocks, translation-ready
+*/
+
+/* Les styles du site sont dans assets/css/ (base.css, pken.css, legal.css, blocks.css). */
