@@ -44,6 +44,9 @@ function pken_defaults() {
  * @return string
  */
 function pken_opt( $key ) {
+	if ( pken_tokens() ) {
+		return pken_token( "opt='" . $key . "'" );
+	}
 	$defaults = pken_defaults();
 	$value    = get_theme_mod( 'pken_' . $key, isset( $defaults[ $key ] ) ? $defaults[ $key ] : '' );
 	return is_string( $value ) ? trim( $value ) : '';
@@ -66,6 +69,9 @@ function pken_asset( $path ) {
  * @return string
  */
 function pken_img( $file ) {
+	if ( pken_tokens() ) {
+		return pken_token( "img='" . $file . "'" );
+	}
 	return pken_asset( 'assets/img/' . $file );
 }
 
@@ -75,6 +81,9 @@ function pken_img( $file ) {
  * @return string
  */
 function pken_logo_url() {
+	if ( pken_tokens() ) {
+		return pken_token( 'logo' );
+	}
 	$id = (int) get_theme_mod( 'custom_logo' );
 	if ( $id ) {
 		$src = wp_get_attachment_image_url( $id, 'medium' );
@@ -122,6 +131,9 @@ function pken_maps_url() {
  * @return string
  */
 function pken_maps_dir_url() {
+	if ( pken_tokens() ) {
+		return pken_token( 'itineraire' );
+	}
 	return 'https://www.google.com/maps/dir/?api=1&destination=' . rawurlencode( pken_opt( 'brand' ) . ' ' . pken_full_address() );
 }
 
@@ -209,6 +221,9 @@ function pken_hours_text() {
  * @return string
  */
 function pken_day_text( $day, $prefix = '' ) {
+	if ( pken_tokens() ) {
+		return pken_token( "jour='" . (int) $day . "' prefixe='" . trim( $prefix ) . "'" );
+	}
 	$h = pken_hours();
 	return isset( $h[ $day ] ) ? $prefix . pken_h( $h[ $day ][0] ) . '–' . pken_h( $h[ $day ][1] ) : $prefix . 'fermé';
 }
@@ -219,6 +234,9 @@ function pken_day_text( $day, $prefix = '' ) {
  * @return string
  */
 function pken_hours_sentence() {
+	if ( pken_tokens() ) {
+		return pken_token( 'horaires' );
+	}
 	$h = pken_hours();
 	if ( isset( $h[0] ) ) {
 		$s = 'Oui, le dimanche et les jours fériés de ' . pken_h( $h[0][0] ) . ' à ' . pken_h( $h[0][1] ) . '.';
@@ -273,6 +291,9 @@ function pken_services() {
  * @return string
  */
 function pken_price( $name ) {
+	if ( pken_tokens() ) {
+		return pken_token( "prix='" . $name . "'" );
+	}
 	foreach ( pken_services() as $s ) {
 		if ( 0 === strcasecmp( $s['name'], $name ) ) {
 			return $s['price'];

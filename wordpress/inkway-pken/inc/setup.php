@@ -58,9 +58,14 @@ function pken_assets() {
 	// Aperçu Elementor : les sections sont rendues après site.js ; on y recopie le statut déjà calculé
 	// dans la barre du haut et on repère le jour courant des horaires.
 	if ( class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
+		$codes = array();
+		preg_match_all( '/\[pken [^\]]*\]/', (string) get_post_meta( get_queried_object_id(), '_elementor_data', true ), $found );
+		foreach ( array_unique( $found[0] ) as $code ) {
+			$codes[ $code ] = do_shortcode( $code );
+		}
 		wp_add_inline_script(
 			'pken-site',
-			'(function(){var fill=function($s){var src=document.querySelector("[data-open-status]:not(:empty)");$s[0].querySelectorAll("[data-open-status]").forEach(function(el){if(src&&!el.innerHTML)el.innerHTML=src.innerHTML;});$s[0].querySelectorAll("[data-day]").forEach(function(el){el.classList.toggle("today",+el.dataset.day===new Date().getDay());});};var hook=function(){elementorFrontend.hooks.addAction("frontend/element_ready/global",fill);};if(window.elementorFrontend&&elementorFrontend.hooks){hook();}else{jQuery(window).on("elementor/frontend/init",hook);}jQuery(window).on("load",function(){fill(jQuery(document.body));});})();'
+			'var PKEN_CODES=' . wp_json_encode( $codes ) . ';(function(){var fill=function($s){var w=$s[0];var h=w.innerHTML;Object.keys(PKEN_CODES).forEach(function(k){if(h.indexOf(k)>-1){h=h.split(k).join(PKEN_CODES[k]);}});if(h!==w.innerHTML){w.innerHTML=h;}var src=document.querySelector("[data-open-status]:not(:empty)");$s[0].querySelectorAll("[data-open-status]").forEach(function(el){if(src&&!el.innerHTML)el.innerHTML=src.innerHTML;});$s[0].querySelectorAll("[data-day]").forEach(function(el){el.classList.toggle("today",+el.dataset.day===new Date().getDay());});};var hook=function(){elementorFrontend.hooks.addAction("frontend/element_ready/global",fill);};if(window.elementorFrontend&&elementorFrontend.hooks){hook();}else{jQuery(window).on("elementor/frontend/init",hook);}jQuery(window).on("load",function(){fill(jQuery(document.body));});})();'
 		);
 	}
 }

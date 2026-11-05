@@ -6,7 +6,7 @@ prestations et tarifs, réalisations, avis Google, carte de fidélité, rendez-v
 par WhatsApp, horaires dynamiques (ouvert / fermé), plan d’accès, FAQ et pages légales.
 Fonctionne sans aucune extension ; Gutenberg et Elementor (gratuit ou Pro) sont pris en charge.
 
-Configuration requise : WordPress 6.0 ou plus (testé jusqu’à 6.7), PHP 7.4 ou plus.
+Configuration requise : WordPress 6.0 ou plus (testé jusqu’à 7.1), PHP 7.4 ou plus (testé en 8.2).
 
 
 1. INSTALLATION
@@ -54,16 +54,27 @@ A. Avec Gutenberg (éditeur de blocs)
 
 B. Avec Elementor
    1. Installez et activez Elementor.
-   2. Modèles › Modèles enregistrés › Importer des modèles › fichier elementor/inkway-pken-accueil.json
-      (dans le dossier du thème ; il est aussi fourni à côté du fichier zip).
-   3. Pages › Accueil › Modifier avec Elementor › icône dossier › Mes modèles › « PKEN Coiffure — Accueil » › Insérer.
-   4. Attributs de la page : gabarit « Pleine largeur Elementor ».
-      Le modèle reprend le site validé à l’identique : une section Elementor par bloc.
-      Hero, atouts, fidélité, salon et FAQ sont des widgets HTML (textes modifiables) ;
-      tarifs, réalisations, avis, rendez-vous et horaires restent reliés au Customizer (codes courts).
-   Le modèle utilise les widgets natifs (Titre, Texte, Image, Bouton, Galerie, Liste d’icônes,
-   Accordéon, Google Maps) ; le formulaire de rendez-vous est le widget « Code court » [pken_rendez_vous].
+   2. Apparence › Accueil Elementor › « Créer l’accueil Elementor ».
+      L’accueil est créé à l’identique du site validé, une section Elementor par bloc,
+      avec le gabarit « Pleine largeur Elementor ».
+   3. Pages › Accueil › Modifier avec Elementor.
+   Hero, atouts, fidélité, salon et FAQ sont des widgets HTML : textes modifiables directement.
+   Les prix, horaires, coordonnées et images y sont des codes [pken …] qui suivent le Customizer
+   et l’adresse du site (voir plus bas) : un prix changé dans le Customizer change partout.
+   Tarifs, réalisations, avis, rendez-vous et horaires sont des widgets « Code court » reliés au Customizer.
+   Autre possibilité : importer le modèle elementor/inkway-pken-accueil.json
+   (Modèles › Modèles enregistrés › Importer), l’insérer dans l’accueil, gabarit « Pleine largeur Elementor ».
    Elementor Pro : les emplacements Theme Builder (en-tête, pied de page, contenu, archives) sont pris en charge.
+
+Codes [pken …] (texte ou attribut d’un widget HTML) :
+  [pken prix='Coupe homme']           prix d’une prestation du Customizer
+  [pken opt='phone']                  réglage du salon (phone, address, city, email, brand…)
+  [pken horaires]                     phrase des horaires (FAQ)
+  [pken jour='0' prefixe='Dimanche']  horaires d’un jour (0 = dimanche … 6 = samedi)
+  [pken img='facade.webp']            image du thème (assets/img)
+  [pken logo]                         logo du site (Customizer › Identité du site, sinon logo du salon)
+  [pken itineraire]                   lien d’itinéraire Google Maps vers le salon
+  Exemple : <img src="[pken img='facade.webp']" alt="Façade"> · Coupe homme <b>[pken prix='Coupe homme']</b>
 
 Codes courts disponibles : [pken_rendez_vous], [pken_tarifs], [pken_galerie], [pken_horaires],
 [pken_section nom="hero|atouts|tarifs|realisations|avis|fidelite|salon|rendez-vous|horaires-acces|faq"].
