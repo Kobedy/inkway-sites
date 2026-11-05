@@ -37,7 +37,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,246,250,.92);backdro
 .hero h1 i{color:var(--clay)}
 .hero-txt p{max-width:520px;margin:0 auto 26px;color:var(--muted);font-size:1.1rem}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.hero-txt .tel{margin:18px auto 0;font-size:1rem}.hero-txt .tel a{font-weight:600;color:var(--fg)}
 .stage{position:relative;width:100%;display:grid;justify-items:center;margin:clamp(20px,4vw,36px) 0 clamp(24px,4vw,40px)}
 .oval{width:min(72vw,440px);aspect-ratio:3/4;border-radius:50% 50% 0 0/40% 40% 0 0;overflow:hidden;position:relative;z-index:1}
 .oval video{width:100%;height:100%;object-fit:cover;display:block}
@@ -58,7 +57,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,246,250,.92);backdro
 @media(min-width:1000px){
 .hero-grid{grid-template-columns:1.05fr 1fr;column-gap:clamp(40px,5vw,80px);grid-template-rows:1fr auto auto auto 1fr;grid-template-areas:". stage" "over stage" "h1 stage" "txt stage" ". stage";justify-items:start;text-align:left}
 .hero .over{grid-area:over}.hero h1{grid-area:h1;font-size:clamp(4rem,6vw,5.6rem)}.hero-txt{grid-area:txt;margin-top:24px}
-.hero-txt p{margin-left:0}.hero-txt .tel{margin-left:0}.cta{justify-content:flex-start}
+.hero-txt p{margin-left:0}.cta{justify-content:flex-start}
 .stage{grid-area:stage;margin:0}.diamonds{inset:0 -6%}
 .oval{width:min(100%,440px,calc((100vh - 150px)*.75));width:min(100%,440px,calc((100svh - 150px)*.75))}
 }
@@ -141,7 +140,6 @@ footer p{color:var(--muted)}footer a{margin:0 10px;display:inline-block}
   <div class="hero-txt">
     <p data-reveal>Manucure, vernis semi-permanent, gel, résine et beauté des pieds, au 36 rue Belgrand. Ouvert du lundi au samedi, de 10 h à 19 h.</p>
     <div class="cta" data-reveal><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn l" href="#tarifs">Voir les tarifs</a></div>
-    <p class="tel" data-reveal>Ou appelez le salon : <a href="tel:+33144622495">01 44 62 24 95</a></p>
   </div>
 </div></div>
 
