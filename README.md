@@ -6,3 +6,6 @@ Publication GitHub Pages :
 - `pken/` — landing page personnalisée de PKEN Coiffure (Alfortville), en attente de validation du gérant.
 
 Pages statiques (HTML/CSS/JS sans dépendance). Toutes les pages portent `noindex` tant qu’elles ne sont pas validées. Photos des modèles : Unsplash.
+
+## Page de choix des maquettes
+`catalogue/choix/?salon=…&m1=/salon/maquette-1/&n1=…` affiche côte à côte les maquettes personnalisées d’un salon (jusqu’à 3, uniquement des pages de ce site) avec un bouton « Je choisis cette maquette » vers WhatsApp Inkway.
