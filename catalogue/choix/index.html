@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vos maquettes de site · Inkway</title>
+<meta name="description" content="Les maquettes de site préparées par Inkway pour votre salon.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1220;--muted:#5b6475;--line:#e6e8ee;--accent:#2e6bff;--bg:#f6f7fb}
+*{box-sizing:border-box}body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+header{background:linear-gradient(135deg,#0b1220,#16213a);color:#fff;padding:40px 0 46px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:-.02em}.logo span{color:#7cf0c8}
+.kick{display:inline-block;margin-top:26px;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#9fb4ff}
+h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.1;margin:8px 0 12px;letter-spacing:-.02em}
+header p{margin:0;color:#c9d3ea;max-width:680px}
+main{padding:34px 0 60px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.thumb{position:relative;display:block;aspect-ratio:1366/900;overflow:hidden;background:#eef0f5;border-bottom:1px solid var(--line)}
+.thumb iframe{position:absolute;top:0;left:0;width:1366px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
+.body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.num{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h2{margin:0;font-size:1.3rem}
+.body p{margin:0;color:var(--muted);font-size:.95rem}
+ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:.88rem}
+.palette{display:flex;gap:6px;margin-top:4px}.palette i{width:22px;height:22px;border-radius:6px;border:1px solid rgba(0,0,0,.08)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;font-size:.92rem;flex:1;text-align:center}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.note{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 20px;color:var(--muted);font-size:.92rem}
+footer{padding:24px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+.grid.n1{grid-template-columns:minmax(0,560px)}.grid.n2{grid-template-columns:repeat(2,1fr)}
+.empty{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;color:var(--muted)}
+@media (max-width:960px){.grid,.grid.n2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">ink<span>way</span></div>
+  <span class="kick">Vos maquettes personnalisées</span>
+  <h1 data-title>Choisissez votre futur site</h1>
+  <p>Chaque maquette a été préparée pour votre salon, avec votre logo, vos couleurs, vos prestations et vos photos. Ouvrez-les en grand, comparez, puis choisissez celle que vous préférez : nous l’ajusterons ensuite avec vous.</p>
+</div></header>
+<main><div class="wrap">
+  <section class="grid" data-grid></section>
+  <div class="note">Pour choisir, cliquez sur « Je choisis cette maquette » : un message WhatsApp prérempli s’ouvre vers Inkway. Vous pouvez aussi répondre au message reçu avec le numéro de la maquette et ce que vous aimeriez changer.</div>
+</div></main>
+<footer>Inkway · création de sites pour les salons · <a href="https://wa.me/33939209321">+33 9 39 20 93 21</a> (appel et WhatsApp)</footer>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var salon = (q.get("salon") || "").slice(0, 80);
+  var grid = document.querySelector("[data-grid]");
+  if (salon) {
+    document.querySelector("[data-title]").textContent = "Les maquettes du site de " + salon;
+    document.title = "Vos maquettes de site — " + salon + " · Inkway";
+  }
+  // Seules les pages de ce site sont acceptées (chemin du type /mon-salon/maquette-1/).
+  var ok = /^\/[a-z0-9][a-z0-9\-\/]*(\.html)?$/i;
+  var list = [];
+  for (var n = 1; n <= 3; n++) {
+    var path = q.get("m" + n) || "";
+    if (ok.test(path) && path.indexOf("..") < 0) list.push({ n: n, path: path, name: (q.get("n" + n) || "").slice(0, 60) });
+  }
+  function el(tag, attrs, text) { var e = document.createElement(tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent = text; return e; }
+  if (!list.length) {
+    grid.replaceWith(el("p", { class: "empty" }, "Aucune maquette à afficher pour le moment : utilisez le lien reçu d’Inkway."));
+    return;
+  }
+  grid.className = "grid n" + list.length;
+  list.forEach(function (m, i) {
+    var card = el("article", { class: "card" });
+    var thumb = el("a", { class: "thumb", href: m.path, target: "_blank", rel: "noopener", "aria-label": "Voir la maquette " + (i + 1) + " en grand" });
+    var frame = el("iframe", { title: "Aperçu de la maquette " + (i + 1), tabindex: "-1", loading: "lazy", src: m.path });
+    thumb.appendChild(frame);
+    var body = el("div", { class: "body" });
+    body.appendChild(el("span", { class: "num" }, "Maquette " + (i + 1)));
+    body.appendChild(el("h2", {}, m.name || "Proposition " + (i + 1)));
+    body.appendChild(el("p", {}, "Personnalisée pour " + (salon || "votre salon") + "."));
+    var actions = el("div", { class: "actions" });
+    actions.appendChild(el("a", { class: "btn ghost", href: m.path, target: "_blank", rel: "noopener" }, "Voir le site en grand"));
+    var msg = "Bonjour Inkway, " + (salon ? "pour " + salon + ", " : "") + "je choisis la maquette " + (i + 1) + (m.name ? " « " + m.name + " »" : "") + ".";
+    actions.appendChild(el("a", { class: "btn", href: "https://wa.me/33939209321?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, "Je choisis cette maquette"));
+    body.appendChild(actions);
+    card.appendChild(thumb); card.appendChild(body); grid.appendChild(card);
+  });
+  var thumbs = document.querySelectorAll(".thumb");
+  function fit() { thumbs.forEach(function (t) { t.querySelector("iframe").style.transform = "scale(" + t.clientWidth / 1366 + ")"; }); }
+  fit(); addEventListener("resize", fit);
+})();
+</script>
+</body>
+</html>
