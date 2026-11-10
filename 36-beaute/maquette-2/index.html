@@ -13,13 +13,14 @@
 <style>
 /* Palette 36 Beauté : bleu nuit du logo et de l'enseigne, rouge vernis et rose nude des réalisations */
 :root{--bg:#fbf7f6;--fg:#1d2752;--accent:#a8344f;--on-accent:#fff;--muted:#5f6178;--line:#ece2e2;--rose:#f5e6e6;--silver:#c9d0e6;--font-d:"Italiana",Georgia,serif;--font-b:"Nunito Sans",system-ui,sans-serif;--r-in:10px;--in-bg:#fff}
-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+html,body{overflow-x:clip}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(29,39,82,.35)}
 .hd{display:flex;align-items:center;gap:30px;padding:14px 0}
 .logo{font-family:var(--font-d);font-size:1.9rem;text-decoration:none;letter-spacing:.06em;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
 .logo .mark{width:42px;height:42px;border-radius:50%;background:var(--fg);display:grid;place-items:center;flex:none}
 .logo .mark img{width:28px;height:28px}
 .nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:.92rem}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
-.tel{font-weight:800;text-decoration:none;white-space:nowrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--fg);color:#fff;font-weight:800;text-decoration:none;border:0;cursor:pointer;transition:.2s;font-size:.92rem}
 .btn:hover{background:var(--accent)}.btn.acc{background:var(--accent)}.btn.acc:hover{background:var(--fg)}
 .btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--fg)}.btn.ghost:hover{background:var(--fg);color:#fff}
@@ -29,6 +30,7 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .pills{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pills span{background:var(--rose);padding:8px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .hero-info{margin-top:18px;color:var(--muted);font-size:.95rem}.hero-info a{font-weight:800;color:var(--fg);white-space:nowrap}
+.sm-only{display:none}
 .soin .p,.cart li b,.info a[href^="tel"]{white-space:nowrap}
 .hv{position:relative}
 .hv img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px}
@@ -92,16 +94,15 @@ footer a{margin-right:14px}
 .mcart{display:none}
 @media(max-width:1000px){.menu{grid-template-columns:1fr}.side{position:static;display:flex;overflow-x:auto}.side a{white-space:nowrap}.side img{display:none}.cart{position:fixed;left:12px;right:12px;bottom:12px;top:auto;z-index:45;display:none}.cart.show{display:block}
  .mcart{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:44}.mcart .btn{width:100%}.forf{grid-template-columns:repeat(2,1fr)}[data-totop]{bottom:78px}}
-@media(max-width:900px){.hero,.rdv,.salon{grid-template-columns:1fr}.info,.avis{grid-template-columns:1fr}.rdv{padding:30px 20px}.promo{left:12px}.hd .btn{display:none}.hd{gap:12px}.tel{margin-left:auto;font-size:.9rem}section{padding:70px 0}.hero{padding:34px 0 60px}}
-@media(max-width:420px){.logo{font-size:1.5rem}.logo .mark{width:36px;height:36px}.logo .mark img{width:24px;height:24px}.tel{font-size:.82rem}.soin{gap:10px}}
+@media(max-width:900px){.hero,.rdv,.salon{grid-template-columns:1fr}.info,.avis{grid-template-columns:1fr}.rdv{padding:30px 20px}.promo{left:12px}.hd{gap:12px}.hd-rdv{margin-left:auto;padding:10px 14px;font-size:.85rem}.lg-only{display:none}.sm-only{display:inline}section{padding:70px 0}.hero{padding:34px 0 60px}}
+@media(max-width:420px){.logo{font-size:1.5rem}.logo .mark{width:36px;height:36px}.logo .mark img{width:24px;height:24px}.hd-rdv{padding:9px 12px;font-size:.8rem}.soin{gap:10px}}
 </style>
 </head>
 <body>
 <header data-header><div class="wrap hd">
   <a class="logo" href="#" aria-label="36 Beauté, retour en haut de page"><span class="mark"><img src="img/logo-diamant.png" width="28" height="28" alt=""></span>36 Beauté</a>
   <nav class="nav" aria-label="Navigation principale"><a href="#carte">Carte &amp; tarifs</a><a href="#realisations">Réalisations</a><a href="#salon">Le salon</a><a href="#avis">Avis</a><a href="#infos">Infos</a></nav>
-  <a class="tel" href="tel:+33144622495" aria-label="Appeler le salon au 01 44 62 24 95">01 44 62 24 95</a>
-  <a class="btn acc" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Prendre rendez-vous</a>
+  <a class="btn acc hd-rdv" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener"><span class="lg-only">Prendre rendez-vous</span><span class="sm-only">Rendez-vous</span></a>
   <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
 </div></header>
 
@@ -111,7 +112,7 @@ footer a{margin-right:14px}
     <h1 data-reveal>Vos ongles, à la carte.</h1>
     <p data-reveal>Manucure, semi-permanent, gel ou résine, beauté des pieds et nail art au 36 rue Belgrand. Composez votre sélection, voyez le prix total, puis réservez votre créneau en ligne.</p>
     <div class="pills" data-reveal><span>✓ Prix affichés</span><span>✓ Durées indiquées</span><span>✓ Réservation 24 h/24</span></div>
-    <div class="cta" data-reveal><a class="btn acc" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn ghost" href="#carte">Composer ma sélection</a></div>
+    <div class="cta" data-reveal><a class="btn ghost" href="#carte">Composer ma sélection</a></div>
     <p class="hero-info" data-reveal>Du lundi au samedi, 10 h – 19 h · <a href="tel:+33144622495">01 44 62 24 95</a></p>
   </div>
   <div class="hv" data-reveal><img class="ph" src="img/hero-noeuds.webp" width="540" height="720" alt="Nail art nœuds rouges sur ongles nude, réalisé au salon 36 Beauté"><a class="promo" href="https://www.google.com/maps/search/?api=1&amp;query=36%20Beaut%C3%A9%2036%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener"><span class="ey">Avis Google</span><b>4,4/5</b><small>128 avis, relevé d’octobre 2026</small><em>Lire les avis →</em></a></div>
