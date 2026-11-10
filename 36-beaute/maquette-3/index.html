@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>36 Beauté — Nail bar &amp; onglerie à Paris 20e · Nail art, tarifs, réservation</title>
+<meta name="description" content="36 Beauté, onglerie au 36 rue Belgrand, Paris 20e : nail art, vernis semi-permanent, gel ou résine, french, babyboomer et beauté des pieds. Tarifs affichés, réservation en ligne 24 h/24. Du lundi au samedi, 10 h – 19 h.">
+<meta name="theme-color" content="#1d2752">
+<link rel="icon" href="img/favicon.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* Palette 36 Beauté : contours bleu nuit (logo, enseigne), rouge vernis et rose nude (réalisations), bleu argent du diamant */
+:root{--bg:#fbf3ee;--fg:#1d2752;--accent:#b8324e;--on-accent:#fff;--muted:#59597a;--line:rgba(29,39,82,.18);--pink:#f7d3dc;--silver:#dfe4f5;--font-d:"Bagel Fat One",cursive;--font-b:"Outfit",system-ui,sans-serif;--r-in:16px;--in-bg:#fff}
+html,body{overflow-x:clip}
+header{position:sticky;top:12px;z-index:50;margin:12px auto 0;width:min(1200px,100% - 24px);background:#fff;border:2px solid var(--fg);border-radius:99px;box-shadow:4px 4px 0 var(--fg)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 10px 8px 14px}
+.logo{font-family:var(--font-d);font-size:1.6rem;text-decoration:none;color:var(--accent);display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+.logo .mark{width:40px;height:40px;border-radius:50%;background:var(--fg);display:grid;place-items:center;flex:none}
+.logo .mark img{width:26px;height:26px}
+.nav{display:flex;gap:22px;font-weight:700}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--fg);box-shadow:3px 3px 0 var(--fg);cursor:pointer;transition:.15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--fg)}
+.btn.w{background:#fff;color:var(--fg)}
+.sm-only{display:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 0}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3.4rem,8vw,7rem);line-height:.92;margin:0 0 20px}
+.hero h1 span{color:var(--accent);display:inline-block;transform:rotate(-3deg)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:460px}
+.hero .hinfo{font-size:1rem;color:var(--fg);font-weight:500;margin-top:18px}.hinfo a{font-weight:700;white-space:nowrap}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.tiles img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:2px solid var(--fg);box-shadow:5px 5px 0 var(--fg)}
+.tiles img:nth-child(2){transform:translateY(40px)}.tiles img:nth-child(3){transform:translateY(-10px)}
+.sticker{position:absolute;width:130px;height:130px;border-radius:50%;background:var(--pink);border:2px solid var(--fg);display:grid;place-items:center;text-align:center;font-family:var(--font-d);font-size:1.1rem;line-height:1.05;left:42%;top:40%;animation:wob 4s ease-in-out infinite;z-index:2}
+@keyframes wob{50%{transform:rotate(12deg) scale(1.05)}}
+.tick{background:var(--fg);color:var(--bg);overflow:hidden;transform:rotate(-1.5deg);margin:20px 0}
+.tick div{display:flex;gap:40px;white-space:nowrap;padding:16px 0;font-family:var(--font-d);font-size:1.6rem;width:max-content;animation:mq 22s linear infinite}
+.tick span:nth-child(even){color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tick div,.sticker{animation:none}}
+section{padding:100px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:.95;margin:0 0 20px}
+h2 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:640px;margin:-6px 0 26px}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.fl button{padding:10px 18px;border-radius:99px;border:2px solid var(--fg);background:#fff;font-weight:700;cursor:pointer}
+.fl button.active{background:var(--fg);color:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal a{border-radius:24px;overflow:hidden;border:2px solid var(--fg);aspect-ratio:1;position:relative;background:var(--pink)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s}.gal a:hover img{transform:scale(1.08) rotate(2deg)}
+.gal a b{position:absolute;left:10px;bottom:10px;background:#fff;border:2px solid var(--fg);border-radius:99px;padding:3px 12px;font-size:.8rem}
+.gal a.ig{display:grid;place-items:center;text-align:center;padding:20px;text-decoration:none;background:var(--fg);color:var(--bg);font-family:var(--font-d);font-size:1.4rem;line-height:1.1}
+.gal a.ig small{display:block;font-family:var(--font-b);font-size:.9rem;color:var(--pink);margin-top:8px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.mc{background:#fff;border:2px solid var(--fg);border-radius:28px;padding:28px;box-shadow:6px 6px 0 var(--fg)}
+.mc:nth-child(2){background:var(--pink)}.mc:nth-child(3){background:var(--silver)}
+.mc h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0 0 14px}
+.mc li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:2px dotted var(--line)}
+.mc li small{display:block;color:var(--muted);font-size:.8rem}
+.mc ul{list-style:none;padding:0;margin:0}.mc b{color:var(--accent);white-space:nowrap}
+.note{color:var(--muted);margin-top:26px}
+.loy{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.loy ul{padding-left:1.1em;color:var(--muted);font-size:1.05rem}.loy li{margin:6px 0}
+.ph2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ph2 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:2px solid var(--fg);box-shadow:5px 5px 0 var(--fg)}
+.ph2 img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:760px}
+.notes .mc{text-align:center}.notes .mc strong{display:block;font-family:var(--font-d);font-weight:400;font-size:3.4rem;color:var(--accent);line-height:1}
+.notes .mc p{margin:6px 0 14px;color:var(--muted)}
+.rdv{background:#fff;border:2px solid var(--fg);border-radius:36px;padding:50px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;box-shadow:8px 8px 0 var(--fg)}
+.rdv .box{background:var(--pink);border:2px solid var(--fg);border-radius:28px;padding:28px}
+.rdv .box h3{font-family:var(--font-d);font-weight:400;font-size:1.8rem;margin:0 0 10px}
+.rdv .box p{margin:0 0 8px}
+.rdv .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.hours{list-style:none;padding:0;margin:14px 0 0}.hours li{padding:4px 0}
+.hours .today{color:var(--accent);font-weight:700}
+.map{width:100%;height:320px;border:2px solid var(--fg);border-radius:28px;margin-top:40px}
+footer{padding:50px 0 90px;text-align:center}
+footer .logo{font-size:3rem}footer p{color:var(--muted)}
+footer p a{margin:0 8px}
+footer .today{color:var(--accent);font-weight:700}
+@media(max-width:900px){.hero,.loy,.rdv{grid-template-columns:1fr}.menu,.notes{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.rdv{padding:28px 20px}.hd .btn{margin-left:auto;padding:9px 14px;box-shadow:2px 2px 0 var(--fg)}.lg-only{display:none}.sm-only{display:inline}.sticker{width:100px;height:100px;font-size:.9rem}section{padding:70px 0}.hero{padding:40px 0 70px}}
+@media(max-width:420px){.logo{font-size:1.25rem;gap:8px}.logo .mark{width:34px;height:34px}.logo .mark img{width:22px;height:22px}.hd{gap:8px;padding-left:8px}.hd .btn{padding:8px 12px;font-size:.85rem}}
+</style>
+</head>
+<body>
+<header data-header><div class="hd">
+  <a class="logo" href="#" aria-label="36 Beauté, retour en haut de page"><span class="mark"><img src="img/logo-diamant.png" width="26" height="26" alt=""></span>36 Beauté</a>
+  <nav class="nav" aria-label="Navigation principale"><a href="#galerie">Nail art</a><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#avis">Avis</a><a href="#rdv">Contact</a></nav>
+  <a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener"><span class="lg-only">Prendre rendez-vous ✦</span><span class="sm-only">Rendez-vous</span></a>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<div class="wrap hero">
+  <div>
+    <h1 data-reveal>Des ongles<br>qui ont du <span>caractère.</span></h1>
+    <p data-reveal>L’onglerie du 36 rue Belgrand, à Paris 20e. Semi-permanent, gel ou résine, french, babyboomer et nail art dessiné à la main, pour les mains comme pour les pieds.</p>
+    <div data-reveal style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn w" href="#galerie">Voir le nail art</a><a class="btn w" href="#tarifs">Voir les tarifs</a></div>
+    <p class="hinfo" data-reveal>Du lundi au samedi, 10 h – 19 h · <a href="tel:+33144622495">01 44 62 24 95</a></p>
+  </div>
+  <div class="tiles" data-reveal>
+    <img class="ph" src="img/ig-noeuds.webp" width="400" height="400" alt="Nail art nœuds rouges sur ongles nude, réalisé au salon">
+    <img class="ph" src="img/ig-french-pois.webp" width="400" height="400" alt="French rose à petits pois sur ongles en amande">
+    <img class="ph" src="img/r-rouge-turquoise.webp" width="400" height="400" alt="Nail art rouge et turquoise sur ongles carrés">
+    <img class="ph" src="img/ig-chrome.webp" width="400" height="400" alt="Ongles nude à pointes chromées">
+    <div class="sticker">Nail art<br>dès 1 €<br>l’ongle</div>
+  </div>
+</div>
+<div class="tick" aria-hidden="true"><div><span>Semi-permanent ✦</span><span>Gel &amp; résine ✦</span><span>French ✦</span><span>Babyboomer ✦</span><span>Nail art ✦</span><span>Beauté des pieds ✦</span><span>Semi-permanent ✦</span><span>Gel &amp; résine ✦</span><span>French ✦</span><span>Babyboomer ✦</span><span>Nail art ✦</span><span>Beauté des pieds ✦</span></div></div>
+
+<section id="galerie"><div class="wrap">
+  <h2 data-reveal>Le <span>book</span> nail art</h2>
+  <p class="lead">Des poses réalisées au salon, publiées sur notre Instagram. Touchez une photo pour l’agrandir.</p>
+  <div class="fl" data-filter-group="#gal"><button class="active" data-filter="all">Tout</button><button data-filter="nude">Nude</button><button data-filter="rouge">Rouge</button><button data-filter="art">Art</button><button data-filter="pieds">Pieds</button></div>
+  <div class="gal" id="gal">
+    <a data-cat="rouge art" data-lightbox href="img/ig-noeuds-grand.webp" data-caption="Nail art nœuds rouges"><img class="ph" loading="lazy" src="img/ig-noeuds.webp" width="400" height="400" alt="Nail art nœuds rouges sur ongles nude"><b>Nœuds rouges</b></a>
+    <a data-cat="nude art" data-lightbox href="img/ig-french-pois-grand.webp" data-caption="French rose à pois"><img class="ph" loading="lazy" src="img/ig-french-pois.webp" width="400" height="400" alt="French rose à petits pois sur ongles en amande"><b>French à pois</b></a>
+    <a data-cat="nude" data-lightbox href="img/ig-chrome-grand.webp" data-caption="Pointes effet chromé"><img class="ph" loading="lazy" src="img/ig-chrome.webp" width="400" height="400" alt="Ongles nude à pointes chromées"><b>Chromé</b></a>
+    <a data-cat="art" data-lightbox href="img/ig-marron-grand.webp" data-caption="Nail art marron et transparent"><img class="ph" loading="lazy" src="img/ig-marron.webp" width="400" height="400" alt="Nail art marron et transparent sur ongles en amande"><b>Marron glacé</b></a>
+    <a data-cat="rouge art" data-lightbox href="img/r-rouge-turquoise-grand.webp" data-caption="Rouge et turquoise"><img class="ph" loading="lazy" src="img/r-rouge-turquoise.webp" width="400" height="400" alt="Nail art rouge et turquoise sur ongles carrés"><b>Rouge &amp; turquoise</b></a>
+    <a data-cat="nude art" data-lightbox href="img/carte-mains.webp" data-caption="Rose nude et feuilles dorées"><img class="ph" loading="lazy" src="img/carte-mains.webp" width="500" height="500" alt="Ongles rose nude ornés de feuilles dorées"><b>Feuilles d’or</b></a>
+    <a data-cat="rouge" data-lightbox href="img/ig-rouge-bonhomme-grand.webp" data-caption="Rouge et bonhomme de neige"><img class="ph" loading="lazy" src="img/ig-rouge-bonhomme.webp" width="400" height="400" alt="Vernis rouge et nail art bonhomme de neige"><b>Rouge de saison</b></a>
+    <a data-cat="nude" data-lightbox href="img/r-babyboomer-carre-grand.webp" data-caption="Babyboomer sur ongles carrés"><img class="ph" loading="lazy" src="img/r-babyboomer-carre.webp" width="400" height="400" alt="Babyboomer sur ongles carrés"><b>Babyboomer</b></a>
+    <a data-cat="rouge art" data-lightbox href="img/carte-nail-art.webp" data-caption="Rouge et fleurs"><img class="ph" loading="lazy" src="img/carte-nail-art.webp" width="500" height="500" alt="Vernis rouge et nail art fleuri sur ongles en amande"><b>Rouge fleuri</b></a>
+    <a data-cat="rouge art" data-lightbox href="img/r-nail-art-rouge-grand.webp" data-caption="Nail art rouge et nude"><img class="ph" loading="lazy" src="img/r-nail-art-rouge.webp" width="400" height="400" alt="Nail art rouge et nude sur ongles en amande"><b>Rouge &amp; nude</b></a>
+    <a data-cat="pieds" data-lightbox href="img/pieds-vernis-bleu.webp" data-caption="Beauté des pieds, vernis bleu nuit"><img class="ph" loading="lazy" src="img/pieds-vernis-bleu.webp" width="500" height="500" alt="Pieds aux ongles vernis bleu nuit"><b>Bleu nuit</b></a>
+    <a class="ig" data-cat="nude rouge art pieds" href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener"><span>Encore plus de poses<small>sur Instagram @36beaute →</small></span></a>
+  </div>
+</div></section>
+
+<section id="tarifs" style="padding-top:0"><div class="wrap">
+  <h2 data-reveal>La <span>carte</span></h2>
+  <p class="lead">Les tarifs du salon, sans surprise. Paiement sur place.</p>
+  <div class="menu">
+    <div class="mc" data-reveal><h3>Mains</h3><ul>
+      <li><span>Vernis simple<small>30 min</small></span> <b>10 €</b></li>
+      <li><span>Manucure + vernis simple<small>30 min</small></span> <b>20 €</b></li>
+      <li><span>Vernis semi-permanent<small>40 min</small></span> <b>25 €</b></li>
+      <li><span>Manucure + semi-permanent<small>30 min</small></span> <b>35 €</b></li>
+      <li><span>Gel ou résine + vernis simple<small>1 h</small></span> <b>30 €</b></li>
+      <li>Gel ou résine + semi-permanent <b>50 €</b></li>
+      <li>Remplissage + semi-permanent <b>40 €</b></li>
+      <li>Pose avec capsules <b>50 €</b></li>
+      <li>Pose avec chablons <b>60 €</b></li></ul></div>
+    <div class="mc" data-reveal><h3>Pieds</h3><ul>
+      <li><span>Vernis simple<small>20 min</small></span> <b>15 €</b></li>
+      <li><span>Beauté des pieds + vernis simple<small>1 h</small></span> <b>30 €</b></li>
+      <li><span>Vernis semi-permanent<small>30 min</small></span> <b>30 €</b></li>
+      <li><span>Beauté des pieds + semi-permanent<small>1 h</small></span> <b>50 €</b></li>
+      <li><span>Gel ou résine + vernis simple<small>1 h</small></span> <b>40 €</b></li>
+      <li>Gel ou résine + semi-permanent <b>60 €</b></li>
+      <li>Remplissage + semi-permanent <b>50 €</b></li>
+      <li>Pose avec capsules <b>60 €</b></li></ul></div>
+    <div class="mc" data-reveal><h3>Suppléments</h3><ul>
+      <li>French <b>+5 €</b></li>
+      <li>Babyboomer (ombré) <b>+10 €</b></li>
+      <li><span>Nail art<small>par ongle</small></span> <b>+1 €</b></li>
+      <li><span>Réparation d’un ongle<small>à l’unité</small></span> <b>5 €</b></li>
+      <li>Dépose <b>10 €</b></li>
+      <li>Gommage <b>10 €</b></li></ul></div>
+  </div>
+  <p class="note">Les durées indiquées sont celles de la réservation en ligne. <a href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Réserver votre prestation sur Planity →</a></p>
+</div></section>
+
+<section id="salon" style="padding-top:0"><div class="wrap loy">
+  <div>
+    <h2 data-reveal>Le <span>salon</span></h2>
+    <p class="lead">Au 36 rue Belgrand, à deux pas de la place Gambetta, un salon clair où l’équipe prend soin de vos mains et de vos pieds.</p>
+    <ul>
+      <li>Des centaines de teintes de vernis au choix</li>
+      <li>Des postes dédiés à la beauté des pieds</li>
+      <li>Des tarifs affichés et le paiement sur place</li>
+      <li>La réservation en ligne 24 h/24, ou par téléphone aux heures d’ouverture</li>
+    </ul>
+  </div>
+  <div class="ph2" data-reveal>
+    <img class="ph" loading="lazy" src="img/salon-postes-face.webp" width="860" height="780" alt="L’intérieur lumineux du salon 36 Beauté et ses postes de beauté des pieds">
+    <img class="ph" loading="lazy" src="img/facade.webp" width="800" height="640" alt="La façade du salon au 36 rue Belgrand, Paris 20e">
+    <img class="ph" loading="lazy" src="img/mur-vernis.webp" width="600" height="600" alt="Le mur de vernis du salon, des centaines de teintes">
+  </div>
+</div></section>
+
+<section id="avis" style="padding-top:0"><div class="wrap">
+  <h2 data-reveal>Vos <span>avis</span></h2>
+  <p class="lead">Les notes publiques du salon, relevées en octobre 2026. Après votre visite, partagez votre expérience.</p>
+  <div class="notes">
+    <div class="mc" data-reveal><strong>4,4/5</strong><p>Google · 128 avis</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=36%20Beaut%C3%A9%2036%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Lire les avis Google</a></div>
+    <div class="mc" data-reveal><strong>4,9/5</strong><p>Planity · 31 avis</p><a class="btn w" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Voir les avis Planity</a></div>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="rdv">
+    <div>
+      <h2>On vous <span>attend</span></h2>
+      <p style="color:var(--muted)">Choisissez votre prestation et votre créneau en ligne, 24 h/24, avec confirmation immédiate. Vous préférez parler au salon ? Appelez-nous aux heures d’ouverture.</p>
+      <p data-open-status data-hours='{"1":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'></p>
+      <ul class="hours"><li data-day="1">Lundi – samedi : 10h – 19h</li><li>Dimanche : fermé</li><li><small>Jours fériés : nous consulter</small></li></ul>
+    </div>
+    <div class="box">
+      <h3>36 Beauté</h3>
+      <p>36 rue Belgrand, 75020 Paris</p>
+      <p><a href="tel:+33144622495">01 44 62 24 95</a> · <a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener">@36beaute</a></p>
+      <div class="cta"><a class="btn" href="https://www.planity.com/36-beaute-75020-paris-vhy" target="_blank" rel="noopener">Réserver en ligne ✦</a><a class="btn w" href="tel:+33144622495">Appeler le salon</a><a class="btn w" href="https://www.google.com/maps/dir/?api=1&amp;destination=36%20rue%20Belgrand%2075020%20Paris" target="_blank" rel="noopener">Itinéraire</a></div>
+    </div>
+  </div>
+  <iframe class="map" loading="lazy" title="Plan d’accès au salon 36 Beauté, 36 rue Belgrand, Paris 20e" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=36%20rue%20Belgrand%2C%2075020%20Paris&amp;z=16&amp;output=embed"></iframe>
+</div></section>
+
+<footer><div class="wrap"><a class="logo" href="#" style="justify-content:center">36 Beauté</a><p>36 rue Belgrand, 75020 Paris · <a href="tel:+33144622495" style="margin:0">01 44 62 24 95</a> · <a href="https://www.instagram.com/36beaute/" target="_blank" rel="noopener" style="margin:0">@36beaute</a></p><p>© <span data-year></span> 36 Beauté · <a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Politique de confidentialité</a></p></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>
