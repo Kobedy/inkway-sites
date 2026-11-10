@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>BL Coiffure — Salon de coiffure femme, homme et enfant, Paris 13e</title>
+<meta name="description" content="BL Coiffure, salon de coiffure au 108 avenue d’Italie, Paris 13e (métro Tolbiac). Coupes femme, homme et enfant, couleur L’Oréal, balayage, lissage brésilien. Ouvert 7 j/7 de 9 h à 20 h. Tarifs affichés, rendez-vous par téléphone ou WhatsApp.">
+<meta name="theme-color" content="#1b1719">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#faf6f3;--fg:#1b1719;--accent:#c4156b;--on-accent:#fff;--muted:#7a6a71;--line:rgba(27,23,25,.15);--soft:#f6e8ee;--font-d:"Cormorant Garamond",Georgia,serif;--font-b:"Jost",system-ui,sans-serif;--r-in:2px;--in-bg:#fffaf7}
+body{font-weight:300}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,243,.9);backdrop-filter:blur(10px);transition:.3s}
+header.scrolled{box-shadow:0 1px 0 var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{font-family:var(--font-d);font-size:1.9rem;text-decoration:none;letter-spacing:.02em;font-style:italic;font-weight:600;white-space:nowrap}
+.logo i{color:var(--accent);font-style:italic}
+.nav{display:flex;gap:34px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase}
+.nav a{text-decoration:none;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--accent);transition:.3s}.nav a:hover::after{right:0}
+.btn{display:inline-block;padding:16px 34px;border:1px solid var(--fg);text-decoration:none;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;background:transparent;cursor:pointer;transition:.3s;font-weight:400}
+.btn:hover,.btn.fill{background:var(--fg);color:var(--bg)}.btn.fill:hover{background:var(--accent);border-color:var(--accent)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:50px 0 100px}
+.arch{position:relative}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0}
+.arch .sm{position:absolute;width:44%;left:-14%;bottom:-8%;aspect-ratio:1;border-radius:50%;border:10px solid var(--bg);object-fit:cover}
+.arch .seal{position:absolute;right:-24px;top:16%;width:120px;height:120px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--font-d);font-style:italic;font-size:1.1rem;line-height:1.1;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.over{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3rem,6.4vw,5.6rem);line-height:1;margin:18px 0 24px}
+h1 i,h2 i{color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:460px;margin-bottom:36px}
+.hero .meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:.9rem;color:var(--muted)}
+.hero .meta a{color:var(--fg);text-decoration:none;font-weight:400;border-bottom:1px solid var(--line)}
+section{padding:110px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,4.6vw,3.8rem);line-height:1.05;margin:14px 0 20px}
+.c{text-align:center}.c p.l{color:var(--muted);max-width:560px;margin:0 auto}
+.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:46px 0 40px}
+.tabs button{border:1px solid var(--line);background:none;padding:12px 24px;border-radius:99px;cursor:pointer;font-size:.85rem;letter-spacing:.1em;transition:.25s}
+.tabs button.active{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.pl{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.pl img{width:100%;aspect-ratio:1;object-fit:cover}
+.ln{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ln b{font-family:var(--font-d);font-size:1.45rem;font-weight:500}.ln i{flex:1;border-bottom:1px dotted var(--muted)}.ln span{font-family:var(--font-d);font-size:1.4rem;color:var(--accent);white-space:nowrap}
+.ln small{display:block;color:var(--muted);font-size:.85rem}
+.note{color:var(--muted);font-size:.85rem;margin:14px 0 0}
+.soft{background:var(--soft)}
+.phil{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;margin-top:50px}
+.phil div{text-align:center}.phil svg{width:52px;height:52px;stroke:var(--accent);fill:none;stroke-width:1.2}
+.phil h3{font-family:var(--font-d);font-size:1.7rem;font-weight:500;margin:14px 0 8px}.phil p{color:var(--muted);margin:0}
+.mas{columns:3;column-gap:18px;margin-top:40px}
+.mas a{display:block;margin-bottom:18px;overflow:hidden;break-inside:avoid}.mas img{width:100%;transition:.6s}.mas a:hover img{transform:scale(1.05)}
+.avis{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:40px auto 0}
+.avis div{border:1px solid var(--line);padding:34px 28px;text-align:center;background:var(--in-bg)}
+.avis b{font-family:var(--font-d);font-size:3rem;font-weight:500;display:block;line-height:1}
+.avis b em{font-size:1.4rem;color:var(--muted);font-style:normal}
+.avis p{margin:8px 0 18px;color:var(--muted)}
+.avis small{display:block;color:var(--muted);font-size:.78rem;margin-top:12px}
+.rdv{display:grid;grid-template-columns:1fr 1fr;background:var(--fg);color:var(--bg);--line:rgba(250,246,243,.2);--in-bg:rgba(255,255,255,.05)}
+.rdv img{width:100%;height:100%;object-fit:cover;min-height:400px}
+.rdv>div{padding:70px}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}.rdv .full{grid-column:1/-1}
+.rdv .btn{border-color:var(--bg);color:var(--bg)}.rdv .btn:hover{background:var(--accent);border-color:var(--accent)}
+.rdv .alt{margin-top:22px;font-size:.9rem;opacity:.8}.rdv .alt a{color:#fff}
+.foot{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:80px 0 40px;text-align:center}
+.foot h4{font-family:var(--font-d);font-size:1.5rem;font-weight:500;margin:0 0 12px}.foot p{color:var(--muted);margin:0}
+.foot .today{color:var(--accent)}
+.foot a{color:var(--fg)}
+.map{margin:0 0 60px}.map iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(.2)}
+.copy{text-align:center;padding:24px 0 80px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.copy a{color:var(--muted)}
+.mo{display:none}
+@media(max-width:900px){.dl{display:none!important}.mo{display:inline}.hd .logo{flex:1}.hero,.pl,.rdv,.avis{grid-template-columns:1fr}.phil,.foot{grid-template-columns:1fr}.mas{columns:2}.rdv>div{padding:40px 22px}.rdv form{grid-template-columns:1fr}.arch .seal{right:0;width:96px;height:96px;font-size:.9rem}.arch .sm{left:-4%}section{padding:80px 0}.hero{padding-top:20px}.map iframe{height:280px}}
+</style>
+</head>
+<body>
+<header data-header><div class="wrap hd">
+  <nav class="nav dl" style="flex:1"><a href="#tarifs">Prestations &amp; tarifs</a><a href="#salon">Le salon</a></nav>
+  <a class="logo" href="#" aria-label="BL Coiffure, retour en haut de page">BL <i>Coiffure</i></a>
+  <nav class="nav" style="flex:1;justify-content:flex-end"><a class="mo" href="#tarifs">Prestations &amp; tarifs</a><a class="mo" href="#salon">Le salon</a><a href="#galerie">Galerie</a><a href="#rdv">Rendez-vous</a></nav>
+  <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
+</div></header>
+
+<div class="wrap hero">
+  <div>
+    <span class="over" data-reveal>Salon de coiffure · Paris 13e · Tolbiac</span>
+    <h1 data-reveal>Femmes, hommes, enfants : <i>bienvenue.</i></h1>
+    <p data-reveal>Coupes, couleurs L’Oréal, balayages et lissages brésiliens, au 108 avenue d’Italie. Le salon vous accueille sept jours sur sept, de 9 h à 20 h, avec ou sans rendez-vous.</p>
+    <div data-reveal style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn fill" href="#rdv">Prendre rendez-vous</a><a class="btn" href="tel:+33145809793">01 45 80 97 93</a></div>
+    <div class="meta" data-reveal><span>Ouvert 7 j/7 · 9 h – 20 h</span><span><a href="#tarifs">Tarifs affichés</a></span><span><a href="https://maps.google.com/?cid=16638742292258441605" target="_blank" rel="noopener">Avis Google</a></span></div>
+  </div>
+  <div class="arch" data-reveal>
+    <img class="ph" src="img/devanture.webp" alt="Devanture de BL Coiffure, 108 avenue d’Italie à Paris, enseigne noire « Hommes, enfants, femmes »" width="720" height="480">
+    <img class="sm ph" src="img/salon-bacs.webp" alt="Bacs à shampoing du salon BL Coiffure" width="720" height="480">
+    <div class="seal">Ouvert<br>7 j/7</div>
+  </div>
+</div>
+
+<section id="tarifs" class="soft"><div class="wrap" data-tabs>
+  <div class="c"><span class="over">Prestations &amp; tarifs</span><h2 data-reveal>Notre <i>carte</i></h2><p class="l">Tarifs affichés au salon. Un supplément peut s’appliquer selon la longueur et l’épaisseur des cheveux ; le salon vous l’indique avant de commencer.</p></div>
+  <div class="tabs" role="tablist"><button class="active" data-tab="femme" role="tab" aria-selected="true">Femme</button><button data-tab="couleur" role="tab" aria-selected="false">Couleur &amp; balayage</button><button data-tab="lissage" role="tab" aria-selected="false">Lissage &amp; soins</button><button data-tab="homme" role="tab" aria-selected="false">Homme &amp; enfant</button></div>
+  <div class="pl">
+    <img class="ph" loading="lazy" src="img/salon-interieur.webp" alt="Intérieur lumineux du salon BL Coiffure, fauteuils et miroirs" width="720" height="480">
+    <div>
+      <div data-panel="femme">
+        <div class="ln"><div><b>Shampooing, coupe, soin, brushing</b><small>Forfait femme</small></div><i></i><span>25 €</span></div>
+        <div class="ln"><div><b>Brushing + soin</b><small>Selon la longueur</small></div><i></i><span>dès 22 €</span></div>
+        <div class="ln"><div><b>Coupe aux ciseaux</b><small>Sans shampooing</small></div><i></i><span>15 €</span></div>
+        <p class="note">Les forfaits comprennent le shampooing et le soin adaptés à la nature de vos cheveux.</p>
+      </div>
+      <div data-panel="couleur" hidden>
+        <div class="ln"><div><b>Couleur racines L’Oréal + soin + brushing</b></div><i></i><span>dès 40 €</span></div>
+        <div class="ln"><div><b>Couleur L’Oréal cheveux longs + soin + brushing</b></div><i></i><span>48 €</span></div>
+        <div class="ln"><div><b>Couleur racines sans ammoniaque Inoa</b></div><i></i><span>dès 45 €</span></div>
+        <div class="ln"><div><b>Couleur Inoa cheveux longs</b></div><i></i><span>65 €</span></div>
+        <div class="ln"><div><b>Balayage + soin + brushing</b></div><i></i><span>65 €</span></div>
+        <div class="ln"><div><b>Mèches + soin + brushing</b></div><i></i><span>85 €</span></div>
+        <p class="note">Colorations L’Oréal Professionnel : Majirel, Inoa (sans ammoniaque).</p>
+      </div>
+      <div data-panel="lissage" hidden>
+        <div class="ln"><div><b>Lissage brésilien à la kératine</b><small>1 h à 2 h 30 selon la longueur</small></div><i></i><span>dès 85 €</span></div>
+        <div class="ln"><div><b>Botox capillaire + brushing</b><small>Soin lissant et réparateur</small></div><i></i><span>40 €</span></div>
+        <div class="ln"><div><b>Soin profond</b><small>Compris dans les forfaits femme</small></div><i></i><span>inclus</span></div>
+      </div>
+      <div data-panel="homme" hidden>
+        <div class="ln"><div><b>Coupe homme</b><small>Tondeuse ou ciseaux, 20 min</small></div><i></i><span>dès 10 €</span></div>
+        <div class="ln"><div><b>Coupe aux ciseaux</b><small>Avec coiffage</small></div><i></i><span>15 €</span></div>
+        <div class="ln"><div><b>Taille de barbe</b><small>25 min</small></div><i></i><span>dès 6 €</span></div>
+        <div class="ln"><div><b>Coupe enfant</b><small>Fille ou garçon, 15 min</small></div><i></i><span>dès 8 €</span></div>
+      </div>
+      <br><a class="btn fill" href="#rdv">Réserver une prestation</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="salon"><div class="wrap c">
+  <span class="over">Le salon</span><h2 data-reveal>Un salon de quartier, <i>pour toute la famille</i></h2>
+  <p class="l">Installé depuis 2018 avenue d’Italie, à deux pas du métro Tolbiac, BL Coiffure coiffe les femmes, les hommes et les enfants dans un cadre clair et contemporain.</p>
+  <div class="phil">
+    <div data-reveal><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="20"/><path d="M26 14v12l8 5"/></svg><h3>Ouvert 7 j/7</h3><p>De 9 h à 20 h, dimanche compris. Passez quand cela vous arrange, avec ou sans rendez-vous.</p></div>
+    <div data-reveal><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 6c10 12 14 19 14 26a14 14 0 01-28 0c0-7 4-14 14-26z"/></svg><h3>Produits L’Oréal Professionnel</h3><p>Colorations Majirel et Inoa sans ammoniaque, soins et lissages à la kératine.</p></div>
+    <div data-reveal><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M8 20h36M8 32h36M14 20l4-8h16l4 8"/><path d="M14 32l4 8h16l4-8"/></svg><h3>Tarifs affichés</h3><p>Les prix sont annoncés en vitrine et sur ce site. Pas de surprise à la caisse.</p></div>
+  </div>
+</div></section>
+
+<section id="galerie" class="soft"><div class="wrap">
+  <div class="c"><span class="over">Galerie</span><h2 data-reveal>Le salon et <i>nos réalisations</i></h2></div>
+  <div class="mas">
+    <a data-lightbox href="img/realisation-balayage.webp" data-caption="Balayage et ondulations"><img class="ph" loading="lazy" src="img/realisation-balayage.webp" alt="Balayage blond sur cheveux longs ondulés, vue de dos" width="1000" height="1333"></a>
+    <a data-lightbox href="img/salon-fauteuils.webp" data-caption="L’espace coiffage"><img class="ph" loading="lazy" src="img/salon-fauteuils.webp" alt="Fauteuils et miroirs de l’espace coiffage" width="1200" height="675"></a>
+    <a data-lightbox href="img/coupe-homme.webp" data-caption="Coupe homme au salon"><img class="ph" loading="lazy" src="img/coupe-homme.webp" alt="Coiffeur réalisant une coupe homme dans le salon" width="720" height="480"></a>
+    <a data-lightbox href="img/realisation-lissage.webp" data-caption="Lissage brésilien"><img class="ph" loading="lazy" src="img/realisation-lissage.webp" alt="Cheveux longs lissés et brillants après un lissage brésilien, vue de dos" width="1000" height="1778"></a>
+    <a data-lightbox href="img/salon-bacs-2.webp" data-caption="Les bacs à shampoing"><img class="ph" loading="lazy" src="img/salon-bacs-2.webp" alt="Bacs à shampoing et produits L’Oréal" width="1080" height="1464"></a>
+    <a data-lightbox href="img/produits-loreal.webp" data-caption="Produits L’Oréal Professionnel"><img class="ph" loading="lazy" src="img/produits-loreal.webp" alt="Produits L’Oréal Professionnel utilisés au salon" width="720" height="480"></a>
+    <a data-lightbox href="img/salon-vitrine.webp" data-caption="Côté vitrine"><img class="ph" loading="lazy" src="img/salon-vitrine.webp" alt="Postes de coiffage côté vitrine, avenue d’Italie" width="1080" height="1159"></a>
+    <a data-lightbox href="img/outils.webp" data-caption="Les outils du coiffeur"><img class="ph" loading="lazy" src="img/outils.webp" alt="Vaporisateur, tondeuse et ciseaux sur un poste de coiffage" width="720" height="480"></a>
+  </div>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="c"><span class="over">Avis</span><h2 data-reveal>Votre avis <i>compte</i></h2><p class="l">Les avis sont publiés par les clients sur Google et Treatwell. Le salon les lit tous.</p></div>
+  <div class="avis">
+    <div data-reveal><b>3,2<em>/5</em></b><p>83 avis Google</p><a class="btn" href="https://maps.google.com/?cid=16638742292258441605" target="_blank" rel="noopener">Lire les avis</a><small>Relevé du 10 novembre 2026</small></div>
+    <div data-reveal><b>4,0<em>/5</em></b><p>191 avis Treatwell</p><a class="btn" href="https://www.treatwell.fr/salon/bl-coiffure/" target="_blank" rel="noopener">Voir sur Treatwell</a><small>Relevé du 10 novembre 2026</small></div>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding:0"><div class="rdv">
+  <img class="ph" loading="lazy" src="img/salon-vitrine.webp" alt="" width="1080" height="1159">
+  <div><span class="over">Rendez-vous</span><h2>Réservez votre <i>créneau</i></h2><p style="opacity:.7">Votre demande s’envoie par WhatsApp. Le salon vous confirme le créneau en retour. Vous pouvez aussi venir sans rendez-vous.</p>
+    <form data-booking data-whatsapp="33145809793" data-salon="BL Coiffure" data-hours='{"0":["09:00","20:00"],"1":["09:00","20:00"],"2":["09:00","20:00"],"3":["09:00","20:00"],"4":["09:00","20:00"],"5":["09:00","20:00"],"6":["09:00","20:00"]}'>
+      <label class="field full">Prestation<select name="service" required><option value="">Choisir</option><option>Shampooing, coupe, soin, brushing (femme)</option><option>Brushing + soin</option><option>Couleur L’Oréal</option><option>Couleur Inoa sans ammoniaque</option><option>Balayage</option><option>Mèches</option><option>Lissage brésilien</option><option>Botox capillaire</option><option>Coupe homme</option><option>Taille de barbe</option><option>Coupe enfant</option></select></label>
+      <label class="field">Date<input type="date" name="date" required></label>
+      <label class="field">Heure<select name="time" required></select></label>
+      <label class="field">Nom<input name="name" required autocomplete="name"></label>
+      <label class="field">Téléphone<input type="tel" name="phone" required pattern="[0-9 +().-]{8,}" autocomplete="tel"></label>
+      <label class="field full">Longueur / remarque<textarea name="note" rows="2"></textarea></label>
+      <div class="full"><button class="btn" type="submit">Envoyer ma demande</button></div>
+    </form>
+    <div data-booking-result hidden></div>
+    <p class="alt">Vous préférez appeler ? <a href="tel:+33145809793">01 45 80 97 93</a>, tous les jours de 9 h à 20 h.</p>
+  </div>
+</div></section>
+
+<div class="wrap foot">
+  <div><h4>Adresse</h4><p>108 avenue d’Italie<br>75013 Paris<br>Métro Tolbiac (ligne 7)</p></div>
+  <div data-hours='{"0":["09:00","20:00"],"1":["09:00","20:00"],"2":["09:00","20:00"],"3":["09:00","20:00"],"4":["09:00","20:00"],"5":["09:00","20:00"],"6":["09:00","20:00"]}'><h4>Horaires</h4><p data-open-status></p><p><span data-day="1">Lundi – Samedi 9 h – 20 h</span><br><span data-day="0">Dimanche 9 h – 20 h</span></p></div>
+  <div><h4>Contact</h4><p><a href="tel:+33145809793">01 45 80 97 93</a><br><a href="https://wa.me/33145809793" target="_blank" rel="noopener">WhatsApp</a><br><a href="https://maps.google.com/?cid=16638742292258441605" target="_blank" rel="noopener">Fiche Google</a> · <a href="https://www.treatwell.fr/salon/bl-coiffure/" target="_blank" rel="noopener">Treatwell</a></p></div>
+</div>
+<div class="wrap map"><iframe title="Plan d’accès : BL Coiffure, 108 avenue d’Italie, 75013 Paris" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=108+avenue+d%27Italie+75013+Paris&amp;hl=fr&amp;z=16&amp;output=embed"></iframe></div>
+<div class="copy">© <span data-year></span> BL Coiffure · AXEL COIFFEUR SAS · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></div>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>

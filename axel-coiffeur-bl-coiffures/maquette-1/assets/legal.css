@@ -1,0 +1,50 @@
+/* BL Coiffure — pages Mentions légales et Confidentialité */
+:root{--bg:#faf6f3;--fg:#1b1719;--accent:#c4156b;--accent-l:#e04a93;--cream:#f6e8ee;--muted:#7a6a71;--line:rgba(27,23,25,.12);--font-d:"Cormorant Garamond",Georgia,serif;--font-b:"Jost",system-ui,sans-serif}
+html,body{overflow-x:clip}
+body{font-size:16.5px}
+.lg-head{background:#1b1719;color:#fff;position:sticky;top:0;z-index:20}
+.lg-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.lg-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.lg-brand img{height:50px;width:auto}
+.lg-brand b{font-family:var(--font-d);font-style:italic;font-weight:600;font-size:1.5rem}
+.lg-back{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;font-size:.92rem}
+.lg-back:hover{background:#9c0f55}
+.lg-hero{background:var(--cream);padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.lg-hero .kick{display:block;color:var(--accent);font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.lg-hero h1{font-family:var(--font-d);font-weight:500;font-size:clamp(2rem,5vw,3rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.02em}
+.lg-hero p{margin:0;color:var(--muted)}
+.lg-body{padding:48px 0 80px}
+.lg-body .wrap{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:start}
+.lg-toc{position:sticky;top:96px;display:flex;flex-direction:column;gap:4px;font-size:.92rem;border-left:2px solid var(--line);padding-left:16px}
+.lg-toc a{text-decoration:none;color:var(--muted);padding:4px 0}.lg-toc a:hover{color:var(--accent)}
+.lg-text{max-width:760px}
+.lg-text section{padding:0 0 34px;margin:0 0 34px;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+.lg-text section:last-child{border-bottom:0}
+.lg-text h2{font-family:var(--font-d);font-weight:500;font-size:1.7rem;margin:0 0 14px;letter-spacing:-.01em}
+.lg-text h3{font-size:1.02rem;margin:22px 0 8px}
+.lg-text p,.lg-text li{color:#3a3135}
+.lg-text ul{padding-left:20px}
+.lg-text a{color:var(--accent);font-weight:700}
+.lg-card{background:#fffaf7;border:1px solid var(--line);border-radius:12px;padding:6px 22px;margin:8px 0 6px}
+.lg-card dl{display:grid;grid-template-columns:minmax(150px,220px) 1fr;margin:0}
+.lg-card dt,.lg-card dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line)}
+.lg-card dt{font-weight:700;color:var(--muted);font-size:.92rem;padding-right:14px}
+.lg-card dd{font-weight:600}
+.lg-card dl>:nth-last-child(-n+2){border-bottom:0}
+.lg-pending{color:var(--muted);font-style:italic;font-weight:500}
+.lg-table{width:100%;border-collapse:collapse;font-size:.94rem;margin:10px 0}
+.lg-table th,.lg-table td{text-align:left;vertical-align:top;padding:10px 12px;border:1px solid var(--line)}
+.lg-table th{background:#fffaf7;font-weight:800}
+.lg-foot{background:#1b1719;color:#cfc8c0;padding:30px 0;font-size:.88rem}
+.lg-foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.lg-foot a{color:#cfc8c0;text-decoration:none}.lg-foot a:hover{color:var(--accent-l)}
+.lg-foot a[aria-current]{color:#fff;font-weight:700}
+@media (max-width:860px){
+  .lg-body .wrap{grid-template-columns:1fr;gap:28px}
+  .lg-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px 14px;border-left:0;padding-left:0}
+  .lg-card dl{grid-template-columns:1fr}
+  .lg-card dt{border-bottom:0;padding-bottom:0}
+  .lg-head .lg-brand b{font-size:1.1rem}.lg-brand img{height:42px}
+  .lg-back{padding:10px 14px}
+  .lg-table{display:block;overflow-x:auto}
+}
