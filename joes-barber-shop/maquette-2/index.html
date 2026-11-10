@@ -26,11 +26,30 @@ header.scrolled{background:rgba(243,239,232,.92);backdrop-filter:blur(10px);bord
 .nav a:hover{background:var(--fg);color:var(--bg)}
 .nav a.cta{background:var(--accent);color:#fff}
 .hero{padding:120px 0 40px;position:relative}
-.giant{font-family:var(--font-d);font-weight:900;font-size:clamp(3.4rem,18vw,16rem);line-height:.8;letter-spacing:-.06em;margin:0;position:relative;z-index:1}
-.giant span{color:var(--accent)}
-.giant small{display:block;font-size:.24em;letter-spacing:-.02em;line-height:1.1;margin-top:.25em;font-weight:700}
-.hero-grid{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:30px;align-items:end;margin-top:-2vw;position:relative;z-index:2}
-.hero-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:0 0 200px 200px}
+.giant{font-family:var(--font-d);font-weight:900;font-size:clamp(3.4rem,17vw,15rem);line-height:.82;letter-spacing:-.06em;margin:0;position:relative;z-index:1}
+.giant .dot-acc{color:var(--accent);font-weight:900}
+.giant .ch{font-style:normal}
+.giant small{display:block;font-size:max(.2em,1.05rem);letter-spacing:-.02em;line-height:1.15;margin-top:.35em;font-weight:700}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(24px,3vw,44px);align-items:end;margin-top:clamp(28px,4vw,56px);position:relative;z-index:2}
+.hero-img{position:relative;overflow:hidden;border-radius:0 0 200px 200px;aspect-ratio:4/5;max-height:600px;width:100%;justify-self:center}
+.hero-grid .hero-img img{width:100%;height:100%;object-fit:cover;border-radius:0;transform:scale(1.12);will-change:transform}
+.hero-img .badge{position:absolute;top:16px;left:16px;background:var(--accent);color:#fff;font-family:var(--font-d);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:99px;display:flex;align-items:center;gap:8px}
+.hero-img .badge::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+/* Animations du héros */
+.giant .ch{display:inline-block;transform:translateY(105%) rotate(6deg);opacity:0;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*70ms + .1s)}
+.giant .ch-wrap{display:inline-block;overflow:hidden;padding-bottom:.06em;vertical-align:bottom}
+.giant small{opacity:0;animation:fade .8s .7s ease forwards}
+.giant .dot-acc{display:inline-block;animation:up .9s cubic-bezier(.2,.8,.2,1) .5s forwards,bob 3s 1.6s ease-in-out infinite;opacity:0;transform:translateY(105%)}
+@keyframes up{to{transform:none;opacity:1}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-.08em)}}
+.hero-img{clip-path:inset(100% 0 0 0);animation:unclip 1.2s .35s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes unclip{to{clip-path:inset(0 0 0 0)}}
+.hero-grid > div:not(.hero-img){opacity:0;animation:fade .9s .9s ease forwards}
+.hero-grid > .meta{animation-delay:1.05s}
+/* Barre de progression de lecture */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0);z-index:70;pointer-events:none}
 .hero p.big{font-size:1.2rem;line-height:1.45;margin:0;font-weight:500}
 .meta{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);display:grid;gap:8px}
 .meta b{color:var(--fg)}
@@ -110,9 +129,46 @@ footer .giant{font-size:clamp(3.2rem,17vw,15rem);color:transparent;-webkit-text-
 .fl a{text-decoration:none;margin-right:18px}
 .fl a:hover{color:var(--accent)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* Animations au défilement et au survol */
+h2[data-reveal]{clip-path:inset(0 0 100% 0);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1),clip-path 1s cubic-bezier(.7,0,.2,1)}
+h2[data-reveal].in{clip-path:inset(0 0 -10% 0)}
+.lbl::before{animation:pulse-dot 2.4s ease-in-out infinite}
+@keyframes pulse-dot{50%{transform:scale(1.6);opacity:.6}}
+.btn .ar{transition:transform .3s,background .25s}.btn:hover .ar{transform:translateX(4px) rotate(-45deg)}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s}
+.btn:hover::after{transform:translateX(120%)}
+.row .n{transition:color .3s,transform .3s}.row:hover .n{color:var(--accent);transform:translateX(4px)}
+.row h3{transition:letter-spacing .3s}.row:hover h3{letter-spacing:0}
+.cd{transition:opacity .8s,transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.cd:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+.mini li{transition:padding .3s,color .3s}.mini li:hover{padding-left:8px;color:var(--accent)}
+.mini.dark li:hover{color:#ff6b6b}
+.strip a{transition:opacity .8s,transform .6s cubic-bezier(.2,.7,.2,1)}.strip a:hover{transform:translateY(-6px)}
+.strip a[data-reveal]:nth-child(2){transition-delay:.08s}.strip a[data-reveal]:nth-child(3){transition-delay:.16s}
+/* Bande « enseigne de barbier » animée */
+.pole{height:14px;background:repeating-linear-gradient(-45deg,var(--accent) 0 14px,#fff 14px 28px,#1f3f8f 28px 42px,#fff 42px 56px);background-size:79.2px 79.2px;animation:pole 2.2s linear infinite}
+@keyframes pole{to{background-position:79.2px 0}}
+.map{transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}.map:hover{transform:scale(1.015);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+/* Pied de page : le contour se remplit à l’apparition */
+footer .giant{background:linear-gradient(90deg,var(--accent) 50%,transparent 50%) 100% 0/200% 100% no-repeat;-webkit-background-clip:text;background-clip:text;transition:background-position 1.6s cubic-bezier(.7,0,.2,1)}
+footer .giant.in,footer .giant:hover{background-position:0 0}
+footer .giant[data-reveal]{transform:none}
+@media (prefers-reduced-motion:reduce){
+ .giant .ch,.giant .dot-acc,.giant small,.hero-grid > div:not(.hero-img),.hero-img{animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
+ .hero-grid .hero-img img{transform:none}
+ h2[data-reveal]{clip-path:none}
+ .pole,.lbl::before,.hero-img .badge::before{animation:none}
+ .progress{display:none}
+}
 @media(max-width:900px){
  .hero{padding-top:100px}
- .hero-grid,.appr,.book,.move-grid,.subcards{grid-template-columns:1fr}.hero-grid{margin-top:24px}
+ .hero-grid,.appr,.book,.move-grid,.subcards{grid-template-columns:1fr}.hero-grid{margin-top:28px;gap:28px}
+ .hero-img{max-height:70vh;border-radius:0 0 160px 160px}
+ .giant{font-size:20.5vw}
+ footer .giant{font-size:24vw}
+ .fl a{display:inline-block;white-space:nowrap;margin:0 14px 8px 0}
+ .marq{margin-top:44px}.marq div{font-size:1.15rem;padding:14px 0}
  .row{grid-template-columns:34px 1fr auto;row-gap:6px;gap:12px}.row p{grid-column:2/-1}.row button{grid-column:2/-1;justify-self:start}.row .thumb{display:none}.row .pr{grid-column:3;grid-row:1}
  .row h3{font-size:1.08rem}
  .book{padding:36px 22px;border-radius:24px}.book form{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}section{padding:80px 0}
@@ -122,6 +178,7 @@ footer .giant{font-size:clamp(3.2rem,17vw,15rem);color:transparent;-webkit-text-
 </style>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 <header data-header><div class="wrap hd">
   <a class="logo" href="#" aria-label="Joe’s Barber Shop, accueil"><img src="img/logo-instagram.png" width="44" height="44" alt=""><span>JOE’S<sup>®</sup></span></a>
   <nav class="nav" aria-label="Navigation principale"><a href="#tarifs">Tarifs</a><a href="#adresse">Adresse</a><a href="#salon">Le salon</a><a href="#looks">Looks</a><a href="#faq">FAQ</a><a class="cta" href="#rdv">Prendre rendez-vous</a></nav>
@@ -130,18 +187,19 @@ footer .giant{font-size:clamp(3.2rem,17vw,15rem);color:transparent;-webkit-text-
 
 <main>
 <section class="hero"><div class="wrap">
-  <h1 class="giant" data-reveal>JOE’S<span>.</span><small>Barber Shop · Rosny-sous-Bois</small></h1>
+  <h1 class="giant" aria-label="Joe’s Barber Shop, Rosny-sous-Bois"><span class="ch-wrap" aria-hidden="true"><i class="ch" style="--i:0">J</i><i class="ch" style="--i:1">O</i><i class="ch" style="--i:2">E</i><i class="ch" style="--i:3">’</i><i class="ch" style="--i:4">S</i></span><span class="ch-wrap" aria-hidden="true"><b class="dot-acc">.</b></span><small aria-hidden="true">Barber Shop · Rosny-sous-Bois</small></h1>
   <div class="hero-grid">
-    <div data-reveal><p class="big">Le barbier du quartier, pour hommes, femmes et enfants. Dégradés, barbe, rasage à l’ancienne, tresses et locks. Nouveau salon à Rosny-sous-Bois.</p>
+    <div><p class="big">Le barbier du quartier, pour hommes, femmes et enfants. Dégradés, barbe, rasage à l’ancienne, tresses et locks. Nouveau salon à Rosny-sous-Bois.</p>
       <div class="ctas"><a class="btn" href="#rdv">Prendre rendez-vous <span class="ar" aria-hidden="true">→</span></a><a class="btn ghost" href="tel:+33782196704">07 82 19 67 04</a></div>
     </div>
-    <img class="ph" data-reveal src="img/hero-coupe.webp" width="800" height="1000" alt="Barbier travaillant une coupe courte texturée aux ciseaux (photo d’illustration)" fetchpriority="high">
-    <div class="meta" data-reveal><span data-open-status data-hours='{"0":["11:00","19:00"],"1":["10:30","19:00"],"2":["10:30","19:00"],"3":["10:30","19:00"],"4":["10:30","19:00"],"5":["10:30","19:00"],"6":["10:30","19:00"]}'></span><span><b>Nouveau salon</b> — 3 square des Lilas, 93110 Rosny-sous-Bois</span><span><b>Tél.</b> — <a href="tel:+33782196704">07 82 19 67 04</a></span><span><b>Horaires</b> — Lun – sam 10h30 – 19h · dim 11h – 19h</span><span><b>Google</b> — 4,5/5 · <a href="https://share.google/al7FFzVQTH9WnopoI" target="_blank" rel="noopener">443 avis</a></span></div>
+    <div class="hero-img"><img class="ph" data-parallax src="img/hero-coupe.webp" width="800" height="1000" alt="Barbier travaillant une coupe courte texturée aux ciseaux (photo d’illustration)" fetchpriority="high"><span class="badge">Nouveau salon</span></div>
+    <div class="meta"><span data-open-status data-hours='{"0":["11:00","19:00"],"1":["10:30","19:00"],"2":["10:30","19:00"],"3":["10:30","19:00"],"4":["10:30","19:00"],"5":["10:30","19:00"],"6":["10:30","19:00"]}'></span><span><b>Nouveau salon</b> — 3 square des Lilas, 93110 Rosny-sous-Bois</span><span><b>Tél.</b> — <a href="tel:+33782196704">07 82 19 67 04</a></span><span><b>Horaires</b> — Lun – sam 10h30 – 19h · dim 11h – 19h</span><span><b>Google</b> — 4,5/5 · <a href="https://share.google/al7FFzVQTH9WnopoI" target="_blank" rel="noopener">443 avis</a></span></div>
   </div>
 </div>
 <div class="marq" aria-hidden="true"><div><span>Dégradé</span><i>✦</i><span>Coupe ciseaux</span><i>✦</i><span>Taille de barbe</span><i>✦</i><span>Rasage à l’ancienne</span><i>✦</i><span>Tresses &amp; locks</span><i>✦</i><span>Dégradé</span><i>✦</i><span>Coupe ciseaux</span><i>✦</i><span>Taille de barbe</span><i>✦</i><span>Rasage à l’ancienne</span><i>✦</i><span>Tresses &amp; locks</span><i>✦</i></div></div>
 </section>
 
+<div class="pole" aria-hidden="true"></div>
 <section id="adresse" class="move"><div class="wrap move-grid">
   <div data-reveal>
     <span class="lbl">Nouvelle adresse</span>
@@ -209,12 +267,12 @@ footer .giant{font-size:clamp(3.2rem,17vw,15rem);color:transparent;-webkit-text-
 <section id="looks"><div class="wrap">
   <span class="lbl">Lookbook</span><h2 data-reveal>Dégradés, barbes, rasages.</h2>
   <div class="strip">
-    <a data-lightbox href="img/look-1-grand.webp" data-caption="Coupe tondeuse sur cheveux texturés"><img class="ph" loading="lazy" decoding="async" src="img/look-1.webp" width="700" height="931" alt="Barbier réalisant une coupe à la tondeuse sur cheveux texturés (photo d’illustration)"></a>
-    <a data-lightbox href="img/look-2-grand.webp" data-caption="Tracé de la barbe"><img class="ph" loading="lazy" decoding="async" src="img/look-2.webp" width="700" height="931" alt="Tracé précis de la barbe à la tondeuse (photo d’illustration)"></a>
-    <a data-lightbox href="img/look-3-grand.webp" data-caption="Barbe et dégradé"><img class="ph" loading="lazy" decoding="async" src="img/look-3.webp" width="700" height="931" alt="Client en coupe et barbe au fauteuil (photo d’illustration)"></a>
-    <a data-lightbox href="img/look-4-grand.webp" data-caption="Rasage à l’ancienne"><img class="ph" loading="lazy" decoding="async" src="img/look-4.webp" width="700" height="931" alt="Rasage au rasoir, en noir et blanc (photo d’illustration)"></a>
-    <a data-lightbox href="img/look-5-grand.webp" data-caption="Finitions à la tondeuse"><img class="ph" loading="lazy" decoding="async" src="img/look-5.webp" width="700" height="931" alt="Barbier faisant les finitions d’un dégradé à la tondeuse (photo d’illustration)"></a>
-    <a data-lightbox href="img/look-6-grand.webp" data-caption="Contour au rasoir"><img class="ph" loading="lazy" decoding="async" src="img/look-6.webp" width="700" height="931" alt="Contour de la nuque au rasoir (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-1-grand.webp" data-caption="Coupe tondeuse sur cheveux texturés"><img class="ph" loading="lazy" decoding="async" src="img/look-1.webp" width="700" height="931" alt="Barbier réalisant une coupe à la tondeuse sur cheveux texturés (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-2-grand.webp" data-caption="Tracé de la barbe"><img class="ph" loading="lazy" decoding="async" src="img/look-2.webp" width="700" height="931" alt="Tracé précis de la barbe à la tondeuse (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-3-grand.webp" data-caption="Barbe et dégradé"><img class="ph" loading="lazy" decoding="async" src="img/look-3.webp" width="700" height="931" alt="Client en coupe et barbe au fauteuil (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-4-grand.webp" data-caption="Rasage à l’ancienne"><img class="ph" loading="lazy" decoding="async" src="img/look-4.webp" width="700" height="931" alt="Rasage au rasoir, en noir et blanc (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-5-grand.webp" data-caption="Finitions à la tondeuse"><img class="ph" loading="lazy" decoding="async" src="img/look-5.webp" width="700" height="931" alt="Barbier faisant les finitions d’un dégradé à la tondeuse (photo d’illustration)"></a>
+    <a data-reveal data-lightbox href="img/look-6-grand.webp" data-caption="Contour au rasoir"><img class="ph" loading="lazy" decoding="async" src="img/look-6.webp" width="700" height="931" alt="Contour de la nuque au rasoir (photo d’illustration)"></a>
   </div>
   <p class="note">Plus de réalisations sur Instagram : <a href="https://www.instagram.com/joe_barber_shop/" target="_blank" rel="noopener">@joe_barber_shop</a>.</p>
 </div></section>
@@ -255,10 +313,25 @@ footer .giant{font-size:clamp(3.2rem,17vw,15rem);color:transparent;-webkit-text-
 </main>
 
 <footer><div class="wrap">
-  <div class="giant" aria-hidden="true">JOE’S</div>
+  <div class="giant" data-reveal aria-hidden="true">JOE’S</div>
   <div class="fl"><div><a href="#tarifs">Tarifs</a><a href="#adresse">Adresse</a><a href="#rdv">Rendez-vous</a><a href="https://www.instagram.com/joe_barber_shop/" target="_blank" rel="noopener">Instagram</a><a href="https://share.google/al7FFzVQTH9WnopoI" target="_blank" rel="noopener">Avis Google</a></div><span>© <span data-year></span> Joe’s Barber Shop · 3 square des Lilas, 93110 Rosny-sous-Bois · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span></div>
 </div></footer>
 <button data-totop aria-label="Haut de page">↑</button>
 <script src="assets/site.js"></script>
+<script>
+/* Joe’s : barre de progression et léger parallaxe de la photo d’accueil */
+(function(){
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var bar=document.querySelector(".progress"), img=document.querySelector("[data-parallax]"), tick=false;
+  function update(){
+    var h=document.documentElement.scrollHeight-innerHeight, y=scrollY;
+    if(bar) bar.style.transform="scaleX("+(h>0?Math.min(1,y/h):0)+")";
+    if(img && y<innerHeight*1.2) img.style.transform="translateY("+(y*0.12).toFixed(1)+"px) scale(1.12)";
+    tick=false;
+  }
+  addEventListener("scroll",function(){ if(!tick){ tick=true; requestAnimationFrame(update); } },{passive:true});
+  update();
+})();
+</script>
 </body>
 </html>
