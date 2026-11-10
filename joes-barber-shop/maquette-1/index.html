@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Joe’s Barber Shop — Barbier homme, femme, enfant · Rosny-sous-Bois</title>
+<meta name="description" content="Joe’s Barber Shop, barbier pour hommes, femmes et enfants : coupes, barbe, soins du visage et tresses. Nouvelle adresse au 3 square des Lilas, Rosny-sous-Bois. Tarifs affichés, rendez-vous au 07 82 19 67 04.">
+<meta name="theme-color" content="#111214">
+<link rel="icon" href="img/logo-joes-barber-shop.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* Palette Joe’s Barber Shop : noir de la façade, rouge et bleu de l’enseigne et du poteau de barbier */
+:root{--bg:#111214;--fg:#f1ede6;--accent:#ec4a52;--blue:#5b86e5;--on-accent:#111214;--muted:#aaa49b;--line:rgba(241,237,230,.16);--font-d:"Bodoni Moda",Georgia,serif;--font-b:"Work Sans",system-ui,sans-serif;--nav-bg:#111214;--in-bg:rgba(255,255,255,.04)}
+.top{border-bottom:1px solid var(--line);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.top .wrap{display:flex;justify-content:space-between;gap:6px 12px;padding:9px 0;flex-wrap:wrap}
+.top a{text-decoration:none;color:var(--fg);white-space:nowrap}
+.pole{height:5px;background:repeating-linear-gradient(-45deg,#ec4a52 0 9px,#f1ede6 9px 18px,#3d6fd6 18px 27px,#f1ede6 27px 36px)}
+header{position:sticky;top:0;z-index:50;background:rgba(17,18,20,.94);backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 0}
+.nav{display:flex;gap:28px;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.nav a{text-decoration:none;opacity:.85}.nav a:hover{opacity:1;color:var(--accent)}
+.nav.r{justify-content:flex-end;align-items:center}
+.logo{font-family:var(--font-d);font-size:1.9rem;font-weight:800;text-decoration:none;text-align:center;line-height:1}
+.logo small{display:block;font:500 .6rem var(--font-b);letter-spacing:.42em;color:var(--accent);margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);text-decoration:none;font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.25s}
+.btn:hover{background:transparent;color:var(--accent)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.05);transform:scale(1.06);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(17,18,20,.55),rgba(17,18,20,.93) 75%)}
+.hero>.in{position:relative;z-index:2;padding:70px 20px;max-width:900px}
+.badge{width:96px;height:96px;border-radius:50%;background:#fff;padding:6px;margin:0 auto 22px;box-shadow:0 0 0 3px var(--accent),0 0 0 7px var(--blue)}
+.est{display:inline-flex;align-items:center;gap:14px;color:var(--accent);letter-spacing:.4em;font-size:.75rem;text-transform:uppercase}
+.est::before,.est::after{content:"";width:46px;height:1px;background:currentColor}
+.hero h1{font-family:var(--font-d);font-weight:500;font-size:clamp(2.8rem,8vw,6.2rem);line-height:.95;margin:22px 0}
+.hero h1 em{color:var(--accent)}
+.hero p{max-width:580px;margin:0 auto 30px;color:#ddd5ca;font-size:1.08rem}
+.hero .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .facts{margin-top:28px;display:flex;gap:10px 26px;justify-content:center;flex-wrap:wrap;font-size:.9rem;color:#ddd5ca}
+.hero .facts a{color:var(--fg)}
+.move{background:#1a1b1f;border-block:1px solid var(--line);padding:34px 0}
+.move .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.move b.tag{font-family:var(--font-d);font-style:italic;font-size:1.6rem;color:var(--accent);white-space:nowrap}
+.move p{margin:0;color:var(--muted)}.move p strong{color:var(--fg)}
+section{padding:110px 0}
+.kicker{color:var(--accent);letter-spacing:.32em;font-size:.72rem;text-transform:uppercase;font-weight:600}
+h2{font-family:var(--font-d);font-weight:500;font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.05;margin:12px 0 18px}
+.center{text-align:center}.center p.lead{max-width:620px;margin:0 auto;color:var(--muted)}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:50px 80px;margin-top:60px}
+.pcol h3{font-family:var(--font-d);font-style:italic;font-weight:500;font-size:1.6rem;border-bottom:1px solid var(--accent);padding-bottom:10px;margin:0 0 10px}
+.pi{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px dashed var(--line)}
+.pi b{font-weight:600;font-size:1.05rem}.pi i{border-bottom:1px dotted var(--muted);transform:translateY(-4px)}
+.pi span{font-family:var(--font-d);font-size:1.3rem;color:var(--accent);white-space:nowrap}
+.pi small{grid-column:1/-1;color:var(--muted);margin-top:-8px}
+.pi button{grid-column:1/-1;justify-self:start;background:none;border:0;color:var(--accent);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:0}
+.pnote{margin:40px auto 0;max-width:720px;text-align:center;color:var(--muted);font-size:.95rem}
+.pnote strong{color:var(--fg)}
+.ritual{background:#18191d;border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:50px}
+.st{border-top:1px solid var(--accent);padding-top:22px}
+.st em{font-family:var(--font-d);font-size:3rem;color:var(--accent);font-style:italic;line-height:1}
+.st h4{font-size:1.1rem;margin:12px 0 6px}.st p{color:var(--muted);margin:0;font-size:.95rem}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.frame{position:relative;z-index:0}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.frame::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--accent);z-index:-1}
+.stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+.stats b{font-family:var(--font-d);font-size:2.6rem;color:var(--accent);display:block;line-height:1}
+.stats span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px;margin-top:50px}
+.gal a{overflow:hidden;display:block}.gal a:nth-child(1){grid-row:span 2}.gal a:nth-child(4){grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.6s}.gal a:hover img{transform:scale(1.07)}
+.rating{max-width:820px;margin:30px auto 0;text-align:center}
+.rating .score{font-family:var(--font-d);font-size:clamp(3.4rem,8vw,5.2rem);line-height:1;color:var(--accent)}
+.rating .score small{font-size:.4em;color:var(--muted)}
+.rating p{color:var(--muted);margin:10px 0 26px}
+.rating .alt{margin-top:22px;font-size:.88rem}
+.book{display:grid;grid-template-columns:1fr 1.2fr;gap:0;border:1px solid var(--line)}
+.book aside{padding:50px;background:url("img/salon-interieur.webp") center/cover;position:relative}
+.book aside::before{content:"";position:absolute;inset:0;background:rgba(17,18,20,.86)}
+.book aside>*{position:relative}
+.book aside p{color:#ddd5ca}
+.book aside a{color:var(--fg)}
+.hours{width:100%;border-collapse:collapse;margin-top:20px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--accent);font-weight:600}
+.book form{padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.book form .full{grid-column:1/-1}
+.book form .small a{color:var(--fg)}
+.map{height:380px;border:0;width:100%;display:block;filter:grayscale(1) invert(.92) contrast(.9)}
+footer{border-top:1px solid var(--line);padding:60px 0 90px;color:var(--muted);font-size:.9rem}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer .logo{text-align:left;color:var(--fg)}
+footer h5{color:var(--fg);letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;margin:0 0 14px}
+footer a{display:block;text-decoration:none;margin:6px 0}
+footer a:hover{color:var(--accent)}
+footer p a{display:inline;margin:0}
+@media(max-width:900px){
+ .hd{grid-template-columns:auto 1fr auto}.hd .nav.l{display:none!important}.logo{text-align:left;font-size:1.6rem}
+ .nav.r{position:fixed}.prices,.split,.book,.ft{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}
+ .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal a:nth-child(4){grid-column:auto}
+ .move .wrap{grid-template-columns:1fr;gap:12px}
+ section{padding:80px 0}.book aside,.book form{padding:30px 22px}.book form{grid-template-columns:1fr}
+ [data-booking-result]{margin:0 22px 30px!important}
+}
+@media(max-width:560px){.steps{grid-template-columns:1fr}.hd .btn{display:none}.stats{gap:22px}.logo small{letter-spacing:.3em}.pi{gap:10px}.btn{padding:14px 20px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span data-open-status data-hours='{"0":["11:00","19:00"],"1":["10:00","20:00"],"2":["10:00","20:00"],"3":["10:00","20:00"],"4":["10:00","20:00"],"5":["10:00","20:00"],"6":["10:00","20:00"]}'>Ouvert 7 jours sur 7</span><span>Nouvelle adresse : Rosny-sous-Bois · <a href="tel:+33782196704">07 82 19 67 04</a></span></div></div>
+<div class="pole" aria-hidden="true"></div>
+<header data-header><div class="wrap hd">
+  <nav class="nav l" aria-label="Navigation principale"><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#galerie">Galerie</a></nav>
+  <a class="logo" href="#">Joe’s Barber Shop<small>HOMME · FEMME · ENFANT</small></a>
+  <nav class="nav r" aria-label="Navigation secondaire"><a href="#avis">Avis</a><a href="#contact">Accès</a><a class="btn" href="#rdv">Réserver</a></nav>
+  <button class="burger" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
+</div></header>
+
+<main>
+<section class="hero" style="padding:0">
+  <img src="img/salon-interieur.webp" width="1280" height="800" fetchpriority="high" alt="Intérieur de Joe’s Barber Shop : fauteuils de barbier, miroirs et logo du salon au mur" class="ph">
+  <div class="in">
+    <img class="badge" src="img/logo-joes-barber-shop.png" width="150" height="150" alt="Logo Joe’s Barber Shop" data-reveal>
+    <span class="est" data-reveal>Barbier · Coiffure</span>
+    <h1 data-reveal>Le style,<br><em>pour toute</em> la famille.</h1>
+    <p data-reveal>Coupes à la tondeuse ou aux ciseaux, barbe sculptée, soins du visage et tresses. Hommes, femmes et enfants : on prend soin de vos cheveux.</p>
+    <div class="ctas" data-reveal><a class="btn" href="#rdv">Prendre rendez-vous</a><a class="btn ghost" href="#tarifs">Voir les tarifs</a></div>
+    <div class="facts" data-reveal><span>3 square des Lilas, 93110 Rosny-sous-Bois</span><a href="tel:+33782196704">07 82 19 67 04</a><span>Lun–sam 10 h–20 h · dim. 11 h–19 h</span></div>
+  </div>
+</section>
+
+<div class="move" id="demenagement"><div class="wrap">
+  <b class="tag">On déménage !</b>
+  <p><strong>Joe’s Barber Shop quitte le 62 rue Martre à Clichy pour le 3 square des Lilas, à Rosny-sous-Bois.</strong> Si Google affiche le salon de Clichy « définitivement fermé », c’est normal : toute l’équipe vous attend à la nouvelle adresse. Un doute ? Appelez-nous avant de passer.</p>
+  <a class="btn ghost" href="tel:+33782196704">Appeler le salon</a>
+</div></div>
+
+<section id="tarifs"><div class="wrap">
+  <div class="center"><span class="kicker">La carte</span><h2 data-reveal>Prestations &amp; tarifs</h2><p class="lead">Des prix clairs, affichés, sans surprise. Tarifs en vigueur depuis janvier 2026.</p></div>
+  <div class="prices">
+    <div class="pcol" data-reveal><h3>Coupes</h3>
+      <div class="pi"><b>Coupe tondeuse</b><i></i><span>17 €</span><button data-book="Coupe tondeuse">Réserver →</button></div>
+      <div class="pi"><b>Coupe ciseaux</b><i></i><span>22 €</span><button data-book="Coupe ciseaux">Réserver →</button></div>
+      <div class="pi"><b>Coupe + barbe</b><i></i><span>22 €</span><button data-book="Coupe + barbe">Réserver →</button></div>
+      <div class="pi"><b>Coupe ciseaux + barbe</b><i></i><span>25 €</span><button data-book="Coupe ciseaux + barbe">Réserver →</button></div>
+      <div class="pi"><b>Coupe enfant tondeuse</b><i></i><span>12 €</span><small>Moins de 10 ans</small><button data-book="Coupe enfant tondeuse">Réserver →</button></div>
+      <div class="pi"><b>Coupe enfant ciseaux</b><i></i><span>15 €</span><small>Moins de 10 ans</small><button data-book="Coupe enfant ciseaux">Réserver →</button></div>
+    </div>
+    <div class="pcol" data-reveal><h3>Barbe &amp; finitions</h3>
+      <div class="pi"><b>Taillage de barbe</b><i></i><span>10 €</span><button data-book="Taillage de barbe">Réserver →</button></div>
+      <div class="pi"><b>Taillage de barbe sculptée</b><i></i><span>15 €</span><button data-book="Taillage de barbe sculptée">Réserver →</button></div>
+      <div class="pi"><b>Coloration de la barbe</b><i></i><span>15 €</span><button data-book="Coloration de la barbe">Réserver →</button></div>
+      <div class="pi"><b>Contour demi-tête</b><i></i><span>5 €</span></div>
+      <div class="pi"><b>Contour tête entière</b><i></i><span>10 €</span></div>
+      <div class="pi"><b>Design</b><i></i><span>dès 5 €</span></div>
+      <div class="pi"><b>Fibre homme</b><i></i><span>3 €</span></div>
+      <div class="pi"><b>Défrisage</b><i></i><span>20 €</span><button data-book="Défrisage">Réserver →</button></div>
+    </div>
+    <div class="pcol" data-reveal><h3>Soins du visage</h3>
+      <div class="pi"><b>Soin visage homme</b><i></i><span>35 €</span><button data-book="Soin visage homme">Réserver →</button></div>
+      <div class="pi"><b>Coupe tondeuse + soin du visage</b><i></i><span>45 €</span><button data-book="Coupe tondeuse + soin du visage">Réserver →</button></div>
+      <div class="pi"><b>Coupe + barbe + soin du visage</b><i></i><span>50 €</span><button data-book="Coupe + barbe + soin du visage">Réserver →</button></div>
+      <div class="pi"><b>Coupe ciseaux + soin du visage</b><i></i><span>50 €</span><button data-book="Coupe ciseaux + soin du visage">Réserver →</button></div>
+      <div class="pi"><b>Coupe ciseaux + barbe + soin du visage</b><i></i><span>55 €</span><button data-book="Coupe ciseaux + barbe + soin du visage">Réserver →</button></div>
+    </div>
+    <div class="pcol" data-reveal><h3>Tresses femmes &amp; hommes</h3>
+      <div class="pi"><b>Tresses, nattes collées, vanilles</b><i></i><span>sur devis</span><small>Selon la longueur, le volume et le motif</small><button data-book="Tresses (devis)">Demander un devis →</button></div>
+      <div class="pi"><b>Twists, knotless &amp; fulani braids</b><i></i><span>sur devis</span><small>Avec ou sans rajouts</small><button data-book="Tresses (devis)">Demander un devis →</button></div>
+      <div class="pi"><b>Locks : départ, reprise, décapage</b><i></i><span>sur devis</span><button data-book="Locks (devis)">Demander un devis →</button></div>
+    </div>
+  </div>
+  <p class="pnote">Tarifs sans rendez-vous. <strong>Sur rendez-vous : 5 € supplémentaires.</strong> Les prix affichés au salon font foi.</p>
+</div></section>
+
+<section class="ritual" id="rituel"><div class="wrap">
+  <span class="kicker">Votre passage chez Joe’s</span><h2 data-reveal>Simple, net, à votre rythme.</h2>
+  <div class="steps">
+    <div class="st" data-reveal><em>i.</em><h4>Vous venez</h4><p>Passez directement, ou réservez votre créneau pour ne pas attendre.</p></div>
+    <div class="st" data-reveal><em>ii.</em><h4>On échange</h4><p>Coupe, barbe ou tresses : on regarde vos cheveux et on choisit ensemble.</p></div>
+    <div class="st" data-reveal><em>iii.</em><h4>On s’occupe de vous</h4><p>Tondeuse, ciseaux ou tressage : cheveux lisses, bouclés, crépus, tous les styles.</p></div>
+    <div class="st" data-reveal><em>iv.</em><h4>La finition</h4><p>Contours, design ou soin du visage. Vous repartez prêt.</p></div>
+  </div>
+</div></section>
+
+<section id="salon"><div class="wrap split">
+  <div class="frame" data-reveal><img class="ph" loading="lazy" src="img/tresses-twists.webp" width="361" height="451" alt="Cliente de dos avec des twists réalisées au salon Joe’s Barber Shop"></div>
+  <div data-reveal><span class="kicker">Le salon</span><h2>Un barbershop où chacun se sent à la maison.</h2>
+    <p style="color:var(--muted)">Chez Joe’s Barber Shop, on accueille les hommes, les femmes et les enfants. L’équipe travaille tous les types de cheveux, européens comme afro et texturés : dégradés, coupes aux ciseaux, barbe, tresses et locks.</p>
+    <p style="color:var(--muted)">Après des années rue Martre à Clichy, le salon s’installe à Rosny-sous-Bois. Même équipe, même énergie, même souci du détail.</p>
+    <div class="stats"><div><b>4,5/5</b><span>sur Google</span></div><div><b data-count="443">443</b><span>avis Google</span></div><div><b>7 j/7</b><span>ouvert</span></div></div>
+  </div>
+</div></section>
+
+<section id="galerie" class="ritual"><div class="wrap">
+  <span class="kicker">Galerie</span><h2 data-reveal>Le travail parle.</h2>
+  <div class="gal">
+    <a data-lightbox data-caption="Nattes collées réalisées au salon" href="img/tresses-collees.webp"><img class="ph" loading="lazy" src="img/tresses-collees.webp" alt="Nattes collées réalisées au salon, vue de dos"></a>
+    <a data-lightbox data-caption="Tresses avec motif" href="img/tresses-design.webp"><img class="ph" loading="lazy" src="img/tresses-design.webp" alt="Tresses avec motif, vue de dos dans le fauteuil du salon"></a>
+    <a data-lightbox data-caption="Twists" href="img/tresses-twists.webp"><img class="ph" loading="lazy" src="img/tresses-twists.webp" alt="Twists réalisées au salon"></a>
+    <a data-lightbox data-caption="Le salon en pleine journée" href="img/salon-coupe.webp"><img class="ph" loading="lazy" src="img/salon-coupe.webp" alt="Coiffeur en train de couper les cheveux d’un client au salon"></a>
+    <a data-lightbox data-caption="L’intérieur du salon" href="img/salon-interieur.webp"><img class="ph" loading="lazy" src="img/salon-interieur.webp" alt="Fauteuils de barbier et logo Joe’s Barber Shop"></a>
+    <a data-lightbox data-caption="L’ancienne devanture, rue Martre à Clichy" href="img/devanture-clichy.webp"><img class="ph" loading="lazy" src="img/devanture-clichy.webp" alt="Ancienne devanture Barber Shop rouge et bleue, rue Martre à Clichy"></a>
+  </div>
+</div></section>
+
+<section id="avis"><div class="wrap">
+  <div class="center"><span class="kicker">Avis clients</span><h2 data-reveal>Ils nous font confiance.</h2></div>
+  <div class="rating" data-reveal>
+    <div class="score">4,5<small>/5</small></div>
+    <p>443 avis Google · relevé du 10 novembre 2026</p>
+    <a class="btn" href="https://share.google/al7FFzVQTH9WnopoI" target="_blank" rel="noopener">Lire les avis sur Google</a>
+    <p class="alt">Également noté 4,6/5 sur Treatwell (193 avis).</p>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="book">
+    <aside><span class="kicker">Horaires</span><h2 style="font-size:2.2rem">Passez nous voir</h2>
+      <p>3 square des Lilas<br>93110 Rosny-sous-Bois<br><a href="tel:+33782196704">07 82 19 67 04</a> · <a href="tel:+33147395280">01 47 39 52 80</a></p>
+      <table class="hours"><tr data-day="1"><td>Lundi</td><td>10h – 20h</td></tr><tr data-day="2"><td>Mardi</td><td>10h – 20h</td></tr><tr data-day="3"><td>Mercredi</td><td>10h – 20h</td></tr><tr data-day="4"><td>Jeudi</td><td>10h – 20h</td></tr><tr data-day="5"><td>Vendredi</td><td>10h – 20h</td></tr><tr data-day="6"><td>Samedi</td><td>10h – 20h</td></tr><tr data-day="0"><td>Dimanche</td><td>11h – 19h</td></tr></table>
+    </aside>
+    <div>
+      <form data-booking data-whatsapp="33782196704" data-salon="Joe’s Barber Shop" data-hours='{"0":["11:00","19:00"],"1":["10:00","20:00"],"2":["10:00","20:00"],"3":["10:00","20:00"],"4":["10:00","20:00"],"5":["10:00","20:00"],"6":["10:00","20:00"]}'>
+        <div class="full"><span class="kicker">Réservation</span><h2 style="font-size:2.2rem;margin-bottom:0">Votre fauteuil vous attend</h2></div>
+        <label class="field full">Prestation<select name="service" required><option value="">Choisir</option><optgroup label="Coupes"><option>Coupe tondeuse</option><option>Coupe ciseaux</option><option>Coupe + barbe</option><option>Coupe ciseaux + barbe</option><option>Coupe enfant tondeuse</option><option>Coupe enfant ciseaux</option></optgroup><optgroup label="Barbe &amp; finitions"><option>Taillage de barbe</option><option>Taillage de barbe sculptée</option><option>Coloration de la barbe</option><option>Défrisage</option></optgroup><optgroup label="Soins du visage"><option>Soin visage homme</option><option>Coupe tondeuse + soin du visage</option><option>Coupe + barbe + soin du visage</option><option>Coupe ciseaux + soin du visage</option><option>Coupe ciseaux + barbe + soin du visage</option></optgroup><optgroup label="Tresses"><option>Tresses (devis)</option><option>Locks (devis)</option></optgroup></select></label>
+        <label class="field">Date<input type="date" name="date" required></label>
+        <label class="field">Créneau<select name="time" required></select></label>
+        <label class="field">Nom<input name="name" required autocomplete="name"></label>
+        <label class="field">Téléphone<input name="phone" type="tel" required pattern="[0-9 +().-]{8,}" autocomplete="tel"></label>
+        <div class="full"><button class="btn" type="submit">Demander ce créneau</button></div>
+        <p class="full small" style="margin:0">Votre demande s’ouvre dans WhatsApp ; le salon vous confirme le créneau. Rien n’est enregistré sur ce site (<a href="confidentialite.html">confidentialité</a>). Vous préférez appeler ? <a href="tel:+33782196704">07 82 19 67 04</a></p>
+      </form>
+      <div data-booking-result hidden style="margin:0 50px 40px"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" style="padding:0"><iframe class="map" loading="lazy" title="Plan d’accès : 3 square des Lilas, 93110 Rosny-sous-Bois" src="https://maps.google.com/maps?q=3%20square%20des%20Lilas%2C%2093110%20Rosny-sous-Bois&z=16&output=embed"></iframe></section>
+</main>
+
+<footer><div class="wrap ft">
+  <div><a class="logo" href="#">Joe’s Barber Shop<small>HOMME · FEMME · ENFANT</small></a><p>3 square des Lilas, 93110 Rosny-sous-Bois<br><a href="tel:+33782196704">07 82 19 67 04</a> · <a href="tel:+33147395280">01 47 39 52 80</a><br><a href="mailto:joesbarbershop92@gmail.com">joesbarbershop92@gmail.com</a></p><p>Anciennement 62 rue Martre, 92110 Clichy.</p></div>
+  <div><h5>Navigation</h5><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#galerie">Galerie</a><a href="#rdv">Rendez-vous</a></div>
+  <div><h5>Suivre</h5><a href="https://www.instagram.com/joe_barber_shop/" target="_blank" rel="noopener">Instagram</a><a href="https://share.google/al7FFzVQTH9WnopoI" target="_blank" rel="noopener">Avis Google</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><p>© <span data-year></span> Joe’s Barber Shop</p></div>
+</div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>
