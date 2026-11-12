@@ -15,7 +15,7 @@ Recherche du 12 novembre 2026. Ce fichier est interne : il n’est relié depuis
 | Prestations, durées et tarifs | Carte complète (≈ 80 lignes) : ongles mains/pieds, regard, soins Jadéa, épilation, forfaits, massages, maquillage, hommes | https://www.planity.com/beauty-touch-75012-paris (relevé du 12/11/2026, toutes catégories dépliées) |
 | Marque des soins visage | Jadéa, produits fabriqués en France, disponibles à la vente | Planity (texte de la catégorie « Soins du visage ») |
 | Présentation | « Cocon de beauté et de bien-être » (Instagram) ; « à deux pas de la gare de Lyon », esthéticienne passionnée, soins sur mesure (Planity) — textes reformulés | Instagram ; Planity ; Treatwell |
-| Réservation | Bouton « Prendre rendez-vous » → Planity (réservation 24 h/24, confirmation immédiate) + formulaire de demande WhatsApp | Planity ; audit Inkway (réservation active sur Planity) |
+| Réservation | Tous les boutons de rendez-vous → https://www.planity.com/beauty-touch-75012-paris (compte Planity existant du salon, réservation 24 h/24). Le formulaire WhatsApp du modèle a été retiré à la demande d’Inkway ; WhatsApp reste un simple lien de contact | Planity ; audit Inkway (réservation active sur Planity) |
 | Note Google | 4,8/5 · 272 avis (relevé du 12/11/2026, lien `https://maps.google.com/?cid=16889916027685239097`) | https://www.google.com/maps/place/Beauty+Touch+Paris/@48.8473455,2.3748599,17z |
 | Instagram | @beautytouch.paris (246 abonnés, 56 publications, dernière le 12/03/2026) | https://www.instagram.com/beautytouch.paris/ |
 | Couleurs | Fond beige rosé #f7efe9, noir #1d1418, magenta #b0136e (néon de l’enseigne, assombri pour un contraste de 6,6:1 avec le blanc), rose poudré #f6c6d4 (fauteuils), mauve clair #e4d3db (logo) | Devanture et intérieur (photos Planity) ; logo Instagram |
@@ -49,7 +49,7 @@ Aucune photo Unsplash ni d’un autre salon. Écartées : un gros plan de visage
 
 1. Horaires définitifs (lundi et dimanche) et fermetures exceptionnelles.
 2. Adresse exacte : « 30 » ou « 30 ter » avenue Daumesnil.
-3. Numéro WhatsApp pour les demandes (provisoirement le 06 21 41 08 08) et e-mail de contact à afficher.
+3. Numéro WhatsApp de contact (provisoirement le 06 21 41 08 08) et e-mail de contact à afficher.
 4. Tarifs : valider la carte reprise de Planity (relevé du 12/11/2026) et les prix affichés au salon.
 5. Droits d’usage des photos Planity et Instagram ; fichier source du logo de l’enseigne (vectoriel) pour remplacer l’extraction photo.
 6. Avantages clients (carte de fidélité, offres, cartes cadeaux) : aucune information publique — la section « Les petits plus » ne liste que des faits vérifiés.
