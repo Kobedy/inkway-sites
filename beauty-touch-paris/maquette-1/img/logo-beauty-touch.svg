@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t">
+  <title id="t">Beauty Touch Paris</title>
+  <!-- Logotype recomposé d’après le logo officiel (photo de profil Instagram @beautytouch.paris) -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&amp;family=Pinyon+Script&amp;display=swap");
+    .bt{font-family:"Playfair Display","Didot","Bodoni 72",Georgia,serif;font-size:250px;fill:#8a6f78;letter-spacing:-18px}
+    .sc{font-family:"Pinyon Script","Snell Roundhand","Brush Script MT",cursive;font-size:64px;fill:#382127}
+    .pa{font-family:"Playfair Display",Georgia,serif;font-size:20px;letter-spacing:6px;fill:#382127}
+  </style>
+  <rect width="400" height="400" fill="#e5e0da"/>
+  <text class="bt" x="200" y="262" text-anchor="middle">BT</text>
+  <text class="sc" x="200" y="232" text-anchor="middle" transform="rotate(-6 200 220)">Beauty Touch</text>
+  <text class="pa" x="232" y="300" text-anchor="middle">PARIS</text>
+</svg>
