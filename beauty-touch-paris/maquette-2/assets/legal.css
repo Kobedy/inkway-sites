@@ -5,8 +5,7 @@ body{font-size:16.5px}
 .lg-head{background:#2a1f26;color:#fff;position:sticky;top:0;z-index:20}
 .lg-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
 .lg-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.lg-brand .mark{width:44px;height:44px;border-radius:50%;background:var(--greige);color:var(--taupe);display:grid;place-items:center;font-family:Didot,"Bodoni 72","Times New Roman",Georgia,serif;font-size:1.1rem;flex:none}
-.lg-brand b{font-family:var(--font-d);font-weight:400;font-size:1.6rem;letter-spacing:.03em}
+.lg-brand img{height:50px;width:auto}
 .lg-back{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;font-size:.92rem}
 .lg-back:hover{background:#7f2f56}
 .lg-hero{background:var(--cream);padding:56px 0 40px;border-bottom:1px solid var(--line)}
@@ -45,7 +44,7 @@ body{font-size:16.5px}
   .lg-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px 14px;border-left:0;padding-left:0}
   .lg-card dl{grid-template-columns:1fr}
   .lg-card dt{border-bottom:0;padding-bottom:0}
-  .lg-head .lg-brand b{font-size:1.3rem}.lg-brand .mark{width:38px;height:38px;font-size:.95rem}
+  .lg-brand img{height:40px}
   .lg-back{padding:10px 14px}
   .lg-table{display:block;overflow-x:auto}
 }

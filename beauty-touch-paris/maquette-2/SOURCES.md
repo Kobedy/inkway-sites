@@ -19,7 +19,7 @@ Document interne Inkway, non relié depuis le site. Relevés du 12 novembre 2026
 | Accès | Gare de Lyon ; bus arrêt Lyon – Ledru-Rollin | Planity (« à deux pas de Gare de Lyon ») ; Treatwell (arrêt de bus) |
 | Note Google | 4,8/5 · 272 avis (12/11/2026) | Fiche Google (https://www.google.com/maps?cid=16889916027685239097). L’audit du 29/10/2026 indiquait 273 avis. |
 | Note Planity | 4,7/5 · 119 avis (12/11/2026) | Planity. L’audit indiquait 118 avis. |
-| Réservation en ligne | Planity | Lien de la bio Instagram et du bouton « Site Web » de Google |
+| Réservation en ligne | Tous les boutons de réservation ouvrent https://www.planity.com/beauty-touch-75012-paris (demande Inkway du 12/11/2026 ; le formulaire WhatsApp du modèle a été retiré) | Lien de la bio Instagram et du bouton « Site Web » de Google |
 | Instagram | @beautytouch.paris | https://www.instagram.com/beautytouch.paris/ |
 | Couleurs | Prune #2a1f26 (façade), magenta #a3406f (enseigne néon, assombri pour le contraste), greige #e9e3dd et mauve-gris #8a7676 (monogramme « BT »), rose poudré #f4e7e9 (fauteuils, intérieur) | Logo Instagram, photos de la façade et de l’intérieur (aucun brand guideline fourni) |
 | Polices | Italiana (titres, proche du monogramme fin du logo), Nunito Sans (texte) | Polices du modèle « Carte de soins & réservation » |
@@ -28,8 +28,8 @@ Document interne Inkway, non relié depuis le site. Relevés du 12 novembre 2026
 
 | Fichier | Contenu | Origine |
 |---|---|---|
-| img/favicon.png, apple-touch-icon.png, logo-officiel-instagram.png | Monogramme « BT » officiel | Photo de profil Instagram @beautytouch.paris (150 px seulement) |
-| img/logo-beauty-touch.svg | Logotype typographique Inkway d’après le monogramme | Création Inkway, faute de logo en haute définition |
+| img/logo-beauty-touch*.png / .webp | Logo de l’enseigne néon « Beauty Touch · Esthétique & Onglerie », détouré sur fond transparent : version magenta pour fond clair, version néon pour fond sombre, avec ou sans la mention « Esthétique & Onglerie » | Extrait de la photo de façade publiée par le salon sur Planity (enseigne d’environ 800 px de large, agrandie et détourée par Inkway) |
+| img/favicon.png, apple-touch-icon.png, logo-officiel-instagram.png | Monogramme « BT » | Photo de profil Instagram @beautytouch.paris (150 px seulement) |
 | img/facade*.webp | Façade de nuit, enseigne néon « Beauty Touch · Esthétique & Onglerie » | Photos publiées par le salon sur Planity |
 | img/entree*, accueil*, postes-ongles*, cabine-soins* | Intérieur de l’institut | Photos publiées par le salon sur Planity |
 | img/ongles-bleu-nuit*, ongles-nude-nacre*, ongles-nail-art-dore* | Réalisations onglerie | Photos publiées par le salon sur Planity |
@@ -50,8 +50,8 @@ Aucune photo d’un autre salon, aucune photo Unsplash. Une photo Planity de bac
 1. Accord écrit pour l’utilisation des photos Planity et Instagram sur le site.
 2. Horaires définitifs (lundi, dimanche) et fermetures exceptionnelles ou jours fériés.
 3. Numéro de rue : 30 ou 30 ter avenue Daumesnil.
-4. Confirmation que le 06 21 41 08 08 reçoit bien les messages WhatsApp (le formulaire envoie la demande sur ce numéro).
-5. Logo en haute définition (SVG ou PNG transparent) : seule la photo de profil Instagram de 150 px est disponible.
+4. Confirmation que le 06 21 41 08 08 reçoit bien les messages WhatsApp (lien « Écrire sur WhatsApp »).
+5. Fichier source du logo de l’enseigne (SVG ou PNG haute définition) : le logo du site est détouré d’une photo de façade, à remplacer par le fichier du fabricant de l’enseigne s’il existe.
 6. Tarifs et carte : validation des 77 prestations et des trois formules mises en avant ; éventuelles prestations head spa ou extensions à ajouter.
 7. Avantages clients (fidélité, offres, cartes cadeaux) : coché dans le cahier des charges, mais aucun détail public. Non affiché.
 8. Mentions légales : capital social, immatriculation RCS, numéro de TVA, directeur de la publication, hébergeur.
