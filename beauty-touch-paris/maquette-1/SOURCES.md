@@ -31,6 +31,7 @@ Aucun avis client n’est recopié sur le site : seules les notes et le nombre d
 | Fichier `img/` | Contenu | Source |
 |---|---|---|
 | devanture.webp | Devanture, néon « Beauty Touch, esthétique & onglerie » | Photos du salon sur Planity |
+| accueil-devanture.webp | Image d’accueil : devanture de nuit recadrée en portrait, fond sombre prolongé en haut, légère retouche (contraste, netteté) | Même photo Planity |
 | interieur.webp | Intérieur, fauteuils rose poudré | Photos du salon sur Planity |
 | entree.webp | Accueil vu depuis l’entrée | Photos du salon sur Planity |
 | cabine.webp | Cabine de soins | Photos du salon sur Planity |
@@ -64,9 +65,10 @@ Aucun avis client n’est recopié sur le site : seules les notes et le nombre d
 1. Horaires définitifs, en particulier le dimanche et le lundi, et les fermetures exceptionnelles.
 2. Adresse exacte à afficher : 30 ou 30 ter avenue Daumesnil.
 3. Numéro WhatsApp : le 06 21 41 08 08 est utilisé par défaut.
-4. Droits d’usage des photos Planity et Instagram, et accord des clientes visibles sur les avant/après.
-5. Fichier source du logo (vectoriel) : le logo actuel est détouré d’une photo de 1 600 px. Le logo Instagram (monogramme BT) diffère de l’enseigne : confirmer lequel est le logo officiel.
-6. Tarifs : à revalider avant mise en ligne, ainsi que l’offre Head Spa éventuelle.
-7. Avantages clients (fidélité, offres « Nos offres » de la story Instagram, cartes cadeaux) : non publiés faute d’information vérifiable.
-8. Mentions légales : capital social, numéro de TVA, nom du directeur de la publication, médiateur de la consommation, hébergeur.
-9. Mention « plus de 10 ans d’expérience » et marques OPI / DND toujours d’actualité.
+4. Photos professionnelles : aucune n’existe en ligne (Google, Planity, Treatwell, Instagram : photos au téléphone). Un shooting de l’institut améliorerait l’accueil et la galerie.
+5. Droits d’usage des photos Planity et Instagram, et accord des clientes visibles sur les avant/après.
+6. Fichier source du logo (vectoriel) : le logo actuel est détouré d’une photo de 1 600 px. Le logo Instagram (monogramme BT) diffère de l’enseigne : confirmer lequel est le logo officiel.
+7. Tarifs : à revalider avant mise en ligne, ainsi que l’offre Head Spa éventuelle.
+8. Avantages clients (fidélité, offres « Nos offres » de la story Instagram, cartes cadeaux) : non publiés faute d’information vérifiable.
+9. Mentions légales : capital social, numéro de TVA, nom du directeur de la publication, médiateur de la consommation, hébergeur.
+10. Mention « plus de 10 ans d’expérience » et marques OPI / DND toujours d’actualité.
