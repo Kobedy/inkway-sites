@@ -21,8 +21,8 @@ Relevé effectué le 12 novembre 2026. Ce fichier n’est relié depuis aucune p
 | Note Planity | 4,7/5, 119 avis | Planity |
 | Note Treatwell | 4,7/5, 240 avis | Treatwell |
 | Raison sociale, forme, SIREN, SIRET, NAF, siège | INSTITUT BEAUTY TOUCH PARIS, SAS, 922 346 127, 922 346 127 00017, 96.02B, 30 avenue Daumesnil | https://annuaire-entreprises.data.gouv.fr (API recherche-entreprises.api.gouv.fr) |
-| Logo | Recomposé en SVG (monogramme BT mauve, « Beauty Touch » en script, PARIS) | Photo de profil Instagram @beautytouch.paris (seule version trouvée, 150 px) |
-| Couleurs | Crème #f7f2ec, prune #382127, mauve #7a5a66 / #8a6f78, rose #b02d6b | Logo Instagram (fond #e5e0da, BT #887177, script #382127) et néon rose de la devanture |
+| Logo | Logo de l’enseigne lumineuse : « Beauty Touch » en script néon rose, « ESTHETIQUE & ONGLERIE » en capitales. Détouré sur fond transparent à partir de la photo de la devanture | Photo de la devanture publiée par le salon sur Planity |
+| Couleurs | Crème #f7f2ec, prune #382127, mauve #7a5a66, rose #b02d6b | Néon rose de l’enseigne (#d313d2) et logo Instagram (fond #e5e0da, BT #887177, script #382127) |
 
 Aucun avis client n’est recopié sur le site : seules les notes et le nombre d’avis sont affichés, avec la date du relevé.
 
@@ -39,7 +39,9 @@ Aucun avis client n’est recopié sur le site : seules les notes et le nombre d
 | ongles-bleus.webp, ongles-nude.webp, ongles-nail-art.webp | Réalisations ongles | Photos du salon sur Planity |
 | regard-avant-apres-01/02/04/06/08/10.webp | Avant / après cils et sourcils | Publications Instagram @beautytouch.paris (nov. 2025 – mars 2026) |
 | ongles-rose.webp, ongles-rouges.webp | Réalisations ongles | Publications Instagram @beautytouch.paris |
-| logo-instagram.webp, favicon.png | Logo d’origine | Photo de profil Instagram |
+| logo-beauty-touch.png, logo-beauty-touch-800.png | Logo de l’enseigne, rose et prune, fond transparent (fond clair) | Détouré de la photo de la devanture (Planity) |
+| logo-beauty-touch-neon.png, logo-beauty-touch-neon-600.png | Logo de l’enseigne, néon rose et blanc, fond transparent (fond sombre) | Détouré de la photo de la devanture (Planity) |
+| favicon.png | « B » du néon sur fond prune | Détouré de la photo de la devanture (Planity) |
 | soin-visage.webp | Illustration | Unsplash photo-1616394584738-fc6e612e71b9 |
 | beaute-pieds.webp | Illustration | Unsplash photo-1519415510236-718bdfcd89c8 |
 | maquillage.webp | Illustration | Unsplash photo-1487412947147-5cebf100ffc2 |
@@ -54,6 +56,7 @@ Aucun avis client n’est recopié sur le site : seules les notes et le nombre d
 - **Prénom de l’esthéticienne** : « Laila » (Planity, Treatwell) et « Leila » (description Planity). Le site ne cite pas de prénom.
 - **Head spa** : un résumé Google mentionne des formules Head Spa (45 min à 1 h 30, 65 € à 110 €), absentes de la carte Planity actuelle. Le site montre seulement la photo du bac, sans prestation ni tarif.
 - **Treatwell** : la page n’accepte pas de réservation ; elle liste quelques prestations absentes de Planity (extensions Gel X, faux ongles résine/gel). Non reprises.
+- **Réservation** : tous les boutons de rendez-vous du site ouvrent la page Planity du salon. Le formulaire WhatsApp reste proposé comme alternative.
 - **Facebook** : le lien Facebook de la fiche Google mène à Planity Pro (audit). Aucun lien Facebook sur le site. Aucun compte TikTok trouvé.
 
 ## À confirmer par le salon
@@ -62,7 +65,7 @@ Aucun avis client n’est recopié sur le site : seules les notes et le nombre d
 2. Adresse exacte à afficher : 30 ou 30 ter avenue Daumesnil.
 3. Numéro WhatsApp : le 06 21 41 08 08 est utilisé par défaut.
 4. Droits d’usage des photos Planity et Instagram, et accord des clientes visibles sur les avant/après.
-5. Logo en haute définition (fichier source SVG ou PNG transparent) pour remplacer la recomposition.
+5. Fichier source du logo (vectoriel) : le logo actuel est détouré d’une photo de 1 600 px. Le logo Instagram (monogramme BT) diffère de l’enseigne : confirmer lequel est le logo officiel.
 6. Tarifs : à revalider avant mise en ligne, ainsi que l’offre Head Spa éventuelle.
 7. Avantages clients (fidélité, offres « Nos offres » de la story Instagram, cartes cadeaux) : non publiés faute d’information vérifiable.
 8. Mentions légales : capital social, numéro de TVA, nom du directeur de la publication, médiateur de la consommation, hébergeur.
