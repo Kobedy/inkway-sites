@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Beauty Touch Paris — Institut de beauté, ongles &amp; regard · Paris 12e</title>
+<meta name="description" content="Beauty Touch Paris, institut de beauté au 30 avenue Daumesnil (Paris 12e), près de la gare de Lyon : vernis semi-permanent, rehaussement de cils, soins du visage Jadéa, épilation, massages. Du mardi au dimanche, 10 h – 19 h.">
+<meta name="theme-color" content="#1d1418">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#f7efe9;--fg:#1d1418;--accent:#b0136e;--on-accent:#fff;--muted:#6b5660;--line:rgba(29,20,24,.16);--pink:#f6c6d4;--mauve:#e4d3db;--font-d:"Bagel Fat One",cursive;--font-b:"Outfit",system-ui,sans-serif;--r-in:16px;--in-bg:#fff}
+header{position:sticky;top:12px;z-index:50;margin:12px auto 0;width:min(1200px,100% - 24px);background:#fff;border:2px solid var(--fg);border-radius:99px;box-shadow:4px 4px 0 var(--fg)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 12px}
+.logo{font-family:var(--font-d);font-size:1.5rem;text-decoration:none;color:var(--accent);display:inline-flex;align-items:center;gap:10px;line-height:1}
+.logo img{width:44px;height:44px}
+.nav{display:flex;gap:22px;font-weight:700}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--fg);box-shadow:3px 3px 0 var(--fg);cursor:pointer;transition:.15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--fg)}
+.btn.w{background:#fff;color:var(--fg)}
+.btn:focus-visible,.nav a:focus-visible,.fl button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:70px 0}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(3rem,7vw,6.2rem);line-height:.95;margin:0 0 20px}
+.hero h1 span{color:var(--accent);display:inline-block;transform:rotate(-3deg)}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:480px}
+.facts{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px;font-weight:500}
+.facts a{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+.facts a:hover{color:var(--accent)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.tiles img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:28px;border:2px solid var(--fg);box-shadow:5px 5px 0 var(--fg)}
+.tiles img:nth-child(2){transform:translateY(40px)}.tiles img:nth-child(3){transform:translateY(-10px)}
+.sticker{position:absolute;width:130px;height:130px;border-radius:50%;background:var(--pink);border:2px solid var(--fg);display:grid;place-items:center;text-align:center;font-family:var(--font-d);font-size:1.05rem;line-height:1.05;left:42%;top:40%;animation:wob 4s ease-in-out infinite;z-index:2}
+@keyframes wob{50%{transform:rotate(12deg) scale(1.05)}}
+.tick{background:var(--fg);color:var(--bg);overflow:hidden;transform:rotate(-1.5deg);margin:20px 0}
+.tick div{display:flex;gap:40px;white-space:nowrap;padding:16px 0;font-family:var(--font-d);font-size:1.6rem;width:max-content;animation:mq 22s linear infinite}
+.tick span:nth-child(even){color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tick div,.sticker{animation:none}}
+section{padding:100px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:.95;margin:0 0 20px}
+h2 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.1rem;max-width:640px;margin:0 0 26px}
+.fl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.fl button{padding:10px 18px;border-radius:99px;border:2px solid var(--fg);background:#fff;font-weight:700;cursor:pointer}
+.fl button.active{background:var(--fg);color:var(--bg)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal a{border-radius:24px;overflow:hidden;border:2px solid var(--fg);aspect-ratio:1;position:relative;background:var(--pink)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s}.gal a:hover img{transform:scale(1.08) rotate(2deg)}
+.gal a b{position:absolute;left:10px;bottom:10px;background:#fff;border:2px solid var(--fg);border-radius:99px;padding:3px 12px;font-size:.8rem}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.mc{background:#fff;border:2px solid var(--fg);border-radius:28px;padding:28px;box-shadow:6px 6px 0 var(--fg)}
+.mc:nth-child(3n+2){background:var(--pink)}.mc:nth-child(3n){background:var(--mauve)}
+.mc h3{font-family:var(--font-d);font-weight:400;font-size:1.9rem;line-height:1.05;margin:0 0 14px}
+.mc li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:2px dotted var(--line)}
+.mc li small{display:block;color:var(--muted);font-size:.8rem}
+.mc ul{list-style:none;padding:0;margin:0}.mc b{color:var(--accent);white-space:nowrap}
+.mc .note{margin:14px 0 0;font-size:.9rem;color:var(--muted)}
+.mc.cta{background:var(--fg);color:var(--bg)}.mc.cta p{color:var(--bg);opacity:.9}
+.mc.cta h3{color:var(--pink)}
+.menu-note{margin:26px 0 0;color:var(--muted);font-size:.95rem}
+.loy{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.loy .txt p{color:var(--muted);font-size:1.1rem}
+.lc{background:var(--fg);color:var(--bg);border-radius:28px;padding:32px;box-shadow:8px 8px 0 var(--accent)}
+.lc h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0 0 16px;color:var(--pink)}
+.lc ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.lc li{display:flex;gap:12px;align-items:flex-start}
+.lc li::before{content:"✦";color:var(--pink);flex:none}
+.salon-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.salon-pics img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:22px;border:2px solid var(--fg)}
+.rdv{background:#fff;border:2px solid var(--fg);border-radius:36px;padding:50px;display:grid;grid-template-columns:1fr 1.2fr;gap:40px;box-shadow:8px 8px 0 var(--fg)}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.rdv h3{font-family:var(--font-d);font-weight:400;font-size:1.5rem;margin:26px 0 8px}
+.field input,.field select,.field textarea{border:2px solid var(--fg)}
+.hrs{list-style:none;padding:0;margin:0;max-width:340px}
+.hrs li{display:flex;justify-content:space-between;padding:5px 0;border-bottom:2px dotted var(--line)}
+.hrs li.today{color:var(--accent);font-weight:700}
+.contact{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.contact a{font-weight:700}
+.map{width:100%;height:320px;border:2px solid var(--fg);border-radius:28px;margin-top:40px}
+footer{padding:50px 0 90px;text-align:center}
+footer .logo{font-size:2.6rem;flex-direction:column}
+footer .logo img{width:84px;height:84px}
+footer p{color:var(--muted)}
+footer a{font-weight:700}
+@media(max-width:900px){.hero,.loy,.rdv{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.rdv{padding:28px 20px}.rdv form{grid-template-columns:1fr}.hd .btn{display:none}.sticker{width:100px;height:100px;font-size:.85rem}section{padding:70px 0}.hero{padding:44px 0 60px}}
+@media(max-width:420px){.logo{font-size:1.25rem}.logo img{width:38px;height:38px}.btn{padding:12px 18px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Beauty Touch Paris","address":{"@type":"PostalAddress","streetAddress":"30 avenue Daumesnil","postalCode":"75012","addressLocality":"Paris","addressCountry":"FR"},"telephone":"+33621410808","email":"laila8lina@hotmail.fr","openingHours":"Tu-Su 10:00-19:00","priceRange":"5 € – 80 €","sameAs":["https://www.instagram.com/beautytouch.paris/","https://www.planity.com/beauty-touch-75012-paris"]}</script>
+</head>
+<body id="top">
+<header data-header><div class="hd">
+  <a class="logo" href="#top" aria-label="Beauty Touch Paris, retour en haut"><img src="img/monogramme-bt.svg" alt="" width="44" height="44">Beauty Touch</a>
+  <nav class="nav" aria-label="Menu principal"><a href="#galerie">Réalisations</a><a href="#tarifs">Tarifs</a><a href="#salon">Le salon</a><a href="#rdv">Horaires &amp; contact</a></nav>
+  <a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Prendre RDV ✦</a>
+  <button class="burger" data-nav-toggle aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1 data-reveal>Ongles, regard<br>&amp; soins, tout en <span>douceur.</span></h1>
+    <p data-reveal>Votre cocon de beauté et de bien-être à deux pas de la gare de Lyon. Vernis semi-permanent, rehaussement de cils, soins du visage Jadéa, épilation et massages.</p><br>
+    <div data-reveal style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn w" href="#tarifs">Voir les tarifs</a></div>
+    <ul class="facts" data-reveal>
+      <li data-open-status></li>
+      <li>Du mardi au dimanche, 10 h – 19 h · fermé le lundi</li>
+      <li>📞 <a href="tel:+33621410808">06 21 41 08 08</a> · 30 avenue Daumesnil, Paris 12e</li>
+      <li>★ <a href="https://maps.google.com/?cid=16889916027685239097" target="_blank" rel="noopener">4,8/5 sur Google · 272 avis</a> <span class="small">(relevé du 12/11/2026)</span></li>
+    </ul>
+  </div>
+  <div class="tiles" data-reveal>
+    <img class="ph" src="img/devanture-carre.webp" width="600" height="600" alt="Devanture de Beauty Touch, enseigne néon rose « Esthétique &amp; onglerie »">
+    <img class="ph" src="img/ongles-nail-art-carre.webp" width="600" height="600" alt="Ongles amande nude avec nail art doré">
+    <img class="ph" src="img/bar-ongles-carre.webp" width="600" height="600" alt="Le bar à ongles du salon et ses fauteuils rose poudré">
+    <img class="ph" src="img/ongles-bleu-carre.webp" width="600" height="600" alt="Vernis semi-permanent bleu nuit sur ongles amande">
+    <div class="sticker" aria-hidden="true">Semi-<br>permanent<br>30 €</div>
+  </div>
+</div>
+<div class="tick" aria-hidden="true"><div><span>Semi-permanent ✦</span><span>Rehaussement de cils ✦</span><span>Soins Jadéa ✦</span><span>Épilation ✦</span><span>Massages ✦</span><span>Beauté des pieds ✦</span><span>Semi-permanent ✦</span><span>Rehaussement de cils ✦</span><span>Soins Jadéa ✦</span><span>Épilation ✦</span><span>Massages ✦</span><span>Beauté des pieds ✦</span></div></div>
+
+<section id="galerie"><div class="wrap">
+  <h2 data-reveal>Nos <span>réalisations</span></h2>
+  <p class="lead" data-reveal>Des photos prises au salon : ongles, rehaussements de cils avant/après et notre institut.</p>
+  <div class="fl" data-filter-group="#gal"><button class="active" data-filter="all">Tout</button><button data-filter="ongles">Ongles</button><button data-filter="regard">Regard</button><button data-filter="salon">Le salon</button></div>
+  <div class="gal" id="gal">
+    <a data-cat="ongles" data-lightbox data-caption="Nail art doré sur base nude" href="img/ongles-nail-art.webp"><img class="ph" loading="lazy" src="img/ongles-nail-art-carre.webp" width="600" height="600" alt="Ongles nude avec nail art doré"><b>Nail art</b></a>
+    <a data-cat="regard" data-lightbox data-caption="Rehaussement de cils, avant / après" href="img/regard-1.webp"><img class="ph" loading="lazy" src="img/regard-1-carre.webp" width="600" height="600" alt="Rehaussement de cils, photo avant et après"><b>Avant / après</b></a>
+    <a data-cat="ongles" data-lightbox data-caption="Semi-permanent bleu nuit" href="img/ongles-bleu.webp"><img class="ph" loading="lazy" src="img/ongles-bleu-carre.webp" width="600" height="600" alt="Vernis semi-permanent bleu nuit"><b>Bleu nuit</b></a>
+    <a data-cat="salon" data-lightbox data-caption="La devanture, 30 avenue Daumesnil" href="img/devanture.webp"><img class="ph" loading="lazy" src="img/devanture-carre.webp" width="600" height="600" alt="Devanture de l’institut Beauty Touch"><b>La devanture</b></a>
+    <a data-cat="ongles" data-lightbox data-caption="Rose poudré, forme amande" href="img/ongles-rose.webp"><img class="ph" loading="lazy" src="img/ongles-rose-carre.webp" width="600" height="600" alt="Ongles amande rose poudré"><b>Rose poudré</b></a>
+    <a data-cat="regard" data-lightbox data-caption="Rehaussement de cils, avant / après" href="img/regard-2.webp"><img class="ph" loading="lazy" src="img/regard-2-carre.webp" width="600" height="600" alt="Rehaussement de cils sur yeux clairs, avant et après"><b>Rehaussement</b></a>
+    <a data-cat="salon" data-lightbox data-caption="Le bar à ongles" href="img/bar-ongles.webp"><img class="ph" loading="lazy" src="img/bar-ongles-carre.webp" width="600" height="600" alt="Tables de manucure et présentoirs de vernis"><b>Bar à ongles</b></a>
+    <a data-cat="ongles" data-lightbox data-caption="Nude naturel" href="img/ongles-nude.webp"><img class="ph" loading="lazy" src="img/ongles-nude-carre.webp" width="600" height="600" alt="Ongles nude brillants"><b>Nude</b></a>
+    <a data-cat="regard" data-lightbox data-caption="Rehaussement et teinture, avant / après" href="img/regard-3.webp"><img class="ph" loading="lazy" src="img/regard-3-carre.webp" width="600" height="600" alt="Rehaussement et teinture des cils, avant et après"><b>Cils + teinture</b></a>
+    <a data-cat="salon" data-lightbox data-caption="La cabine de soins" href="img/cabine-soins.webp"><img class="ph" loading="lazy" src="img/cabine-soins-carre.webp" width="600" height="600" alt="Cabine de soins avec table de massage"><b>Cabine de soins</b></a>
+    <a data-cat="ongles" data-lightbox data-caption="Rouge et accent doré" href="img/ongles-rouge.webp"><img class="ph" loading="lazy" src="img/ongles-rouge-carre.webp" width="600" height="600" alt="Ongles rouges avec un ongle décoré doré"><b>Rouge</b></a>
+    <a data-cat="regard" data-lightbox data-caption="Rehaussement de cils, avant / après" href="img/regard-4.webp"><img class="ph" loading="lazy" src="img/regard-4-carre.webp" width="600" height="600" alt="Rehaussement de cils, avant et après"><b>Regard ouvert</b></a>
+  </div>
+</div></section>
+
+<section id="tarifs" style="padding-top:0"><div class="wrap">
+  <h2 data-reveal>La <span>carte</span></h2>
+  <p class="lead" data-reveal>Tous nos prix, sans surprise. Les durées sont indicatives.</p>
+  <div class="fl" data-filter-group="#menu"><button class="active" data-filter="all">Tout</button><button data-filter="ongles">Ongles</button><button data-filter="regard">Regard</button><button data-filter="visage">Visage</button><button data-filter="epilation">Épilation</button><button data-filter="corps">Massages &amp; maquillage</button><button data-filter="hommes">Hommes</button></div>
+  <div class="menu" id="menu">
+    <div class="mc" data-cat="ongles" data-reveal><h3>Ongles mains</h3><ul>
+      <li><span>Manucure<small>30 min</small></span><b>20 €</b></li>
+      <li><span>Pose de vernis classique<small>20 min</small></span><b>15 €</b></li>
+      <li><span>Manucure + vernis classique<small>35 min</small></span><b>25 €</b></li>
+      <li><span>Vernis semi-permanent<small>45 min</small></span><b>30 €</b></li>
+      <li><span>Manucure + semi-permanent<small>1 h</small></span><b>40 €</b></li>
+      <li><span>Gainage / renforcement<small>1 h 20</small></span><b>50 €</b></li>
+      <li><span>Nail art, French, babyboomer ou chrome<small>supplément · 15 min</small></span><b>+10 €</b></li>
+      <li><span>Dépose semi-permanent<small>avant une prestation · seule</small></span><b>5 € · 15 €</b></li>
+      <li><span>Dépose extensions<small>30 min</small></span><b>25 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="ongles" data-reveal><h3>Ongles pieds</h3><ul>
+      <li><span>Beauté des pieds<small>40 min</small></span><b>30 €</b></li>
+      <li><span>Beauté des pieds Prestige<small>bain aux pétales, masque, massage · 1 h</small></span><b>50 €</b></li>
+      <li><span>Pose de vernis classique<small>20 min</small></span><b>15 €</b></li>
+      <li><span>Pose de vernis semi-permanent<small>45 min</small></span><b>30 €</b></li>
+      <li><span>Beauté des pieds + vernis classique<small>45 min</small></span><b>40 €</b></li>
+      <li><span>Beauté des pieds + semi-permanent<small>1 h</small></span><b>50 €</b></li>
+      <li><span>Prestige + vernis classique<small>1 h 10</small></span><b>65 €</b></li>
+      <li><span>Prestige + semi-permanent<small>1 h 20</small></span><b>75 €</b></li>
+      <li><span>Nail art, French, babyboomer ou chrome<small>supplément · 15 min</small></span><b>+10 €</b></li>
+      <li><span>Dépose semi-permanent<small>avant une prestation · seule</small></span><b>5 € · 15 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="regard" data-reveal><h3>Beauté du regard</h3><ul>
+      <li><span>Rehaussement de cils<small>45 min</small></span><b>45 €</b></li>
+      <li><span>Rehaussement + teinture<small>1 h</small></span><b>55 €</b></li>
+      <li><span>Rehaussement + teinture + Lashbotox<small>1 h 10</small></span><b>60 €</b></li>
+      <li><span>Soin des cils Lashbotox<small>5 min</small></span><b>7 €</b></li>
+      <li><span>Teinture cils ou sourcils<small>20 min</small></span><b>15 €</b></li>
+      <li><span>Restructuration des sourcils<small>15 min</small></span><b>15 €</b></li>
+      <li><span>Restructuration + teinture<small>30 min</small></span><b>25 €</b></li>
+      <li><span>Brow lift<small>35 min</small></span><b>45 €</b></li>
+      <li><span>Brow lift + restructuration ou teinture<small>45 min</small></span><b>50 €</b></li>
+      <li><span>Brow lift + restructuration + teinture<small>1 h</small></span><b>55 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="visage" data-reveal><h3>Soins du visage Jadéa</h3><ul>
+      <li><span>Soin flash purifiant<small>30 min</small></span><b>29,50 €</b></li>
+      <li><span>Soin purifiant complet<small>1 h</small></span><b>59 €</b></li>
+      <li><span>Soin flash hydratant<small>30 min</small></span><b>34,50 €</b></li>
+      <li><span>Soin hydratant complet<small>1 h</small></span><b>69 €</b></li>
+      <li><span>Soin flash anti-âge<small>30 min</small></span><b>39,50 €</b></li>
+      <li><span>Soin anti-âge complet<small>1 h</small></span><b>79 €</b></li>
+    </ul><p class="note">Produits Jadéa fabriqués en France, disponibles à la vente au salon.</p></div>
+    <div class="mc" data-cat="epilation" data-reveal><h3>Épilation à la cire</h3><ul>
+      <li><span>Sourcils<small>15 min</small></span><b>15 €</b></li>
+      <li><span>Lèvre ou menton<small>10 min</small></span><b>5 €</b></li>
+      <li><span>Visage complet<small>30 min</small></span><b>20 €</b></li>
+      <li><span>Aisselles<small>10 min</small></span><b>10 €</b></li>
+      <li><span>Demi-bras · bras complets<small>15 · 20 min</small></span><b>15 € · 20 €</b></li>
+      <li><span>Demi-jambes<small>15 min</small></span><b>15 €</b></li>
+      <li><span>Cuisses<small>15 min</small></span><b>20 €</b></li>
+      <li><span>Jambes complètes<small>25 min</small></span><b>30 €</b></li>
+      <li><span>Maillot simple<small>10 min</small></span><b>15 €</b></li>
+      <li><span>Maillot échancré<small>15 min</small></span><b>20 €</b></li>
+      <li><span>Maillot intégral<small>20 min</small></span><b>25 €</b></li>
+      <li><span>Sillon interfessier<small>10 min</small></span><b>5 €</b></li>
+      <li><span>Ventre<small>10 min</small></span><b>15 €</b></li>
+      <li><span>Bas du dos<small>20 min</small></span><b>15 €</b></li>
+      <li><span>Fesses<small>30 min</small></span><b>15 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="epilation" data-reveal><h3>Forfaits épilation</h3><ul>
+      <li><span>Demi-jambes + maillot échancré + aisselles<small>30 min</small></span><b>40 €</b></li>
+      <li><span>Jambes complètes + maillot intégral + aisselles<small>1 h</small></span><b>60 €</b></li>
+      <li><span>Jambes + bras complets + aisselles + maillot intégral + sillon<small>1 h 20</small></span><b>80 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="corps" data-reveal><h3>Massages &amp; maquillage</h3><ul>
+      <li><span>Réflexologie crânienne<small>30 min</small></span><b>30 €</b></li>
+      <li><span>Massage relaxant essentiel<small>30 min</small></span><b>35 €</b></li>
+      <li><span>Massage relaxant profond<small>1 h</small></span><b>70 €</b></li>
+      <li><span>Relaxant profond aux pierres chaudes<small>1 h</small></span><b>80 €</b></li>
+      <li><span>Maquillage de jour<small>30 min</small></span><b>45 €</b></li>
+      <li><span>Maquillage de soirée<small>1 h</small></span><b>55 €</b></li>
+    </ul></div>
+    <div class="mc" data-cat="hommes" data-reveal><h3>Pour les hommes</h3><ul>
+      <li><span>Manucure<small>30 min</small></span><b>20 €</b></li>
+      <li><span>Beauté des pieds<small>30 min</small></span><b>30 €</b></li>
+      <li><span>Sourcils<small>15 min</small></span><b>10 €</b></li>
+      <li><span>Oreilles ou nez<small>10 min</small></span><b>10 €</b></li>
+      <li><span>Lèvres ou menton<small>10 min</small></span><b>10 €</b></li>
+      <li><span>Visage complet<small>35 min</small></span><b>25 €</b></li>
+      <li><span>Aisselles<small>10 min</small></span><b>15 €</b></li>
+      <li><span>Dos ou torse<small>20 min</small></span><b>30 €</b></li>
+      <li><span>Ventre<small>15 min</small></span><b>20 €</b></li>
+      <li><span>Bas du dos<small>10 min</small></span><b>15 €</b></li>
+      <li><span>Avant-bras · bras complets<small>15 · 20 min</small></span><b>18 € · 25 €</b></li>
+      <li><span>Demi-jambes · cuisses<small>15 · 20 min</small></span><b>20 € · 25 €</b></li>
+      <li><span>Jambes complètes<small>30 min</small></span><b>35 €</b></li>
+    </ul></div>
+    <div class="mc cta" data-cat="ongles regard visage epilation corps hommes" data-reveal><h3>Envie d’un moment pour vous ?</h3><p>Réservez en ligne 24 h/24 sur Planity avec confirmation immédiate, ou appelez-nous au <a href="tel:+33621410808" style="color:inherit;font-weight:700">06 21 41 08 08</a>.</p><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Prendre rendez-vous</a></div>
+  </div>
+  <p class="menu-note">Tarifs en vigueur au salon, susceptibles d’évoluer : le prix affiché lors de la réservation fait foi.</p>
+</div></section>
+
+<section id="salon" style="padding-top:0"><div class="wrap loy">
+  <div class="txt">
+    <h2 data-reveal>Le <span>salon</span></h2>
+    <p data-reveal>Beauty Touch est un institut de beauté du 12e arrondissement, à deux pas de la gare de Lyon. Un espace lumineux et chaleureux, pensé pour prendre soin de vous, en toute simplicité.</p>
+    <p data-reveal>Une esthéticienne passionnée vous accueille pour vos ongles, votre regard, votre peau et votre détente, avec des soins sur mesure qui révèlent votre beauté naturelle.</p>
+    <div class="salon-pics" data-reveal>
+      <img class="ph" loading="lazy" src="img/accueil.webp" width="1169" height="710" alt="L’espace d’accueil avec fauteuils rose poudré">
+      <img class="ph" loading="lazy" src="img/entree.webp" width="1400" height="1050" alt="L’entrée vitrée de l’institut, vue sur le salon">
+    </div>
+  </div>
+  <div class="lc" data-reveal>
+    <h3>Les petits plus</h3>
+    <ul>
+      <li>Réservation en ligne 24 h/24 sur Planity, confirmation immédiate.</li>
+      <li>Ouvert le dimanche, de 10 h à 19 h.</li>
+      <li>Soins du visage Jadéa, des produits fabriqués en France et disponibles à la vente.</li>
+      <li>Une carte complète : ongles, regard, visage, épilation, massages et maquillage.</li>
+      <li>Des prestations dédiées aux hommes.</li>
+      <li>À deux pas de la gare de Lyon.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap">
+  <div class="rdv">
+    <div>
+      <h2>On vous <span>attend</span></h2>
+      <p style="color:var(--muted)">Réservez en ligne sur Planity, ou envoyez-nous une demande : le salon vous confirme le créneau sur WhatsApp.</p>
+      <p><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a></p>
+      <p data-open-status data-hours='{"0":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'></p>
+      <h3>Horaires</h3>
+      <ul class="hrs">
+        <li data-day="2"><span>Mardi</span><span>10 h – 19 h</span></li>
+        <li data-day="3"><span>Mercredi</span><span>10 h – 19 h</span></li>
+        <li data-day="4"><span>Jeudi</span><span>10 h – 19 h</span></li>
+        <li data-day="5"><span>Vendredi</span><span>10 h – 19 h</span></li>
+        <li data-day="6"><span>Samedi</span><span>10 h – 19 h</span></li>
+        <li data-day="0"><span>Dimanche</span><span>10 h – 19 h</span></li>
+        <li data-day="1"><span>Lundi</span><span>Fermé</span></li>
+      </ul>
+      <h3>Contact</h3>
+      <ul class="contact">
+        <li>30 avenue Daumesnil, 75012 Paris</li>
+        <li>Téléphone : <a href="tel:+33621410808">06 21 41 08 08</a></li>
+        <li>WhatsApp : <a href="https://wa.me/33621410808" target="_blank" rel="noopener">écrire au salon</a></li>
+        <li>E-mail : <a href="mailto:laila8lina@hotmail.fr">laila8lina@hotmail.fr</a></li>
+        <li>Instagram : <a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">@beautytouch.paris</a></li>
+        <li>Avis : <a href="https://maps.google.com/?cid=16889916027685239097" target="_blank" rel="noopener">lire et laisser un avis Google</a></li>
+      </ul>
+    </div>
+    <div>
+      <form data-booking data-whatsapp="33621410808" data-salon="Beauty Touch Paris">
+        <label class="field full">Prestation<select name="service" required><option value="">Choisir</option>
+          <optgroup label="Ongles"><option>Manucure + vernis semi-permanent</option><option>Vernis semi-permanent mains</option><option>Gainage / renforcement</option><option>Beauté des pieds</option><option>Beauté des pieds Prestige</option><option>Beauté des pieds + semi-permanent</option></optgroup>
+          <optgroup label="Regard"><option>Rehaussement de cils</option><option>Rehaussement de cils + teinture</option><option>Brow lift</option><option>Restructuration des sourcils</option></optgroup>
+          <optgroup label="Visage &amp; corps"><option>Soin du visage Jadéa</option><option>Épilation</option><option>Massage</option><option>Maquillage</option></optgroup>
+          <optgroup label="Hommes"><option>Prestation homme</option></optgroup>
+        </select></label>
+        <label class="field">Date<input type="date" name="date" required></label>
+        <label class="field">Heure<select name="time" required></select></label>
+        <label class="field">Prénom<input name="name" autocomplete="given-name" required></label>
+        <label class="field">Téléphone<input type="tel" name="phone" autocomplete="tel" required pattern="[0-9 +().-]{8,}"></label>
+        <label class="field full">Une précision ? (couleur, zone d’épilation…)<textarea name="note" rows="2"></textarea></label>
+        <p class="full small" style="margin:0">Vos informations servent uniquement à préparer votre message WhatsApp au salon. <a href="confidentialite.html">En savoir plus</a></p>
+        <div class="full"><button class="btn" type="submit">Envoyer ma demande ✦</button></div>
+      </form>
+      <div data-booking-result hidden></div>
+    </div>
+  </div>
+  <iframe class="map" loading="lazy" title="Plan d’accès : Beauty Touch Paris, 30 avenue Daumesnil, 75012 Paris" src="https://maps.google.com/maps?q=Beauty%20Touch%20Paris%2C%2030%20avenue%20Daumesnil%2C%2075012%20Paris&z=16&output=embed"></iframe>
+</div></section>
+</main>
+
+<footer><div class="wrap"><a class="logo" href="#top" aria-label="Beauty Touch Paris, retour en haut"><img src="img/logo-beauty-touch.svg" alt="" width="84" height="84" loading="lazy">Beauty Touch</a>
+  <p>30 avenue Daumesnil, 75012 Paris · <a href="tel:+33621410808">06 21 41 08 08</a> · <a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">@beautytouch.paris</a></p>
+  <p>Du mardi au dimanche, 10 h – 19 h · <a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a></p>
+  <p>© <span data-year>2026</span> Beauty Touch Paris · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+</body>
+</html>
