@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Beauty Touch Paris — Institut de beauté à Paris 12e, Gare de Lyon · Carte des soins et rendez-vous</title>
+<meta name="description" content="Beauty Touch Paris, institut de beauté au 30 ter avenue Daumesnil, Paris 12e, près de la gare de Lyon. Soins du visage Jadéa, rehaussement de cils, onglerie, épilation à la cire, massages. Prix affichés, du mardi au dimanche de 10 h à 19 h. 06 21 41 08 08.">
+<meta name="theme-color" content="#2a1f26">
+<link rel="icon" href="img/favicon.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+/* Palette Beauty Touch Paris : greige et mauve du monogramme « BT », magenta de l’enseigne néon, prune de la façade, rose poudré de l’intérieur */
+:root{--bg:#faf7f4;--fg:#2a1f26;--accent:#a3406f;--on-accent:#fff;--muted:#6f6267;--line:#ece4e1;--rose:#f4e7e9;--greige:#e9e3dd;--taupe:#8a7676;--neon:#e9a9c6;--font-d:"Italiana",Didot,Georgia,serif;--font-b:"Nunito Sans",system-ui,sans-serif;--r-in:10px;--in-bg:#fff}
+html,body{overflow-x:clip}
+img{height:auto}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 10px 30px -18px rgba(42,31,38,.35)}
+.hd{display:flex;align-items:center;gap:30px;padding:14px 0}
+.logo{font-family:var(--font-d);font-size:1.75rem;text-decoration:none;letter-spacing:.04em;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;line-height:1}
+.logo .mark{width:46px;height:46px;border-radius:50%;background:var(--greige);color:var(--taupe);display:grid;place-items:center;flex:none;font-family:Didot,"Bodoni 72","Times New Roman",Georgia,serif;font-size:1.15rem;letter-spacing:0}
+.logo small{display:block;font-family:var(--font-b);font-size:.62rem;font-weight:800;letter-spacing:.32em;color:var(--accent);margin-top:5px}
+.nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:.92rem}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--fg);color:#fff;font-weight:800;text-decoration:none;border:0;cursor:pointer;transition:.2s;font-size:.92rem}
+.btn:hover{background:var(--accent)}.btn.acc{background:var(--accent)}.btn.acc:hover{background:var(--fg)}
+.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--fg)}.btn.ghost:hover{background:var(--fg);color:#fff}
+.btn:focus-visible,.add:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center;padding:56px 0 80px}
+.hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(2.8rem,6vw,5.2rem);line-height:1;margin:16px 0}
+.hero p{color:var(--muted);font-size:1.12rem;max-width:520px}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.pills span{background:var(--rose);padding:8px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
+.cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero-tel{display:block;margin-top:18px;color:var(--muted);font-size:.95rem}.hero-tel a{color:var(--fg);font-weight:800;text-decoration:none;white-space:nowrap}
+.hv{position:relative}
+.hv img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:16px}
+.promo{position:absolute;left:-40px;bottom:40px;background:#fff;padding:20px 22px;border-radius:14px;box-shadow:0 24px 50px -20px rgba(42,31,38,.35);max-width:260px;text-decoration:none;display:block}
+.promo b{font-family:var(--font-d);font-size:2.6rem;color:var(--accent);display:block;line-height:1;margin:6px 0 4px}
+.promo small{color:var(--muted);display:block}.promo u{font-weight:800;font-size:.88rem;text-decoration-thickness:1px;text-underline-offset:3px}
+.stars{color:#c9932e;letter-spacing:2px;font-size:.95rem}
+.ey{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:800}
+section{padding:90px 0}
+h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.6rem);margin:10px 0 14px;line-height:1.05}
+.lead{color:var(--muted);max-width:640px;margin:0}
+.menu{display:grid;grid-template-columns:200px 1fr 320px;gap:36px;align-items:start;margin-top:40px}
+.side{position:sticky;top:96px;display:grid;gap:4px}
+.side a{padding:11px 14px;border-radius:10px;text-decoration:none;font-weight:600;color:var(--muted)}.side a:hover,.side a.active{background:var(--rose);color:var(--fg)}
+.grp{margin-bottom:40px;scroll-margin-top:96px}
+.grp h3{font-family:var(--font-d);font-weight:400;font-size:2rem;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.soin{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line)}
+.soin b{display:block}.soin small{color:var(--muted)}
+.soin .p{font-weight:800;white-space:nowrap}
+.add{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--accent);background:none;color:var(--accent);font-size:1.2rem;cursor:pointer;transition:.2s;flex:none}
+.soin.sel{background:var(--rose);border-radius:10px;padding-inline:12px}.soin.sel .add{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.cart{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.cart h4{margin:0 0 12px;font-family:var(--font-d);font-size:1.6rem;font-weight:400}
+.cart ul{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px;font-size:.92rem;max-height:220px;overflow:auto}
+.cart li{display:flex;justify-content:space-between;gap:10px}.cart li b{white-space:nowrap}
+.cart .tot{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font-weight:800}
+.cart .empty{color:var(--muted);font-size:.92rem}
+.cart .btn{width:100%;margin-top:14px}
+.cart .alt{display:block;text-align:center;margin-top:12px;font-size:.86rem;color:var(--muted)}
+.forf{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.fc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.fc img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.fc div{padding:22px;display:flex;flex-direction:column;flex:1}.fc h3{margin:0;font-family:var(--font-d);font-weight:400;font-size:1.7rem}
+.fc p{color:var(--muted);margin:8px 0 14px}.fc .p{font-weight:800;font-size:1.2rem}.fc .p s{color:var(--muted);font-weight:400;margin-left:6px}
+.fc .btn{margin-top:auto;align-self:flex-start;padding:11px 18px}.fc .p{margin-bottom:16px}
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:50px;align-items:center}
+.about ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.about li{display:flex;gap:10px}.about li::before{content:"✦";color:var(--accent)}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.notes a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;display:block}
+.notes b{font-family:var(--font-d);font-size:2rem;font-weight:400;color:var(--accent);line-height:1}
+.notes small{display:block;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+.gal a{display:block;border-radius:12px;overflow:hidden;position:relative}
+.gal a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal a:hover img{transform:scale(1.04)}
+.rdv{background:var(--fg);color:#fff;border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;--line:rgba(255,255,255,.22);--in-bg:rgba(255,255,255,.06)}
+.rdv>*,.rdv form>*,.field input,.field select{min-width:0}
+.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.rdv .ey{color:var(--neon)}
+.rdv p{opacity:.85}.rdv a{color:#fff}
+.rdv .ways{display:grid;gap:10px;margin-top:22px}
+.rdv .ways a{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.rdv .ways a span{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:none}
+.rdv input[readonly]{opacity:.9}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.info>div{background:var(--rose);border-radius:16px;padding:26px}.info b.t{display:block;font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin-bottom:8px}
+.info a{font-weight:700}
+.hrs{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:3px;font-size:.95rem}
+.hrs li{display:flex;justify-content:space-between;gap:10px}
+.hrs li.today{color:var(--accent);font-weight:800}
+.map{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--greige)}
+.map iframe{display:block;width:100%;height:340px;border:0}
+footer{padding:40px 0 90px;border-top:1px solid var(--line);margin-top:60px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:var(--accent)}
+.mcart{display:none}
+.sm-only,.xs-only{display:none}
+.rdv .btn{white-space:normal;text-align:center}
+@media(max-width:1000px){.menu{grid-template-columns:1fr}.side{position:sticky;top:74px;z-index:5;background:#fff;display:flex;overflow-x:auto;padding:6px 0}.side a{white-space:nowrap}.cart{position:fixed;left:12px;right:12px;bottom:12px;top:auto;z-index:45;display:none;box-shadow:0 20px 50px -10px rgba(42,31,38,.45)}.cart.show{display:block}
+ .mcart{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:44}.mcart .btn{width:100%;box-shadow:0 12px 30px -10px rgba(42,31,38,.5)}[data-totop]{bottom:78px}}
+@media(max-width:900px){.hero,.rdv,.about{grid-template-columns:1fr}.forf,.info{grid-template-columns:1fr}.rdv{padding:30px 20px}.rdv form{grid-template-columns:1fr}.promo{position:relative;left:auto;bottom:auto;margin:-46px 14px 0;max-width:none;padding:16px 18px}.promo b{font-size:2.1rem}section{padding:70px 0}
+ .hd{gap:12px}.hd .btn.hd-cta{margin-left:auto;padding:10px 14px;font-size:.85rem}.lg-only{display:none}.sm-only{display:inline}
+ .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.hero{padding-top:30px}}
+.burger{flex:none}.logo{min-width:0}
+@media(max-width:360px){.hd .sm-only{display:none}.hd .xs-only{display:inline}}
+@media(max-width:420px){.hd{gap:8px}.logo{font-size:1.15rem;gap:7px}.logo small{font-size:.55rem}.logo .mark{width:36px;height:36px;font-size:.95rem}.hd .btn.hd-cta{padding:9px 12px}.logo small{letter-spacing:.22em}.notes{grid-template-columns:1fr}.soin{gap:10px}}
+</style>
+</head>
+<body>
+<header data-header><div class="wrap hd">
+  <a class="logo" href="#" aria-label="Beauty Touch Paris, accueil"><span class="mark" aria-hidden="true">BT</span><span>Beauty Touch<small>PARIS 12E</small></span></a>
+  <nav class="nav" id="menu" aria-label="Menu principal"><a href="#carte">Carte &amp; tarifs</a><a href="#formules">Formules</a><a href="#institut">L’institut</a><a href="#rdv">Rendez-vous</a><a href="#infos">Accès &amp; horaires</a></nav>
+  <a class="btn acc hd-cta" href="#carte"><span class="lg-only">Prendre rendez-vous</span><span class="sm-only">Rendez-vous</span><span class="xs-only">RDV</span></a>
+  <button class="burger" data-nav-toggle aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false"><span></span></button>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <span class="ey" data-reveal>Institut de beauté · Paris 12e · Gare de Lyon</span>
+    <h1 data-reveal>Votre cocon de beauté et de bien-être.</h1>
+    <p data-reveal>Soins du visage Jadéa, rehaussement de cils, onglerie, épilation à la cire et massages, à deux pas de la gare de Lyon. Composez votre soin, voyez le prix et la durée, puis demandez votre rendez-vous.</p>
+    <div class="pills" data-reveal><span>✓ Tous les prix affichés</span><span>✓ Mardi – dimanche, 10 h – 19 h</span><span>✓ Réservation en ligne</span></div>
+    <div class="cta" data-reveal><a class="btn acc" href="#carte">Prendre rendez-vous</a><a class="btn ghost" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a></div>
+    <span class="hero-tel" data-reveal>Une question ? Appelez l’institut au <a href="tel:+33621410808">06 21 41 08 08</a></span>
+  </div>
+  <div class="hv" data-reveal><img class="ph" src="img/facade.webp" srcset="img/facade-mini.webp 700w, img/facade.webp 1400w" sizes="(max-width:900px) 100vw, 560px" width="1400" height="1049" fetchpriority="high" alt="Façade de l’institut Beauty Touch, enseigne néon rose « Esthétique &amp; Onglerie », avenue Daumesnil">
+    <a class="promo" href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener"><span class="ey">Avis Google</span><b>4,8 / 5</b><span class="stars" aria-hidden="true">★★★★★</span><small>272 avis · relevé du 12 novembre 2026</small><u>Lire les avis Google</u></a></div>
+</div>
+
+<section id="carte" style="background:#fff"><div class="wrap">
+  <span class="ey">Carte des soins</span><h2 data-reveal>Composez votre moment</h2>
+  <p class="lead">Ajoutez un ou plusieurs soins avec le bouton +. La durée et le prix total s’affichent dans votre sélection.</p>
+  <div class="menu">
+    <nav class="side" aria-label="Rubriques de la carte"><a class="active" href="#g-visage">Visage</a><a href="#g-regard">Regard</a><a href="#g-mains">Mains</a><a href="#g-pieds">Pieds</a><a href="#g-epil">Épilation</a><a href="#g-forfaits">Forfaits</a><a href="#g-massages">Massages</a><a href="#g-maquillage">Maquillage</a><a href="#g-homme">Homme</a></nav>
+    <div id="soins">
+      <div class="grp" id="g-visage"><h3>Soins Jadéa</h3>
+        <div class="soin" data-soin="Soin flash purifiant" data-price="29.5" data-min="30"><div><b>Soin flash purifiant</b><small>30 min · Peaux mixtes à grasses</small></div><span class="p">29,50 €</span><button class="add" type="button" aria-label="Ajouter : Soin flash purifiant">+</button></div>
+        <div class="soin" data-soin="Soin purifiant complet" data-price="59" data-min="60"><div><b>Soin purifiant complet</b><small>1 h · Peaux mixtes à grasses</small></div><span class="p">59 €</span><button class="add" type="button" aria-label="Ajouter : Soin purifiant complet">+</button></div>
+        <div class="soin" data-soin="Soin flash hydratant" data-price="34.5" data-min="30"><div><b>Soin flash hydratant</b><small>30 min · Peaux sèches ou déshydratées</small></div><span class="p">34,50 €</span><button class="add" type="button" aria-label="Ajouter : Soin flash hydratant">+</button></div>
+        <div class="soin" data-soin="Soin hydratant complet" data-price="69" data-min="60"><div><b>Soin hydratant complet</b><small>1 h · Peaux sèches ou déshydratées</small></div><span class="p">69 €</span><button class="add" type="button" aria-label="Ajouter : Soin hydratant complet">+</button></div>
+        <div class="soin" data-soin="Soin flash anti-âge" data-price="39.5" data-min="30"><div><b>Soin flash anti-âge</b><small>30 min · Éclat et fermeté</small></div><span class="p">39,50 €</span><button class="add" type="button" aria-label="Ajouter : Soin flash anti-âge">+</button></div>
+        <div class="soin" data-soin="Soin anti-âge complet" data-price="79" data-min="60"><div><b>Soin anti-âge complet</b><small>1 h · Éclat et fermeté</small></div><span class="p">79 €</span><button class="add" type="button" aria-label="Ajouter : Soin anti-âge complet">+</button></div>
+      </div>
+      <div class="grp" id="g-regard"><h3>Cils et sourcils</h3>
+        <div class="soin" data-soin="Rehaussement de cils" data-price="45" data-min="45"><div><b>Rehaussement de cils</b><small>45 min</small></div><span class="p">45 €</span><button class="add" type="button" aria-label="Ajouter : Rehaussement de cils">+</button></div>
+        <div class="soin" data-soin="Rehaussement de cils + teinture" data-price="55" data-min="60"><div><b>Rehaussement de cils + teinture</b><small>1 h</small></div><span class="p">55 €</span><button class="add" type="button" aria-label="Ajouter : Rehaussement de cils + teinture">+</button></div>
+        <div class="soin" data-soin="Rehaussement + teinture + soin Lashbot" data-price="60" data-min="70"><div><b>Rehaussement + teinture + soin Lashbot</b><small>1 h 10</small></div><span class="p">60 €</span><button class="add" type="button" aria-label="Ajouter : Rehaussement + teinture + soin Lashbot">+</button></div>
+        <div class="soin" data-soin="Soin des cils Lashbot" data-price="7" data-min="5"><div><b>Soin des cils Lashbot</b><small>5 min</small></div><span class="p">7 €</span><button class="add" type="button" aria-label="Ajouter : Soin des cils Lashbot">+</button></div>
+        <div class="soin" data-soin="Teinture cils ou sourcils" data-price="15" data-min="20"><div><b>Teinture cils ou sourcils</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Teinture cils ou sourcils">+</button></div>
+        <div class="soin" data-soin="Restructuration des sourcils" data-price="15" data-min="15"><div><b>Restructuration des sourcils</b><small>15 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Restructuration des sourcils">+</button></div>
+        <div class="soin" data-soin="Restructuration des sourcils + teinture" data-price="25" data-min="30"><div><b>Restructuration des sourcils + teinture</b><small>30 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Restructuration des sourcils + teinture">+</button></div>
+        <div class="soin" data-soin="Brow lift" data-price="45" data-min="35"><div><b>Brow lift</b><small>35 min · Rehaussement des sourcils</small></div><span class="p">45 €</span><button class="add" type="button" aria-label="Ajouter : Brow lift">+</button></div>
+        <div class="soin" data-soin="Brow lift + restructuration ou teinture" data-price="50" data-min="45"><div><b>Brow lift + restructuration ou teinture</b><small>45 min</small></div><span class="p">50 €</span><button class="add" type="button" aria-label="Ajouter : Brow lift + restructuration ou teinture">+</button></div>
+        <div class="soin" data-soin="Brow lift + restructuration + teinture" data-price="55" data-min="60"><div><b>Brow lift + restructuration + teinture</b><small>1 h</small></div><span class="p">55 €</span><button class="add" type="button" aria-label="Ajouter : Brow lift + restructuration + teinture">+</button></div>
+      </div>
+      <div class="grp" id="g-mains"><h3>Onglerie mains</h3>
+        <div class="soin" data-soin="Manucure" data-price="20" data-min="30"><div><b>Manucure</b><small>30 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Manucure">+</button></div>
+        <div class="soin" data-soin="Pose de vernis classique (mains)" data-price="15" data-min="20"><div><b>Pose de vernis classique</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Pose de vernis classique">+</button></div>
+        <div class="soin" data-soin="Manucure + vernis classique" data-price="25" data-min="35"><div><b>Manucure + vernis classique</b><small>35 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Manucure + vernis classique">+</button></div>
+        <div class="soin" data-soin="Pose de vernis semi-permanent (mains)" data-price="30" data-min="45"><div><b>Pose de vernis semi-permanent</b><small>45 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Pose de vernis semi-permanent">+</button></div>
+        <div class="soin" data-soin="Manucure + vernis semi-permanent" data-price="40" data-min="60"><div><b>Manucure + vernis semi-permanent</b><small>1 h</small></div><span class="p">40 €</span><button class="add" type="button" aria-label="Ajouter : Manucure + vernis semi-permanent">+</button></div>
+        <div class="soin" data-soin="Gainage / renforcement" data-price="50" data-min="80"><div><b>Gainage / renforcement</b><small>1 h 20</small></div><span class="p">50 €</span><button class="add" type="button" aria-label="Ajouter : Gainage / renforcement">+</button></div>
+        <div class="soin" data-soin="Supplément nail art, french, babyboomer ou chrome (mains)" data-price="10" data-min="15"><div><b>Supplément nail art, french, babyboomer ou chrome</b><small>15 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Supplément nail art, french, babyboomer ou chrome">+</button></div>
+        <div class="soin" data-soin="Dépose semi-permanent avant une prestation (mains)" data-price="5" data-min="20"><div><b>Dépose semi-permanent avant une prestation</b><small>20 min</small></div><span class="p">5 €</span><button class="add" type="button" aria-label="Ajouter : Dépose semi-permanent avant une prestation">+</button></div>
+        <div class="soin" data-soin="Dépose semi-permanent seule (mains)" data-price="15" data-min="20"><div><b>Dépose semi-permanent seule</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Dépose semi-permanent seule">+</button></div>
+        <div class="soin" data-soin="Dépose extensions" data-price="25" data-min="30"><div><b>Dépose extensions</b><small>30 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Dépose extensions">+</button></div>
+      </div>
+      <div class="grp" id="g-pieds"><h3>Beauté des pieds</h3>
+        <div class="soin" data-soin="Beauté des pieds" data-price="30" data-min="40"><div><b>Beauté des pieds</b><small>40 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds prestige" data-price="50" data-min="60"><div><b>Beauté des pieds prestige</b><small>1 h</small></div><span class="p">50 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds prestige">+</button></div>
+        <div class="soin" data-soin="Pose de vernis classique (pieds)" data-price="15" data-min="20"><div><b>Pose de vernis classique</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Pose de vernis classique">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds + vernis classique" data-price="40" data-min="45"><div><b>Beauté des pieds + vernis classique</b><small>45 min</small></div><span class="p">40 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds + vernis classique">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds prestige + vernis classique" data-price="65" data-min="70"><div><b>Beauté des pieds prestige + vernis classique</b><small>1 h 10</small></div><span class="p">65 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds prestige + vernis classique">+</button></div>
+        <div class="soin" data-soin="Pose de vernis semi-permanent (pieds)" data-price="30" data-min="45"><div><b>Pose de vernis semi-permanent</b><small>45 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Pose de vernis semi-permanent">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds + vernis semi-permanent" data-price="50" data-min="60"><div><b>Beauté des pieds + vernis semi-permanent</b><small>1 h</small></div><span class="p">50 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds + vernis semi-permanent">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds prestige + vernis semi-permanent" data-price="75" data-min="80"><div><b>Beauté des pieds prestige + vernis semi-permanent</b><small>1 h 20</small></div><span class="p">75 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds prestige + vernis semi-permanent">+</button></div>
+        <div class="soin" data-soin="Supplément nail art, french, babyboomer ou chrome (pieds)" data-price="10" data-min="15"><div><b>Supplément nail art, french, babyboomer ou chrome</b><small>15 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Supplément nail art, french, babyboomer ou chrome">+</button></div>
+        <div class="soin" data-soin="Dépose semi-permanent avant une prestation (pieds)" data-price="5" data-min="20"><div><b>Dépose semi-permanent avant une prestation</b><small>20 min</small></div><span class="p">5 €</span><button class="add" type="button" aria-label="Ajouter : Dépose semi-permanent avant une prestation">+</button></div>
+        <div class="soin" data-soin="Dépose semi-permanent seule (pieds)" data-price="15" data-min="20"><div><b>Dépose semi-permanent seule</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Dépose semi-permanent seule">+</button></div>
+      </div>
+      <div class="grp" id="g-epil"><h3>Épilation à la cire</h3>
+        <div class="soin" data-soin="Sourcils (épilation)" data-price="15" data-min="15"><div><b>Sourcils</b><small>15 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Sourcils">+</button></div>
+        <div class="soin" data-soin="Lèvre ou menton" data-price="5" data-min="10"><div><b>Lèvre ou menton</b><small>10 min</small></div><span class="p">5 €</span><button class="add" type="button" aria-label="Ajouter : Lèvre ou menton">+</button></div>
+        <div class="soin" data-soin="Visage complet" data-price="20" data-min="30"><div><b>Visage complet</b><small>30 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Visage complet">+</button></div>
+        <div class="soin" data-soin="Aisselles" data-price="10" data-min="10"><div><b>Aisselles</b><small>10 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Aisselles">+</button></div>
+        <div class="soin" data-soin="Demi-bras" data-price="15" data-min="15"><div><b>Demi-bras</b><small>15 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Demi-bras">+</button></div>
+        <div class="soin" data-soin="Bras complets" data-price="20" data-min="20"><div><b>Bras complets</b><small>20 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Bras complets">+</button></div>
+        <div class="soin" data-soin="Demi-jambes" data-price="15" data-min="15"><div><b>Demi-jambes</b><small>15 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Demi-jambes">+</button></div>
+        <div class="soin" data-soin="Cuisses" data-price="20" data-min="15"><div><b>Cuisses</b><small>15 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Cuisses">+</button></div>
+        <div class="soin" data-soin="Jambes complètes" data-price="30" data-min="25"><div><b>Jambes complètes</b><small>25 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Jambes complètes">+</button></div>
+        <div class="soin" data-soin="Maillot simple" data-price="15" data-min="10"><div><b>Maillot simple</b><small>10 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Maillot simple">+</button></div>
+        <div class="soin" data-soin="Maillot échancré" data-price="20" data-min="15"><div><b>Maillot échancré</b><small>15 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Maillot échancré">+</button></div>
+        <div class="soin" data-soin="Maillot intégral" data-price="25" data-min="20"><div><b>Maillot intégral</b><small>20 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Maillot intégral">+</button></div>
+        <div class="soin" data-soin="Sillon interfessier" data-price="5" data-min="10"><div><b>Sillon interfessier</b><small>10 min</small></div><span class="p">5 €</span><button class="add" type="button" aria-label="Ajouter : Sillon interfessier">+</button></div>
+        <div class="soin" data-soin="Fesses" data-price="15" data-min="30"><div><b>Fesses</b><small>30 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Fesses">+</button></div>
+        <div class="soin" data-soin="Ventre" data-price="15" data-min="10"><div><b>Ventre</b><small>10 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Ventre">+</button></div>
+        <div class="soin" data-soin="Bas du dos" data-price="15" data-min="20"><div><b>Bas du dos</b><small>20 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Bas du dos">+</button></div>
+      </div>
+      <div class="grp" id="g-forfaits"><h3>Forfaits épilation</h3>
+        <div class="soin" data-soin="Demi-jambes + maillot échancré + aisselles" data-price="40" data-min="30"><div><b>Demi-jambes + maillot échancré + aisselles</b><small>30 min · au lieu de 45 € à l’unité</small></div><span class="p">40 €</span><button class="add" type="button" aria-label="Ajouter : Demi-jambes + maillot échancré + aisselles">+</button></div>
+        <div class="soin" data-soin="Jambes complètes + maillot intégral + aisselles" data-price="60" data-min="60"><div><b>Jambes complètes + maillot intégral + aisselles</b><small>1 h · au lieu de 65 € à l’unité</small></div><span class="p">60 €</span><button class="add" type="button" aria-label="Ajouter : Jambes complètes + maillot intégral + aisselles">+</button></div>
+        <div class="soin" data-soin="Jambes et bras complets + aisselles + maillot intégral + sillon" data-price="80" data-min="80"><div><b>Jambes et bras complets + aisselles + maillot intégral + sillon</b><small>1 h 20 · au lieu de 90 € à l’unité</small></div><span class="p">80 €</span><button class="add" type="button" aria-label="Ajouter : Jambes et bras complets + aisselles + maillot intégral + sillon">+</button></div>
+      </div>
+      <div class="grp" id="g-massages"><h3>Massages bien-être</h3>
+        <div class="soin" data-soin="Réflexologie crânienne" data-price="30" data-min="30"><div><b>Réflexologie crânienne</b><small>30 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Réflexologie crânienne">+</button></div>
+        <div class="soin" data-soin="Massage relaxant essentiel" data-price="35" data-min="30"><div><b>Massage relaxant essentiel</b><small>30 min</small></div><span class="p">35 €</span><button class="add" type="button" aria-label="Ajouter : Massage relaxant essentiel">+</button></div>
+        <div class="soin" data-soin="Massage relaxant profond" data-price="70" data-min="60"><div><b>Massage relaxant profond</b><small>1 h</small></div><span class="p">70 €</span><button class="add" type="button" aria-label="Ajouter : Massage relaxant profond">+</button></div>
+        <div class="soin" data-soin="Massage relaxant profond aux pierres chaudes" data-price="80" data-min="60"><div><b>Massage relaxant profond aux pierres chaudes</b><small>1 h</small></div><span class="p">80 €</span><button class="add" type="button" aria-label="Ajouter : Massage relaxant profond aux pierres chaudes">+</button></div>
+      </div>
+      <div class="grp" id="g-maquillage"><h3>Maquillage</h3>
+        <div class="soin" data-soin="Maquillage de jour" data-price="45" data-min="30"><div><b>Maquillage de jour</b><small>30 min</small></div><span class="p">45 €</span><button class="add" type="button" aria-label="Ajouter : Maquillage de jour">+</button></div>
+        <div class="soin" data-soin="Maquillage de soirée" data-price="55" data-min="60"><div><b>Maquillage de soirée</b><small>1 h</small></div><span class="p">55 €</span><button class="add" type="button" aria-label="Ajouter : Maquillage de soirée">+</button></div>
+      </div>
+      <div class="grp" id="g-homme"><h3>Prestations homme</h3>
+        <div class="soin" data-soin="Manucure homme" data-price="20" data-min="30"><div><b>Manucure</b><small>30 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Manucure">+</button></div>
+        <div class="soin" data-soin="Beauté des pieds homme" data-price="30" data-min="30"><div><b>Beauté des pieds</b><small>30 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Beauté des pieds">+</button></div>
+        <div class="soin" data-soin="Épilation sourcils homme" data-price="10" data-min="15"><div><b>Épilation sourcils</b><small>15 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Épilation sourcils">+</button></div>
+        <div class="soin" data-soin="Épilation oreilles ou nez" data-price="10" data-min="10"><div><b>Épilation oreilles ou nez</b><small>10 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Épilation oreilles ou nez">+</button></div>
+        <div class="soin" data-soin="Épilation lèvres ou menton homme" data-price="10" data-min="10"><div><b>Épilation lèvres ou menton</b><small>10 min</small></div><span class="p">10 €</span><button class="add" type="button" aria-label="Ajouter : Épilation lèvres ou menton">+</button></div>
+        <div class="soin" data-soin="Épilation visage complet homme" data-price="25" data-min="35"><div><b>Épilation visage complet</b><small>35 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Épilation visage complet">+</button></div>
+        <div class="soin" data-soin="Épilation aisselles homme" data-price="15" data-min="10"><div><b>Épilation aisselles</b><small>10 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Épilation aisselles">+</button></div>
+        <div class="soin" data-soin="Épilation dos ou torse" data-price="30" data-min="20"><div><b>Épilation dos ou torse</b><small>20 min</small></div><span class="p">30 €</span><button class="add" type="button" aria-label="Ajouter : Épilation dos ou torse">+</button></div>
+        <div class="soin" data-soin="Épilation ventre homme" data-price="20" data-min="15"><div><b>Épilation ventre</b><small>15 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Épilation ventre">+</button></div>
+        <div class="soin" data-soin="Épilation bas du dos homme" data-price="15" data-min="10"><div><b>Épilation bas du dos</b><small>10 min</small></div><span class="p">15 €</span><button class="add" type="button" aria-label="Ajouter : Épilation bas du dos">+</button></div>
+        <div class="soin" data-soin="Épilation demi-jambes homme" data-price="20" data-min="15"><div><b>Épilation demi-jambes</b><small>15 min</small></div><span class="p">20 €</span><button class="add" type="button" aria-label="Ajouter : Épilation demi-jambes">+</button></div>
+        <div class="soin" data-soin="Épilation cuisses homme" data-price="25" data-min="20"><div><b>Épilation cuisses</b><small>20 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Épilation cuisses">+</button></div>
+        <div class="soin" data-soin="Épilation jambes complètes homme" data-price="35" data-min="30"><div><b>Épilation jambes complètes</b><small>30 min</small></div><span class="p">35 €</span><button class="add" type="button" aria-label="Ajouter : Épilation jambes complètes">+</button></div>
+        <div class="soin" data-soin="Épilation avant-bras homme" data-price="18" data-min="15"><div><b>Épilation avant-bras</b><small>15 min</small></div><span class="p">18 €</span><button class="add" type="button" aria-label="Ajouter : Épilation avant-bras">+</button></div>
+        <div class="soin" data-soin="Épilation bras complets homme" data-price="25" data-min="20"><div><b>Épilation bras complets</b><small>20 min</small></div><span class="p">25 €</span><button class="add" type="button" aria-label="Ajouter : Épilation bras complets">+</button></div>
+      </div>
+      <p class="lead small">Tarifs relevés le 12 novembre 2026. Les prix affichés à l’institut font foi.</p>
+    </div>
+    <aside class="cart" id="cart" aria-label="Ma sélection"><h4>Ma sélection</h4><ul id="cart-list" aria-live="polite"></ul><p class="empty" id="cart-empty">Ajoutez un soin avec le bouton +</p><div class="tot"><span id="cart-min">0 min</span><span id="cart-tot">0 €</span></div><a class="btn acc" href="#rdv" id="cart-go">Demander ce rendez-vous</a><a class="alt" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">ou réserver directement sur Planity</a></aside>
+  </div>
+</div></section>
+<div class="mcart"><button class="btn acc" id="mcart" type="button" aria-controls="cart">Ma sélection · <span id="mcount">0</span> soin(s) · <span id="mtot">0 €</span></button></div>
+
+<section id="formules"><div class="wrap">
+  <span class="ey">Formules</span><h2 data-reveal>Les formules de l’institut</h2>
+  <p class="lead">Des associations pensées pour gagner du temps, à prix réduit par rapport aux soins pris séparément.</p>
+  <div class="forf">
+    <div class="fc" data-reveal><img class="ph" loading="lazy" decoding="async" src="img/cils-avant-apres-1.webp" width="511" height="640" style="object-position:center 30%" alt="Avant et après un rehaussement de cils réalisé chez Beauty Touch Paris"><div><h3>Regard sublimé</h3><p>Rehaussement de cils, teinture et soin Lashbot. 1 h 10.</p><span class="p">60 € <s>67 €</s></span><button class="btn ghost" type="button" data-add="Rehaussement + teinture + soin Lashbot">Ajouter à ma sélection</button></div></div>
+    <div class="fc" data-reveal><img class="ph" loading="lazy" decoding="async" src="img/ongles-nude-nacre-mini.webp" width="700" height="525" alt="Mains aux ongles nude nacrés, vernis semi-permanent réalisé à l’institut"><div><h3>Mains parfaites</h3><p>Manucure et pose de vernis semi-permanent. 1 h.</p><span class="p">40 € <s>50 €</s></span><button class="btn ghost" type="button" data-add="Manucure + vernis semi-permanent">Ajouter à ma sélection</button></div></div>
+    <div class="fc" data-reveal><img class="ph" loading="lazy" decoding="async" src="img/cabine-soins-mini.webp" width="700" height="525" alt="Cabine de soins et d’épilation de l’institut, table de soin et serviettes roses"><div><h3>Épilation jambes complètes</h3><p>Jambes complètes, maillot intégral et aisselles. 1 h.</p><span class="p">60 € <s>65 €</s></span><button class="btn ghost" type="button" data-add="Jambes complètes + maillot intégral + aisselles">Ajouter à ma sélection</button></div></div>
+  </div>
+</div></section>
+
+<section id="institut" style="background:#fff"><div class="wrap">
+  <div class="about">
+    <div>
+      <span class="ey">L’institut</span><h2 data-reveal>Une parenthèse douce, près de la gare de Lyon</h2>
+      <p class="lead" data-reveal>Beauty Touch Paris vous accueille avenue Daumesnil dans un institut lumineux aux tons rose poudré. Votre esthéticienne, forte de plus de dix ans d’expérience, prend le temps de vous écouter et adapte chaque soin à votre peau et à vos envies.</p>
+      <ul data-reveal>
+        <li>Soins du visage de la marque Jadéa : purifiant, hydratant ou anti-âge</li>
+        <li>Rehaussement de cils, brow lift et restructuration des sourcils</li>
+        <li>Manucure, semi-permanent, gainage et beauté des pieds</li>
+        <li>Épilation à la cire, massages relaxants et maquillage</li>
+        <li>Une carte dédiée aux hommes</li>
+      </ul>
+      <div class="notes" data-reveal>
+        <a href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener"><b>4,8/5</b><small>272 avis Google</small><small>Lire les avis →</small></a>
+        <a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener"><b>4,7/5</b><small>119 avis Planity</small><small>Voir sur Planity →</small></a>
+      </div>
+      <p class="small" style="margin-top:10px">Notes relevées le 12 novembre 2026.</p>
+    </div>
+    <div class="gal" data-reveal>
+      <a href="img/postes-ongles.webp" data-lightbox data-caption="Les postes d’onglerie et le mur de vernis"><img loading="lazy" decoding="async" src="img/postes-ongles-mini.webp" width="700" height="488" alt="Deux postes d’onglerie blancs, fauteuils roses et mur de vernis"></a>
+      <a href="img/entree.webp" data-lightbox data-caption="L’entrée de l’institut"><img loading="lazy" decoding="async" src="img/entree-mini.webp" width="700" height="525" alt="Entrée vitrée de l’institut avec fauteuils roses et plantes vertes"></a>
+      <a href="img/accueil.webp" data-lightbox data-caption="L’espace d’accueil"><img loading="lazy" decoding="async" src="img/accueil-mini.webp" width="700" height="425" alt="Espace d’accueil avec fauteuils rose poudré et comptoir lumineux"></a>
+      <a href="img/ongles-nail-art-dore.webp" data-lightbox data-caption="Nail art doré sur base nude"><img loading="lazy" decoding="async" src="img/ongles-nail-art-dore-mini.webp" width="700" height="571" alt="Ongles amande nude ornés de feuilles d’or"></a>
+      <a href="img/ongles-bleu-nuit.webp" data-lightbox data-caption="Semi-permanent bleu nuit pailleté"><img loading="lazy" decoding="async" src="img/ongles-bleu-nuit-mini.webp" width="700" height="396" alt="Ongles amande vernis bleu nuit pailleté"></a>
+      <a href="img/cils-avant-apres-2.webp" data-lightbox data-caption="Rehaussement de cils : avant, après"><img loading="lazy" decoding="async" src="img/cils-avant-apres-2.webp" width="513" height="640" style="object-position:center 25%" alt="Avant et après un rehaussement de cils"></a>
+      <a href="img/ongles-rose-amande.webp" data-lightbox data-caption="Semi-permanent rose pâle"><img loading="lazy" decoding="async" src="img/ongles-rose-amande.webp" width="361" height="640" alt="Ongles amande vernis rose pâle"></a>
+      <a href="img/cabine-soins.webp" data-lightbox data-caption="La cabine de soins du visage, d’épilation et de massage"><img loading="lazy" decoding="async" src="img/cabine-soins-mini.webp" width="700" height="525" alt="Cabine de soins avec table de massage, serviettes roses et mur carrelé noir"></a>
+      <a href="img/cils-avant-apres-3.webp" data-lightbox data-caption="Rehaussement de cils : avant, après"><img loading="lazy" decoding="async" src="img/cils-avant-apres-3.webp" width="517" height="640" style="object-position:center 25%" alt="Avant et après un rehaussement de cils sur des yeux bleus"></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="rdv"><div class="wrap rdv">
+  <div><span class="ey">Rendez-vous</span><h2>Demandez votre rendez-vous</h2><p>Votre sélection est reprise automatiquement. Choisissez un jour et un horaire : la demande s’ouvre dans WhatsApp et l’institut vous confirme le créneau.</p>
+    <div class="ways">
+      <a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener"><span aria-hidden="true">📅</span>Réserver en ligne sur Planity, 24 h/24</a>
+      <a href="tel:+33621410808"><span aria-hidden="true">✆</span>Appeler le 06 21 41 08 08</a>
+      <a href="https://wa.me/33621410808" target="_blank" rel="noopener"><span aria-hidden="true">✉</span>Écrire sur WhatsApp</a>
+    </div>
+  </div>
+  <div>
+    <form data-booking data-whatsapp="33621410808" data-salon="Beauty Touch Paris">
+      <label class="field full">Soins choisis<input name="service" required readonly placeholder="Composez votre sélection dans la carte"></label>
+      <label class="field">Date<input type="date" name="date" required></label>
+      <label class="field">Heure<select name="time" required></select></label>
+      <label class="field">Nom<input name="name" required autocomplete="name"></label>
+      <label class="field">Téléphone<input type="tel" name="phone" required autocomplete="tel" pattern="[0-9 +().-]{8,}"></label>
+      <div class="full"><button class="btn acc" type="submit">Envoyer ma demande sur WhatsApp</button></div>
+      <p class="full small" style="margin:0">Aucune donnée n’est enregistrée par le site. <a href="confidentialite.html">Confidentialité</a></p>
+    </form>
+    <div data-booking-result hidden></div>
+  </div>
+</div></section>
+
+<section id="infos" style="padding-top:0"><div class="wrap">
+  <div class="info">
+    <div data-reveal><b class="t">Adresse</b>30 ter avenue Daumesnil<br>75012 Paris<br><span class="small">Gare de Lyon (métro 1 et 14, RER A et D) · bus arrêt Lyon – Ledru-Rollin</span><br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Beauty+Touch+Paris,+30+ter+avenue+Daumesnil,+75012+Paris" target="_blank" rel="noopener">Itinéraire →</a></div>
+    <div data-reveal data-hours='{"0":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'><b class="t">Horaires</b><span data-open-status></span>
+      <ul class="hrs"><li data-day="1"><span>Lundi</span><span>Fermé</span></li><li data-day="2"><span>Mardi</span><span>10 h – 19 h</span></li><li data-day="3"><span>Mercredi</span><span>10 h – 19 h</span></li><li data-day="4"><span>Jeudi</span><span>10 h – 19 h</span></li><li data-day="5"><span>Vendredi</span><span>10 h – 19 h</span></li><li data-day="6"><span>Samedi</span><span>10 h – 19 h</span></li><li data-day="0"><span>Dimanche</span><span>10 h – 19 h</span></li></ul></div>
+    <div data-reveal><b class="t">Contact</b><a href="tel:+33621410808">06 21 41 08 08</a><br><a href="mailto:laila8lina@hotmail.fr">laila8lina@hotmail.fr</a><br><a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram @beautytouch.paris</a><br><a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a></div>
+  </div>
+  <div class="map" data-reveal><iframe title="Plan d’accès à Beauty Touch Paris, 30 ter avenue Daumesnil, Paris 12e" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Beauty+Touch+Paris,+30+ter+avenue+Daumesnil,+75012+Paris&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span data-year></span> Beauty Touch Paris · 30 ter avenue Daumesnil, 75012 Paris</span><span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram</a></span></div></footer>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  var sel=[],list=document.getElementById("cart-list"),form=document.querySelector("form[data-booking]");
+  function eur(n){return n.toLocaleString("fr-FR",{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2})+" €"}
+  function dur(m){return m>=60?Math.floor(m/60)+" h"+(m%60?" "+String(m%60).padStart(2,"0"):""):m+" min"}
+  function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+  function render(){
+    var t=0,m=0;list.innerHTML=sel.map(function(s){t+=s.p;m+=s.m;return "<li><span>"+esc(s.l)+"</span><b>"+eur(s.p)+"</b></li>"}).join("");
+    document.getElementById("cart-empty").hidden=sel.length>0;
+    document.getElementById("cart-tot").textContent=eur(t);
+    document.getElementById("cart-min").textContent=dur(m);
+    document.getElementById("mcount").textContent=sel.length;
+    document.getElementById("mtot").textContent=eur(t);
+    form.elements.service.value=sel.map(function(s){return s.l}).join(" + ")+(sel.length?" ("+eur(t)+", "+dur(m)+")":"");
+  }
+  function toggle(el,force){
+    var n=el.dataset.soin,i=sel.findIndex(function(s){return s.n===n});
+    if(force&&i>-1)return;
+    if(i>-1)sel.splice(i,1);else sel.push({n:n,l:n,p:+el.dataset.price,m:+el.dataset.min});
+    el.classList.toggle("sel",i===-1);
+    el.querySelector(".add").setAttribute("aria-pressed",i===-1?"true":"false");
+    render();
+  }
+  document.querySelectorAll(".soin").forEach(function(el){
+    el.querySelector(".add").setAttribute("aria-pressed","false");
+    el.querySelector(".add").addEventListener("click",function(){toggle(el)});
+  });
+  document.querySelectorAll("[data-add]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var el=document.querySelector('.soin[data-soin="'+b.dataset.add+'"]');if(!el)return;
+      toggle(el,true);b.textContent="✓ Ajouté à ma sélection";
+    });
+  });
+  var cart=document.getElementById("cart");
+  document.getElementById("mcart").addEventListener("click",function(){var o=cart.classList.toggle("show");this.setAttribute("aria-expanded",o?"true":"false")});
+  document.getElementById("cart-go").addEventListener("click",function(){cart.classList.remove("show")});
+  var links=document.querySelectorAll(".side a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("active",on);if(on&&a.parentNode.scrollWidth>a.parentNode.clientWidth)a.parentNode.scrollTo({left:a.offsetLeft-20,behavior:"smooth"})})})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll(".grp").forEach(function(g){io.observe(g)});}
+  form.addEventListener("submit",function(e){if(!sel.length){e.preventDefault();e.stopImmediatePropagation();var r=document.querySelector("[data-booking-result]");r.hidden=false;r.innerHTML="<b>Ajoutez au moins un soin</b><p>Composez votre sélection dans la carte des soins ci-dessus.</p>";document.getElementById("carte").scrollIntoView({behavior:"smooth"});}},true);
+  render();
+})();
+</script>
+</body>
+</html>
