@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hair &amp; Beauty by Lyna — Coiffure &amp; beauté à Viry-Châtillon</title>
+<meta name="description" content="Hair & Beauty by Lyna, salon de coiffure et de beauté au 58 route de Fleury à Viry-Châtillon : mèches, ombrés, couleurs, coupes, ongles, soins et épilation. Réservation en ligne 24 h/24 sur Planity · 09 55 10 49 13.">
+<meta name="theme-color" content="#120a10">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/balayage-ondule-700.webp">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+:root{--bg:#120a10;--fg:#f7eef3;--accent:#e58cc8;--accent2:#8fdcc8;--on-accent:#120a10;--muted:#b9a9b3;--line:rgba(247,238,243,.14);--font-d:"Syne",sans-serif;--font-b:"Figtree",system-ui,sans-serif;--nav-bg:#120a10;--r-in:14px;--in-bg:#1c1219}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.3s}
+header.scrolled{background:rgba(18,10,16,.88);backdrop-filter:blur(12px)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.logo{display:block;text-decoration:none;flex-shrink:0}
+.logo img{height:46px;width:auto}
+.nav{display:flex;gap:28px;font-weight:500}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:99px;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--fg)}
+.btn.o{background:none;color:var(--fg);border:1px solid var(--line)}.btn.o:hover{border-color:var(--accent);color:var(--accent)}
+.hd .btn{opacity:0;visibility:hidden;transform:translateY(-6px)}
+.cta-out .hd .btn{opacity:1;visibility:visible;transform:none}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding-top:100px;padding-bottom:40px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,rgba(229,140,200,.22),transparent 60%);left:30%;top:10%;filter:blur(20px)}
+.hero::after{content:"";position:absolute;width:36vw;height:36vw;border-radius:50%;background:radial-gradient(circle,rgba(143,220,200,.12),transparent 62%);left:-8%;bottom:-6%;filter:blur(20px)}
+.hero > *{position:relative;z-index:1}
+.hero h1{font-family:var(--font-d);font-weight:800;font-size:clamp(3rem,7vw,6.4rem);line-height:.9;margin:0 0 24px;letter-spacing:-.03em;position:relative}
+.hero h1 span{color:var(--accent);display:block}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:470px;position:relative}
+.hero-info{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:.95rem;color:var(--muted)}
+.hero-info a{text-decoration:none;color:var(--fg);font-weight:600}.hero-info a:hover{color:var(--accent)}
+.hero-info b{color:var(--accent2)}
+.collage{position:relative;height:620px}
+.collage img{position:absolute;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.collage img:nth-child(1){width:58%;height:72%;left:0;top:4%;transform:rotate(-5deg)}
+.collage img:nth-child(2){width:48%;height:56%;right:0;top:0;transform:rotate(4deg)}
+.collage img:nth-child(3){width:46%;height:46%;right:10%;bottom:0;transform:rotate(-2deg);border:6px solid var(--accent)}
+section{padding:110px 0}
+.h{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+h2{font-family:var(--font-d);font-weight:800;font-size:clamp(2.3rem,5.4vw,4.6rem);line-height:.95;margin:0;letter-spacing:-.02em}
+h2 em{font-style:normal;color:var(--accent)}
+.k{font-family:var(--font-d);color:var(--accent2);letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;display:block;margin-bottom:12px}
+.fl{display:flex;gap:8px;flex-wrap:wrap}
+.fl button{border:1px solid var(--line);background:none;border-radius:99px;padding:10px 18px;cursor:pointer;font-weight:600}
+.fl button.active{background:var(--fg);color:var(--bg)}
+.pf{columns:4 240px;column-gap:14px}
+.pf a{display:block;margin-bottom:14px;border-radius:18px;overflow:hidden;position:relative;break-inside:avoid}
+.pf img{width:100%;transition:.6s}.pf a:hover img{transform:scale(1.06)}
+.pf a span{position:absolute;left:12px;bottom:12px;background:rgba(18,10,16,.75);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px;font-size:.8rem;opacity:0;transform:translateY(8px);transition:.3s}
+.pf a:hover span,.pf a:focus span{opacity:1;transform:none}
+.ba{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.salon-ph{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;margin:0}
+.salon-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.salon-ph figcaption{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:99px;background:rgba(18,10,16,.75);font-size:.8rem}
+.steps{display:grid;gap:14px;margin-top:30px}
+.steps div{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:20px;border:1px solid var(--line);border-radius:18px}
+.steps b{font-family:var(--font-d);font-size:2rem;color:var(--accent)}
+.steps h3{margin:0 0 4px;font-family:var(--font-d)}.steps p{margin:0;color:var(--muted)}
+.tarifs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tc{border:1px solid var(--line);border-radius:24px;padding:30px;position:relative;overflow:hidden;transition:.3s}
+.tc:hover{border-color:var(--accent);transform:translateY(-4px)}
+.tc.hot{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.tc h3{font-family:var(--font-d);font-size:1.6rem;margin:0}.tc .pr{font-family:var(--font-d);font-size:3rem;font-weight:800;margin:14px 0}
+.tc .pr small{font-size:1rem;font-weight:700;margin-right:6px}
+.tc ul{padding:0;list-style:none;margin:0 0 24px;display:grid;gap:8px}.tc li::before{content:"✦ ";color:var(--accent)}.tc.hot li::before{color:var(--bg)}
+.tc.hot .btn{background:var(--bg);color:var(--fg)}
+.carte{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.carte details{border:1px solid var(--line);border-radius:18px;padding:0 20px}
+.carte summary{cursor:pointer;padding:18px 0;font-family:var(--font-d);font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.carte summary::-webkit-details-marker{display:none}
+.carte summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}
+.carte details[open] summary::after{content:"–"}
+.carte ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.carte li{display:flex;justify-content:space-between;gap:14px;padding-bottom:8px;border-bottom:1px dashed var(--line);color:var(--muted)}
+.carte li b{color:var(--fg);white-space:nowrap;font-weight:600}
+.carte-note{color:var(--muted);font-size:.9rem;margin-top:18px}
+.rdv{display:grid;grid-template-columns:1fr 1fr;gap:50px;border:1px solid var(--line);border-radius:32px;padding:56px;background:linear-gradient(140deg,#1f1019,#120a10)}
+.rdv-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
+.hours{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:6px}
+.hours li{display:flex;justify-content:space-between;padding:9px 14px;border-radius:12px;border:1px solid var(--line)}
+.hours li.today{border-color:var(--accent);color:var(--accent);font-weight:600}
+.addr{color:var(--muted);margin:0 0 16px}.addr a{color:var(--fg)}
+.map{width:100%;aspect-ratio:16/10;border:0;border-radius:18px;filter:grayscale(.3) contrast(1.05)}
+.avis{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.avis a{display:inline-flex;gap:8px;align-items:center;padding:10px 16px;border-radius:99px;border:1px solid var(--line);text-decoration:none;font-size:.92rem}
+.avis a:hover{border-color:var(--accent)}
+.avis b{color:var(--accent)}
+.ig-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-bottom:18px}
+.ig-h a{color:var(--accent);font-weight:600;text-decoration:none}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.ig a{aspect-ratio:1;overflow:hidden}.ig img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1);transition:.4s}.ig a:hover img{transform:scale(1.1)}
+footer{padding:60px 0 90px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--muted)}
+footer .big{font-family:var(--font-d);font-weight:800;font-size:clamp(2.6rem,9vw,7.5rem);color:var(--fg);line-height:.9;width:100%}
+footer .big span{color:var(--accent)}
+footer a{text-decoration:none}footer a:hover{color:var(--accent)}
+footer .today{color:var(--accent)}
+.mbar{display:none}
+@media(max-width:900px){
+  .hero,.ba,.rdv{grid-template-columns:1fr}
+  .hero{min-height:0;padding-top:88px;gap:22px}
+  .collage{order:-1;height:360px}
+  .tarifs,.carte{grid-template-columns:1fr}
+  .rdv{padding:30px 20px}
+  .ig{grid-template-columns:repeat(3,1fr)}
+  .hd .btn{display:none}
+  .logo img{height:38px}
+  section{padding:80px 0}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:45;gap:8px;transform:translateY(140%);transition:transform .35s}
+  .mbar .btn{flex:1;justify-content:center;padding:14px 16px}
+  .mbar .btn.o{flex:0 0 auto;background:var(--bg)}
+  .cta-out .mbar{transform:none}
+  .cta-out [data-totop]{bottom:84px}
+  .nav-open .mbar{display:none}
+}
+@media(max-width:420px){.collage{height:310px}.hero h1{font-size:2.8rem;margin-bottom:16px}.hero p{font-size:1.05rem}.hero br{display:none}.hero p~div{margin-top:18px}}
+</style>
+</head>
+<body>
+<header data-header><div class="wrap hd">
+  <a class="logo" href="#" aria-label="Hair &amp; Beauty by Lyna, retour en haut"><img src="img/logo-horizontal-clair.webp" width="750" height="174" alt="Hair &amp; Beauty by Lyna"></a>
+  <nav class="nav" aria-label="Navigation principale"><a href="#portfolio">Réalisations</a><a href="#salon">Le salon</a><a href="#tarifs">Tarifs</a><a href="#rdv">Rendez-vous</a></nav>
+  <a class="btn" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Prendre rendez-vous</a>
+  <button class="burger" data-nav-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <span class="k" data-reveal>Coiffure &amp; beauté · Viry-Châtillon</span>
+    <h1 data-reveal>Sublimez<span>vos reflets.</span></h1>
+    <p data-reveal>Mèches, ombrés, couleurs, coupes, ongles et soins du visage. Au 58 route de Fleury, l’équipe Hair &amp; Beauty by Lyna vous accueille du mardi au dimanche.</p><br>
+    <div data-reveal style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" data-hero-cta href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn o" href="#portfolio">Voir nos réalisations</a></div>
+    <div class="hero-info" data-reveal>
+      <a href="tel:+33955104913">☎ 09 55 10 49 13</a>
+      <a href="https://maps.google.com/?cid=14652725211508680005" target="_blank" rel="noopener"><b>★ 4,6/5</b>&nbsp;· 87 avis Google</a>
+      <span>Mar – dim · 9 h 30 – 19 h</span>
+    </div>
+  </div>
+  <div class="collage" data-reveal>
+    <img class="ph" src="img/balayage-ondule-700.webp" width="700" height="967" fetchpriority="high" alt="Balayage blond aux ondulations souples réalisé au salon Hair &amp; Beauty by Lyna">
+    <img class="ph" src="img/salon-hero.webp" width="900" height="828" alt="Intérieur du salon : mur fleuri rose, enseigne lumineuse Hair beauty by Lyna et produits capillaires">
+    <img class="ph" src="img/blond-lumineux-700.webp" width="700" height="525" alt="Blond polaire lumineux sur cheveux longs, vu de dos au fauteuil">
+  </div>
+</div>
+
+<section id="portfolio"><div class="wrap">
+  <div class="h"><div><span class="k">Réalisations</span><h2 data-reveal>Nos <em>créations</em></h2></div>
+    <div class="fl" data-filter-group="#pf"><button class="active" data-filter="all">Tout</button><button data-filter="meches">Mèches &amp; ombrés</button><button data-filter="coupe">Coupe &amp; couleur</button><button data-filter="ongles">Ongles</button><button data-filter="salon">Le salon</button></div></div>
+  <div class="pf" id="pf">
+    <a data-cat="meches" data-lightbox data-caption="Balayage ondulé" href="img/balayage-ondule.webp"><img class="ph" loading="lazy" src="img/balayage-ondule-700.webp" width="700" height="967" alt="Balayage blond miel sur cheveux longs ondulés"><span>Balayage ondulé</span></a>
+    <a data-cat="meches" data-lightbox data-caption="Blond lumineux" href="img/blond-lumineux.webp"><img class="ph" loading="lazy" src="img/blond-lumineux-700.webp" width="700" height="525" alt="Mèches blond polaire sur cheveux longs bouclés"><span>Blond lumineux</span></a>
+    <a data-cat="coupe" data-lightbox data-caption="Coupe courte et couleur prune" href="img/coupe-courte.webp"><img class="ph" loading="lazy" src="img/coupe-courte-700.webp" width="700" height="525" alt="Coupe courte effilée avec une couleur prune intense, vue de profil"><span>Coupe courte &amp; couleur</span></a>
+    <a data-cat="ongles" data-lightbox data-caption="Pose gel, french rose" href="img/ongles-french.webp"><img class="ph" loading="lazy" src="img/ongles-french-700.webp" width="700" height="394" alt="Ongles longs en gel rose avec french blanche et nœuds"><span>French rose</span></a>
+    <a data-cat="salon" data-lightbox data-caption="L’espace d’accueil du salon" href="img/salon-interieur.webp"><img class="ph" loading="lazy" src="img/salon-interieur-700.webp" width="700" height="525" alt="Espace d’accueil du salon avec mur fleuri, chaises blanches et étagère de produits"><span>Le salon</span></a>
+    <a data-cat="meches" data-lightbox data-caption="Reflets blonds" href="img/reflets-blonds.webp"><img class="ph" loading="lazy" src="img/reflets-blonds-700.webp" width="700" height="394" alt="Gros plan sur des reflets blonds et beiges aux ondulations naturelles"><span>Reflets blonds</span></a>
+    <a data-cat="meches" data-lightbox data-caption="Ombré hair et wavy" href="img/balayage-ondule-2.webp"><img class="ph" loading="lazy" src="img/balayage-ondule-2-700.webp" width="580" height="580" alt="Ombré hair blond et ondulations sur cheveux longs, au fauteuil du salon"><span>Ombré hair</span></a>
+  </div>
+</div></section>
+
+<section id="salon" style="padding-top:0"><div class="wrap ba">
+  <figure class="salon-ph" data-reveal>
+    <img class="ph" loading="lazy" src="img/salon-interieur-700.webp" width="700" height="525" alt="Accueil lumineux du salon Hair &amp; Beauty by Lyna, route de Fleury">
+    <figcaption>58 route de Fleury, Viry-Châtillon</figcaption>
+  </figure>
+  <div><span class="k">Le salon</span><h2 data-reveal>Coiffure <em>&amp;</em> beauté, sous un même toit.</h2>
+    <p style="color:var(--muted)">Un accueil chaleureux, des conseils sincères et des prestations sur mesure. Spécialiste des mèches et des ombrés, le salon prend aussi soin de vos ongles, de votre peau et de votre regard.</p>
+    <div class="steps"><div data-reveal><b>01</b><span><h3>Coiffure</h3><p>Coupes femme, homme et enfant, couleurs, mèches, ombré hair, lissages brésilien et au tanin.</p></span></div><div data-reveal><b>02</b><span><h3>Beauté du regard</h3><p>Extensions de cils, rehaussement, brow lift, microblading et épilation au fil.</p></span></div><div data-reveal><b>03</b><span><h3>Ongles &amp; soins</h3><p>Semi-permanent, pose gel, soins du visage, épilation à la cire et maquillage.</p></span></div></div>
+  </div>
+</div></section>
+
+<section id="tarifs" style="padding-top:0"><div class="wrap">
+  <div class="h"><div><span class="k">Tarifs</span><h2 data-reveal>Des prix <em>clairs</em></h2></div><p style="color:var(--muted);max-width:380px;margin:0">Prix de départ relevés sur notre page de réservation. Les prestations « sur devis » sont confirmées au salon selon la longueur et l’épaisseur des cheveux.</p></div>
+  <div class="tarifs">
+    <div class="tc" data-reveal><h3>Coupe &amp; brushing</h3><div class="pr"><small>dès</small>10 €</div><ul><li>Coupe homme dégradé · 10 €</li><li>Shampoing + brushing · dès 15 €</li><li>Shampoing + coupe + brushing · dès 30 €</li></ul><a class="btn o" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Réserver</a></div>
+    <div class="tc hot" data-reveal><h3>Mèches &amp; ombrés</h3><div class="pr"><small>dès</small>125 €</div><ul><li>Ombré hair · dès 125 €</li><li>Mèches · dès 125 € (sur devis)</li><li>Couleur + brushing · dès 50 €</li></ul><a class="btn" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Réserver</a></div>
+    <div class="tc" data-reveal><h3>Ongles &amp; beauté</h3><div class="pr"><small>dès</small>5 €</div><ul><li>Semi-permanent mains · 25 €</li><li>Pose gel capsules · 45 €</li><li>Rehaussement de cils · 35 €</li></ul><a class="btn o" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Réserver</a></div>
+  </div>
+
+  <div class="carte">
+    <details><summary>Coupe &amp; brushing</summary><ul>
+      <li>Shampoing + brushing, cheveux courts<b>15 €</b></li>
+      <li>Shampoing + brushing, cheveux mi-longs<b>18 €</b></li>
+      <li>Shampoing + coupe + brushing, courts<b>30 €</b></li>
+      <li>Shampoing + coupe + brushing, mi-longs<b>35 €</b></li>
+      <li>Shampoing + coupe + brushing, longs<b>40 €</b></li>
+      <li>Coupe frange<b>7 €</b></li>
+      <li>Coupe enfant<b>15 €</b></li>
+      <li>Coupe homme dégradé<b>10 €</b></li>
+      <li>Coupe homme sans shampoing<b>10 €</b></li>
+      <li>Coupe homme + barbe<b>15 €</b></li>
+      <li>Soin au bac<b>dès 5 €</b></li>
+      <li>Soin au bac, thérapie rapide<b>12 €</b></li>
+    </ul></details>
+    <details><summary>Coloration</summary><ul>
+      <li>Couleur + shampoing + brushing, courts<b>50 €</b></li>
+      <li>Couleur + shampoing + brushing, mi-longs<b>60 €</b></li>
+      <li>Couleur + shampoing + brushing, longs<b>65 €</b></li>
+      <li>Couleur + coupe + brushing, courts<b>60 €</b></li>
+      <li>Couleur + coupe + brushing, mi-longs<b>67 €</b></li>
+      <li>Couleur + coupe + brushing, longs<b>72 €</b></li>
+      <li>Couleur sans ammoniaque<b>sur devis</b></li>
+    </ul></details>
+    <details><summary>Ombré hair &amp; mèches</summary><ul>
+      <li>Ombré hair, cheveux courts<b>125 €</b></li>
+      <li>Ombré hair, cheveux mi-longs<b>165 €</b></li>
+      <li>Ombré hair, cheveux longs<b>165 à 175 €</b></li>
+      <li>Mèches, cheveux courts (sur devis)<b>dès 125 €</b></li>
+      <li>Mèches, cheveux mi-longs (sur devis)<b>145 à 165 €</b></li>
+      <li>Mèches, cheveux longs (sur devis)<b>165 à 180 €</b></li>
+    </ul></details>
+    <details><summary>Lissages &amp; soins profonds</summary><ul>
+      <li>Lissage brésilien<b>100 à 180 €</b></li>
+      <li>Lissage au tanin, coréen ou indien<b>dès 120 €</b></li>
+      <li>Soin bot<b>50 à 80 €</b></li>
+      <li>Soin filler therapy<b>35 à 45 €</b></li>
+    </ul></details>
+    <details><summary>Coiffure événement</summary><ul>
+      <li>Chignon, attaches (sur devis)<b>dès 45 €</b></li>
+      <li>Mariage, essai + jour J<b>35 €</b></li>
+      <li>Maquillage du jour<b>22 €</b></li>
+      <li>Maquillage de soirée avec faux cils<b>45 €</b></li>
+      <li>Maquillage de mariée<b>sur devis</b></li>
+    </ul></details>
+    <details><summary>Ongles</summary><ul>
+      <li>Semi-permanent mains, manucure offerte<b>25 €</b></li>
+      <li>Semi-permanent pieds<b>25 €</b></li>
+      <li>Pose gel capsules<b>45 €</b></li>
+      <li>Pose gel capsules + french<b>50 €</b></li>
+      <li>Réparation d’un ongle gel<b>5 €</b></li>
+      <li>Dépose semi-permanent<b>10 €</b></li>
+      <li>Dépose gel mains<b>20 €</b></li>
+    </ul></details>
+    <details><summary>Regard &amp; extensions de cils</summary><ul>
+      <li>Rehaussement de cils + teinture<b>35 €</b></li>
+      <li>Brow lift + teinture<b>32 €</b></li>
+      <li>Microblading<b>140 €</b></li>
+      <li>Extensions, pose naturelle<b>55 €</b></li>
+      <li>Extensions, pose mixte<b>60 €</b></li>
+      <li>Extensions, pose russe<b>80 €</b></li>
+      <li>Extensions, pose russe XXL<b>90 €</b></li>
+      <li>Remplissage extensions (3 semaines)<b>60 à 90 €</b></li>
+    </ul></details>
+    <details><summary>Soins visage &amp; corps</summary><ul>
+      <li>Soin express<b>20 €</b></li>
+      <li>Soin hydratant<b>32 €</b></li>
+      <li>Soin purifiant<b>35 €</b></li>
+      <li>Soin anti-âge<b>40 €</b></li>
+      <li>Gommage + modelage + masque, californien 1 h<b>59 €</b></li>
+    </ul></details>
+    <details><summary>Épilation à la cire</summary><ul>
+      <li>Lèvres · menton<b>5 € chacun</b></li>
+      <li>Sourcils<b>7 €</b></li>
+      <li>Aisselles · demi-bras<b>10 € chacun</b></li>
+      <li>Demi-jambes · maillot échancré<b>12 € chacun</b></li>
+      <li>Maillot simple · maillot brésilien<b>15 € chacun</b></li>
+      <li>Bras entiers<b>21 €</b></li>
+      <li>Jambes entières<b>24 €</b></li>
+      <li>Maillot intégral<b>25 €</b></li>
+    </ul></details>
+    <details><summary>Épilation au fil</summary><ul>
+      <li>Lèvres · menton · pommettes<b>5 € chacun</b></li>
+      <li>Sourcils<b>8 €</b></li>
+      <li>Teinture sourcils<b>8 €</b></li>
+      <li>Joues<b>10 €</b></li>
+      <li>Forfait visage sans sourcils<b>20 €</b></li>
+    </ul></details>
+  </div>
+  <p class="carte-note">Tarifs indicatifs, susceptibles d’évoluer : les prix affichés au salon et sur Planity font foi.</p>
+</div></section>
+
+<section id="rdv" style="padding-top:0"><div class="wrap rdv">
+  <div><span class="k">Rendez-vous</span><h2>Réservez <em>en ligne</em>, 24 h/24.</h2>
+    <p style="color:var(--muted)">Choisissez votre prestation et votre créneau sur Planity : la confirmation est immédiate et le paiement se fait au salon. Vous préférez parler à l’équipe ? Appelez-nous.</p>
+    <div class="rdv-ctas"><a class="btn" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Réserver sur Planity</a><a class="btn o" href="tel:+33955104913">09 55 10 49 13</a></div>
+    <p data-open-status data-hours='{"0":["09:30","19:00"],"2":["09:30","19:00"],"3":["09:30","19:00"],"4":["09:30","19:00"],"5":["09:30","19:00"],"6":["09:30","19:00"]}'></p>
+    <div class="avis">
+      <a href="https://maps.google.com/?cid=14652725211508680005" target="_blank" rel="noopener"><b>★ 4,6/5</b> · 87 avis Google</a>
+      <a href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener"><b>★ 4,5/5</b> · 73 avis Planity</a>
+    </div>
+    <p class="small" style="margin-top:10px">Notes relevées le 12 novembre 2026.</p>
+  </div>
+  <div>
+    <ul class="hours" aria-label="Horaires d’ouverture">
+      <li data-day="2"><span>Mardi</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="3"><span>Mercredi</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="4"><span>Jeudi</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="5"><span>Vendredi</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="6"><span>Samedi</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="0"><span>Dimanche</span><span>9 h 30 – 19 h</span></li>
+      <li data-day="1"><span>Lundi</span><span>Fermé</span></li>
+    </ul>
+    <p class="addr">Les horaires du dimanche peuvent varier : un appel avant de passer est conseillé.<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hair+%26+Beauty+by+Lyna%2C+58+route+de+Fleury%2C+91170+Viry-Ch%C3%A2tillon" target="_blank" rel="noopener">58 route de Fleury, 91170 Viry-Châtillon</a></p>
+    <iframe class="map" title="Plan d’accès : Hair &amp; Beauty by Lyna, 58 route de Fleury, Viry-Châtillon" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hair+%26+Beauty+by+Lyna,+58+route+de+Fleury,+91170+Viry-Ch%C3%A2tillon&amp;output=embed"></iframe>
+  </div>
+</div></section>
+
+<div class="wrap ig-h"><span class="k" style="margin:0">Instagram</span><a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener">Suivez @hairbeautybylyna →</a></div>
+<div class="ig">
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/balayage-ondule-carre.webp" width="400" height="400" alt="Balayage ondulé, sur Instagram"></a>
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/ongles-french-carre.webp" width="400" height="400" alt="French rose, sur Instagram"></a>
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/salon-interieur-carre.webp" width="400" height="400" alt="Le salon, sur Instagram"></a>
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/coupe-courte-carre.webp" width="400" height="400" alt="Coupe courte et couleur, sur Instagram"></a>
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/reflets-blonds-carre.webp" width="400" height="400" alt="Reflets blonds, sur Instagram"></a>
+  <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener"><img class="ph" loading="lazy" src="img/blond-lumineux-carre.webp" width="400" height="400" alt="Blond lumineux, sur Instagram"></a>
+</div>
+</main>
+
+<footer class="wrap"><div class="big">by Lyna<span>.</span></div>
+  <span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hair+%26+Beauty+by+Lyna%2C+58+route+de+Fleury%2C+91170+Viry-Ch%C3%A2tillon" target="_blank" rel="noopener">58 route de Fleury, 91170 Viry-Châtillon</a> · <a href="tel:+33955104913">09 55 10 49 13</a><br>Mardi – dimanche 9 h 30 – 19 h · lundi fermé</span>
+  <span>© <span data-year></span> Hair &amp; Beauty by Lyna · <a href="https://www.instagram.com/hairbeautybylyna/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Planity</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+</footer>
+<div class="mbar" aria-label="Réservation rapide"><a class="btn" href="https://www.planity.com/hair-beauty-by-lyna-91170-viry-chatillon" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn o" href="tel:+33955104913" aria-label="Appeler le salon au 09 55 10 49 13">☎</a></div>
+<button data-totop aria-label="Haut de page">↑</button>
+<script src="assets/site.js"></script>
+<script>
+/* Un seul bouton de réservation à la fois : celui de l'en-tête (et la barre mobile) n'apparaît qu'une fois le bouton du hero sorti de l'écran. */
+(function(){var c=document.querySelector("[data-hero-cta]");if(!c||!("IntersectionObserver" in window)){document.body.classList.add("cta-out");return}
+new IntersectionObserver(function(e){document.body.classList.toggle("cta-out",!e[0].isIntersecting)}).observe(c)})();
+</script>
+</body>
+</html>
