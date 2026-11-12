@@ -1,0 +1,51 @@
+/* Beauty Touch Paris (proposition 3) — pages Mentions légales et Confidentialité */
+:root{--bg:#f7efe9;--fg:#1d1418;--accent:#b0136e;--on-accent:#fff;--muted:#6b5660;--line:rgba(29,20,24,.16);--card:#fff;--pink:#f6c6d4;--font-d:"Bagel Fat One",cursive;--font-b:"Outfit",system-ui,sans-serif}
+html,body{overflow-x:clip}
+body{font-size:16.5px}
+.lg-head{position:sticky;top:12px;z-index:20;margin:12px auto 0;width:min(1200px,100% - 24px);background:#fff;border:2px solid var(--fg);border-radius:99px;box-shadow:4px 4px 0 var(--fg)}
+.lg-head .wrap{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 12px}
+.lg-brand{text-decoration:none;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
+.lg-brand img{width:40px;height:40px}
+.lg-brand b{font-family:var(--font-d);font-weight:400;font-size:1.4rem;white-space:nowrap}
+.lg-back{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:99px;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none;font-size:.92rem;white-space:nowrap;border:2px solid var(--fg);box-shadow:3px 3px 0 var(--fg)}
+.lg-back:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--fg)}
+.lg-hero{padding:64px 0 40px}
+.lg-hero .kick{display:inline-block;background:var(--pink);border:2px solid var(--fg);border-radius:99px;padding:3px 14px;font-weight:700;font-size:.85rem;margin-bottom:14px}
+.lg-hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,6vw,4.4rem);line-height:.95;margin:0 0 12px}
+.lg-hero p{margin:0;color:var(--muted)}
+.lg-body{padding:20px 0 80px}
+.lg-body .wrap{display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:start}
+.lg-toc{position:sticky;top:100px;display:flex;flex-direction:column;gap:4px;font-size:.92rem;border-left:2px solid var(--fg);padding-left:16px}
+.lg-toc a{text-decoration:none;color:var(--muted);padding:4px 0}.lg-toc a:hover{color:var(--accent)}
+.lg-text{max-width:760px;min-width:0}
+.lg-text section{padding:0 0 34px;margin:0 0 34px;border-bottom:2px dotted var(--line);scroll-margin-top:100px}
+.lg-text section:last-child{border-bottom:0}
+.lg-text h2{font-family:var(--font-d);font-weight:400;font-size:1.9rem;margin:0 0 14px}
+.lg-text h3{font-size:1.05rem;margin:22px 0 8px}
+.lg-text ul{padding-left:20px}
+.lg-text a{color:var(--accent);font-weight:600}
+.lg-card{background:var(--card);border:2px solid var(--fg);border-radius:22px;padding:6px 22px;margin:8px 0 6px;box-shadow:5px 5px 0 var(--fg)}
+.lg-card dl{display:grid;grid-template-columns:minmax(150px,220px) 1fr;margin:0}
+.lg-card dt,.lg-card dd{margin:0;padding:12px 0;border-bottom:2px dotted var(--line)}
+.lg-card dt{font-weight:600;color:var(--muted);font-size:.92rem;padding-right:14px}
+.lg-card dd{font-weight:600}
+.lg-card dl>:nth-last-child(-n+2){border-bottom:0}
+.lg-pending{color:var(--muted);font-style:italic;font-weight:500}
+.lg-table{width:100%;border-collapse:collapse;font-size:.94rem;margin:10px 0;background:#fff}
+.lg-table th,.lg-table td{text-align:left;vertical-align:top;padding:10px 12px;border:2px solid var(--fg)}
+.lg-table th{background:var(--pink);font-weight:700}
+.lg-foot{border-top:2px solid var(--fg);color:var(--muted);padding:30px 0;font-size:.88rem}
+.lg-foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.lg-foot a{color:var(--muted)}.lg-foot a:hover{color:var(--accent)}
+.lg-foot a[aria-current]{color:var(--fg);font-weight:700}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:860px){
+  .lg-body .wrap{grid-template-columns:1fr;gap:28px}
+  .lg-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px 14px;border-left:0;padding-left:0}
+  .lg-card dl{grid-template-columns:1fr}
+  .lg-card dt{border-bottom:0;padding-bottom:0}
+  .lg-brand b{font-size:1.1rem}
+  .lg-brand img{width:34px;height:34px}
+  .lg-back{padding:9px 14px}
+  .lg-table{display:block;overflow-x:auto}
+}

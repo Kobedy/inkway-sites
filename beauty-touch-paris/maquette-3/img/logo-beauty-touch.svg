@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beauty Touch Paris">
+  <circle cx="100" cy="100" r="98" fill="#efe6df" stroke="#1d1418" stroke-width="4"/>
+  <text x="100" y="118" text-anchor="middle" font-family="Didot,'Bodoni 72','Playfair Display',Georgia,'Times New Roman',serif" font-size="92" fill="#8a5a6b" letter-spacing="-4">BT</text>
+  <text x="100" y="112" text-anchor="middle" font-family="'Segoe Script','Brush Script MT','Snell Roundhand',cursive" font-size="27" fill="#2c1f24" transform="rotate(-8 100 105)">Beauty Touch</text>
+  <text x="100" y="152" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="13" letter-spacing="5" fill="#2c1f24">PARIS</text>
+</svg>
