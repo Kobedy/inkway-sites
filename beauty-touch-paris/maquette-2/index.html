@@ -18,9 +18,8 @@ img{height:auto}
 header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
 header.scrolled{box-shadow:0 10px 30px -18px rgba(42,31,38,.35)}
 .hd{display:flex;align-items:center;gap:30px;padding:14px 0}
-.logo{font-family:var(--font-d);font-size:1.75rem;text-decoration:none;letter-spacing:.04em;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;line-height:1}
-.logo .mark{width:46px;height:46px;border-radius:50%;background:var(--greige);color:var(--taupe);display:grid;place-items:center;flex:none;font-family:Didot,"Bodoni 72","Times New Roman",Georgia,serif;font-size:1.15rem;letter-spacing:0}
-.logo small{display:block;font-family:var(--font-b);font-size:.62rem;font-weight:800;letter-spacing:.32em;color:var(--accent);margin-top:5px}
+.logo{display:inline-flex;align-items:center;text-decoration:none;flex:none}
+.logo img{height:54px;width:auto}
 .nav{display:flex;gap:26px;margin-left:auto;font-weight:600;font-size:.92rem}.nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
 .btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:10px;background:var(--fg);color:#fff;font-weight:800;text-decoration:none;border:0;cursor:pointer;transition:.2s;font-size:.92rem}
 .btn:hover{background:var(--accent)}.btn.acc{background:var(--accent)}.btn.acc:hover{background:var(--fg)}
@@ -80,14 +79,17 @@ h2{font-family:var(--font-d);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.6rem
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .gal a:hover img{transform:scale(1.04)}
 .rdv{background:var(--fg);color:#fff;border-radius:20px;padding:56px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;--line:rgba(255,255,255,.22);--in-bg:rgba(255,255,255,.06)}
-.rdv>*,.rdv form>*,.field input,.field select{min-width:0}
-.rdv form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rdv .full{grid-column:1/-1}
+.rdv>*{min-width:0}
+.recap{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:16px;padding:26px}
+.recap h3{font-family:var(--font-d);font-weight:400;font-size:1.8rem;margin:0 0 12px}
+.recap ul{list-style:none;padding:0;margin:0 0 12px;display:grid;gap:8px}.recap li{display:flex;justify-content:space-between;gap:12px}.recap li b{white-space:nowrap}
+.recap .tot{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-bottom:18px;font-weight:800}
+.recap .btn{width:100%}
 .rdv .ey{color:var(--neon)}
 .rdv p{opacity:.85}.rdv a{color:#fff}
-.rdv .ways{display:grid;gap:10px;margin-top:22px}
+.rdv .ways{display:grid;gap:10px;margin-top:22px}.rdv .ways .small{opacity:.8}
 .rdv .ways a{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
 .rdv .ways a span{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;flex:none}
-.rdv input[readonly]{opacity:.9}
 .info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .info>div{background:var(--rose);border-radius:16px;padding:26px}.info b.t{display:block;font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin-bottom:8px}
 .info a{font-weight:700}
@@ -103,16 +105,17 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
 .rdv .btn{white-space:normal;text-align:center}
 @media(max-width:1000px){.menu{grid-template-columns:1fr}.side{position:sticky;top:74px;z-index:5;background:#fff;display:flex;overflow-x:auto;padding:6px 0}.side a{white-space:nowrap}.cart{position:fixed;left:12px;right:12px;bottom:12px;top:auto;z-index:45;display:none;box-shadow:0 20px 50px -10px rgba(42,31,38,.45)}.cart.show{display:block}
  .mcart{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:44}.mcart .btn{width:100%;box-shadow:0 12px 30px -10px rgba(42,31,38,.5)}[data-totop]{bottom:78px}}
-@media(max-width:900px){.hero,.rdv,.about{grid-template-columns:1fr}.forf,.info{grid-template-columns:1fr}.rdv{padding:30px 20px}.rdv form{grid-template-columns:1fr}.promo{position:relative;left:auto;bottom:auto;margin:-46px 14px 0;max-width:none;padding:16px 18px}.promo b{font-size:2.1rem}section{padding:70px 0}
+@media(max-width:900px){.hero,.rdv,.about{grid-template-columns:1fr}.forf,.info{grid-template-columns:1fr}.rdv{padding:30px 20px}.recap{padding:20px}.promo{position:relative;left:auto;bottom:auto;margin:-46px 14px 0;max-width:none;padding:16px 18px}.promo b{font-size:2.1rem}section{padding:70px 0}
  .hd{gap:12px}.hd .btn.tel{margin-left:auto;width:44px;height:44px;padding:0;flex:none}.hd .btn.tel .tn{display:none}
  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.hero{padding-top:20px;gap:30px}.hero .hv{order:-1}}
-.burger{flex:none}.logo{min-width:0}
-@media(max-width:420px){.hd{gap:8px}.logo{font-size:1.15rem;gap:7px}.logo small{font-size:.55rem}.logo small{letter-spacing:.22em}.notes{grid-template-columns:1fr}.soin{gap:10px}}
+.burger{flex:none}
+.flogo img{height:56px;width:auto;margin-bottom:6px}
+@media(max-width:420px){.hd{gap:8px}.logo img{height:44px}.notes{grid-template-columns:1fr}.soin{gap:10px}}
 </style>
 </head>
 <body>
 <header data-header><div class="wrap hd">
-  <a class="logo" href="#" aria-label="Beauty Touch Paris, accueil"><span>Beauty Touch<small>PARIS 12E</small></span></a>
+  <a class="logo" href="#"><img src="img/logo-beauty-touch.webp" width="600" height="163" alt="Beauty Touch Paris, retour en haut de page"></a>
   <nav class="nav" id="menu" aria-label="Menu principal"><a href="#carte">Carte &amp; tarifs</a><a href="#formules">Formules</a><a href="#institut">L’institut</a><a href="#rdv">Rendez-vous</a><a href="#infos">Accès &amp; horaires</a></nav>
   <a class="btn acc tel" href="tel:+33621410808" aria-label="Appeler l’institut au 06 21 41 08 08"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="tn">06 21 41 08 08</span></a>
   <button class="burger" data-nav-toggle aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false"><span></span></button>
@@ -123,7 +126,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
   <div>
     <span class="ey" data-reveal>Institut de beauté · Paris 12e · Gare de Lyon</span>
     <h1 data-reveal>Votre cocon de beauté et de bien-être.</h1>
-    <p data-reveal>Soins du visage Jadéa, rehaussement de cils, onglerie, épilation à la cire et massages, à deux pas de la gare de Lyon. Composez votre soin, voyez le prix et la durée, puis demandez votre rendez-vous.</p>
+    <p data-reveal>Soins du visage Jadéa, rehaussement de cils, onglerie, épilation à la cire et massages, à deux pas de la gare de Lyon. Composez votre soin, voyez le prix et la durée, puis réservez en ligne sur Planity.</p>
     <div class="pills" data-reveal><span>✓ Tous les prix affichés</span><span>✓ Mardi – dimanche, 10 h – 19 h</span><span>✓ Réservation en ligne</span></div>
     <div class="cta" data-reveal><a class="btn acc" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a></div>
   </div>
@@ -234,7 +237,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
       </div>
       <p class="lead small">Tarifs relevés le 12 novembre 2026. Les prix affichés à l’institut font foi.</p>
     </div>
-    <aside class="cart" id="cart" aria-label="Ma sélection"><h4>Ma sélection</h4><ul id="cart-list" aria-live="polite"></ul><p class="empty" id="cart-empty">Ajoutez un soin avec le bouton +</p><div class="tot"><span id="cart-min">0 min</span><span id="cart-tot">0 €</span></div><a class="btn acc" href="#rdv" id="cart-go">Demander ce rendez-vous</a><a class="alt" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">ou réserver directement sur Planity</a></aside>
+    <aside class="cart" id="cart" aria-label="Ma sélection"><h4>Ma sélection</h4><ul id="cart-list" aria-live="polite"></ul><p class="empty" id="cart-empty">Ajoutez un soin avec le bouton +</p><div class="tot"><span id="cart-min">0 min</span><span id="cart-tot">0 €</span></div><a class="btn acc" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener" id="cart-go">Réserver sur Planity</a><a class="alt" href="#rdv">Voir le récapitulatif</a></aside>
   </div>
 </div></section>
 <div class="mcart"><button class="btn acc" id="mcart" type="button" aria-controls="cart">Ma sélection · <span id="mcount">0</span> soin(s) · <span id="mtot">0 €</span></button></div>
@@ -282,24 +285,20 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
 </div></section>
 
 <section id="rdv"><div class="wrap rdv">
-  <div><span class="ey">Rendez-vous</span><h2>Demandez votre rendez-vous</h2><p>Votre sélection est reprise automatiquement. Choisissez un jour et un horaire : la demande s’ouvre dans WhatsApp et l’institut vous confirme le créneau.</p>
+  <div><span class="ey">Rendez-vous</span><h2>Réservez sur Planity</h2><p>L’institut gère ses rendez-vous sur Planity : vous voyez les créneaux libres en temps réel et votre réservation est confirmée tout de suite, 24 h/24.</p>
     <div class="ways">
-      <a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener"><span aria-hidden="true">📅</span>Réserver en ligne sur Planity, 24 h/24</a>
-      <a href="tel:+33621410808"><span aria-hidden="true">✆</span>Appeler le 06 21 41 08 08</a>
-      <a href="https://wa.me/33621410808" target="_blank" rel="noopener"><span aria-hidden="true">✉</span>Écrire sur WhatsApp</a>
+      <span class="small">Une question avant de réserver ?</span>
+      <a href="tel:+33621410808"><span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>Appeler le 06 21 41 08 08</a>
+      <a href="https://wa.me/33621410808" target="_blank" rel="noopener"><span aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span>Écrire sur WhatsApp</a>
     </div>
   </div>
-  <div>
-    <form data-booking data-whatsapp="33621410808" data-salon="Beauty Touch Paris">
-      <label class="field full">Soins choisis<input name="service" required readonly placeholder="Composez votre sélection dans la carte"></label>
-      <label class="field">Date<input type="date" name="date" required></label>
-      <label class="field">Heure<select name="time" required></select></label>
-      <label class="field">Nom<input name="name" required autocomplete="name"></label>
-      <label class="field">Téléphone<input type="tel" name="phone" required autocomplete="tel" pattern="[0-9 +().-]{8,}"></label>
-      <div class="full"><button class="btn acc" type="submit">Envoyer ma demande sur WhatsApp</button></div>
-      <p class="full small" style="margin:0">Aucune donnée n’est enregistrée par le site. <a href="confidentialite.html">Confidentialité</a></p>
-    </form>
-    <div data-booking-result hidden></div>
+  <div class="recap">
+    <h3>Votre sélection</h3>
+    <ul id="rdv-list" aria-live="polite"></ul>
+    <p id="rdv-empty" class="small">Composez votre sélection dans la <a href="#carte">carte des soins</a> pour connaître le prix et la durée, ou réservez directement.</p>
+    <div class="tot" id="rdv-tot" hidden><span id="rdv-min"></span><span id="rdv-eur"></span></div>
+    <a class="btn acc" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver sur Planity</a>
+    <p class="small" style="margin:12px 0 0">Sur Planity, choisissez les mêmes soins puis votre créneau.</p>
   </div>
 </div></section>
 
@@ -314,12 +313,12 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© <span data-year></span> Beauty Touch Paris · 30 ter avenue Daumesnil, 75012 Paris</span><span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram</a></span></div></footer>
+<footer><div class="wrap"><span><a class="flogo" href="#"><img loading="lazy" src="img/logo-beauty-touch-complet.webp" width="600" height="149" alt="Beauty Touch, esthétique et onglerie"></a><br>© <span data-year></span> Beauty Touch Paris · 30 ter avenue Daumesnil, 75012 Paris</span><span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram</a></span></div></footer>
 <button data-totop aria-label="Haut de page">↑</button>
 <script src="assets/site.js"></script>
 <script>
 (function(){
-  var sel=[],list=document.getElementById("cart-list"),form=document.querySelector("form[data-booking]");
+  var sel=[],list=document.getElementById("cart-list"),rl=document.getElementById("rdv-list");
   function eur(n){return n.toLocaleString("fr-FR",{minimumFractionDigits:n%1?2:0,maximumFractionDigits:2})+" €"}
   function dur(m){return m>=60?Math.floor(m/60)+" h"+(m%60?" "+String(m%60).padStart(2,"0"):""):m+" min"}
   function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
@@ -330,7 +329,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
     document.getElementById("cart-min").textContent=dur(m);
     document.getElementById("mcount").textContent=sel.length;
     document.getElementById("mtot").textContent=eur(t);
-    form.elements.service.value=sel.map(function(s){return s.l}).join(" + ")+(sel.length?" ("+eur(t)+", "+dur(m)+")":"");
+    rl.innerHTML=list.innerHTML;document.getElementById("rdv-empty").hidden=sel.length>0;document.getElementById("rdv-tot").hidden=!sel.length;
+    document.getElementById("rdv-eur").textContent=eur(t);document.getElementById("rdv-min").textContent=dur(m);
   }
   function toggle(el,force){
     var n=el.dataset.soin,i=sel.findIndex(function(s){return s.n===n});
@@ -355,7 +355,6 @@ footer a{text-decoration:none}footer a:hover{color:var(--accent)}
   document.getElementById("cart-go").addEventListener("click",function(){cart.classList.remove("show")});
   var links=document.querySelectorAll(".side a");
   if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){var on=a.getAttribute("href")==="#"+e.target.id;a.classList.toggle("active",on);if(on&&a.parentNode.scrollWidth>a.parentNode.clientWidth)a.parentNode.scrollTo({left:a.offsetLeft-20,behavior:"smooth"})})})},{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll(".grp").forEach(function(g){io.observe(g)});}
-  form.addEventListener("submit",function(e){if(!sel.length){e.preventDefault();e.stopImmediatePropagation();var r=document.querySelector("[data-booking-result]");r.hidden=false;r.innerHTML="<b>Ajoutez au moins un soin</b><p>Composez votre sélection dans la carte des soins ci-dessus.</p>";document.getElementById("carte").scrollIntoView({behavior:"smooth"});}},true);
   render();
 })();
 </script>
