@@ -27,7 +27,7 @@ Aucun avis client n’est recopié sur le site : seuls la note et le nombre d’
 
 | Fichier | Contenu | Source |
 |---|---|---|
-| img/logo-beauty-touch.svg, img/favicon.svg | Logotype recomposé par Inkway d’après le monogramme « BT » mauve + « Beauty Touch » script + « PARIS » | Photo de profil Instagram (disponible seulement en 150 × 150 px, inutilisable telle quelle) |
+| img/logo-enseigne.webp, img/logo-enseigne.png, img/favicon.png | Logo tiré de l’enseigne néon de la devanture (« Beauty Touch » script + « ESTHETIQUE & ONGLERIE »), détouré sur fond noir uni #1d1418 ; favicon = le « B » de l’enseigne | Photo de devanture sur Planity (nuit). Le monogramme « BT » de la photo de profil Instagram n’existe qu’en 150 px |
 | img/devanture.webp | Devanture, enseigne néon rose | Photos du salon sur Planity |
 | img/entree.webp, img/accueil.webp, img/bar-ongles.webp, img/cabine-soins.webp | Entrée, accueil, bar à ongles, cabine de soins | Photos du salon sur Planity |
 | img/ongles-nude.webp, img/ongles-nail-art.webp, img/ongles-bleu.webp | Réalisations ongles | Photos du salon sur Planity |
@@ -51,7 +51,7 @@ Aucune photo Unsplash ni d’un autre salon. Écartées : un gros plan de visage
 2. Adresse exacte : « 30 » ou « 30 ter » avenue Daumesnil.
 3. Numéro WhatsApp pour les demandes (provisoirement le 06 21 41 08 08) et e-mail de contact à afficher.
 4. Tarifs : valider la carte reprise de Planity (relevé du 12/11/2026) et les prix affichés au salon.
-5. Droits d’usage des photos Planity et Instagram ; logo officiel en haute définition (SVG ou PNG transparent).
+5. Droits d’usage des photos Planity et Instagram ; fichier source du logo de l’enseigne (vectoriel) pour remplacer l’extraction photo.
 6. Avantages clients (carte de fidélité, offres, cartes cadeaux) : aucune information publique — la section « Les petits plus » ne liste que des faits vérifiés.
 7. Prénom (et orthographe) de l’esthéticienne si le salon souhaite le voir sur le site.
 8. Mentions légales : capital social, n° de TVA intracommunautaire, médiateur de la consommation, hébergeur.

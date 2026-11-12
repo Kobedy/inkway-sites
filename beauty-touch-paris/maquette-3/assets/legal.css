@@ -5,7 +5,7 @@ body{font-size:16.5px}
 .lg-head{position:sticky;top:12px;z-index:20;margin:12px auto 0;width:min(1200px,100% - 24px);background:#fff;border:2px solid var(--fg);border-radius:99px;box-shadow:4px 4px 0 var(--fg)}
 .lg-head .wrap{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 12px}
 .lg-brand{text-decoration:none;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
-.lg-brand img{width:40px;height:40px}
+.lg-brand img{height:46px;width:auto;border-radius:99px}
 .lg-brand b{font-family:var(--font-d);font-weight:400;font-size:1.4rem;white-space:nowrap}
 .lg-back{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:99px;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none;font-size:.92rem;white-space:nowrap;border:2px solid var(--fg);box-shadow:3px 3px 0 var(--fg)}
 .lg-back:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--fg)}
@@ -45,7 +45,7 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
   .lg-card dl{grid-template-columns:1fr}
   .lg-card dt{border-bottom:0;padding-bottom:0}
   .lg-brand b{font-size:1.1rem}
-  .lg-brand img{width:34px;height:34px}
+  .lg-brand img{height:36px}
   .lg-back{padding:9px 14px}
   .lg-table{display:block;overflow-x:auto}
 }
