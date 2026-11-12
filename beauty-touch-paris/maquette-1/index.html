@@ -9,7 +9,7 @@
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/interieur.webp">
+<link rel="preload" as="image" href="img/onglerie.webp">
 <link rel="stylesheet" href="assets/base.css">
 <style>
 :root{--bg:#f7f2ec;--fg:#382127;--accent:#7a5a66;--on-accent:#fff;--clay:#b02d6b;--muted:#6e6064;--line:rgba(56,33,39,.15);--leaf:#ece3df;--rose:#f0b8d4;--mono:#8a6f78;--font-d:"Playfair Display",Georgia,serif;--font-s:"Pinyon Script","Snell Roundhand",cursive;--font-b:"Karla",system-ui,sans-serif;--r-in:30px;--in-bg:#fff}
@@ -21,7 +21,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(247,242,236,.92);backdro
 .nav{display:flex;gap:26px}.nav a{text-decoration:none;font-size:.95rem}.nav a:hover{color:var(--clay)}
 .btn{display:inline-block;padding:15px 30px;border-radius:99px;background:var(--fg);color:var(--bg);text-decoration:none;font-weight:600;border:0;cursor:pointer;transition:.3s}
 .btn:hover{background:var(--clay)}.btn.l{background:transparent;border:1px solid var(--fg);color:var(--fg)}.btn.l:hover{background:var(--fg);color:var(--bg)}
-.btn.rose{background:var(--clay);color:#fff}.btn.rose:hover{background:var(--fg)}
+.btn.rose{background:var(--clay);color:#fff}
+.hd-tel{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}.hd-tel svg{width:18px;height:18px;fill:currentColor;flex:none}.btn.rose:hover{background:var(--fg)}
 .hero{text-align:center;padding:50px 0 0;position:relative}
 .hero h1{font-family:var(--font-d);font-weight:400;font-size:clamp(2.6rem,6.4vw,5.4rem);line-height:1.02;margin:14px auto 22px;max-width:900px}
 .hero h1 i{color:var(--clay)}
@@ -31,7 +32,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(247,242,236,.92);backdro
 .facts span{display:inline-flex;align-items:center;gap:6px}
 .star{color:var(--clay)}
 .oval{width:min(560px,86vw);aspect-ratio:3/4;margin:50px auto 0;border-radius:50% 50% 0 0/40% 40% 0 0;overflow:hidden;position:relative}
-.oval img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.oval img{width:100%;height:100%;object-fit:cover;object-position:44% 50%}
 .leaf{position:absolute;width:140px;fill:var(--accent);opacity:.16}
 .leaf.a{left:6%;top:40%;transform:rotate(-30deg)}.leaf.b{right:6%;top:58%;transform:scaleX(-1) rotate(-20deg)}
 .badge{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);background:var(--bg);padding:14px 22px;border-radius:99px;font-size:.92rem;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.12)}
@@ -103,13 +104,13 @@ footer{padding:70px 0 90px;text-align:center;border-top:1px solid var(--line)}
 footer p{color:var(--muted)}footer p a{margin:0 10px;display:inline-block}
 footer .logo{justify-content:center;font-size:2.2rem}
 .mbar{display:none}
-@media(max-width:900px){.cats{grid-template-columns:1fr 1fr}.sig,.val,.bk,.acc{grid-template-columns:1fr}.sig div,.bk{padding:36px 22px}.rv{grid-template-columns:1fr}.bk form{grid-template-columns:1fr}.photos{height:380px}.hd>.btn{display:none}section{padding:80px 0}.leaf{display:none}
+@media(max-width:900px){.cats{grid-template-columns:1fr 1fr}.sig,.val,.bk,.acc{grid-template-columns:1fr}.sig div,.bk{padding:36px 22px}.rv{grid-template-columns:1fr}.bk form{grid-template-columns:1fr}.photos{height:380px}.hd-tel{margin-left:auto;padding:12px 18px}section{padding:80px 0}.leaf{display:none}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.sig img{min-height:300px}
   .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(247,242,236,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
   .mbar .btn{padding:13px 10px;text-align:center;font-size:.95rem}
   body{padding-bottom:78px}[data-totop]{bottom:92px}
   .acc iframe{height:320px}}
-@media(max-width:520px){.cats{grid-template-columns:1fr}.ct{border-radius:140px 140px 24px 24px}.ct img{width:62%;margin:6px auto 0}.vals{grid-template-columns:1fr}.logo{font-size:1.6rem}.logo svg{width:38px;height:38px}.hero h1{font-size:2.5rem}.badge{font-size:.85rem;padding:12px 16px}.carte details{padding:4px 16px}.carte td:nth-child(2){padding:9px 8px}}
+@media(max-width:520px){.cats{grid-template-columns:1fr}.ct{border-radius:140px 140px 24px 24px}.ct img{width:62%;margin:6px auto 0}.vals{grid-template-columns:1fr}.logo{font-size:1.6rem}.hd-tel span{display:none}.hd-tel{padding:12px}.hero h1{font-size:2.5rem}.badge{font-size:.85rem;padding:12px 16px}.carte details{padding:4px 16px}.carte td:nth-child(2){padding:9px 8px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BeautySalon","name":"Beauty Touch Paris","image":"img/devanture.webp","telephone":"+33621410808","email":"laila8lina@hotmail.fr","address":{"@type":"PostalAddress","streetAddress":"30 ter avenue Daumesnil","postalCode":"75012","addressLocality":"Paris","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/beautytouch.paris/","https://www.planity.com/beauty-touch-75012-paris"]}
@@ -117,9 +118,9 @@ footer .logo{justify-content:center;font-size:2.2rem}
 </head>
 <body>
 <header data-header><div class="wrap hd">
-  <a class="logo" href="#" aria-label="Beauty Touch Paris, accueil"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#e5e0da"/><text x="50" y="67" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="50" fill="#8a6f78" letter-spacing="-4">BT</text></svg><span>Beauty Touch<small>PARIS</small></span></a>
+  <a class="logo" href="#" aria-label="Beauty Touch Paris, accueil"><span>Beauty Touch<small>PARIS</small></span></a>
   <nav class="nav" id="menu"><a href="#soins">Soins &amp; tarifs</a><a href="#institut">L’institut</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#acces">Accès</a><a href="#faq">FAQ</a></nav>
-  <a class="btn" href="#rdv">Prendre rendez-vous</a>
+  <a class="btn hd-tel" href="tel:+33621410808" aria-label="Appeler l’institut au 06 21 41 08 08"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>06 21 41 08 08</span></a>
   <button class="burger" data-nav-toggle aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span></button>
 </div></header>
 
@@ -130,12 +131,11 @@ footer .logo{justify-content:center;font-size:2.2rem}
   <p data-reveal>Soins du visage Jadéa, beauté du regard, épilation, ongles et massages. Un institut chaleureux, à deux pas de la gare de Lyon.</p>
   <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn" href="#rdv">Prendre rendez-vous</a><a class="btn l" href="#soins">Voir les tarifs</a></div>
   <div class="facts" data-reveal>
-    <span><a href="tel:+33621410808">📞 06 21 41 08 08</a></span>
     <span>Mardi – dimanche · 10 h – 19 h</span>
     <span><span class="star" aria-hidden="true">★</span><a href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener">4,8/5 · 272 avis Google</a></span>
   </div>
   <svg class="leaf a" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90z"/></svg><svg class="leaf b" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90z"/></svg>
-  <div class="oval" data-reveal><img class="ph" src="img/interieur.webp" alt="L’intérieur lumineux de Beauty Touch : fauteuils rose poudré, table de manucure et vitrine sur l’avenue Daumesnil" width="1400" height="850" fetchpriority="high"><span class="badge" data-open-status data-hours='{"0":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Mardi – dimanche · 10 h – 19 h</span></div>
+  <div class="oval" data-reveal><img class="ph" src="img/onglerie.webp" alt="L’intérieur de Beauty Touch : néon « Beauty » sur un mur de roses, présentoirs de vernis et tables de manucure" width="1200" height="836" fetchpriority="high"><span class="badge" data-open-status data-hours='{"0":["10:00","19:00"],"2":["10:00","19:00"],"3":["10:00","19:00"],"4":["10:00","19:00"],"5":["10:00","19:00"],"6":["10:00","19:00"]}'>Mardi – dimanche · 10 h – 19 h</span></div>
 </div></div>
 
 <section id="soins"><div class="wrap">
@@ -185,7 +185,7 @@ footer .logo{justify-content:center;font-size:2.2rem}
 <section id="institut"><div class="wrap val">
   <div><span class="over">L’institut</span><h2 data-reveal>Un moment <i>rien que pour vous</i></h2><p style="color:var(--muted)">Au 30 ter avenue Daumesnil, à deux pas de la gare de Lyon, Beauty Touch est un institut dédié à la beauté et au bien-être. Épilation précise, vernis semi-permanent, soin du visage sur mesure, rehaussement de cils ou massage détente : chaque prestation est pensée pour révéler votre beauté naturelle.</p>
     <div class="vals"><div data-reveal><b>Plus de 10 ans d’expérience</b><p>Une esthéticienne professionnelle et passionnée.</p></div><div data-reveal><b>Soins Jadéa</b><p>Des produits sains et efficaces, fabriqués en France.</p></div><div data-reveal><b>Vernis OPI et DND</b><p>Des marques reconnues pour les mains et les pieds.</p></div><div data-reveal><b>Femmes et hommes</b><p>Une carte dédiée aux hommes : épilation, mains, pieds.</p></div></div></div>
-  <div class="photos" data-reveal><img class="ph" loading="lazy" src="img/onglerie.webp" alt="L’espace onglerie : deux tables de manucure et un mur de vernis" width="1200" height="836"><img class="ph" loading="lazy" src="img/devanture.webp" alt="La devanture de Beauty Touch, enseigne lumineuse rose « Beauty Touch, esthétique et onglerie »" width="1400" height="1050"></div>
+  <div class="photos" data-reveal><img class="ph" loading="lazy" src="img/interieur.webp" alt="L’accueil de Beauty Touch : fauteuils rose poudré, table de manucure et vitrine sur l’avenue Daumesnil" width="1400" height="850"><img class="ph" loading="lazy" src="img/devanture.webp" alt="La devanture de Beauty Touch, enseigne lumineuse rose « Beauty Touch, esthétique et onglerie »" width="1400" height="1050"></div>
 </div></section>
 
 <section id="galerie" style="padding-top:0"><div class="wrap">
