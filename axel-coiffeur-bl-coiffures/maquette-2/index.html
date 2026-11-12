@@ -22,8 +22,10 @@ header.scrolled{border-color:var(--line)}
 .nav{display:flex;gap:26px;margin-left:auto;font-weight:500}
 .nav a{text-decoration:none;white-space:nowrap}.nav a:hover{color:var(--accent)}
 .logo small,.hd .btn{white-space:nowrap}
-@media(max-width:1180px){.hd{gap:20px}.nav{gap:18px}.hd .tel{display:none}}
-.hd .tel{font-weight:700;text-decoration:none;white-space:nowrap}.hd .tel:hover{color:var(--accent)}
+@media(max-width:1180px){.hd{gap:20px}.nav{gap:18px}}
+.tel-btn{gap:10px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+@media(max-width:900px){.hd a.tel-btn{display:inline-flex;margin-left:auto;padding:11px 16px}}
+@media(max-width:600px){.hd a.tel-btn{width:46px;height:46px;padding:0;font-size:1.15rem}.hd .tel-btn .num{display:none}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:99px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:0;cursor:pointer;transition:.2s}
 .btn:hover{background:var(--fg)}.btn.o{background:transparent;border:1.5px solid var(--fg);color:var(--fg)}.btn.o:hover{background:var(--fg);color:#fff}
 .btn.w{background:#fff;color:var(--fg)}.btn.w:hover{background:var(--accent);color:#fff}
@@ -96,7 +98,7 @@ footer{background:var(--fg);color:#fbeef4;padding:70px 0 90px;margin-top:40px}
 footer a{text-decoration:none;display:block;opacity:.85;margin:5px 0}footer a:hover{opacity:1;color:var(--pink-l)}
 footer .today{color:var(--pink-l);font-weight:700}
 footer .logo{color:#fff}footer .logo small{color:var(--pink-l)}
-@media(max-width:900px){.list,.bk,.gift,.fg,.acc{grid-template-columns:1fr}.why .g{grid-template-columns:1fr 1fr}.qb{grid-template-columns:1fr}.qb label+label{border-left:0;border-top:1px solid var(--line)}.hin{padding:26px}.hero{min-height:560px}.gift{padding:34px 22px}.hd .btn,.hd .tel{display:none}section{padding:70px 0}.it img{width:64px;height:64px}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal a.w{grid-column:span 2}.card3d{transform:rotate(-3deg)}.acc iframe{min-height:300px}}
+@media(max-width:900px){.list,.bk,.gift,.fg,.acc{grid-template-columns:1fr}.why .g{grid-template-columns:1fr 1fr}.qb{grid-template-columns:1fr}.qb label+label{border-left:0;border-top:1px solid var(--line)}.hin{padding:26px}.hero{min-height:560px}.gift{padding:34px 22px}.hd .btn{display:none}section{padding:70px 0}.it img{width:64px;height:64px}.gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal a.w{grid-column:span 2}.card3d{transform:rotate(-3deg)}.acc iframe{min-height:300px}}
 @media(max-width:600px){
 .hero{min-height:0;border-radius:24px;margin-top:10px}
 .hin{padding:84px 18px 22px}
@@ -135,8 +137,7 @@ footer .logo{color:#fff}footer .logo small{color:var(--pink-l)}
 <header data-header><div class="wrap hd">
   <a class="logo" href="#" aria-label="BL Coiffure, retour en haut de page"><i aria-hidden="true">BL</i><span>BL Coiffure<small>Axel Coiffeur · Paris 13</small></span></a>
   <nav class="nav"><a href="#prestations">Prestations &amp; tarifs</a><a href="#reserver">Réserver</a><a href="#galerie">Le salon</a><a href="#avis">Avis</a><a href="#acces">Accès</a></nav>
-  <a class="tel" href="tel:+33145809793">01 45 80 97 93</a>
-  <a class="btn" href="#reserver">Prendre RDV</a>
+  <a class="btn tel-btn" href="tel:+33145809793" aria-label="Appeler le salon au 01 45 80 97 93"><span aria-hidden="true">☎</span><span class="num">01 45 80 97 93</span></a>
   <button class="burger" data-nav-toggle aria-label="Menu"><span></span></button>
 </div></header>
 
