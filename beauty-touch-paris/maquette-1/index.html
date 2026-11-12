@@ -16,7 +16,7 @@
 header{position:sticky;top:0;z-index:50;background:rgba(247,242,236,.92);backdrop-filter:blur(10px)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
 .logo{font-family:var(--font-s);font-size:1.9rem;line-height:1;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap}
-.logo svg{width:44px;height:44px;flex:none}
+.logo img{height:64px;width:auto}
 .logo small{display:block;font-family:var(--font-d);font-size:.6rem;letter-spacing:.32em;color:var(--accent);margin-top:2px}
 .nav{display:flex;gap:26px}.nav a{text-decoration:none;font-size:.95rem}.nav a:hover{color:var(--clay)}
 .btn{display:inline-block;padding:15px 30px;border-radius:99px;background:var(--fg);color:var(--bg);text-decoration:none;font-weight:600;border:0;cursor:pointer;transition:.3s}
@@ -102,7 +102,7 @@ h2 i{color:var(--clay)}
 .faq summary{font-family:var(--font-d);font-size:1.25rem;cursor:pointer}.faq p{color:var(--muted)}
 footer{padding:70px 0 90px;text-align:center;border-top:1px solid var(--line)}
 footer p{color:var(--muted)}footer p a{margin:0 10px;display:inline-block}
-footer .logo{justify-content:center;font-size:2.2rem}
+footer .logo{justify-content:center}footer .logo img{height:84px}
 .mbar{display:none}
 @media(max-width:900px){.cats{grid-template-columns:1fr 1fr}.sig,.val,.bk,.acc{grid-template-columns:1fr}.sig div,.bk{padding:36px 22px}.rv{grid-template-columns:1fr}.bk form{grid-template-columns:1fr}.photos{height:380px}.hd-tel{margin-left:auto;padding:12px 18px}section{padding:80px 0}.leaf{display:none}
   .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.sig img{min-height:300px}
@@ -111,15 +111,15 @@ footer .logo{justify-content:center;font-size:2.2rem}
   body{padding-bottom:78px}[data-totop]{bottom:92px}
   .acc iframe{height:320px}
   .hero{padding-top:18px}.hero .wrap{display:flex;flex-direction:column;align-items:center}.hero .oval{order:-1;width:min(440px,100%);aspect-ratio:4/5;margin:0 auto 30px}}
-@media(max-width:520px){.cats{grid-template-columns:1fr}.ct{border-radius:140px 140px 24px 24px}.ct img{width:62%;margin:6px auto 0}.vals{grid-template-columns:1fr}.logo{font-size:1.6rem}.hd-tel span{display:none}.hd-tel{padding:12px}.hero h1{font-size:2.5rem}.badge{font-size:.85rem;padding:12px 16px}.carte details{padding:4px 16px}.carte td:nth-child(2){padding:9px 8px}}
+@media(max-width:520px){.cats{grid-template-columns:1fr}.ct{border-radius:140px 140px 24px 24px}.ct img{width:62%;margin:6px auto 0}.vals{grid-template-columns:1fr}.logo img{height:42px}.hd-tel span{display:none}.hd-tel{padding:12px}.hero h1{font-size:2.5rem}.badge{font-size:.85rem;padding:12px 16px}.carte details{padding:4px 16px}.carte td:nth-child(2){padding:9px 8px}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BeautySalon","name":"Beauty Touch Paris","image":"img/devanture.webp","telephone":"+33621410808","email":"laila8lina@hotmail.fr","address":{"@type":"PostalAddress","streetAddress":"30 ter avenue Daumesnil","postalCode":"75012","addressLocality":"Paris","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/beautytouch.paris/","https://www.planity.com/beauty-touch-75012-paris"]}
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Beauty Touch Paris","logo":"img/logo-beauty-touch.png","image":"img/devanture.webp","telephone":"+33621410808","email":"laila8lina@hotmail.fr","address":{"@type":"PostalAddress","streetAddress":"30 ter avenue Daumesnil","postalCode":"75012","addressLocality":"Paris","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/beautytouch.paris/","https://www.planity.com/beauty-touch-75012-paris"]}
 </script>
 </head>
 <body>
 <header data-header><div class="wrap hd">
-  <a class="logo" href="#" aria-label="Beauty Touch Paris, accueil"><span>Beauty Touch<small>PARIS</small></span></a>
+  <a class="logo" href="#"><img src="img/logo-beauty-touch-800.png" alt="Beauty Touch, esthétique &amp; onglerie" width="800" height="208"></a>
   <nav class="nav" id="menu"><a href="#soins">Soins &amp; tarifs</a><a href="#institut">L’institut</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#acces">Accès</a><a href="#faq">FAQ</a></nav>
   <a class="btn hd-tel" href="tel:+33621410808" aria-label="Appeler l’institut au 06 21 41 08 08"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>06 21 41 08 08</span></a>
   <button class="burger" data-nav-toggle aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span></button>
@@ -130,7 +130,7 @@ footer .logo{justify-content:center;font-size:2.2rem}
   <span class="over" data-reveal>Institut de beauté · Paris 12e · Gare de Lyon</span>
   <h1 data-reveal>Votre cocon de beauté <i>et de bien-être.</i></h1>
   <p data-reveal>Soins du visage Jadéa, beauté du regard, épilation, ongles et massages. Un institut chaleureux, à deux pas de la gare de Lyon.</p>
-  <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn" href="#rdv">Prendre rendez-vous</a><a class="btn l" href="#soins">Voir les tarifs</a></div>
+  <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn l" href="#soins">Voir les tarifs</a></div>
   <div class="facts" data-reveal>
     <span>Mardi – dimanche · 10 h – 19 h</span>
     <span><span class="star" aria-hidden="true">★</span><a href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener">4,8/5 · 272 avis Google</a></span>
@@ -180,7 +180,7 @@ footer .logo{justify-content:center;font-size:2.2rem}
   <img class="ph" loading="lazy" src="img/beaute-pieds.webp" alt="Bain de pieds aux fleurs" width="1100" height="733">
   <div><span class="over">Le soin à découvrir</span><h2>La beauté des pieds <i style="color:var(--rose)">Prestige</i></h2><p style="opacity:.85">Une heure de soin complet pour des pieds doux, nourris et parfaitement détendus.</p>
     <ol><li>Bain de pieds aux pétales de rose et au citron</li><li>Gommage exfoliant</li><li>Soin des ongles et des cuticules</li><li>Masque nourrissant</li><li>Massage des pieds et des jambes</li></ol>
-    <div class="pr">50 € <small>· 65 € avec pose de vernis classique</small></div><br><a class="btn" href="#rdv" data-book="Beauté des pieds Prestige">Réserver ce soin</a></div>
+    <div class="pr">50 € <small>· 65 € avec pose de vernis classique</small></div><br><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Réserver ce soin</a></div>
 </div>
 
 <section id="institut"><div class="wrap val">
@@ -268,8 +268,8 @@ footer .logo{justify-content:center;font-size:2.2rem}
 </div></section>
 </main>
 
-<footer><div class="wrap"><a class="logo" href="#" aria-label="Beauty Touch Paris, haut de page"><span>Beauty Touch<small>PARIS</small></span></a><p>30 ter avenue Daumesnil, 75012 Paris · <a href="tel:+33621410808" style="margin:0">06 21 41 08 08</a></p><p>Mardi – dimanche · 10 h – 19 h</p><p><a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram</a><a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Planity</a><a href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener">Avis Google</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></p><p>© <span data-year>2026</span> Beauty Touch Paris</p></div></footer>
-<nav class="mbar" aria-label="Contact rapide"><a class="btn l" href="tel:+33621410808">Appeler</a><a class="btn" href="#rdv">Prendre rendez-vous</a></nav>
+<footer><div class="wrap"><a class="logo" href="#"><img src="img/logo-beauty-touch-800.png" alt="Beauty Touch, esthétique &amp; onglerie, haut de page" width="800" height="208" loading="lazy"></a><p>30 ter avenue Daumesnil, 75012 Paris · <a href="tel:+33621410808" style="margin:0">06 21 41 08 08</a></p><p>Mardi – dimanche · 10 h – 19 h</p><p><a href="https://www.instagram.com/beautytouch.paris/" target="_blank" rel="noopener">Instagram</a><a href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Planity</a><a href="https://www.google.com/maps?cid=16889916027685239097" target="_blank" rel="noopener">Avis Google</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a></p><p>© <span data-year>2026</span> Beauty Touch Paris</p></div></footer>
+<nav class="mbar" aria-label="Contact rapide"><a class="btn l" href="tel:+33621410808">Appeler</a><a class="btn" href="https://www.planity.com/beauty-touch-75012-paris" target="_blank" rel="noopener">Prendre rendez-vous</a></nav>
 <button data-totop aria-label="Haut de page">↑</button>
 <script src="assets/site.js"></script>
 </body>
