@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fashion Institut — Proposition 1 « Maison signature » — Maquette Inkway</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Maquette PDF A4 — Proposition 1 « Maison signature » ===== */
+@page { size: A4; margin: 0 }
+:root{
+  --bg:#f8f2ec;        /* ivoire */
+  --fg:#3a2a24;        /* brun profond */
+  --accent:#a8624c;    /* vieux rose / terre cuite (assombri pour l'impression) */
+  --rose:#d9b2a4;      /* vieux rose clair */
+  --soft:#efe2d8;
+  --paper:#fffaf6;
+  --muted:#6b574d;
+  --line:rgba(58,42,36,.18);
+  --font-d:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --font-b:"Jost","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#d8cfc8}
+body{
+  font-family:var(--font-b);font-weight:300;color:var(--fg);font-size:12.5px;line-height:1.5;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+@media print{ html,body{background:var(--bg)} .page{margin:0!important;box-shadow:none!important} }
+
+/* --- Page A4 --- */
+.page{
+  width:210mm;height:297mm;overflow:hidden;position:relative;background:var(--bg);
+  margin:0 auto 10mm;box-shadow:0 4px 30px rgba(0,0,0,.18);
+  break-inside:avoid;page-break-inside:avoid;
+}
+.page + .page{break-before:page;page-break-before:always}
+.pad{padding:13mm 14mm 0}
+.folio{
+  position:absolute;left:14mm;right:14mm;bottom:7mm;display:flex;justify-content:space-between;
+  font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  border-top:1px solid var(--line);padding-top:2.6mm;
+}
+.folio b{font-weight:500;color:var(--accent)}
+.tag{
+  display:inline-flex;align-items:center;gap:7px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:5mm;
+}
+.tag::before{content:"";width:18px;height:1px;background:var(--accent)}
+
+/* --- Typo du site --- */
+.over{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:400}
+h1,h2,h3{font-family:var(--font-d);font-weight:400;line-height:1.02}
+h1 i,h2 i,h3 i{color:var(--accent)}
+h2{font-size:40px;margin:3mm 0 3mm}
+.lead{color:var(--muted);font-size:13px;max-width:125mm}
+.c{text-align:center}.c .lead{margin:0 auto}
+.btn{
+  display:inline-block;padding:11px 22px;border:1px solid var(--fg);font-size:10px;letter-spacing:.22em;
+  text-transform:uppercase;font-weight:400;color:var(--fg);text-decoration:none;white-space:nowrap;
+}
+.btn.fill{background:var(--fg);color:var(--bg)}
+.btn.rose{background:var(--accent);border-color:var(--accent);color:#fff}
+.tbc{
+  display:inline-block;font-family:var(--font-b);font-style:normal;font-size:8.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--accent);border:1px dashed var(--accent);border-radius:99px;
+  padding:1px 7px;vertical-align:middle;white-space:nowrap;font-weight:400;line-height:1.5;
+}
+
+/* --- Emplacement photo (pas de banque d'images) --- */
+.ph{
+  position:relative;display:grid;place-items:center;text-align:center;color:var(--fg);
+  background:
+    repeating-linear-gradient(135deg,rgba(255,255,255,.22) 0 2px,transparent 2px 14px),
+    linear-gradient(160deg,var(--rose),#c58e7c);
+  overflow:hidden;
+}
+.ph.ivory{background:repeating-linear-gradient(135deg,rgba(168,98,76,.07) 0 2px,transparent 2px 14px),var(--soft)}
+.ph.dark{background:repeating-linear-gradient(135deg,rgba(255,255,255,.06) 0 2px,transparent 2px 14px),linear-gradient(160deg,#5a4038,#3a2a24);color:var(--bg)}
+.ph span{
+  font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;
+  background:rgba(255,250,246,.88);color:var(--fg);padding:4px 9px;border-radius:99px;
+}
+.ph em{display:block;font-family:var(--font-d);font-size:15px;font-style:italic;margin-bottom:5px}
+.ph.dark em{color:var(--bg)}
+
+/* --- Logotype typographique --- */
+.logo{font-family:var(--font-d);font-size:25px;letter-spacing:.02em;line-height:1;white-space:nowrap}
+.logo i{color:var(--accent)}
+.logo small{display:block;font-family:var(--font-b);font-size:7.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+/* ===== PAGE 1 — COUVERTURE ===== */
+.cover{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18mm 18mm 0}
+.cover .agency{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.cover .archbig{
+  margin:13mm 0 10mm;width:118mm;height:150mm;border-radius:999px 999px 0 0;
+  background:linear-gradient(175deg,var(--soft),#ecd6ca);border:1px solid rgba(168,98,76,.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;
+}
+.cover .archbig::before{
+  content:"";position:absolute;inset:6mm 6mm 0;border-radius:999px 999px 0 0;border:1px solid rgba(168,98,76,.3);border-bottom:0;
+}
+.cover .monogram{
+  width:30mm;height:30mm;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;
+  font-family:var(--font-d);font-size:44px;font-style:italic;margin-bottom:9mm;
+}
+.cover .bigname{font-family:var(--font-d);font-size:66px;line-height:.92}
+.cover .bigname i{color:var(--accent)}
+.cover .sub{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:7mm}
+.cover .prop{font-family:var(--font-d);font-size:30px;line-height:1.1}
+.cover .prop i{color:var(--accent)}
+.cover .desc{color:var(--muted);font-size:12.5px;margin-top:3mm}
+.cover .meta{
+  margin-top:10mm;display:flex;gap:9mm;justify-content:center;font-size:11px;color:var(--fg);
+}
+.cover .meta div{border-top:1px solid var(--line);padding-top:3mm;min-width:38mm}
+.cover .meta small{display:block;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:1mm}
+.stamp{
+  position:absolute;left:0;right:0;bottom:0;background:var(--fg);color:var(--bg);
+  padding:6.5mm 18mm;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.06em;
+}
+.stamp b{font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:10.5px}
+.stamp span{color:var(--rose)}
+
+/* ===== PAGE 2 — ACCUEIL ===== */
+.site-hd{
+  display:flex;align-items:center;justify-content:space-between;padding:5mm 0 4.5mm;border-bottom:1px solid var(--line);
+}
+.nav{display:flex;gap:6.5mm;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase}
+.site-hd .btn{padding:9px 15px;font-size:9px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:9mm;align-items:center;padding:11mm 0 9mm}
+.hero h1{font-size:50px;margin:4mm 0 5mm}
+.hero p{color:var(--muted);font-size:13.5px;margin-bottom:7mm;max-width:88mm}
+.hero .ctas{display:flex;gap:3mm;flex-wrap:wrap}
+.rating{
+  margin-top:8mm;display:flex;align-items:center;gap:4mm;padding-top:5mm;border-top:1px solid var(--line);
+}
+.rating .note{font-family:var(--font-d);font-size:34px;line-height:1;color:var(--accent)}
+.rating .note small{font-size:16px;color:var(--muted)}
+.rating .stars{color:var(--accent);letter-spacing:2px;font-size:13px}
+.rating p{margin:0;font-size:11px;color:var(--muted);line-height:1.4}
+.rating a{white-space:nowrap;color:var(--fg);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--accent)}
+.archwrap{position:relative;padding:0 6mm 9mm 9mm}
+.archwrap .ph.main{width:100%;aspect-ratio:4/5;border-radius:999px 999px 0 0}
+.archwrap .ph.sm{
+  position:absolute;width:33mm;height:33mm;left:0;bottom:0;border-radius:50%;border:3mm solid var(--bg);
+}
+.archwrap .ph.sm span{font-size:7px;padding:3px 6px}
+.seal{
+  position:absolute;right:0;top:13%;width:26mm;height:26mm;border-radius:50%;background:var(--accent);color:#fff;
+  display:grid;place-items:center;text-align:center;font-family:var(--font-d);font-style:italic;font-size:14px;line-height:1.1;
+}
+.strip{
+  display:grid;grid-template-columns:repeat(3,1fr);background:var(--fg);color:var(--bg);margin:0 -14mm;padding:6mm 14mm;gap:6mm;
+}
+.strip div{font-size:12px;display:flex;flex-direction:column;gap:1mm}
+.strip small{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose)}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:8mm;margin-top:9mm;text-align:center}
+.values svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.2}
+.values h3{font-size:21px;font-weight:500;margin:2mm 0 1.5mm}
+.values p{color:var(--muted);font-size:11.5px}
+.values-hd{display:flex;justify-content:space-between;align-items:baseline;margin-top:9mm}
+.values-hd h2{font-size:30px;margin:0}
+
+/* ===== PAGE 3 — CARTE ===== */
+.tabs{display:flex;justify-content:center;gap:2mm;flex-wrap:wrap;margin:6mm 0 7mm}
+.tabs span{border:1px solid var(--line);padding:7px 15px;border-radius:99px;font-size:10.5px;letter-spacing:.1em;background:var(--paper)}
+.tabs span.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6mm 9mm}
+.cat{background:var(--paper);border:1px solid var(--line);padding:4mm 5.5mm 3mm}
+.cat.on{border-color:var(--fg);box-shadow:inset 0 3px 0 var(--fg)}
+.cat h3{font-size:24px;font-weight:500;display:flex;justify-content:space-between;align-items:baseline}
+.cat h3 small{font-family:var(--font-b);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.ln{display:flex;align-items:baseline;gap:2.5mm;padding:2.1mm 0;border-bottom:1px solid var(--line)}
+.ln:last-child{border-bottom:0}
+.ln b{font-family:var(--font-d);font-size:16.5px;font-weight:500}
+.ln i{flex:1;border-bottom:1px dotted var(--muted);transform:translateY(-3px)}
+.ln span{font-family:var(--font-d);font-size:16px;color:var(--accent);white-space:nowrap}
+.ln small{display:block;font-size:9.5px;color:var(--muted)}
+.ln .tbc{font-family:var(--font-b);font-size:7.5px;color:var(--accent);margin-left:1mm;transform:translateY(-1px)}
+.cat.note{background:var(--fg);color:var(--bg);border-color:var(--fg);display:flex;flex-direction:column;justify-content:center}
+.cat.note h3{color:var(--bg);display:block}
+.cat.note p{font-size:12px;color:#e9dcd2;margin-top:2mm}
+.cat.note .btn{margin-top:5mm;border-color:var(--bg);color:var(--bg);align-self:flex-start}
+.menu-foot{margin-top:6mm;font-size:10.5px;color:var(--muted);text-align:center}
+
+/* ===== PAGE 4 — UNIVERS ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:9mm;align-items:center}
+.about .ph{height:62mm;border-radius:0 0 999px 999px}
+.about p{color:var(--muted);font-size:12.5px;margin-bottom:3mm}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:5mm}
+.team figure{text-align:center}
+.team .ph{height:44mm;border-radius:999px 999px 0 0}
+.team figcaption{margin-top:2.5mm}
+.team b{display:block;font-family:var(--font-d);font-size:17px;font-weight:500}
+.team small{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sec-hd{display:flex;justify-content:space-between;align-items:flex-end;margin-top:7mm}
+.sec-hd h2{font-size:30px;margin:1.5mm 0 0}
+.sec-hd p{font-size:10.5px;color:var(--muted);max-width:70mm;text-align:right}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:24mm;gap:3mm;margin-top:5mm}
+.mosaic .ph{border-radius:2px}
+.mosaic .a{grid-column:span 2;grid-row:span 2}
+.mosaic .b{grid-row:span 2}
+.mosaic .w{grid-column:span 2}
+.mosaic .ph span{font-size:7.5px}
+.mosaic .ph em{font-size:13px}
+
+/* ===== PAGE 5 — INFOS & RDV ===== */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:5mm}
+.card{background:var(--paper);border:1px solid var(--line);padding:5mm 6mm}
+.card h3{font-size:22px;font-weight:500;margin-bottom:2.5mm}
+.hours div{display:flex;justify-content:space-between;padding:2mm 0;border-bottom:1px solid var(--line);font-size:12px}
+.hours div:last-child{border-bottom:0}
+.hours .off{color:var(--muted)}
+.contact p{font-size:12px;margin-bottom:2.5mm}
+.contact p small{display:block;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.contact .big{font-family:var(--font-d);font-size:22px}
+.map{
+  position:relative;height:34mm;margin-top:5mm;border:1px solid var(--line);overflow:hidden;
+  background:
+    linear-gradient(90deg,transparent 31%,#fff 31% 33.5%,transparent 33.5%),
+    linear-gradient(0deg,transparent 46%,#fff 46% 49.5%,transparent 49.5%),
+    linear-gradient(115deg,transparent 64%,#fff 64% 66%,transparent 66%),
+    linear-gradient(25deg,transparent 20%,#fff 20% 21.5%,transparent 21.5%),
+    #e6dcd2;
+}
+.map .pin{
+  position:absolute;left:31%;top:31%;width:9mm;height:9mm;background:var(--accent);
+  border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,.25);
+}
+.map .pin::after{content:"";position:absolute;inset:2.8mm;background:#fff;border-radius:50%}
+.map .lbl{position:absolute;left:39%;top:30%;background:var(--paper);padding:2mm 3.5mm;font-size:10.5px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.map .lbl b{display:block;font-family:var(--font-d);font-size:15px;font-weight:500}
+.map .cap{position:absolute;right:3mm;bottom:3mm;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,250,246,.9);padding:2px 7px}
+.rdv{
+  margin:6mm -14mm 0;background:var(--fg);color:var(--bg);padding:7mm 14mm;display:grid;grid-template-columns:1fr 1.05fr;gap:9mm;align-items:center;
+}
+.rdv h2{color:var(--bg);font-size:36px;margin:2mm 0 3mm}
+.rdv h2 i{color:var(--rose)}
+.rdv p{font-size:12px;color:#e3d4c9}
+.rdv .over{color:var(--rose)}
+.widget{background:var(--paper);color:var(--fg);padding:5mm;border-radius:2px}
+.widget .step{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5mm}
+.field{border:1px solid var(--line);padding:2.4mm 3mm;font-size:11.5px;margin-bottom:3mm;display:flex;justify-content:space-between;background:#fff}
+.field i{color:var(--muted);font-style:normal}
+.slots{display:flex;gap:2mm;margin-bottom:4mm;flex-wrap:wrap}
+.slots span{border:1px solid var(--line);padding:1.6mm 3mm;font-size:11px;background:#fff}
+.slots span.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.widget .btn{width:100%;text-align:center}
+.widget .note{font-size:9px;color:var(--muted);margin-top:2.5mm;text-align:center}
+.site-ft{display:flex;justify-content:space-between;align-items:center;padding:4.5mm 0 0;font-size:10px;color:var(--muted)}
+.site-ft .logo{font-size:19px}
+.site-ft nav{display:flex;gap:5mm;letter-spacing:.12em;text-transform:uppercase;font-size:8.5px}
+
+/* ===== PAGE 6 — MOBILE ===== */
+.phones{display:flex;justify-content:center;gap:7mm;margin-top:7mm}
+.phone{
+  width:calc(375px * .56 + 16px);height:calc(780px * .56 + 16px);background:#1f1714;border-radius:30px;padding:8px;
+  box-shadow:0 10px 26px rgba(58,42,36,.28);position:relative;flex:none;
+}
+.phone::before{content:"";position:absolute;top:13px;left:50%;width:56px;height:14px;margin-left:-28px;background:#1f1714;border-radius:10px;z-index:3}
+.phone .vp{width:calc(375px * .56);height:calc(780px * .56);overflow:hidden;border-radius:23px;background:var(--bg)}
+.scr{width:375px;height:780px;transform:scale(.56);transform-origin:0 0;background:var(--bg);position:relative;font-size:15px}
+.scr .sb{height:44px;display:flex;justify-content:space-between;align-items:center;padding:0 26px;font-size:13px;font-weight:500}
+.scr .mh{display:flex;justify-content:space-between;align-items:center;padding:10px 20px 14px;border-bottom:1px solid var(--line)}
+.scr .mh .logo{font-size:24px}
+.burger{width:26px;display:flex;flex-direction:column;gap:6px}.burger i{height:1.5px;background:var(--fg);display:block}
+.scr .in{padding:20px}
+.scr h1{font-size:44px;margin:12px 0 14px}
+.scr p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.scr .btn{padding:15px 20px;font-size:12px;display:block;text-align:center;margin-bottom:10px}
+.scr .ph.m{height:260px;border-radius:999px 999px 0 0;margin-top:10px}
+.scr .ph span{font-size:11px}
+.sticky{position:absolute;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1.4fr;border-top:1px solid var(--line);background:var(--paper)}
+.sticky span{padding:17px 10px;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+.sticky span.go{background:var(--fg);color:var(--bg)}
+.scr .tabs{justify-content:flex-start;margin:14px 0 16px;gap:7px}
+.scr .tabs span{font-size:13px;padding:8px 14px}
+.scr .ln b{font-size:20px}.scr .ln span{font-size:19px}.scr .ln small{font-size:12px}
+.scr .ln{padding:13px 0}
+.scr h2{font-size:38px;margin:6px 0 4px}
+.scr .hours div{font-size:15px;padding:11px 0}
+.scr .card{padding:16px 18px;margin-bottom:14px}
+.scr .card h3{font-size:24px}
+.scr .tbc{font-size:10px}
+.phone-cap{text-align:center;margin-top:5mm}
+.phone-cap b{display:block;font-family:var(--font-d);font-size:19px;font-weight:500}
+.phone-cap small{font-size:10px;color:var(--muted)}
+.mob-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:12mm}
+.mob-notes div{border-top:1px solid var(--accent);padding-top:3mm}
+.mob-notes b{display:block;font-family:var(--font-d);font-size:18px;font-weight:500;margin-bottom:1mm}
+.mob-notes p{font-size:11px;color:var(--muted)}
+
+/* ===== PAGE 7 — VALIDATION ===== */
+.audit{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:5mm}
+.audit div{background:var(--paper);border:1px solid var(--line);padding:4.5mm 5mm}
+.audit small{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.audit b{display:block;font-family:var(--font-d);font-size:17px;font-weight:500;margin:1.5mm 0 1.5mm;line-height:1.15}
+.audit p{font-size:10.5px;color:var(--muted)}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:5mm 9mm;margin-top:5mm}
+.checks h4{font-family:var(--font-d);font-size:19px;font-weight:500;margin-bottom:1.5mm;color:var(--accent)}
+.checks li{list-style:none;display:flex;gap:2.5mm;font-size:11px;padding:1.1mm 0;border-bottom:1px solid var(--line)}
+.checks li::before{content:"";flex:none;width:3.2mm;height:3.2mm;border:1px solid var(--fg);margin-top:.6mm;background:#fff}
+.tbc-list{margin-top:6mm;background:var(--soft);padding:5mm 6mm}
+.tbc-list h4{font-family:var(--font-d);font-size:19px;font-weight:500;margin-bottom:2mm}
+.tbc-list ul{columns:2;column-gap:9mm}
+.tbc-list li{font-size:10.8px;margin:0 0 1.6mm 4mm;break-inside:avoid}
+</style>
+</head>
+<body>
+
+<!-- =============== PAGE 1 — COUVERTURE =============== -->
+<section class="page">
+  <div class="cover">
+    <div class="agency">Inkway · Création de sites pour salons</div>
+    <div class="archbig">
+      <div class="monogram">Fi</div>
+      <div class="bigname">Fashion<br><i>Institut</i></div>
+      <div class="sub">Coiffure &amp; beauté · Livry-Gargan</div>
+    </div>
+    <div class="prop">Proposition 1 — <i>Maison signature</i></div>
+    <p class="desc">Maquette du futur site : élégant et doux, arches, ivoire et vieux rose.</p>
+    <div class="meta">
+      <div><small>Date</small>17 novembre 2026</div>
+      <div><small>Proposition</small>1 sur 3</div>
+      <div><small>Contenu</small>7 pages</div>
+    </div>
+  </div>
+  <div class="stamp">
+    <b>Maquette soumise à validation — Inkway</b>
+    <span>Logo, photos et tarifs : à fournir par le salon</span>
+  </div>
+</section>
+
+<!-- =============== PAGE 2 — ACCUEIL =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Page d’accueil · ordinateur</div>
+    <header class="site-hd">
+      <div class="logo">Fashion <i>Institut</i><small>Coiffure &amp; beauté</small></div>
+      <nav class="nav"><span>La carte</span><span>Le salon</span><span>Carnet</span><span>Infos</span></nav>
+      <span class="btn fill">Prendre rendez-vous</span>
+    </header>
+
+    <div class="hero">
+      <div>
+        <div class="over">Salon de coiffure · Livry-Gargan</div>
+        <h1>Vos cheveux,<br><i>notre</i> savoir&#8209;faire</h1>
+        <p>Coupe, couleur, soins et extensions, au cœur de Livry-Gargan. Un accueil attentif, du lundi au samedi.</p>
+        <div class="ctas">
+          <span class="btn fill">Prendre rendez-vous</span>
+          <span class="btn">Voir la carte</span>
+        </div>
+        <div class="rating">
+          <div class="note">4,3<small>/5</small></div>
+          <div>
+            <div class="stars">★★★★☆</div>
+            <p>Note Google · 69 avis<br><span style="font-size:9.5px">(relevé du 29/10/2026, mis à jour automatiquement)</span></p>
+          </div>
+          <a>Lire les avis Google →</a>
+        </div>
+      </div>
+      <div class="archwrap">
+        <div class="ph main"><div><em>Photo du salon</em><span>Photo du salon à fournir</span></div></div>
+        <div class="ph sm ivory"><span>Réalisation</span></div>
+        <div class="seal">Livry-<br>Gargan<br>93190</div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <div><small>Horaires</small>Lun – sam · 9 h 30 – 19 h</div>
+      <div><small>Adresse</small>21 rue Eugène Massé, Livry-Gargan</div>
+      <div><small>Téléphone</small>01 45 09 07 13</div>
+    </div>
+
+    <div class="values-hd">
+      <h2>Les valeurs <i>du salon</i></h2>
+      <span class="tbc">Textes à valider</span>
+    </div>
+    <div class="values">
+      <div>
+        <svg viewBox="0 0 48 48"><path d="M24 6c6 8 14 12 14 22a14 14 0 0 1-28 0c0-10 8-14 14-22z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg>
+        <h3>Tous les cheveux</h3>
+        <p>Lisses, bouclés ou frisés : chaque texture a sa coupe et son soin.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 48 48"><rect x="9" y="8" width="30" height="34" rx="2"/><path d="M15 17h18M15 24h18M15 31h11"/></svg>
+        <h3>Des prix affichés</h3>
+        <p>La carte et les tarifs sont publiés en ligne. Le prix annoncé est le prix payé.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="8"/><path d="M9 42c2-9 8-13 15-13s13 4 15 13"/></svg>
+        <h3>Un vrai conseil</h3>
+        <p>On prend le temps d’échanger avant chaque prestation.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Proposition 1 — Maison signature</b></span><span>2 / 7</span></div>
+</section>
+
+<!-- =============== PAGE 3 — CARTE & TARIFS =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Carte des prestations &amp; tarifs</div>
+    <div class="c">
+      <div class="over">La carte</div>
+      <h2>Nos <i>prestations</i></h2>
+      <p class="lead">Une carte claire, organisée par onglets. Les tarifs seront publiés tels qu’appliqués au salon.</p>
+    </div>
+    <div class="tabs"><span class="on">Coupe</span><span>Couleur</span><span>Soins</span><span>Extensions</span><span>Événements</span></div>
+
+    <div class="menu">
+      <div class="cat on">
+        <h3>Coupe <small>Onglet actif</small></h3>
+        <div class="ln"><div><b>Coupe femme</b><small>Shampoing, coupe, coiffage</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Coupe enfant</b><small>Âge limite à préciser</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Cheveux bouclés &amp; frisés</b><small>Coupe adaptée à la boucle</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Coupe homme</b><small>Si proposée au salon</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+      </div>
+      <div class="cat">
+        <h3>Couleur</h3>
+        <div class="ln"><div><b>Coloration</b><small>Racines ou complète</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Mèches</b><small>Selon longueur</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Balayage</b><small>Éclaircissement naturel</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+      </div>
+      <div class="cat">
+        <h3>Soins</h3>
+        <div class="ln"><div><b>Traitement à la kératine</b><small>Brillance et discipline</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Lissage permanent</b><small>Durée selon cheveux</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+      </div>
+      <div class="cat">
+        <h3>Extensions</h3>
+        <div class="ln"><div><b>Extensions capillaires</b><small>Pose, méthode à préciser</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Tissage</b><small>Pose et entretien</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+      </div>
+      <div class="cat">
+        <h3>Événements</h3>
+        <div class="ln"><div><b>Coiffure de cérémonie</b><small>Mariage, fête, soirée</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+        <div class="ln"><div><b>Essai coiffure</b><small>Si proposé</small></div><i></i><span>— € <span class="tbc">à confirmer</span></span></div>
+      </div>
+      <div class="cat note">
+        <h3>Prix clairs, <i style="color:var(--rose)">sans surprise</i></h3>
+        <p>Chaque prestation affiche son prix ou son « à partir de ». Le tarif en ligne est celui du salon.</p>
+        <span class="btn">Réserver cette prestation</span>
+      </div>
+    </div>
+    <p class="menu-foot">Liste établie d’après les prestations publiques du salon (fiche Fresha) · Prix, durées et intitulés à fournir par le salon.</p>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Proposition 1 — Maison signature</b></span><span>3 / 7</span></div>
+</section>
+
+<!-- =============== PAGE 4 — UNIVERS / ÉQUIPE / CARNET =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Le salon · équipe · carnet</div>
+    <div class="about">
+      <div>
+        <div class="over">Le salon</div>
+        <h2>Un lieu pensé <i>pour vous</i></h2>
+        <p>Fashion Institut vous accueille rue Eugène Massé, à Livry-Gargan. Coupe, couleur, soins, lissage et extensions : toute la carte se fait sur place.</p>
+        <p>Ici, on vous écoute avant de prendre les ciseaux. Pour un résultat qui vous ressemble.</p>
+        <span class="tbc">Présentation à valider par le salon</span>
+      </div>
+      <div class="ph"><div><em>L’espace coiffure</em><span>Photo du salon à fournir</span></div></div>
+    </div>
+
+    <div class="sec-hd">
+      <div><div class="over">L’équipe</div><h2>Des mains <i>expertes</i></h2></div>
+      <p>Prénoms, spécialités et photos fournis par le salon (avec accord de chaque personne).</p>
+    </div>
+    <div class="team">
+      <figure><div class="ph ivory"><span>Portrait à fournir</span></div><figcaption><b>Prénom</b><small>Spécialité à confirmer</small></figcaption></figure>
+      <figure><div class="ph ivory"><span>Portrait à fournir</span></div><figcaption><b>Prénom</b><small>Spécialité à confirmer</small></figcaption></figure>
+      <figure><div class="ph ivory"><span>Portrait à fournir</span></div><figcaption><b>Prénom</b><small>Spécialité à confirmer</small></figcaption></figure>
+    </div>
+
+    <div class="sec-hd">
+      <div><div class="over">Le carnet</div><h2>Nos <i>réalisations</i></h2></div>
+      <p>Galerie en mosaïque, alimentée par vos photos (droits d’usage à confirmer).</p>
+    </div>
+    <div class="mosaic">
+      <div class="ph a"><div><em>Couleur · balayage</em><span>Photo du salon à fournir</span></div></div>
+      <div class="ph b dark"><div><em>Bouclés</em><span>Photo à fournir</span></div></div>
+      <div class="ph ivory"><div><em>Façade</em><span>Photo à fournir</span></div></div>
+      <div class="ph ivory"><div><em>Lissage</em><span>Photo à fournir</span></div></div>
+      <div class="ph w"><div><em>Extensions</em><span>Photo du salon à fournir</span></div></div>
+      <div class="ph w dark"><div><em>L’accueil</em><span>Photo du salon à fournir</span></div></div>
+    </div>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Proposition 1 — Maison signature</b></span><span>4 / 7</span></div>
+</section>
+
+<!-- =============== PAGE 5 — INFOS PRATIQUES & RDV =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Horaires · adresse · contact · rendez-vous</div>
+    <div class="c">
+      <div class="over">Infos pratiques</div>
+      <h2>Venir <i>au salon</i></h2>
+    </div>
+    <div class="infos">
+      <div class="card hours">
+        <h3>Horaires</h3>
+        <div><span>Lundi</span><span>9 h 30 – 19 h</span></div>
+        <div><span>Mardi</span><span>9 h 30 – 19 h</span></div>
+        <div><span>Mercredi</span><span>9 h 30 – 19 h</span></div>
+        <div><span>Jeudi</span><span>9 h 30 – 19 h</span></div>
+        <div><span>Vendredi</span><span>9 h 30 – 19 h</span></div>
+        <div><span>Samedi</span><span>9 h 30 – 19 h <span class="tbc">à confirmer</span></span></div>
+        <div class="off"><span>Dimanche</span><span>Fermé</span></div>
+      </div>
+      <div class="card contact">
+        <h3>Contact</h3>
+        <p><small>Adresse</small>21 rue Eugène Massé <span class="tbc">n° à confirmer</span><br>93190 Livry-Gargan</p>
+        <p><small>Téléphone</small><span class="big">01 45 09 07 13</span></p>
+        <p><small>E-mail</small>à confirmer</p>
+        <p><small>WhatsApp · réseaux sociaux</small>à confirmer</p>
+        <span class="btn">Appeler le salon</span>
+      </div>
+    </div>
+    <div class="map">
+      <div class="pin"></div>
+      <div class="lbl"><b>Fashion Institut</b>Rue Eugène Massé · Livry-Gargan</div>
+      <div class="cap">Plan Google Maps intégré</div>
+    </div>
+
+    <div class="rdv">
+      <div>
+        <div class="over">Rendez-vous</div>
+        <h2>Réservez <i>votre moment</i></h2>
+        <p>Choisissez votre prestation, votre jour et votre heure, en ligne, à toute heure. Ou appelez-nous pendant les horaires d’ouverture.</p>
+      </div>
+      <div class="widget">
+        <div class="step">1 · Prestation</div>
+        <div class="field">Coupe femme <i>▾</i></div>
+        <div class="step">2 · Date</div>
+        <div class="field">Jour au choix <i>▾</i></div>
+        <div class="step">3 · Créneau</div>
+        <div class="slots"><span>9 h 30</span><span class="on">11 h 00</span><span>14 h 30</span><span>16 h 00</span></div>
+        <span class="btn fill">Confirmer le rendez-vous</span>
+        <div class="note">Module de réservation intégré · outil à choisir avec le salon</div>
+      </div>
+    </div>
+
+    <footer class="site-ft">
+      <div class="logo">Fashion <i>Institut</i></div>
+      <nav><span>Mentions légales</span><span>Confidentialité</span><span>Avis Google</span></nav>
+      <span>© 2026 Fashion Institut</span>
+    </footer>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Proposition 1 — Maison signature</b></span><span>5 / 7</span></div>
+</section>
+
+<!-- =============== PAGE 6 — VERSION MOBILE =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Version mobile · écrans de 375 px</div>
+    <div class="c">
+      <div class="over">Sur téléphone</div>
+      <h2>Version <i>mobile</i></h2>
+      <p class="lead">La plupart des clientes réserveront depuis leur téléphone. Le bouton « Prendre rendez-vous » reste toujours visible en bas de l’écran.</p>
+    </div>
+
+    <div class="phones">
+      <!-- Écran 1 : accueil -->
+      <div>
+        <div class="phone"><div class="vp"><div class="scr">
+          <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+          <div class="mh"><div class="logo">Fashion <i>Institut</i></div><div class="burger"><i></i><i></i><i></i></div></div>
+          <div class="in">
+            <div class="over">Livry-Gargan</div>
+            <h1>Vos cheveux,<br><i>notre</i> savoir-faire</h1>
+            <p>Coupe, couleur, soins et extensions. Du lundi au samedi.</p>
+            <span class="btn fill">Prendre rendez-vous</span>
+            <div class="ph m"><span>Photo du salon à fournir</span></div>
+          </div>
+          <div class="sticky"><span>Appeler</span><span class="go">Rendez-vous</span></div>
+        </div></div></div>
+        <div class="phone-cap"><b>Accueil</b><small>Héros, bouton de réservation</small></div>
+      </div>
+
+      <!-- Écran 2 : carte -->
+      <div>
+        <div class="phone"><div class="vp"><div class="scr">
+          <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+          <div class="mh"><div class="logo">Fashion <i>Institut</i></div><div class="burger"><i></i><i></i><i></i></div></div>
+          <div class="in">
+            <div class="over">La carte</div>
+            <h2>Nos <i>prestations</i></h2>
+            <div class="tabs"><span>Coupe</span><span class="on">Couleur</span><span>Soins</span></div>
+            <div class="ln"><div><b>Coloration</b><small>Racines ou complète</small></div><i></i><span>— €</span></div>
+            <div class="ln"><div><b>Mèches</b><small>Selon longueur</small></div><i></i><span>— €</span></div>
+            <div class="ln"><div><b>Balayage</b><small>Éclaircissement naturel</small></div><i></i><span>— €</span></div>
+            <p style="margin-top:14px;font-size:13px"><span class="tbc">Tarifs à confirmer</span></p>
+          </div>
+          <div class="sticky"><span>Appeler</span><span class="go">Rendez-vous</span></div>
+        </div></div></div>
+        <div class="phone-cap"><b>La carte</b><small>Onglets faciles au pouce</small></div>
+      </div>
+
+      <!-- Écran 3 : infos -->
+      <div>
+        <div class="phone"><div class="vp"><div class="scr">
+          <div class="sb"><span>9:41</span><span>●●● ▮</span></div>
+          <div class="mh"><div class="logo">Fashion <i>Institut</i></div><div class="burger"><i></i><i></i><i></i></div></div>
+          <div class="in">
+            <div class="over">Infos pratiques</div>
+            <h2>Venir <i>au salon</i></h2>
+            <div class="card hours" style="margin-top:14px">
+              <h3>Horaires</h3>
+              <div><span>Lun – sam</span><span>9 h 30 – 19 h</span></div>
+              <div class="off"><span>Dimanche</span><span>Fermé</span></div>
+            </div>
+            <div class="card contact">
+              <h3>Contact</h3>
+              <p>21 rue Eugène Massé<br>93190 Livry-Gargan</p>
+              <p class="big">01 45 09 07 13</p>
+            </div>
+          </div>
+          <div class="sticky"><span>Itinéraire</span><span class="go">Rendez-vous</span></div>
+        </div></div></div>
+        <div class="phone-cap"><b>Infos &amp; contact</b><small>Appel et itinéraire en un geste</small></div>
+      </div>
+    </div>
+
+    <div class="mob-notes">
+      <div><b>Barre fixe</b><p>« Appeler » et « Rendez-vous » restent accessibles sur toutes les pages.</p></div>
+      <div><b>Lecture rapide</b><p>Textes courts, gros caractères, contrastes renforcés.</p></div>
+      <div><b>Même charte</b><p>Arches, ivoire et vieux rose, comme sur ordinateur.</p></div>
+    </div>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Proposition 1 — Maison signature</b></span><span>6 / 7</span></div>
+</section>
+
+<!-- =============== PAGE 7 — POINTS À VALIDER =============== -->
+<section class="page">
+  <div class="pad">
+    <div class="tag">Validation · prochaines étapes</div>
+    <div class="over">Ce que la maquette corrige</div>
+    <h2 style="font-size:34px">Les points <i>de l’audit</i></h2>
+    <div class="audit">
+      <div><small>Constat</small><b>Aucun site, aucune réservation en ligne</b><p>Le site ajoute un module de rendez-vous intégré et un lien depuis la fiche Google.</p></div>
+      <div><small>Constat</small><b>Des prix jugés changeants</b><p>Une carte publiée, avec des tarifs identiques à ceux du salon.</p></div>
+      <div><small>Constat</small><b>Deux numéros, deux adresses</b><p>Un seul numéro et une seule adresse, partout en ligne, après votre choix.</p></div>
+    </div>
+
+    <div class="over" style="margin-top:8mm">Cahier des charges</div>
+    <h2 style="font-size:30px">À fournir <i>ou valider</i></h2>
+    <div class="checks">
+      <div>
+        <h4>Identité</h4>
+        <ul>
+          <li>Nom commercial affiché sur le site</li>
+          <li>Logo fourni en bonne qualité</li>
+          <li>Couleurs de la charte validées</li>
+          <li>Style et ton souhaités</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contenus</h4>
+        <ul>
+          <li>Prestations et tarifs complets</li>
+          <li>Horaires habituels et exceptionnels</li>
+          <li>Adresse, téléphone, e-mail, WhatsApp</li>
+          <li>Présentation du salon et textes validés</li>
+          <li>Photos du lieu et des réalisations (droits d’usage)</li>
+          <li>Avantages clients (fidélité, offres, accueil)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fonctionnalités</h4>
+        <ul>
+          <li>Mode de prise de rendez-vous choisi</li>
+          <li>Galerie / portfolio</li>
+          <li>Avis clients : lien vers les avis Google</li>
+          <li>Liens réseaux sociaux</li>
+          <li>Plan d’accès Google Maps</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Technique &amp; légal</h4>
+        <ul>
+          <li>Modèle du catalogue choisi</li>
+          <li>Nom de domaine · hébergement · accès techniques</li>
+          <li>Mentions légales : raison sociale, SIRET, hébergeur</li>
+          <li>Confidentialité du formulaire de contact</li>
+          <li>Cahier des charges relu et validé</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tbc-list">
+      <h4>Informations à confirmer</h4>
+      <ul>
+        <li>Numéro de rue : 21 ou 19 rue Eugène Massé</li>
+        <li>Numéro à afficher : 01 45 09 07 13 (01 43 51 87 20 vu sur Planity)</li>
+        <li>Ouverture du samedi : 9 h 30 ou 10 h</li>
+        <li>Coupe homme et coiffure de cérémonie proposées ?</li>
+        <li>Tous les tarifs et durées</li>
+        <li>Textes de présentation et valeurs</li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio"><span>Fashion Institut · <b>Maquette soumise à validation — Inkway</b></span><span>7 / 7</span></div>
+</section>
+
+</body>
+</html>
